@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png">
+    <title>As-is usim/join | Liiv M(리브모바일)</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="wrap">
+        <section class="layout">
+            <header>
+                <img src="./img/common_status.png">
+                <img src="./img/common_header.png">
+            </header>
+        </section>
+
+        <section class="content__section content__usim">
+            <div class="content__wrap">
+                <img src="./img/usim_contents.png">
+            </div>
+            <div class="bottom__fix">
+                <div class="container">
+                    <img src="./img/usim_bottom_fix.png">
+                    <div class="link__area" data-link="content__usim-agree"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content__section content__usim-agree">
+            <div class="content__wrap">
+                <img src="./img/agree_ttl.png" class="agree__item-ttl">
+                <img src="./img/agree_off.png" class="agree__item-off">
+                <img src="./img/agree_notice.png" class="agree__item-notice">
+                <img src="./img/agree_check.png" class="agree__item-check">
+                <div class="link__area-parent">
+                    <img src="./img/agree_btn.png" class="agree__item-btn">
+                    <div class="link__area" data-link="content__usim-join"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content__section content__usim-join">
+            <div class="content__wrap">
+                <img src="./img/join_step.png" class="join__item-step">
+                <div class="link__area-parent">
+                    <img src="./img/join_form.png" class="join__item-form">
+                    <div class="link__area prev" data-link="content__usim-agree"></div>
+                    <div class="link__area next" data-link="content__usim-check"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content__section content__usim-check">
+            <div class="content__wrap">
+                <img src="./img/check_ttl.png" class="check__item-ttl">
+                <div class="link__area-parent">
+                    <img src="./img/check_contents.png" class="check__item-contents">
+                    <div class="link__area prev" data-link="content__usim-join"></div>
+                    <div class="link__area next" data-link="content__usim-done"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content__section content__usim-done">
+            <div class="content__wrap">
+                <img src="./img/done_ttl.png" class="done__item-ttl">
+                <img src="./img/done_notice.png" class="done__item-notice">
+                <div class="link__area-parent">
+                    <img src="./img/done_contents.png" class="done__item-contents">
+                    <div class="link__area prev" data-link="content__usim-check"></div>
+                    <div class="link__area next" data-link="content__usim-card"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content__section content__usim-card">
+            <div class="content__wrap">
+                <img src="./img/done_ttl.png" class="done__item-ttl">
+                <img src="./img/done_notice.png" class="done__item-notice">
+                <img src="./img/done_contents.png" class="done__item-contents">
+                <div class="card__item-popup">
+                    <div class="container">
+                        <img src="./img/card_popup.png">
+                        <div class="link__area prev" data-link="content__usim-done"></div>
+                        <div class="link__area next" data-link="content__usim"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- <script src="./js/script.js"></script> -->
+    <script>
+        window.addEventListener("load", ()=>{
+            getHeadPad();
+            window.addEventListener("resize", getHeadPad);
+            window.addEventListener("scroll", joinHeadScrollChk);
+
+            const usim = document.querySelector(".content__usim");
+            const usimAgree = document.querySelector(".content__usim-agree");
+            const usimJoin = document.querySelector(".content__usim-join");
+            const usimCheck = document.querySelector(".content__usim-check");
+            const usimDone = document.querySelector(".content__usim-done");
+            const usimCard = document.querySelector(".content__usim-card");
+
+            usim.classList.add("active");
+
+            const linkArea = Array.from(document.querySelectorAll(".link__area"));
+            linkArea.forEach((item)=>{
+                item.addEventListener("click", (e)=>{
+                    // sectionHide();
+                    // const link = item.dataset.link;
+                    // document.querySelector(`.${link}`).classList.add("active");
+                    pageChange(item);
+                })
+            })
+        })
+
+        const pageChange = function(item){
+            const section = Array.from(document.querySelectorAll(".content__section"));
+            section.forEach((item)=>{ item.classList.remove("active") })
+            
+            const link = item.dataset.link;
+            document.querySelector(`.${link}`).classList.add("active");
+            window.scrollTo(0, 0);
+            HeadershadowHide();
+        }
+
+        const HeadershadowHide = function(){
+            const activepage = document.querySelector(".content__section.active");
+            const pageJoin = document.querySelector(".content__usim-join");
+            const head = document.querySelector("header");
+            activepage === pageJoin ? head.classList.add("shadow-hide") : head.classList.remove("shadow-hide");
+            return activepage === pageJoin;
+        }
+
+        const joinHeadScrollChk = function(){
+            let pageChk = HeadershadowHide();
+            if( !pageChk ){return false}
+            const activepage = document.querySelector(".content__section.active");
+            const pageJoin = document.querySelector(".content__usim-join");
+            const head = document.querySelector("header");
+            head.classList.toggle("shadow-hide", window.scrollY <= 100);
+        }
+
+        const getHeadPad = function(){
+            const head = document.querySelector("header");
+            const contentWrap = document.querySelectorAll(".content__wrap");
+            contentWrap.forEach((item)=>{ item.style.marginTop = `${head.offsetHeight}px`; });
+        }
+    </script>
+</body>
+</html>
