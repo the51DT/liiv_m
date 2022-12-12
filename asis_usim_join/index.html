@@ -14,7 +14,7 @@
     <div id="wrap">
         <section class="layout">
             <header>
-                <img src="./img/common_status.png">
+                <img src="./img/common_status.png" class="mobile-hidden">
                 <img src="./img/common_header.png">
             </header>
         </section>
@@ -92,12 +92,20 @@
                 </div>
             </div>
         </section>
-
     </div>
 
-    <!-- <script src="./js/script.js"></script> -->
     <script>
+        function detectMobileDevice(agent) {
+            const mobileRegex = [/Android/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i]
+            return mobileRegex.some(mobile => agent.match(mobile))
+        }
+        const isMobile = detectMobileDevice(window.navigator.userAgent)
+
         window.addEventListener("load", ()=>{
+
+            const statusBar = document.querySelector(".mobile-hidden");
+            isMobile ? statusBar.style.display = "none" : null;
+
             getHeadPad();
             window.addEventListener("resize", getHeadPad);
             window.addEventListener("scroll", joinHeadScrollChk);
@@ -113,12 +121,7 @@
 
             const linkArea = Array.from(document.querySelectorAll(".link__area"));
             linkArea.forEach((item)=>{
-                item.addEventListener("click", (e)=>{
-                    // sectionHide();
-                    // const link = item.dataset.link;
-                    // document.querySelector(`.${link}`).classList.add("active");
-                    pageChange(item);
-                })
+                item.addEventListener("click", (e)=>{ pageChange(item) })
             })
         })
 
