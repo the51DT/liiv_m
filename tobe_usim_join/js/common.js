@@ -36,15 +36,15 @@ const isMobile = chkMobile(window.navigator.userAgent)
 
 // footer home bar check
 const getFootPad = function(){
-    const foot = Array.from(document.querySelectorAll("footer"));               // footer elem
-    const footH = document.querySelector(".active .foot__btn").offsetHeight;    // 하단 버튼 높이
+    const foot = Array.from(document.querySelectorAll("footer"));                   // footer elem
+    const footH = document.querySelector(".active .foot__btn") ? document.querySelector(".active .foot__btn").offsetHeight : 0;   // 하단 버튼 높이
     foot.forEach((item)=>{ item.style.bottom = `-${footH * 0.2}px`; })
 }
 
 // header, footer padding setting
 const containerPad = function(){
-    const head = document.querySelector("header");
-    const foot = document.querySelector("footer");
+    const head = document.querySelector(".active header");
+    const foot = document.querySelector(".active footer") ?? 0;
     const contentWrap = document.querySelectorAll(".container__wrap");
     contentWrap.forEach((item)=>{
         item.style.paddingTop = `${head.offsetHeight}px`;
@@ -54,9 +54,8 @@ const containerPad = function(){
 
 // page link
 const pageChange = function(link){
-    console.log(link)
     const section = Array.from(document.querySelectorAll(".content__section"));
     section.forEach((item)=>{ item.classList.remove("active") })
-
+    window.scrollTo(0, 0);
     document.querySelector(`.${link}`).classList.add("active");
 }
