@@ -37,7 +37,8 @@ const isMobile = chkMobile(window.navigator.userAgent)
 // footer home bar check
 const getFootPad = function(){
     const foot = Array.from(document.querySelectorAll("footer"));
-    foot.forEach((item)=>{ console.log(item); item.style.bottom = `-${item.offsetHeight * 0.2}px`; })
+    const footH = document.querySelector("footer").offsetHeight;
+    foot.forEach((item)=>{ console.log(item); item.style.bottom = `-${footH * 0.2}px`; })
 }
 
 // header, footer padding setting
