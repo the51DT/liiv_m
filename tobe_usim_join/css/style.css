@@ -18,5 +18,23 @@ footer{position:fixed; left:50%; bottom:0; width:100%; max-width:390px; transfor
 .mobile footer{}
 
 
-.content__section{position:relative; min-height:100vh; display: none;}
+.content__section{position:relative; min-height: var(--vh); display: none; box-sizing:border-box;}
 .content__section.active{display: block; animation:pageLoad .5s;}
+
+
+
+
+
+
+
+/** common ************************/
+.shadow{box-shadow:0 0 10px rgba(0,0,0, .05);}
+.radius{border-radius:12px;}
+
+
+/** (가입자 유형 선택) section__jointype **************/
+.section__jointype{}
+.section__jointype-step{}
+.section__jointype-text{padding:40px 20px 0}
+.section__jointype-text img{width:121px;}
+.section__jointype-btn{padding:30px 20px 0; display:flex; align-items:center; justify-content:space-between; gap: 10px;}
