@@ -6,8 +6,9 @@ window.addEventListener("load", ()=>{
     const index = document.querySelector(".section__type");
     index.classList.add("active");
 
-    getHeadPad();
-    window.addEventListener("resize", getHeadPad);
+    containerPad();
+    window.addEventListener("resize", containerPad);
+
     if(isMobile){
         document.querySelector("body").classList.add("mobile");
         getFootPad();
@@ -18,8 +19,6 @@ window.addEventListener("load", ()=>{
     linkItem.forEach((item)=>{
         item.addEventListener("click", (e)=>{ e.preventDefault(); pageChange(item.dataset.link) })
     })
-
-    
 })
 
 // 모바일 100vh 대응
@@ -34,19 +33,25 @@ function chkMobile(agent) {
 }
 const isMobile = chkMobile(window.navigator.userAgent)
 
-// header height check
-const getHeadPad = function(){
-    const head = document.querySelector("header");
-    const contentWrap = document.querySelectorAll(".container__wrap");
-    contentWrap.forEach((item)=>{ item.style.paddingTop = `${head.offsetHeight}px`; });
-}
 
-// footer height check
+// footer home bar check
 const getFootPad = function(){
-    const foot = document.querySelector("footer");
-    foot.style.bottom = `-${foot.offsetHeight * 0.2}px`;
+    const foot = Array.from(document.querySelectorAll("footer"));
+    foot.forEach((item)=>{ console.log(item); item.style.bottom = `-${item.offsetHeight * 0.2}px`; })
 }
 
+// header, footer padding setting
+const containerPad = function(){
+    const head = document.querySelector("header");
+    const foot = document.querySelector("footer");
+    const contentWrap = document.querySelectorAll(".container__wrap");
+    contentWrap.forEach((item)=>{
+        item.style.paddingTop = `${head.offsetHeight}px`;
+        item.style.paddingBottom = `${foot.offsetHeight}px`;
+    });
+}
+
+// page link
 const pageChange = function(link){
     console.log(link)
     const section = Array.from(document.querySelectorAll(".content__section"));
