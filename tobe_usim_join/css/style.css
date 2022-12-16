@@ -1,3 +1,8 @@
+@keyframes pageLoad {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
 ::-webkit-scrollbar{display:none;}
 
 html,body{height:100%;}
@@ -11,3 +16,7 @@ header{position:fixed; left:50%; top:0; width:100%; max-width:390px; transform:t
 /** footer ************/
 footer{position:fixed; left:50%; bottom:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
 .mobile footer{}
+
+
+.content__section{position:relative; min-height:100vh; display: none;}
+.content__section.active{display: block; animation:pageLoad .5s;}
