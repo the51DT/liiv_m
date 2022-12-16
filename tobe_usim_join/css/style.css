@@ -1,0 +1,13 @@
+::-webkit-scrollbar{display:none;}
+
+html,body{height:100%;}
+#wrap{position:relative; width:100%; max-width:390px; min-height:100%; margin:0 auto; overflow-y:scroll; overflow-x:hidden;}
+#wrap img{max-width:100%}
+
+
+/** header ************/
+header{position:fixed; left:50%; top:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
+
+/** footer ************/
+footer{position:fixed; left:50%; bottom:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
+.mobile footer{}
