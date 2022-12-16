@@ -21,14 +21,14 @@ header.shadow-hide{box-shadow: 0 0 0 #fff;}
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
-.content__section{position:relative; display: none; min-height:100vh;}
+.content__section{position:relative; display: none; min-height: var(--vh); box-sizing:border-box;}
 .content__section.active{display: block; animation:loadAnimation .5s;}
     .content__usim-card.active{animation:none;}
 .content__section img{display: block; box-sizing:border-box;}
 
 
 /* content__usim */
-.content__usim .content__wrap{padding:1.75rem 0.1875rem 20rem;}
+.content__usim .content__wrap{margin:1.75rem 0.1875rem 20rem;}
 
 
 /* content__usim-agree */
