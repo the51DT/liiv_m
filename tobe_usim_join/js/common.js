@@ -36,8 +36,8 @@ const isMobile = chkMobile(window.navigator.userAgent)
 
 // footer home bar check
 const getFootPad = function(){
-    const foot = Array.from(document.querySelectorAll("footer"));
-    const footH = document.querySelector(".active footer").offsetHeight;
+    const foot = Array.from(document.querySelectorAll("footer"));               // footer elem
+    const footH = document.querySelector(".active .foot__btn").offsetHeight;    // 하단 버튼 높이
     foot.forEach((item)=>{ item.style.bottom = `-${footH * 0.2}px`; })
 }
 
