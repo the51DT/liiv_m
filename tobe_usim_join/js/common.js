@@ -59,3 +59,4 @@ const pageChange = function(link){
     window.scrollTo(0, 0);
     document.querySelector(`.${link}`).classList.add("active");
 }
+
