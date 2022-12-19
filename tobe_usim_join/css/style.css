@@ -57,17 +57,34 @@ img{width: 100%;}
 .jumin .secend:before{content: " - "; position: absolute;left: 8%;top: 50%;}
 
 /* form */
+.check__list__wrap {padding:2rem; border:0.1rem solid #E7E8EA; border-radius:1.2rem}
+.check__list__wrap .check-type1 + .check-type1 {margin-top:2rem}
+.check__list__wrap .check-type2 + .check-type2 {margin-top:1rem}
+.check__list__wrap .check-type1 + .check-type2 {margin-top:1.7rem}
+.check__list__wrap .check-type1 + .check__wrap {margin-top:2rem}
+.check__list__wrap .check__wrap .check-type2 {margin-left:2.7rem}
+.check__list__wrap .check__wrap + .check__wrap {margin-top:2rem}
+.check__alert {position:relative; margin-top:1rem; padding-left:1.7rem; color:#555; font-size:1.2rem; line-height:1.5rem}
+.check__alert::before {content:''; display:block; position:absolute; width:1.3rem; height:1.3rem; top:0.1rem; left:0; background:url(../img/icon_alert.svg) no-repeat center / contain;}
+.check__alert + .check__list__wrap {margin-top:3rem}
+.btn__terms {position:absolute; width:2.4rem; height:2.4rem; top:-0.2rem; right:-0.9rem; background:url(../img/btn_terms.svg) no-repeat center / contain}
+.term__box {padding:1.5rem; border:0.1rem solid #E7E8EA; border-radius:1.2rem}
+.term__box .term__txt {font-size:1.2rem; line-height:1.8rem}
+.check-type1 + .term__box {margin-top:1.5rem}
+
+.check-type1 {position:relative; padding:0.15rem 0}
 .check-type1 label {position: relative;padding-left: 3rem;}
 .check-type1.solo label {position: relative;padding-left: 0;}
-.check-type1 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 1.4rem; color: #222;}
+.check-type1 label span {vertical-align: middle;display: inline-block; font-size: 1.4rem; color: #222; line-height: 1.8rem; letter-spacing: -0.02rem;}
+.check-type1 label span strong {color:#FF2E00}
 .check-type1 label input[type=checkbox]:checked{background-position: 0 100%;}
 .check-type1 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;background: url(../img/check.png) no-repeat 0 0;}
 
 .check-type2 label {position: relative;padding-left: 3rem;}
 .check-type2.solo label {position: relative;padding-left: 0;}
-.check-type2 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 1.4rem; color: #222;}
+.check-type2 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 1.2rem; color: #222; line-height:1.5rem}
 .check-type2 label input[type=checkbox]:checked{background-position: 0 100%;}
-.check-type2 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;background: url(../img/check2.png) no-repeat 0 0;}
+.check-type2 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;top: -0.25rem;background: url(../img/check2.png) no-repeat 0 0;}
 
 .radio-type1 label span {/* vertical-align: middle; */white-space: nowrap;display: block;padding-top:0.3rem;}
 .radio-type1 label{position: relative;padding-left: 3rem;}
@@ -80,7 +97,7 @@ img{width: 100%;}
 .ip-wrap strong {float: left;display: block;font-weight: bold;line-height: 4.8rem;margin-right: 3rem;}
 
 /** header ************/
-header{position:fixed; left:50%; top:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:9;}
+header{position:fixed; left:50%; top:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:11;}
 
 /** footer ************/
 footer{position:fixed; left:50%; bottom:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:9;}
@@ -114,3 +131,14 @@ footer{position:fixed; left:50%; bottom:0; width:100%; max-width:360px; transfor
 .pos__btm {position:fixed; max-width:360px!important; left:0; right:0; bottom:var(--fh); margin:0 auto}
 .shadow__top {box-shadow:0 0 1.6rem rgba(0,0,0,0.15)}
 .br__top16 {border-radius:1.6rem 1.6rem 0 0}
+.result__wrap {padding:0 2rem; border:1px solid #E7E8EA; border-radius:0 0 1.6rem 1.6rem; box-shadow:0 0 2rem rgba(0,0,0,0.07)}
+.result__wrap .result__item {display:block; padding:1.5rem 0}
+.result__wrap .result__item + .result__item {border-top:1px solid #E7E8EA}
+.rdo__result {color:#222; font-size:1.4rem; line-height:1.8rem; letter-spacing:-0.03rem;}
+
+.dim {display:none; position:fixed; left:0; right:0; top:0; bottom:0; max-width:360px; margin:0 auto; background:rgba(0,0,0,0.6); z-index:10}
+.dim.active {display:block}
+.pop__layer {display:none; position:fixed; left:0; right:0; top:0; bottom:0; z-index:100}
+.pop__layer.active {display:block}
+.pop__layer > img {position:absolute; top:26%; left:calc(50% - 180px); max-width:360px!important; margin:0 auto}
+.btn__close {position:absolute; display:block; width:6rem; height:6rem; top:0; right:0}

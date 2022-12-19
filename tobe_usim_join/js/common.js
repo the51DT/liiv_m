@@ -19,6 +19,41 @@ window.addEventListener("load", ()=>{
     linkItem.forEach((item)=>{
         item.addEventListener("click", (e)=>{ e.preventDefault(); pageChange(item.dataset.link) })
     })
+
+    // step1 유심 라디오버튼 임시
+    const radioSelect = Array.from(document.querySelectorAll(".rdo__item"));
+    const radioResult = document.querySelectorAll(".rdo__result");
+    radioSelect.forEach((rdo)=>{
+        const rdoTxt = rdo.getAttribute("data-txt");
+        console.log(document.querySelector('input[type=radio]:checked').value);
+        if(rdo.classList.contains("active")){
+            radioResult.forEach((result)=>{
+                result.innerHTML = rdoTxt;
+            })
+        };
+        rdo.addEventListener("click", (e)=>{
+            console.log(document.querySelector('input[type=radio]:checked').value);
+            radioResult.forEach((result)=>{
+                result.innerHTML = rdoTxt;
+            })
+        })
+    })
+
+    // close 버튼 팝업
+    const btnClose = document.querySelector('header .btn__close');
+    const leavepop = document.querySelector('#leave__pop');
+    const dim = document.querySelector('.dim');
+
+    btnClose.addEventListener("click", function(e){
+        e.preventDefault;
+        leavepop.classList.toggle("active");
+        dim.classList.toggle("active");
+    });
+    leavepop.addEventListener("click", function(e){
+        e.preventDefault;
+        leavepop.classList.toggle("active");
+        dim.classList.toggle("active");
+    });
 })
 
 // 모바일 100vh 대응
