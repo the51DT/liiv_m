@@ -9,36 +9,6 @@ html,body{height:100%;}
 #wrap{position:relative; width:100%; max-width:390px; min-height:100%; margin:0 auto; overflow-y:scroll; overflow-x:hidden;}
 #wrap img{max-width:100%}
 
-
-/** header ************/
-header{position:fixed; left:50%; top:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
-
-/** footer ************/
-footer{position:fixed; left:50%; bottom:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
-.mobile footer{}
-
-
-.content__section{position:relative; min-height: var(--vh); display: none; box-sizing:border-box;}
-.content__section.active{display: block; animation:pageLoad .5s;}
-
-
-
-
-
-
-
-/** common ************************/
-.shadow{box-shadow:0 0 10px rgba(0,0,0, .05);}
-.radius{border-radius:12px;}
-
-
-/** (가입자 유형 선택) section__jointype **************/
-.section__jointype{}
-.section__jointype-step{}
-.section__jointype-text{padding:40px 20px 0}
-.section__jointype-text img{width:121px;}
-.section__jointype-btn{padding:30px 20px 0; display:flex; align-items:center; justify-content:space-between; gap: 10px;}
-
 input[type=checkbox],
 input[type=radio] {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
 *{box-sizing:border-box;}
@@ -99,3 +69,38 @@ img{width: 100%;}
 .ip-wrap{overflow: hidden;}
 .ip-wrap .radio-type1 {float: left;margin-right: 30px;padding-top: 15px;}
 .ip-wrap strong {float: left;display: block;font-weight: bold;line-height: 48px;margin-right: 30px;}
+
+/** header ************/
+header{position:fixed; left:50%; top:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
+
+/** footer ************/
+footer{position:fixed; left:50%; bottom:0; width:100%; max-width:390px; transform:translateX(-50%); z-index:9;}
+.mobile footer{}
+
+
+.content__section{position:relative; min-height: var(--vh); display: none; box-sizing:border-box;}
+.content__section.active{display: block; animation:pageLoad .5s;}
+
+
+
+
+
+
+
+/** common ************************/
+.shadow{box-shadow:0 0 10px rgba(0,0,0, .05);}
+.radius{border-radius:12px;}
+
+
+/** (가입자 유형 선택) section__jointype **************/
+.section__jointype{}
+.section__jointype-step{}
+.section__jointype-text{padding:40px 20px 0}
+.section__jointype-text img{width:121px;}
+.section__jointype-btn{padding:30px 20px 0; display:flex; align-items:center; justify-content:space-between; gap: 10px;}
+
+
+/* step1 */
+.pos__btm {position:fixed; max-width:390px!important; left:0; right:0; bottom:var(--fh); margin:0 auto}
+.shadow__top {box-shadow:0 -10px 36px rgba(0,0,0,0.15)}
+.br__top16 {border-radius:16px 16px 0 0}
