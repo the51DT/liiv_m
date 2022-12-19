@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png">
+    <title>To-be usim/join | Liiv M(리브모바일)</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/common.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+        h2{margin:60px 0 30px; font-weight: bold;}
+
+        input[type=checkbox],
+        input[type=radio] {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
+        *{box-sizing:border-box;}
+        button{border: 0;outline: 0;background: none;padding: 0; margin: 0;}
+        img{width: 100%;}
+
+        .img_radio_wrap{display: flex;justify-content: center;width: 100%;}
+        .img_radio{width: 49%;border: 1px solid #E7E8EA;height: 155px;text-align: center;border-radius: 12px;box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);}
+        .img_radio+.img_radio{margin-left: 2%;}
+        .img_radio p{font-size: 16px;}
+        .img_radio.active{border: 2px solid #FFD338}
+        .img_radio.active p{font-weight: bold;}
+        .img_radio_thum{margin:30px auto 16px;width: 74px;height: 70px;background-color: #D9D9D9;}
+
+        /* 스타일 */
+        .basic-form {position:relative; margin-top: 16px;} /* 기본세팅 */
+        .basic-form input { box-sizing:border-box; padding:16px 0 0;width:100%; height:54px; line-height: 54px; border:0 none; font-size: 18px; color:#222; outline:none; }
+        .basic-form label { position:absolute; left:0%; bottom:0; width:100%; height:100%; border-bottom:1px solid #D6D6D6; text-align:left; pointer-events:none; }
+        .basic-form label:after { content:""; position:absolute; left:0; bottom:-1px; width:0; height:100%; border-bottom:1px solid #000; transition:all .2s ease; } /* 파란색 가로줄 */
+        .basic-form label span { position:absolute; left:0; bottom:8px; transition:all .2s ease; }
+        .basic-form input:focus + label span, 
+        .basic-form input:valid + label span { transform:translateY(-260%); font-size:12px; color:#999; }  /* input에 글을 입력하고 포커스가 지나간 상태에서 제어하려면 valid 선택자를 써야한다. */
+        /* 포커스 될 때 label span(name)이 위로 올라감 */
+        .basic-form input:focus + label::after,
+        .basic-form input:valid + label::after { width:100%; transform:translateX(0); } 
+        /* 포커스 될 때 파란색 가로줄이 생김 */
+        .basic-form input::placeholder {color: transparent;}
+        .basic-form input:focus::placeholder {color: #999;}
+
+        .basic-form .inp-del{display: none; padding:0; margin:0; font-size: 0; position: absolute; right: 0;top: 40%; width: 24px; height: 24px; background: url(./img/inp_del.png) no-repeat 0 0; background-size: cover;}
+        .basic-form input:valid ~ .inp-del{display: block;z-index: 999;}
+
+        .jumin{display: table; width: 100%;margin-top: 20px;}
+        .jumin .basic-form{margin-top: 0;}
+        .jumin div{display: table-cell;width: 40%;}
+        .jumin .secend{position: relative;padding-left: 10%; width: 50%;}
+        .jumin .secend:before{content: " - "; position: absolute;left: 8%;top: 50%;}
+
+        /* form */
+        .check-type1 label {position: relative;padding-left: 30px;}
+        .check-type1.solo label {position: relative;padding-left: 0px;}
+        .check-type1 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 14px; color: #222;}
+        .check-type1 label input[type=checkbox]:checked{background-position: 0 100%;}
+        .check-type1 label input[type=checkbox] {position: absolute;left: 0;width: 20px;height: 20px;background: url(./img/check.png) no-repeat 0 0;}
+
+        .check-type2 label {position: relative;padding-left: 30px;}
+        .check-type2.solo label {position: relative;padding-left: 0px;}
+        .check-type2 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 14px; color: #222;}
+        .check-type2 label input[type=checkbox]:checked{background-position: 0 100%;}
+        .check-type2 label input[type=checkbox] {position: absolute;left: 0;width: 20px;height: 20px;background: url(./img/check2.png) no-repeat 0 0;}
+
+        .radio-type1 label span {/* vertical-align: middle; */white-space: nowrap;display: block;padding-top:3px;}
+        .radio-type1 label{position: relative;padding-left: 30px;}
+        .radio-type1 label input[type=radio] {content: "";position: absolute;left: 0;top: 0;width: 20px;height: 20px;margin-right: 10px;background: url(./img/radio.png) no-repeat;}
+        .radio-type1 label {display: block;}
+        .radio-type1 label input[type=radio]:checked {background-position: 0 100%;}
+
+        .ip-wrap{overflow: hidden;}
+        .ip-wrap .radio-type1 {float: left;margin-right: 30px;padding-top: 15px;}
+        .ip-wrap strong {float: left;display: block;font-weight: bold;line-height: 48px;margin-right: 30px;}
+    </style>
+</head>
+<body>
+    <div id="wrap" style="padding: 21px;">
+
+        <section>
+            <h2>Input</h2>
+            <form>
+            <div class="basic-form">
+                <input type="text" class="form-text" id="user_name" autocomplete="off" required placeholder="내용을 입력해주세요">
+                <label for="user_name"><span>이름</span></label>
+                <a href="#" class="clear-text inp-del">취소</a>
+            </div>
+            <div class="jumin">
+                <div class="jumin_row first">
+                    <div class="basic-form">
+                        <input type="text" class="form-text" id="jumin1" autocomplete="off" required placeholder="입력해주세요">
+                        <label for="jumin1"><span>주민등록번호</span></label>
+                        <a href="#" class="clear-text inp-del">취소</a>
+                    </div>
+                </div>
+                <div class="jumin_row secend">
+                    <div class="basic-form">
+                        <input type="password" class="form-text" id="jumin2" title="주민등록번호 뒷자리" autocomplete="off" required placeholder="입력해주세요">
+                        <label for="jumin2"><span></span></label>
+                        <a href="#" class="clear-text inp-del">취소</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="basic-form">
+                <input type="text" class="form-text" id="user_date" autocomplete="off" required placeholder="내용을 입력해주세요">
+                <label for="user_date"><span>발급일자</span></label>
+                <a href="#" class="clear-text inp-del">취소</a>
+            </div>
+            </form>
+
+        </section>
+
+        <section>
+            <h2>Checkbox</h2>
+            <div>
+
+                <p class="check-type1 solo"><label><input type="checkbox" name="comp" class=""><span></span></label></p>
+                
+                <br><br>
+
+                <p class="check-type1">
+                  <label for="cheese">
+                    <input type="checkbox" name="comp" id="cheese">
+                    <span>Do you like cheese?</span>
+                  </label>
+                </p>
+
+                <br><br>
+
+                <p class="check-type2">
+                    <label for="cheese2">
+                      <input type="checkbox" name="comp" id="cheese2">
+                      <span>Do you like cheese?</span>
+                    </label>
+                  </p>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Radio</h2>
+            <div>
+                <div class="ip-wrap">
+                  <strong>구분</strong>
+                  <p class="radio-type1"><label><input type="radio" name="radio1" value="" checked="checked"><span>전체</span></label></p>
+                  <p class="radio-type1"><label><input type="radio" name="radio1" value="LTE"><span>LTE</span></label></p>
+                  <p class="radio-type1"><label><input type="radio" name="radio1" value="5G"><span>5G</span></label></p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Image radio button</h2>
+            <div class="img_radio_wrap">
+                <div class="img_radio">
+                    <div class="img_radio_thum"></div>
+                    <p>개인</p>
+                </div>
+                <div class="img_radio active">
+                    <div class="img_radio_thum"></div>
+                    <p>개인사업자</p>
+                </div>
+            </div>
+        </section> 
+
+        <section>
+            <h2>Agree</h2>
+            <div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h2>Popup</h2>
+            <div>
+                <a href="./popup.html">Link</a>
+            </div>
+        </section>
+    </div>
+    <script>
+        $(document).on("click", ".img_radio", function () {
+            $(this).siblings().removeClass('active');
+            if(!$(this).hasClass('active')){
+                $(this).addClass('active');
+            }
+            
+        });
+
+        /* clear text */
+        $('form').on('click','.form-text + label + .clear-text', function(e) {
+        e.preventDefault();
+        console.log('clear text.');
+        $(this).prev().prev('input').val('');
+        return false;
+        });
+
+        /* input without required attribute */
+        $('form').on('focus blur keyup','.form-text:not([required])', function(e) {
+        e.preventDefault();
+        if($(this).val().length) {
+            $(this).addClass('valid-text');
+        } else {
+            $(this).removeClass('valid-text');
+        }
+        });
+        $('form').on('click','.form-text:not([required]) + label + .clear-text', function(e) {
+        e.preventDefault();
+        console.log('remove valid-text.');
+        $(this).prev().prev('input').removeClass('valid-text');
+        return false;
+        });
+    </script>
+</body>
+</html>
