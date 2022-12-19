@@ -60,3 +60,36 @@ const pageChange = function(link){
     document.querySelector(`.${link}`).classList.add("active");
 }
 
+$(document).ready(function(){
+    $(document).on("click", ".img_radio", function () {
+        $(this).siblings().removeClass('active');
+        if(!$(this).hasClass('active')){
+            $(this).addClass('active');
+        }
+        
+    });
+
+    /* clear text */
+    $('form').on('click','.form-text + label + .clear-text', function(e) {
+    e.preventDefault();
+    console.log('clear text.');
+    $(this).prev().prev('input').val('');
+    return false;
+    });
+
+    /* input without required attribute */
+    $('form').on('focus blur keyup','.form-text:not([required])', function(e) {
+    e.preventDefault();
+    if($(this).val().length) {
+        $(this).addClass('valid-text');
+    } else {
+        $(this).removeClass('valid-text');
+    }
+    });
+    $('form').on('click','.form-text:not([required]) + label + .clear-text', function(e) {
+    e.preventDefault();
+    console.log('remove valid-text.');
+    $(this).prev().prev('input').removeClass('valid-text');
+    return false;
+    });
+})
