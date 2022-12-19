@@ -38,3 +38,10 @@ footer{position:fixed; left:50%; bottom:0; width:100%; max-width:390px; transfor
 .section__jointype-text{padding:40px 20px 0}
 .section__jointype-text img{width:121px;}
 .section__jointype-btn{padding:30px 20px 0; display:flex; align-items:center; justify-content:space-between; gap: 10px;}
+
+
+
+/* step1 */
+.pos__btm {position:fixed; max-width:390px!important; left:0; right:0; bottom:var(--fh); margin:0 auto}
+.shadow__top {box-shadow:0 -10px 36px rgba(0,0,0,0.15)}
+.br__top16 {border-radius:16px 16px 0 0}
