@@ -19,16 +19,18 @@
 </head>
 <body>
     <div id="wrap">
-        <section class="content__section section__type">
+
+        <section class="content__section section__type active">
             <header>
-                <img src="./img/type-head.png">
+                <img src="./img/head_billtype3_1.png">
             </header>
             <div class="container__wrap">
-                contents
-                <a href="#" class="link__item" data-link="section__billtype3-1">section__jointype 으로 링크</a>
+                초기 페이지 다음으로 이동
             </div>
             <footer>
-                <div class="foot__btn"><img src="./img/common-btn_next.png"></div>
+                <div class="foot__btn">
+                    <a href="#" class="link__item" data-link="section__billtype3-1"><img src="./img/img_billtype3_2_2.png"></a>
+                </div>
             </footer>
         </section>
 
@@ -54,6 +56,7 @@
                                 <select title="">
                                     <option>직접입력</option>
                                     <option>naver.com</option>
+                                    <option>gmail.com</option>
                                 </select>
                             </div>
                         </div>
@@ -61,7 +64,7 @@
                 </div>
                 </form>
                 <div class="next-wrap">
-                    <a href="#" class="link__item billtype3-2" data-link="section__billtype3-2"><span class="blind">section__billtype3-2 으로 링크</span></a>
+                    <a href="#" class="billtype3-2 disabled"><img src="./img/btn_billtype3_1_2.png" alt="수정하기"></a>
                     <img src="./img/img_billtype3_1_2.png">
                 </div>
             </div>
@@ -179,7 +182,7 @@
             </div>
             <footer>
                 <div class="foot__btn type2">
-                    <a href="#" class="link__item" data-link="section__billtype3-7"><img src="./img/btn_billtype3_6_1.png"></a>
+                    <a href="#" class="disabled-type2"><img src="./img/btn_billtype3_6_1.png"></a>
                     <a href="#" class="link__item" data-link="section__billtype3-7"><img src="./img/btn_billtype3_6_2.png"></a>
                 </div>
             </footer>
@@ -194,21 +197,17 @@
                     <img src="./img/img_billtype3_7_1.png">
                     <div class="img-ani-billtype3-7"><img src="./img/img_billtype3_7_2.png"></div>
                 </div>
+                <div class="card__item-toastpopup">
+                    <div class="container">
+                        <a href="#" class="toastpopup-close"><img src="./img/img_billtype3_8_1.png"></a>
+                    </div>
+                </div>
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__billtype3-8"><img src="./img/img_billtype3_2_2.png"></a>
+                    <a href="#" class="toastpopup"><img src="./img/img_billtype3_2_2.png"></a>
                 </div>
             </footer>
-        </section>
-
-        <section class="content__section section__billtype3-8">
-            <header>
-                <img src="./img/head_billtype3_5.png">
-            </header>
-            <div class="container__wrap">
-                
-            </div>
         </section>
 
     </div>
@@ -222,6 +221,50 @@
                 $('.float_billtype3_6').stop().fadeOut('fast');
             }
         });
+        
+        $(document).on("click", ".toastpopup", function (e) {
+            e.preventDefault();
+            $('.card__item-toastpopup').fadeIn('fast');
+            $('.card__item-toastpopup').addClass('active');
+            $('.card__item-toastpopup .container').css('transform','translateY(-100%)');
+            $('html').css('overflow','hidden');
+            
+        });
+
+        $(document).on("click", ".toastpopup-close", function (e) {
+            e.preventDefault();
+            $('.card__item-toastpopup').fadeOut(function(){
+                $('.card__item-toastpopup').css('display','none');
+            })
+            $('.card__item-toastpopup').removeClass('active');
+            $('.card__item-toastpopup .container').css('transform','translateY(0%)');
+            $('html').css('overflow','auto');
+        });
+
+        $(document).on("change",".section__billtype3-1 .email_row.secend select",function(){
+            $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
+        });
+
+        $(document).on("click", ".billtype3-2", function (e) {
+            if(!$(this).hasClass('disabled')){
+                $('.section__billtype3-1').removeClass('active');
+                $('.section__billtype3-2').addClass('active');
+            }else{
+                e.preventDefault();
+            }
+        });
+
+        $(document).on("click", ".disabled", ".disabled-type2", function (e) {
+            console.log('disabled')
+            e.preventDefault();
+        });
+
+        $("a").click(function(e){ 
+            if($(this).hasClass('disabled') || $(this).hasClass('disabled-type2')){
+                e.preventDefault(); 
+            }
+        }); 
+
     </script>
 </body>
 </html>

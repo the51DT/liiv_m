@@ -28,6 +28,9 @@ select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; ap
 *{box-sizing:border-box;}
 button{border: 0;outline: 0;background: none;padding: 0; margin: 0;}
 img{width: 100%;}
+input:disabled,
+.disabled{opacity: .4;}
+.disabled-type2{}
 
 .img_radio_wrap{display: flex;justify-content: center;width: 100%;}
 .img_radio_wrap.type2{flex-direction: column;}
@@ -56,7 +59,7 @@ img{width: 100%;}
 .basic-form input:valid + label::after { width:100%; transform:translateX(0); } 
 /* 포커스 될 때 파란색 가로줄이 생김 */
 .basic-form input::placeholder {color: transparent;}
-.basic-form input:focus::placeholder {color: #999;}
+/* .basic-form input:focus::placeholder {color: #999;} */ /* 2022/12/20 수정요청함 */
 
 .basic-form .inp-del{display: none; padding:0; margin:0; font-size: 0; position: absolute; right: 0;top: 40%; width: 2.4rem; height: 2.4rem; background: url(../img/inp_del.png) no-repeat 0 0; background-size: cover;}
 .basic-form input:valid ~ .inp-del{display: block;z-index: 999;}
@@ -117,7 +120,7 @@ img{width: 100%;}
 .foot__btn.type2{display: table;width: 100%;}
 .foot__btn.type2 a{display: table-cell;width: 50%;}
 
-.float_billtype3_6{display: none;position: fixed; top: 60px; z-index: 2; margin-left: -2.6rem; margin-right: -2.6rem; margin-top: -2.6rem;}
+.float_billtype3_6{display: none;position: fixed; top: 3rem; width: 41.2rem !important; max-width: 41.2rem; z-index: 2; left: 50%; transform:translateX(-50%);}
 
 .ani-billtype3-7{position: relative;}
 .ani-billtype3-7 .img-ani-billtype3-7{animation: aniBilltype37 2s linear infinite;position: absolute;left: 2rem;top: 25.6rem;width: 4.6rem;height: 4.6rem;;z-index: 2;}
@@ -130,6 +133,11 @@ img{width: 100%;}
         100% {transform: scale(1);
     }
 }
+
+/* 가입신청완료 토스트 팝업 */
+.card__item-toastpopup{display: none;position: fixed; left: 50%; top: 0; transform:translateX(-50%); width: 100%; max-width:390px; height: 100%; z-index:10; background:rgba(0,0,0,.8);}
+.card__item-toastpopup .container{position:fixed; left:0; bottom:-415px; box-sizing:border-box; transform:translateX(0%); transition: transform .2s ease}
+
 
 /** header ************/
 header{position:fixed; left:50%; top:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:9;}
