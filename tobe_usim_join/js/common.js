@@ -40,20 +40,20 @@ window.addEventListener("load", ()=>{
     })
 
     // close 버튼 팝업
-    // const btnClose = document.querySelector('header .btn__close');
-    // const leavepop = document.querySelector('#leave__pop');
-    // const dim = document.querySelector('.dim');
+    const btnClose = document.querySelector('header .btn__close');
+    const leavepop = document.querySelector('#leave__pop');
+    const dim = document.querySelector('.dim');
 
-    // btnClose.addEventListener("click", function(e){
-    //     e.preventDefault;
-    //     leavepop.classList.toggle("active");
-    //     dim.classList.toggle("active");
-    // });
-    // leavepop.addEventListener("click", function(e){
-    //     e.preventDefault;
-    //     leavepop.classList.toggle("active");
-    //     dim.classList.toggle("active");
-    // });
+    btnClose.addEventListener("click", function(e){
+        e.preventDefault;
+        leavepop.classList.toggle("active");
+        dim.classList.toggle("active");
+    });
+    leavepop.addEventListener("click", function(e){
+        e.preventDefault;
+        leavepop.classList.toggle("active");
+        dim.classList.toggle("active");
+    });
 })
 
 // 모바일 100vh 대응
@@ -128,6 +128,7 @@ $(document).ready(function(){
     $(this).prev().prev('input').removeClass('valid-text');
     return false;
     });
+
 
 
 
