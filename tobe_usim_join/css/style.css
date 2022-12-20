@@ -22,6 +22,11 @@ html,body{height:100%; font-family:'Spoqa Han Sans Neo', 'sans-serif'}
 }
 .mt0{margin-top: 0 !important;}
 
+input[type='text'],
+input[type='number'],
+input[type='password'],
+select{font-size:1.8rem; font-family:inherit;}
+
 input[type=checkbox],
 input[type=radio] {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
 select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
@@ -42,23 +47,36 @@ img{width: 100%;}
 .img_radio_thum{margin:3rem auto 1rem; width: 7.4rem; height: 7rem;}
 .img_radio.active .img_radio_thum{margin:2.9rem auto 1rem;}
 .img_radio_wrap.padding{padding-left: 2rem;padding-right: 2rem;}
+    /* type3 */
+    .img_radio_wrap.type3{flex-direction: column;}
+    .img_radio_wrap.type3 .img_radio{width: 100%; height:12rem; padding: 1.9rem 1.9rem 1.5rem; display:flex; align-items:center; justify-content:center;}
+    .img_radio_wrap.type3 .img_radio.active{padding: 1.8rem 1.8rem 1.4rem}
+    .img_radio_wrap.type3 .img_radio+.img_radio{margin-left: 0;margin-top: 3.1%;}
+    .img_radio_wrap.type3 .img_radio_thum{margin:0; flex:0 0 50%; height:auto;}
+    .img_radio_wrap.type3 p{flex:0 0 50%;}
+
+
 
 /* 스타일 */
 .basic-form {position:relative; margin-top: 1.6rem;} /* 기본세팅 */
-.basic-form input { box-sizing:border-box; padding:1.6rem 0 0;width:100%; height:5.4rem; line-height: 5.4rem; border:0 none; font-size: 1.8rem; color:#222; outline:none; }
+.basic-form input { box-sizing:border-box; padding:1.6rem 0 0;width:100%; height:5.4rem; line-height: 5.4rem; border:0 none; font-size: 1.8rem; color:#222; outline:none; transition:all .2s;}
 .basic-form label { position:absolute; left:0%; bottom:0; width:100%; height:100%; border-bottom:0.1rem solid #D6D6D6; text-align:left; pointer-events:none; }
-.basic-form label:after { content:""; position:absolute; left:0; bottom:-0.1rem; width:0; height:100%; border-bottom:0.1rem solid #000; transition:all .2s ease; } /* 파란색 가로줄 */
-.basic-form label span { position:absolute; left:0; bottom:0.8rem; transition:all .2s ease; }
+.basic-form label:after { content:""; position:absolute; left:0; bottom:-0.1rem; width:0; height:100%; border-bottom:0.1rem solid #000; transition:all .2s; } /* 파란색 가로줄 */
+.basic-form label span { position:absolute; left:0; bottom:0.8rem; font-size:1.8rem; color:#999; transition:all .2s ease; }
+
 .basic-form input:focus + label span, 
 .basic-form input:valid + label span { transform:translateY(-260%); font-size:1.2rem; color:#999; }  /* input에 글을 입력하고 포커스가 지나간 상태에서 제어하려면 valid 선택자를 써야한다. */
 /* 포커스 될 때 label span(name)이 위로 올라감 */
+.basic-form input:focus{padding-top:3.6rem; height:7.4rem;}
+.basic-form input:focus + label{border-bottom:0.2rem solid #222;}
+.basic-form input:focus + label span{font-size:1.4rem; font-weight:700; color:#000;}
 .basic-form input:focus + label::after,
 .basic-form input:valid + label::after { width:100%; transform:translateX(0); } 
 /* 포커스 될 때 파란색 가로줄이 생김 */
 .basic-form input::placeholder {color: transparent;}
 .basic-form input:focus::placeholder {color: #999;}
 
-.basic-form .inp-del{display: none; padding:0; margin:0; font-size: 0; position: absolute; right: 0;top: 40%; width: 2.4rem; height: 2.4rem; background: url(../img/inp_del.png) no-repeat 0 0; background-size: cover;}
+.basic-form .inp-del{display: none; padding:0; margin:0; font-size: 0; position: absolute; right: 0;bottom: 15%; width: 2rem; height: 2rem; background: url(../img/inp_del.png) no-repeat 0 0; background-size: cover;}
 .basic-form input:valid ~ .inp-del{display: block;z-index: 999;}
 .basic-form-wrap{padding-left: 2rem; padding-right: 2rem;}
 
@@ -85,24 +103,23 @@ img{width: 100%;}
 .check-type1 + .term__box {margin-top:1.5rem}
 
 .check-type1 {position:relative; padding:0.15rem 0}
-.check-type1 label {position: relative;padding-left: 3rem;}
+.check-type1 label {position: relative; display:block; padding-left: 3rem;}
 .check-type1.solo label {position: relative;padding-left: 0;}
 .check-type1 label span {vertical-align: middle;display: inline-block; font-size: 1.4rem; color: #222; line-height: 1.8rem; letter-spacing: -0.02rem;}
 .check-type1 label span strong {color:#FF2E00}
 .check-type1 label input[type=checkbox]:checked{background-position: 0 100%;}
 .check-type1 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;background: url(../img/check.png) no-repeat 0 0;}
 
-.check-type2 label {position: relative;padding-left: 3rem;}
-.check-type2.solo label {position: relative;padding-left: 0;}
+.check-type2 label {position: relative; padding-left: 3rem;}
+.check-type2.solo label {position: relative; padding-left: 0;}
 .check-type2 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 1.2rem; color: #222; line-height:1.5rem}
 .check-type2 label input[type=checkbox]:checked{background-position: 0 100%;}
 .check-type2 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;top: -0.25rem;background: url(../img/check2.png) no-repeat 0 0;}
 
-.radio-type1 label span {/* vertical-align: middle; */white-space: nowrap;display: block;padding-top:0.3rem;}
-.radio-type1 label{position: relative;padding-left: 3rem;}
-.radio-type1 label input[type=radio] {content: "";position: absolute;left: 0;top: 0;width: 2rem;height: 2rem;margin-right: 1rem;background: url(../img/radio.png) no-repeat;}
-.radio-type1 label {display: block;}
-.radio-type1 label input[type=radio]:checked {background-position: 0 100%;}
+.radio-type1 label span {/* vertical-align: middle; */white-space: nowrap; display: block; padding-top:0.3rem;}
+.radio-type1 label{position: relative;padding-left: 3rem; display: block;}
+.radio-type1 label input[type=radio] {position: absolute;left: 0;top: 0;width: 2rem;height: 2rem;margin-right: 1rem;background: url(../img/radio.png) 0 0 no-repeat; background-size:100% auto;}
+.radio-type1 label input[type=radio]:checked{background-position: 0 100%;}
 
 .ip-wrap{overflow: hidden;}
 .ip-wrap .radio-type1 {float: left;margin-right: 3rem;padding-top: 1.5rem;}
@@ -153,7 +170,9 @@ header{position:fixed; left:50%; top:0; width:100%; max-width:360px; transform:t
 
 /** footer ************/
 footer{position:fixed; left:50%; bottom:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:9;}
-.mobile footer{}
+footer .foot__help{text-align:right; padding:0 1rem 1rem}
+footer .foot__help img{width: 20rem;}
+
 
 
 .content__section{position:relative; min-height: var(--vh); display: none; box-sizing:border-box;}
@@ -169,12 +188,103 @@ footer{position:fixed; left:50%; bottom:0; width:100%; max-width:360px; transfor
 .shadow{box-shadow:0 0 1rem rgba(0,0,0, .05);}
 .radius{border-radius:1.2rem;}
 
+.w20{width:20%;}
+.w40{width:40%}
+.w45{width:45%}
+.w49{width:49%}
+.wfull{width:100%;}
+
 
 /** (가입자 유형 선택) section__jointype **************/
-.section__jointype{}
-.section__jointype-step{}
 .section__jointype-text{padding:4.2rem 0 0}
-.section__jointype-btn{padding:3.4rem 2.1rem 0; /*display:flex; align-items:center; justify-content:space-between; gap: 1rem;*/}
+.section__jointype-btn{padding:3.4rem 2.1rem 0;}
+
+
+/** (가입자 유형 선택) section__jointype2 **************/
+.radio__group{display:flex; flex-direction:column; gap:1rem; padding: 0 2rem;}
+.radio__item{border:0.1rem solid #E7E8EA; box-shadow:0 0 1rem rgba(0,0,0, 0.05); border-radius:1.2rem; box-sizing:border-box; padding:2rem 1.5rem 2rem 2rem;}
+.radio__item.active{border:0.2rem solid #FFD338; padding:1.9rem 1.4rem 1.9rem 1.9rem;}
+.radio__item.radio-type1 span{font-size:1.4rem; line-height: 1.45; padding:0; white-space:normal;}
+
+
+/** (가입자 유형 선택) section__jointype3 **************/
+.section__jointype3-text{padding:1rem 0 0;}
+.section__jointype3-btn{padding:3.4rem 2.0rem 0;}
+
+
+/** (가입자 유형 선택) section__jointype4 **************/
+form.jointype4{padding:0 2rem;}
+.section__jointype4 .basic-form{margin:0}
+
+.form__group{margin:0 2rem;}
+.form__item{position:relative; transition:padding .3s;}
+.form__item + .form__item{margin-top:3rem;}
+.form__item label{position:absolute; left:0; top:0; line-height:4rem; font-size:1.8rem; color:#999; transition:all .3s; z-index:1;}
+.form__item ::placeholder{color:transparent; transition:color .3s;}
+.form__item input[type='text'],
+.form__item input[type='number'],
+.form__item input[type='password']{position:relative; height:4rem; padding:0; margin:0; border-width:0 0 1px; border-style:solid; border-color:#D6D6D6; background:transparent; outline: none; z-index:2;}
+
+.form__item select {box-sizing:border-box; width:100%; height:4rem; line-height:4rem; border:0 none; border-bottom:1px solid #D6D6D6;background: url(../img/select-down.png) no-repeat 98% 50%; background-size: 1.2rem auto; outline:none;}
+
+.form__item-input.flex{display:flex; align-items:center; justify-content: space-between; font-size:1.8rem;}
+
+.form__item-hasbtn{position:relative;}
+.form__item-hasbtn .inp-del{position:absolute; right:0; bottom:1rem; display:none; text-indent:-9999px; width:2rem; height:2rem; background:url(../img/inp_del.png) no-repeat 0 0; background-size:100% auto;}
+.form__item-hasbtn.active .inp-del{display:block;}
+    /* active */
+.form__item.active{padding-top:2em;}
+.form__item.active ::placeholder{color:#999;}
+.form__item.active label{line-height:initial; font-size:1.2rem; color:#999;}
+/* focus */
+.form__item.focus{padding-top:4em;}
+.form__item.focus input{border-bottom:0.2rem solid #222;}
+.form__item.focus ::placeholder{color:#999;}
+.form__item.focus label{line-height:initial; font-size:1.4rem; color:#222; font-weight:700;}
+
+/** section__joinhelp *******************************/
+.section__joinhelp{position:absolute; left:0; top:0; width:100%; height: 100%; background:rgba(0,0,0, 0.6); z-index:999;}
+.section__joinhelp-wrap{position:absolute; left:0; bottom:0; width:100%; background:#fff; border-radius:1.2rem 1.2rem 0 0; padding:0 0 2rem; box-shadow:0 0 2rem rgba(0,0,0, 0.07)}
+.section__joinhelp-wrap .form__group{padding-top:3rem;}
+.section__joinhelp-wrap .check-type1{padding:0 2rem;}
+.section__joinhelp-btn{padding:0 2rem;}
+.section__joinhelp-close{position:absolute; right:2rem; top:2rem; width:2.3rem; height:2.3rem;}
+.section__joinhelp.open{display: block; animation:pageLoad .5s;}
+
+
+/** section__joinauth *********************/
+.section__joinauth-ttl{padding:1rem 0 0;}
+
+
+/** section__joininfo *********************/
+.section__joininfo-ttl{padding:1rem 0 0;}
+.section__joininfo .form__group{padding:3.4rem 0 0;}
+
+
+/** section__joininfo2 *************************/
+.section__joininfo2-ttl{padding:1rem 0 0;}
+.section__joininfo2 .form__group{padding:3.4rem 0 0;}
+
+
+/** section__joinaddress *************************/
+.section__joinaddress-ttl{padding:1rem 0 0;}
+.section__joinaddress .form__group{padding:3.4rem 0 0;}
+
+
+/** section__joinbill ****************************/
+.section__joinbill-ttl{padding: 1rem 0 0;}
+
+
+/** section__joinpay ****************************/
+.section__joinpay-ttl{padding:1rem 0 0;}
+.section__joinpay .check-type1{padding:1.5rem 0 0; margin:0 2rem;}
+.section__joinpay-btn{padding:2rem 2rem 0;}
+
+
+/** section__joincard ****************************/
+.section__joincard-card{padding:1rem 0 0;}
+.section__joincard-card .form__group{padding:4rem 0 0;}
+
 
 
 

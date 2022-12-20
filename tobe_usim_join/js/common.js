@@ -127,4 +127,72 @@ $(document).ready(function(){
     $(this).prev().prev('input').removeClass('valid-text');
     return false;
     });
+
+
+
+
+
+    // radio group active
+    $(document).find('.radio__group .radio__item input').on("change", function(){
+        const radioGroup = $(this).parents(".radio__group");
+        radioGroup.find(".radio__item").removeClass("active");
+        $(this).parents(".radio__item").addClass("active")
+    })
+
+    // form focus
+    $(document).find(".form__item input").on("focus", function(){
+        $(this).parents(".form__item").addClass("focus");
+    })
+    $(document).find(".form__item input").on("blur", function(){
+        $(this).parents(".form__item").removeClass("focus");
+        if( $(this).val().length > 1 ){
+            $(this).parents(".form__item").addClass("active");
+        } else {
+            $(this).parents(".form__item").removeClass("active");
+        }
+    })
+
+    // form active
+    $(document).find(".form__group input").on("propertychange change keyup keypress keydown paste input", function(){
+        if( $(this).val().length > 1 ){
+            $(this).parents(".form__item").addClass("active");
+            $(this).parents('.form__item-hasbtn').addClass("active");
+        } else {
+            $(this).parents(".form__item").removeClass("active");
+            $(this).parents('.form__item-hasbtn').removeClass("active");
+        }
+    })
+
+    // regNo text change 2******
+    $(document).find(".regNo2").on("input", function(){
+        const value = $(this).val();
+        let star ="";
+        if (value){
+            for(let i=1; i<value.length; i++){ star += "*" }
+            $(this).val($(this).val()[0] + star)
+        }
+    })
+
+    // clear-text
+    $(document).find(".form__group .clear-text").on("click", function(){
+        $(this).prev("input").val("");
+        $(this).parents(".form__item-hasbtn").removeClass("active");
+
+        let input = $(this).parents(".form__item").find("input");
+        let count = 0;
+
+        input.each((idx, item)=>{ if( $(item).val().length > 1 ){ count++ } })
+        if( count < 1 ){ $(this).parents(".form__item").removeClass("active"); }
+    })
+
+    // help open
+    $(document).find(".link__help").on("click", function(e){
+        e.preventDefault();
+        $(document).find(".section__joinhelp").addClass("open");
+    })
+    // help close
+    $(document).find(".link__help-close").on("click", function(e){
+        e.preventDefault();
+        $(document).find(".section__joinhelp").removeClass("open");
+    })
 })
