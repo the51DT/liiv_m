@@ -52,7 +52,7 @@ img{width: 100%;}
     .img_radio_wrap.type3 .img_radio{width: 100%; height:12rem; padding: 1.9rem 1.9rem 1.5rem; display:flex; align-items:center; justify-content:center;}
     .img_radio_wrap.type3 .img_radio.active{padding: 1.8rem 1.8rem 1.4rem}
     .img_radio_wrap.type3 .img_radio+.img_radio{margin-left: 0;margin-top: 3.1%;}
-    .img_radio_wrap.type3 .img_radio_thum{margin:0; flex:0 0 50%; height:auto;}
+    .img_radio_wrap.type3 .img_radio_thum{margin:0; flex:0 0 12.1rem; height:auto;}
     .img_radio_wrap.type3 p{flex:0 0 50%;}
 
 
@@ -197,6 +197,7 @@ footer .foot__help img{width: 20rem;}
 
 /** (가입자 유형 선택) section__jointype **************/
 .section__jointype-text{padding:4.2rem 0 0}
+.section__jointype .img_radio:nth-of-type(2) .img_radio_thum{width:8.2rem;}
 .section__jointype-btn{padding:3.4rem 2.1rem 0;}
 
 

@@ -93,6 +93,7 @@ const pageChange = function(link){
     section.forEach((item)=>{ item.classList.remove("active") })
     window.scrollTo(0, 0);
     document.querySelector(`.${link}`).classList.add("active");
+    containerPad();
 }
 
 $(document).ready(function(){
