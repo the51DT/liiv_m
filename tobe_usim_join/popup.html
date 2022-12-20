@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png">
+    <title>To-be usim/join | Liiv M(리브모바일)</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/common.js"></script>
+    <style>
+        *{box-sizing: border-box;}
+        h2{margin:20px 0}
+        @keyframes popup {
+            0%{opacity: 0; transform:translateY(3.125rem)}
+            100%{opacity: 1; transform:translateY(0)}
+        }
+
+        /* content__usim-card */
+        .content__usim-card{height:100vh; overflow-y: hidden;}
+        
+        .card__item-popup{position: fixed; left: 50%; top: 0; transform:translateX(-50%); width: 100%; max-width:390px; height: 100%; background:rgba(0,0,0,.8); z-index:10;}
+        .card__item-popup .container{position:fixed; left:0; top:50%; transform:translateY(-50%); box-sizing:border-box; padding:0 4%;}
+        .card__item-popup .container img{animation: popup .3s ease-in-out;}
+        .card__item-popup .container .link__area{position:absolute; bottom:0; width:46%; height:20%;}
+        .card__item-popup .container .link__area.prev{left:4%;}
+        .card__item-popup .container .link__area.next{right:4%;}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section class="content__section section__type active">
+            <header>
+                <img src="./img/type-head.png">
+            </header>
+            <div class="container__wrap" style="padding-top: 60px; padding-bottom: 66px;">
+                contents
+                <a href="#" class="link__item" data-link="content__usim-card">section__jointype 으로 링크</a>
+            </div>
+            <footer style="bottom: -13.2px;">
+                <div class="foot__btn"><img src="./img/common-btn_next.png"></div>
+            </footer>
+        </section>
+        
+        <section class="content__section content__usim-card">
+            <div class="content__wrap">
+                <img src="./img/popup_before.png" class="done__item-ttl">
+                <div class="card__item-popup">
+                    <div class="container">
+                        <img src="./img/card_popup.png">
+                        <a href="#" class="link__area prev link__item" data-link="section__type"></a>
+                        <a href="#" class="link__area next link__item" data-link="section__type"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
