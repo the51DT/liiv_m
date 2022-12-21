@@ -192,27 +192,27 @@ $(document).ready(function(){
         if( count < 1 ){ $(this).parents(".form__item").removeClass("active"); }
     })
 
-    // help toast open
-    $(document).find(".link__help").on("click", function(e){
-        e.preventDefault();
-        $(document).find(".section__joinhelp").addClass("open");
-    })
-    // help close
-    $(document).find(".link__help-close").on("click", function(e){
-        e.preventDefault();
-        if( $(this).hasClass("disabled") ){ return false }
-        $(document).find(".section__joinhelp").removeClass("open");
-    })
+    // // help toast open
+    // $(document).find(".link__help").on("click", function(e){
+    //     e.preventDefault();
+    //     $(document).find(".section__joinhelp").addClass("open");
+    // })
+    // // help close
+    // $(document).find(".link__help-close").on("click", function(e){
+    //     e.preventDefault();
+    //     if( $(this).hasClass("disabled") ){ return false }
+    //     $(document).find(".section__joinhelp").removeClass("open");
+    // })
 
     // leave popup open
-    $(document).find(".link__leave").on("click", function(e){
-        e.preventDefault();
-        $(document).find(".section__leave").addClass("open");
-    })
-    $(document).find(".link__leave-close").on("click", function(e){
-        e.preventDefault();
-        $(document).find(".section__leave").removeClass("open");
-    })
+    // $(document).find(".link__leave").on("click", function(e){
+    //     e.preventDefault();
+    //     $(document).find(".section__leave").addClass("open");
+    // })
+    // $(document).find(".link__leave-close").on("click", function(e){
+    //     e.preventDefault();
+    //     $(document).find(".section__leave").removeClass("open");
+    // })
 
 
 
@@ -322,19 +322,18 @@ $(document).ready(function(){
     })
 
     // disabled check - 가입상담 신청하세요
-    $(document).on("input click change", ".section__joinhelp form, .section__joinhelp .section__joinhelp-checkbox", function(){
-        $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").addClass("disabled");
+    // $(document).on("input click change", ".section__joinhelp form, .section__joinhelp .section__joinhelp-checkbox", function(){
+    //     $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").addClass("disabled");
 
-        const name = $(document).find(".section__joinhelp .section__joinhelp_name");
-        const name2 = $(document).find(".section__joinhelp .section__joinhelp_name2");
-        const checkbox = $(document).find(".section__joinhelp .section__joinhelp-checkbox");
+    //     const name = $(document).find(".section__joinhelp .section__joinhelp_name");
+    //     const name2 = $(document).find(".section__joinhelp .section__joinhelp_name2");
+    //     const checkbox = $(document).find(".section__joinhelp .section__joinhelp-checkbox");
 
-        if( name.val().length < 1 ){ return false }
-        if( name2.val().length < 1 ){ return false }
-        if( checkbox.is(":checked") ){
-            $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").removeClass("disabled");
-        }
-        
-    })
+    //     if( name.val().length < 1 ){ return false }
+    //     if( name2.val().length < 1 ){ return false }
+    //     if( checkbox.is(":checked") ){
+    //         $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").removeClass("disabled");
+    //     }
+    // })
 
 })
