@@ -206,6 +206,7 @@ input:disabled,
 .card__item-toastpopup{display: none;position: fixed; left: 50%; top: 0; transform:translateX(-50%); width: 100%; max-width:390px; height: 100%; z-index:12; background:rgba(0,0,0,.8);}
 .card__item-toastpopup .container{position:fixed; left:0; bottom:-415px; box-sizing:border-box; transform:translateX(0%); transition: transform .2s ease}
 
+.dropdown2{padding-top: 2rem;display: none;}
 
 
 /** header ************/
