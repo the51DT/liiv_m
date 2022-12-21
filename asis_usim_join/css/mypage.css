@@ -1,0 +1,1673 @@
+﻿@charset "utf-8";
+
+/*
+로그인/마이페이지
+Header : z-index:20, Left Slide Menu : z-index:30, mLayer/fLayer : z-index:100, Basic Layer:10 이하 사용
+Html Font Size : 62.5%(1rem) - margin, padding
+Basic Font Size : 15px(1.5rem);
+모바일 기준 : 360px
+*/
+
+/* 로그인 > 공통 */
+.login_wrap {position: relative; z-index: 2; width: 100vw; height: 100vh; padding: 0 1.6rem; background-color: #f2f4f6; overflow: auto;}
+.login_wrap h1 {margin: 2.5rem 0 1rem; font-size: 2rem; text-indent: 0.5rem;}
+.login_wrap h1 .login_logo {position: relative; display: block; width: 14.6rem; height: 6.1rem; margin: 5rem auto; font-size: 2rem;}
+.login_wrap h1 .login_logo::after {content: ""; position: absolute; display: inline-block; width: 100%; height: 100%; background: url(../img/logo_login.png) no-repeat 0 0; background-size: cover;}
+.login_wrap .ui_tabs .btn_area {margin: 0;}
+.login_option .btn_area {margin-bottom: 0;}
+.login_option .btn_area .btn_default {margin-top: 1rem; border-top-left-radius: 0; border-top-right-radius: 0; box-shadow: none;}
+.txt_count {font-size: 1.4rem; color: #717171;}
+.login_wrap .mo_box .label {display: block; margin: 2.6rem 0 1rem; font-size: 1.4rem; color: #717171;}
+.login_wrap .tc_box .mo_box .label:first-child {margin-top: 1.1rem;}
+.dimmed_responsive {position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);}
+
+/* 로그인 > 휴대폰번호/아이디 로그인 */
+.login_info {position: relative; display: table; width: 100%; font-size: 1.4rem; color: #717171;}
+.icon_character_login {position: relative; display: block; width: 3.1rem; height: 4.2rem; vertical-align: top}
+.icon_character_login::after {content:""; position: absolute; display: inline-block; left: 50%; top: 50%; width: 3.1rem; height: 4.2rem; margin-left: -1.55rem; margin-top: -2.1rem; -webkit-appearance:none; appearance:none; -webkit-background-color: transparent; background-color: transparent; background-image: url(../img/character_login.png); background-repeat: no-repeat; background-size: 3.1rem auto;}
+.login_info p {display: table-cell; width: 4.5rem; padding-left: 0.3rem; vertical-align: middle;}
+.login_info p+p {display: table-cell; padding-left: 0; width: calc(100% - 4.5rem); font-size: 1.4rem; color: #717171;}
+.login_info strong {font-size: 1.6rem; color: #111; font-weight: 400;}
+.login_option {margin: 2rem 0;  border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.login_option.default {margin-bottom: 0.5rem;}
+.login_option .ui_tabs .tabs_move {border: 0; border-top-left-radius: 1rem; border-top-right-radius: 1rem;}
+.login_option .mo_select_rdo {margin-top: 3rem;}
+.login_option .mo_select_rdo ul {display: table; width: 100%; margin-bottom: 2.5rem;}
+.login_option .mo_select_rdo li {display: table-cell; width: 50%;}
+.login_service {display: table; width: calc(100% + 2rem); margin: 1.5rem -1.5rem 3.2rem; text-align: center;}
+.login_service a:first-child::before {display: none;}
+.login_service a {position: relative; margin: 0; padding: 1rem 1rem;}
+.login_service a::before {content: "" ; position: absolute; left: 0; top: 50%; display: inline-block; width: 11px; height: 1rem; margin-top: -0.5rem; border-left: 1px solid #ccc;}
+
+.login_option.other {background-color: transparent; box-shadow: none;}
+.login_option.other h2 {position: relative;}
+.login_option.other h2 span {position: relative; z-index: 2; display: block; margin: 0 auto; width: 20rem; font-size: 1.6rem; text-align: center; background-color: #f2f4f6;}
+.login_option.other h2::before {content:""; position: absolute; z-index: 1; left: 0; top: 50%; width: 100%; height: 2px; margin-top: -1px; border-top: 1px solid #ccc}
+.login_option.other ul {display: flex;  width: calc(100% - 3rem); margin: 2.5rem 0 0 1.5rem }
+.login_option.other li {flex: 1; text-align: center;}
+.login_option.other li .btn_sns {display: inline-block;}
+.sp_sns::after {content: ""; display: inline-block; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_sns.png); background-repeat: no-repeat; background-size: auto 3.5rem;}
+.login_option.other li .icon_kbmobile,
+.login_option.other li .icon_kakao,
+.login_option.other li .icon_naver{position: relative; display: inline-block; width: 6rem; height: 6rem; border-radius: 100%; box-shadow: 0 0 20px rgba(13,72,127,0.1); background-color: #fff;}
+.login_option.other li .icon_kbmobile::after,
+.login_option.other li .icon_kakao::after,
+.login_option.other li .icon_naver::after {content:""; position: absolute; display: inline-block; left: 50%; top: 50%; width: 2.5rem; height: 2.5rem; margin-left: -1.25rem; margin-top: -1.25rem;} 
+.login_option.other li .icon_kbmobile::after {background-position: -0.3rem -0.3rem;} 
+.login_option.other li .icon_kakao::after {background-position: -3.8rem -0.3rem;} 
+.login_option.other li .icon_naver::after {background-position: -7.3rem -0.3rem;} 
+.login_option.other p {display: inline-block; width: 80%; margin-top: 0.5rem; font-size: 1.2rem; color: #717171;}
+.login_id_save {margin-top: 2rem;}
+.txt_help .btn_link {font-size: 1.2rem; padding: 0;}
+.txt_help .btn_link::after {bottom: 0.1rem;}
+
+/* 로그인 > 휴대폰번호/아이디 로그인 > 증빙서류제출 팝업 > 상담센터 */
+.opening_time {position: relative; margin: 1.2rem 0.9rem; border-radius: 1rem; border: 2px solid #fff; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.opening_time .title {position: relative; padding: 1.3rem 0; border-bottom: 1px solid #e3e5e6; text-align: center;}
+.icon_tel,
+.ic_time {position: relative; display: inline-block; width: 1.5rem; height: 1.6rem; margin-right: 0.5rem; vertical-align: middle;}
+.icon_tel::before,
+.ic_time::before {content:""; display: inline-block; left: 0; top: 0; width: 1.5rem; height: 1.6rem; background: url(../img/icon_tel.png) no-repeat 0 0; background-size: 1.5rem auto;}
+
+.opening_time .title span {vertical-align: middle;}
+.opening_time .time_info {margin: 1.5rem 2rem;}
+.opening_time dl {margin: 0.2rem 0;}
+.opening_time dt {float: left; padding: 0.2rem 0 0 0; font-size: 1.3rem; color: #717171; vertical-align: top;}
+.opening_time dd {float: left; padding: 0 0 0 2rem; vertical-align: top;}
+.opening_time dd em {font-size: 1.3rem; color: #717171;}
+.opening_time dl::after {content:""; display: block; clear: both; overflow: hidden;}
+
+/* 로그인 > 아이디찾기 */
+.mo_select_rdo.join_types {margin-top: 2rem;}
+.mo_select_rdo.join_types .title {font-size: 1.4rem; color: #717171; font-weight: 400;}
+.mo_select_rdo.join_types > ul {display: table; width: 100%; margin-top: 1.6rem;}
+.mo_select_rdo.join_types > ul li {display: table-cell; width: 50%;}
+.mo_select_rdo.join_types > ul li a {display: block; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.login_wrap .mo_select_rdo.join_types .select_cont {margin-top: 2.5rem; background-color: #f2f4f6;}
+
+/* 로그인 > 인증방법 */
+.cert_types {margin-top: 2.5rem;}
+.cert_types .titlebar .title {font-size: 1.4rem; color: #717171; font-weight: normal;}
+.cert_types .types_list {display: table; width: calc(100% + 0.8rem); margin-left: -0.4rem; margin-bottom: 1.5rem;}
+.cert_types .types_list li {display: table-cell; width: 33.33%; height: 100%;}
+.cert_types .types_list li:first-child {padding-left: 0;}
+.cert_types .types_list li a {display: block; height: 100%; margin: 0 0.4rem; padding: 2.5rem 0; border: 2px solid transparent; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff; color: #111; text-align: center;}
+.cert_types .types_list li a:focus {border: 2px solid #0db7e1;}
+.sp_cert::after {content: ""; display: inline-block; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_cert_method.png); background-repeat: no-repeat; background-size: 30rem auto;}
+.sp_cert.icon_kbmobile2,
+.sp_cert.icon_card,
+.sp_cert.icon_phone,
+.sp_cert.icon_ars {position: relative; display: inline-block; width: 5rem; height: 3.5rem;}
+.sp_cert.icon_kbmobile2::after,
+.sp_cert.icon_card::after,
+.sp_cert.icon_phone::after,
+.sp_cert.icon_ars::after {content:""; position: absolute; display: inline-block; left: 50%; top: 50%; width: 5rem; height: 3.5rem; margin-left: -2.5rem; margin-top: -1.75rem;}
+.sp_cert.icon_kbmobile2::after {background-position: -0.5rem -0.5rem;} 
+.sp_cert.icon_card::after {background-position: -6.5rem -0.5rem;} 
+.sp_cert.icon_phone::after {background-position: -12.5rem -0.5rem;}
+.sp_cert.icon_ars::after {background-position: -24.5rem -0.5rem;}
+
+.cert_types .types_list li a.disabled {cursor: default; pointer-events: none;}
+.cert_types .types_list li a.disabled p {color: #ccc;}
+.cert_types .types_list li a.disabled .sp_cert.icon_kbmobile2::after {background-position: -0.5rem -6.5rem;}
+.cert_types .types_list li a.disabled .sp_cert.icon_card::after {background-position: -6.5rem -6.5rem;}
+.cert_types .types_list li a.disabled .sp_cert.icon_phone::after {background-position: -18.5rem -0.5rem;}
+
+.cert_types .btn_cert_type {display: table; width: 100%; height: 8.4rem; margin: 0; padding: 2.2rem 0; border: 2px solid #0db7e1; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff; color: #111; text-align: center;}
+.cert_types .btn_cert_type i {text-align: right; vertical-align: middle;}
+.cert_types .btn_cert_type span {display: inline-block; height: 3.5rem; line-height: 3.5rem; vertical-align: middle;}
+.cert_types .btn_cert_type.disabled {border: 0;}
+.cert_types .btn_cert_type.disabled span {color: #ccc;}
+
+.disabled .sp_cert.icon_phone::after {background-position: -18.5rem -0.5rem;}
+.mo_select_rdo.cert_types.phone li:last-child {margin-bottom: 0.2rem;}
+.mo_select_rdo.cert_types.phone .btn_area {width: 100%; margin: 1.6rem 0 1.2rem;}
+.mo_select_rdo.cert_types.phone .btn_cert_type,
+.mo_select_rdo.cert_types.phone .btn_point {margin: 0;}
+a.btn.btn_point {width: 100%; background-color: #148fae !important;}
+
+/* 로그인 > 아이디찾기 > 결과 */
+.idfind_result dd .label {margin: 2.2rem 0 1.6rem;}
+.idfind_result {height: calc(100vh - 16.5rem); margin-top: 2rem;}
+.idfind_result dt {margin: 1.5rem 0;}
+.idfind_result dd {margin-bottom: 0.5rem;}
+
+/* 로그인 > (간편)비밀번호 재설정 */
+.pwd_reset {margin-top: 2.5rem;}
+.pwd_reset.type_first {margin-top: 5.3rem;}
+.opening_time.cs_center {margin: 5rem 0 0; text-align: center;}
+.opening_time.cs_center .time_info p {font-size: 1.4rem; color: #717171;}
+.opening_time.cs_center .time_info p strong {font-weight: normal; color: #111;}
+.opening_time.cs_center .time_info em {display: inline-block; width: 1px; height: 0.8rem; margin: 0 0.7rem 0.2rem; padding: 0; border-left: 1px solid #e3e5e6; vertical-align: middle; font-size: 0; line-height: 1;}
+.txt_login_help {margin-top: 1.2rem; color: #717171;}
+.txt_login_help + .cert_types {margin-top: 5.1rem;}
+
+/* 로그인 > 접수번호 셀프개통 */
+.selfopening {background-color: #fafcfd;}
+.selfopening .txt_help {margin: 0 2.4rem 0;}
+.selfopening .tabs_move li a {padding: 1.3rem 2rem 1.2rem; background-color: #fff;}
+.selfopening .tabs_move li.active a span {text-align: left;}
+.selfopening .tabs_move li.active a::before {display: none;}
+.selfopening .btn_area {margin-bottom: 3rem;}
+
+/* 로그아웃 */
+.logout_info {height: calc(100% - 9rem); font-size: 1.4rem; color: #717171; text-align: center;}
+.logout_info .txt_em {display: block; margin: 1rem 0; font-size: 2.1rem; font-weight: bold; color: #111;}
+.loginout_info+.btn_area {margin: 2rem 0;}
+.icon_logout {position: relative;display: inline-block; width: 12rem; height: 11.1rem; margin: 11.5rem auto 0;}
+.icon_logout::after {content: ""; position: absolute; left: 50%; top: 50%; display: inline-block; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/character_logout.png); background-repeat: no-repeat; background-size: 12rem auto; width: 100%; height: 100%; margin-left: -50%; margin-top: -50%}
+
+/* 로그인 > SNS 로그인 안내 팝업 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_sns {padding: 0.5rem 3rem 1.5rem;}
+.login_link {margin-top: 3rem;}
+.login_link .titlebar {margin-bottom: 0;}
+.login_link .link_sns {display: table; margin: 0 auto;}
+.login_link .link_sns li {display: table-cell; padding: 1.5rem;}
+.login_link .link_sns li a p {font-size: 1.2rem; color: #717171; text-align: center;}
+.sp_login_sns.icon_kakao,
+.sp_login_sns.icon_naver {position: relative; display: inline-block; width: 10rem; height: 10rem;}
+.sp_login_sns.icon_kakao::before, 
+.sp_login_sns.icon_naver::before {content: ""; position: absolute; left: 50%; top: 50%; display: inline-block; width: 10rem; height: 10rem; margin-left: -5rem; margin-top: -5rem; border-radius: 10rem; box-shadow: 0 0 0.4rem rgba(13,72,127,0.1);}
+.sp_login_sns.icon_kakao::before {background-color: #fae100;} 
+.sp_login_sns.icon_naver::before {background-color: #1ec800;} 
+.sp_login_sns.icon_kakao::after, 
+.sp_login_sns.icon_naver::after {content: ""; position: absolute; left: 50%; top: 50%; display: inline-block; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_login_sns.png); background-repeat: no-repeat; background-size: 12rem auto; width: 5rem; height: 5rem; margin-left: -2.5rem; margin-top: -2.5rem}
+.sp_login_sns.icon_kakao::after {background-position: -0.5rem -0.5rem;} 
+.sp_login_sns.icon_naver::after {background-position: -6.5rem -0.5rem;} 
+
+/* 유심가입 > 공통 */
+.join_wrap {margin: 0 auto; background-color: #f2f4f6; padding: 1.6rem 1.6rem 3rem;}
+.join_wrap h1.page_title {margin: 0.8rem 0 1.1rem;}
+.join_wrap h2.title {font-size: 1.8rem; color: #111; font-weight: 700;}
+.join_wrap h3.title {font-size: 1.6rem; color: #111; font-weight: 700;}
+.mo_select_rdo.type_rbox input:checked+.chk_item {border: 2px solid #0db7e1;}
+.mo_select_rdo.type_rbox ul>li label input {display: none;}
+.join_ready .opening_time {margin: 1.2rem 0;}
+.join_ready .opening_time .title {font-size: 1.5rem; color: #111;}
+.join_ready .opening_time dd p {display: inline-block;}
+
+/* 유심가입 > 가입안내 */
+.join_info > .header em {font-size: 1.6rem; color: #3bc3e5; font-weight: 700;}
+.join_info > .content {padding-right: 6.5rem; background: url(../img/bg_join_info.png) no-repeat right 6% top 25%; background-size: 10.2rem auto;}
+.join_info>.content .txt_dlz {display: table; padding: 0.3rem 0;}
+.join_info>.content .txt_dlz em {display: table-cell; width: 2rem; padding-top: 0.3rem; font-size: 1.2rem; color: #8aa3b1; font-weight: 700; vertical-align: top;}
+.join_info>.content .txt_dlz p {display: table-cell; width: calc(100% - 2rem);}
+
+/* 유심가입 > 가입안내 > 준비물 */
+.item_check {margin: 1.1rem 0 1.6rem; font-size: 1.4rem;}
+.join_ready {margin-top: 3.6rem;}
+.ready_chk > ul {display: flex; width: calc(100% + 0.8rem); margin-left: -0.4rem; margin-right: -0.4rem;}
+.ready_chk > ul > li {position: relative; flex: 1; margin: 0 0.4rem; padding: 1.5rem 1rem 6rem; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff; text-align: center;}
+.ready_chk li.checked::before {content: ""; position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; border-radius: 1rem; border: 2px solid #0db7e1; box-sizing: border-box;}
+.ready_chk li .btn_open_acc {position: absolute; left: 0; right: 0; bottom: 0; height: 4.1rem; border-top: 1px solid #e3e5e6; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #f7f9fa; font-size: 1.3rem; color: #098aaa; text-align: center; line-height: 3.9rem;} 
+.ready_chk .txt_help {display: inline-block;}
+.ready_chk .txt_help ul {margin: 0;}
+.ready_chk .chkbox em {font-size: 1.3rem; color: #717171;}
+.sp_ready::after {content: ""; display: inline-block; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_ready.png); background-repeat: no-repeat; background-size: 5rem auto;}
+.sp_ready.icon_idcard,.sp_ready.icon_kbacc,.sp_ready.icon_kbcert_card{position: relative; display: block; width: 5rem; height: 5rem; margin: 0 auto;}
+.sp_ready.icon_idcard::after,
+.sp_ready.icon_kbacc::after,
+.sp_ready.icon_kbcert_card::after {content:""; position: absolute; display: inline-block; left: 50%; top: 50%; width: 5rem; height: 5rem; margin-left: -2.5rem; margin-top: -2.5rem;}
+.sp_ready.icon_idcard::after {background-position: 0 0;} 
+.sp_ready.icon_kbacc::after {background-position: 0 -5rem;} 
+.sp_ready.icon_kbcert_card::after {background-position: 0 -10rem;} 
+.ready_chk_tooltip {display: table; width: 100%; margin: 0.8rem 0 0; padding: 1.4rem 2rem 1.1rem 1.1rem; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #f7f9fa;}
+.ready_chk_tooltip .chk_alert {display: table; margin: 0;}
+.ready_chk_tooltip .chk_alert ul {margin: 0 0 0 0.3rem;}
+.ready_chk_tooltip .chk_ok {display: table; font-size: 1.2rem;}
+.ready_chk_tooltip .chk_ok .txt_done {display: table-cell; padding-left: 0.4rem; padding-bottom: 0.1rem; vertical-align: middle}
+.sp_ready_chk {position: relative; display: table-cell; width: 5rem; height: 4rem;  vertical-align: middle;}
+.sp_ready_chk::after{content:""; position: absolute; left: 50%; top: 50%; display: block; width: 5rem; height: 4rem; margin-left: -2.5rem; margin-top: -2rem; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_ready_tooltip.png); background-repeat: no-repeat; background-size: 10rem auto;}
+.sp_ready_chk.icon_alert::after {background-position: 0 0;}
+.sp_ready_chk.icon_ok::after    {background-position: -5rem 0;}
+.ui_accordion.join_type {margin-top: 1.2rem; padding: 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #f7f9fa;}
+.ui_accordion.join_type ul {border-top: 0;}
+.ui_accordion.join_type li .btn.accordion_toggle {padding: 1.4rem 2rem;}
+.ui_accordion.join_type li:first-child a {border-top-left-radius: 1rem; border-top-right-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui_accordion.join_type li:last-child a {border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.ui_accordion.join_type li:last-child a.active { border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui_accordion.join_type li:last-child {border-bottom: 0;}
+.ui_accordion.join_type .accordion_cont {font-size: 1.4rem; color: #717171;}
+.ui_accordion.join_type li:last-child .accordion_cont {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.btn_area.cert_link .btn_point {height: 4rem; font-size: 1.4rem; line-height: 3.8rem;}
+.icon_kb_cert {display: inline-block; width: 1.6rem; height: 2.2rem; margin-right: 0.8rem; background: url(../img/icon_kb_cert.png) no-repeat 0 0; background-size: 1.6rem auto; vertical-align: middle}
+
+/* 유심가입 > 가입안내 > 이벤트 */
+.ui_accordion.event_info {display: block; margin-top: 4rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); border-radius: 1rem;}
+.ui_accordion.event_info .btn.accordion_toggle {border-radius: 1rem; font-weight: 700;}
+.ui_accordion.event_info .btn.accordion_toggle.active {border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui_accordion.event_info .detail {display: table; width: 100%; min-height: 8.5rem; padding: 0 2rem 0 9rem; background: url(../img/bg_event_free.png) left 0 top 0 no-repeat; background-size: 12rem auto;}
+.ui_accordion.event_info .detail ul {display: table-cell; padding-top: 2.5rem;}
+.ui_accordion.event_info .detail li {font-size: 1.3rem;}
+.ui_accordion.event_info .accordion_cont {padding: 0; background-color: #fff; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.ui_accordion.event_info .accordion_cont .txt_help {margin-left: 2rem; margin-right: 2rem;}
+.ui_accordion.event_info .txt_delivery {margin-top: 2rem; padding: 1.5rem 5.5rem 1.5rem 2rem; background: url(../img/bg_event_delivery.png) right 2rem top 50% no-repeat; background-size: 3.2rem auto; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; border-top: 1px solid #e3e5e6; background-color: #f7f9fa; font-size: 1.2rem; color: #717171;}
+.form_group.type_camera {margin-bottom: 0.8rem; }
+.form_group.type_camera input {padding-right: 4rem;}
+.form_group.type_camera .camera_call {position: absolute; right: 0; top: 0; display: inline-block; width: 4rem; height: 4rem;}
+.form_group.type_camera .camera_call input[type="file"] {display: none;}
+.form_group.type_camera .btn.btn_camera {display: inline-block; width: 4rem; height: 4rem; margin: 0; padding: 0; border: 0; background-color: transparent;}
+.icon_camera {position: relative; display: block; margin: 0 auto; width: 4rem; height: 4rem;}
+.icon_camera::after{content:""; position: absolute; left: 50%; top: 50%; display: block; width: 4rem; height: 4rem; margin-left: -2rem; margin-top: -2rem; -webkit-appearance: none; appearance:none; -webkit-background-color:transparent; background-color: transparent; background-image: url(../img/icon_camera.png); background-repeat: no-repeat; background-size: 4rem auto;}
+.dvDesktop .form_group.type_camera input {padding-right: 1.4rem;}
+.dvDesktop .form_group.type_camera .camera_call {display: none;}
+
+/* 유심가입 > 가입안내 > 가입유형 */
+.join_type {margin-top: 3.6rem;}
+.join_type .mo_select_rdo {width: calc(100% + 0.8rem); margin: 1.1rem -0.4rem 0;}
+.join_type .mo_select_rdo ul {display: flex;}
+.join_type .mo_select_rdo li {flex: 1; margin: 0.4rem;}
+.join_type label input {display: none;}
+.chk_item {display: block; min-height: 10.8rem; padding: 1.9rem; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff; text-align: center; border: 2px solid transparent;}
+.icon_join_num, .icon_join_new {position: relative; display: block; margin: 0 auto; width: 4rem; height: 4rem;}
+.sp_join_type::after{content:""; position: absolute; left: 50%; top: 50%; display: block; width: 4rem; height: 4rem; margin-left: -2rem; margin-top: -2rem; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color: transparent; background-image: url(../img/sp_join_type.png); background-repeat: no-repeat; background-size: 10rem auto;}
+.sp_join_type.icon_join_num::after {background-position: -0.5rem -0.5rem;}
+.sp_join_type.icon_join_new::after {background-position: -5.5rem -0.5rem;}
+.other {display: table; width: 100%; margin-top: 0.4rem; padding: 0 1.8rem; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.other p {display: table-cell; font-size: 1.4rem; color: #717171;}
+.other p+p {text-align: right;}
+.other p+p a {position: relative; display: inline-block; padding: 1.5rem 0; font-size: 1.3rem; color: #098aaa;}
+.other p+p a::before {content:""; position: absolute; bottom: 1.5rem; left: 0; display: block; width: 100%; border-bottom: 1px solid #098aaa;}
+
+/* 유심가입 > 가입안내 > 유심정보 */
+.join_usim {margin-top: 3.6rem;}
+.join_usim .btn_area {margin-top: 1.3rem; margin-bottom: 1rem;}
+.join_usim .mo_select_rdo {margin: 1.1rem 0 0;}
+.join_usim .mo_select_rdo > ul {display: flex; width: calc(100% + 0.8rem); margin-left: -0.4rem; margin-right: -0.4rem;}
+.join_usim .mo_select_rdo li {flex: 1; margin: 0.4rem;}
+.icon_join_usim_n, .icon_join_usim_y {position: relative; display: block; margin: 0 auto 0.3rem; width: 4rem; height: 4rem;}
+.sp_join_usim::after{content:""; position: absolute; left: 50%; top: 50%; display: block; width: 4rem; height: 4rem; margin-left: -2rem; margin-top: -2rem; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color: transparent; background-image: url(../img/sp_join_usim.png); background-repeat: no-repeat; background-size: 10rem auto;}
+.sp_join_usim.icon_join_usim_n::after {background-position: -0.5rem -0.5rem;}
+.sp_join_usim.icon_join_usim_y::after {background-position: -5.5rem -0.5rem;}
+.join_usim .mo_select_rdo .txt_help li {margin: 0;}
+.join_usim .mo_select_rdo + .txt_help {margin-bottom: 0;}
+.join_usim .txt_usim_help {margin: 0 0 1.1rem;}
+.dvDesktop .join_usim .txt_usim_help {display: none;}
+.join_usim .mo_select_rdo .select_cont .titlebar {display: table; width: 100%; margin: 2.1rem 0 0.7rem;}
+.join_usim .mo_select_rdo .select_cont .titlebar h3 {display: table-cell; font-size: 1.4rem; color: #717171; font-weight: 400; vertical-align: middle;}
+.join_usim .mo_select_rdo .select_cont .titlebar p {display: table-cell; text-align: right;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_serial_num {padding: 0;}
+.cs_box.type_serial_num .tabs_move li a {padding-top: 0.5rem;}
+.cs_box.type_serial_num .tabs_content {padding-bottom: 2.6rem; background-color: #f2f4f6;}
+.cs_box.type_serial_num .tabs_content .pic_info img {width: 100%;}
+.cs_box.type_serial_num .tabs_content .txt_help {margin: 0 2rem 0;}
+.cs_box.type_serial_num .tabs_content .txt_help ul {margin: 0;}
+.cs_box.type_serial_num .tabs_content .txt_help strong {display: block; font-size: 1.2rem; color: #098aaa; font-weight: 400;}
+.cs_box.type_serial_num .tabs_move li a span::after {content: "망";}
+.icon_join_usim, .icon_join_esim {position: relative; display: block; margin: 0 auto 0.3rem; width: 4rem; height: 4rem;}
+.sp_join_usim2::after{content:""; position: absolute; left: 50%; top: 50%; display: block; width: 4rem; height: 4rem; margin-left: -2rem; margin-top: -2rem; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color: transparent; background-image: url(../img/sp_join_usim2.png); background-repeat: no-repeat; background-size: 10rem auto;}
+.sp_join_usim2.icon_join_usim::after {background-position: -0.5rem -0.5rem;}
+.sp_join_usim2.icon_join_esim::after {background-position: -5.5rem -0.5rem;}
+
+/* 유심가입 > 가입안내 > 요금제 */
+.join_prod {margin-top: 3.5rem;}
+.join_prod > .titlebar {margin-bottom: 1.3rem;}
+.join_prod > .titlebar > p {display: table-cell; text-align: right; vertical-align: middle;}
+.join_prod h3 {font-size: 1.6rem;}
+.join_prod .mo_box {display: table; width: 100%;}
+.join_prod .mo_box .titlebar {margin-top: 0.5rem;}
+.join_prod .mo_box h3 {vertical-align: middle;}
+.join_prod .mo_box .titlebar > p {display: table-cell; text-align: right; vertical-align: middle;}
+.join_prod_default {border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #f7f9fa;}
+.join_prod_default .product_lsit {border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom: 1px solid #eeeff0; background-color: #fff;}
+.product_lsit .c_price.type_title dt {display: block; font-size: 1.2rem; color: #b8b8b8;}
+.product_lsit li.active {border: 2px solid #0db7e1; margin-top: -1px; border-radius: 1rem;}
+.join_prod_default .product_lsit > li::after {left: 0; right: 0;}
+.join_prod_default .product_lsit > li.active::after {display: none;}
+.join_prod_default .txt_help {margin: 0;}
+.join_prod_default .txt_help ul {margin: 1.7rem 2rem 0; padding-bottom: 1.6rem;}
+
+/* 유심가입 > 가입안내 > 요금제 검색 팝업 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.prod_search {padding: 0 0 2.2rem 0;}
+.prod_search {background-color: #f2f4f6;}
+.prod_search .product_lsit {padding: 0 2rem; box-shadow: none; background-color: transparent;}
+.prod_search .product_lsit li {margin: 0.8rem 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.prod_search .prod_sort.type_comm {padding: 0 2rem; border-bottom: 1px solid #e3e5e6; background-color: #fff;}
+.prod_search .prod_sort.type_comm ul {display: table; width: 100%;}
+.prod_search .prod_sort.type_comm li {display: table-cell; width: 25%; text-align: center;}
+.prod_search .prod_sort.type_comm li label input {display: none;}
+.prod_search .prod_sort.type_comm li label input+span {display: block; padding: 0.8rem 0; font-size: 1.6rem;} 
+.prod_search .prod_sort.type_comm li label input+span::after {content:"망";}
+.prod_search .prod_sort.type_comm li:first-child label input+span::after {content:"";}
+.prod_search .prod_sort.type_comm li label input:checked+span {display: block; border-bottom: 2px solid #3bc3e5; text-align: center; color: #111; font-weight: 700;}
+
+.prod_search .prod_sort.type_tech {padding: 2rem; width: calc(100% + 0.8rem); margin-left: -0.8rem; margin-right: -0.8rem; }
+.prod_search .prod_sort.type_tech ul {display: table; width: 100%; }
+.prod_search .prod_sort.type_tech li {display: table-cell; width: 33.33%; text-align: center;}
+.prod_search .prod_sort.type_tech li:last-child {width: 33.34%;}
+.prod_search .prod_sort.type_tech label input {display: none;}
+.prod_search .prod_sort.type_tech span {display: block; width: calc(100% - 0.8rem); height: 4rem; margin: 0 0.8rem; border-radius: 1rem; border: 2px solid transparent; background-color: #fff; line-height: 3.6rem; box-shadow: 0 0 1rem rgba(13,72,127,0.10); color: #111;}
+.prod_search .prod_sort.type_tech input:checked+span {border: 2px solid #0db7e1;}
+.prod_search .prod_sort.type_keyword {margin-bottom: 2.3rem; padding: 1.5rem 2rem; background-color: #fff;}
+.form_group .btn_prod_search {position: absolute; right: 0; top: 0; width: 4rem; height: 4rem;}
+.prod_search .prod_sort.type_pop {padding: 0 2rem 0.5rem; text-align: right;}
+.prod_search .prod_sort.type_pop label input {display: none;}
+.prod_search .product_lsit > li > a {padding-right: 2.2rem;}
+.prod_search .prod_sort.type_pop span {position: relative; display: inline-block; padding: 0.5rem 1.6rem 0.3rem 0; font-size: 1.3rem; color: #111;}
+.prod_search .prod_sort.type_pop span::after {content:""; position: absolute; right: 0; top: 50%; display: inline-block; width: 1rem; height: 0.8rem; margin-top: -0.4rem; background: url(../img/icon_sort_arrow_down.png) no-repeat 50% 50%; background-size: 1rem auto;}
+.prod_search .prod_sort.type_pop input:checked+span::after {background-image: url(../img/icon_sort_arrow_up.png)}
+.prod_search .prod_sort.type_pop label::after {content:""; display: inline-block; width: 1px; height: 0.8rem; margin-left: 0.6rem; margin-right: 0.6rem; border-left: 1px solid #c8cbcd; vertical-align: middle;}
+.prod_search .prod_sort.type_pop label:last-child::after {display: none;}
+.prod_search .product_lsit .c_price.type_title {position: relative; right: auto; top: auto; display: table; margin-top: 0.8rem;}
+.prod_search .product_lsit .c_price.type_title dt {display: table-cell; vertical-align: middle; color: #717171;}
+.prod_search .product_lsit .c_price.type_title dd {display: table-cell; padding-left: 0.5rem; padding-bottom: 0.3rem;}
+.prod_search .product_lsit > li > a {padding: 1.6rem 1.6rem 1.4rem  6.7rem;}
+.prod_search .product_lsit .c_tit .d_type {top: 3.7rem;}
+.prod_search .nodata {width: calc(100% - 4rem); margin: 0.7rem 2rem 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff; border: 0;}
+
+/* 유심가입 > 월 예상 납부금액 하단 고정 레이어 */
+.mo_box.monthly_pay {position: fixed; z-index: 10; left:0; right: 0; bottom: 0; padding: 2.9rem 1.6rem 1rem; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-shadow: 0 0 1.5rem rgba(13,72,127,0.15); background-color: #fff;}
+.mo_box.monthly_pay .btn_area {margin-top: 1.6rem;}
+.monthly_pay dl {display: table; width: 100%; padding-bottom: 1rem; border-bottom: 1px solid #e3e5e6;}
+
+.monthly_pay dt {display: table-cell; height: 100%; font-size: 1.4rem; text-align: left; white-space: nowrap;}
+.monthly_pay dd {display: table-cell; text-align: right;}
+.monthly_pay dd .txt_price strong {font-size: 2.4rem; font-weight: 700; color: #148fae; vertical-align:text-top; line-height: 1;}
+.monthly_pay dd .txt_price em {margin-right: 0.6rem; font-size: 1.2rem; color: #717171;}
+.monthly_pay dd .txt_help {margin: 1rem 0 0;}
+.monthly_pay dd .txt_help p {padding-left: 0;}
+.monthly_pay dd .txt_help p::before {position: relative; margin-right: 0.3rem;}
+.monthly_pay dl+dl {padding-bottom: 0.1rem; padding-top: 1.9rem; border-bottom: 0;}
+.monthly_pay dl+dl dt {width: 30%; font-size: 1.3rem; color: #717171;}
+.monthly_pay dl+dl dd .txt_price strong {font-size: 1.9rem; color: #111;}
+
+/* 유심가입 > 약관동의 */
+.mlayer_pop .layer_content .layer_body .cs_box.type_pdf {display: inline-block; width: 100%; height: calc(95vh - 14rem); padding: 0;}
+.mlayer_pop .layer_content .layer_body .cs_box.type_pdf iframe {width: 100%; height: 100%;}
+.btn_pdf_download {display: inline-block; width: 2.8rem; height: 2.8rem; border: 0; border-radius: 100%; background: #098aaa url(../img/icon_download.png) no-repeat 50% 50%; background-size: 3rem auto; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.2);}
+.join_wrap .chk_group {margin-top: 2.6rem;}
+.chk_all input+label {display: inline-block; width: 100%; padding: 1.4rem 2rem 1.5rem; background-color: #8aa3b1; border-radius: 1rem; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.2); color: #fff; font-weight: 700; text-align: center;}
+.chk_all input:checked+label {background-color: #098aaa;}
+.chk_all input+label span {font-weight: 700; color: rgba(255,255,255,0.8); line-height: 1;}
+.chk_all input+label em {font-size: 1.3rem; font-weight: 400; color: rgba(255,255,255,0.8); line-height: 1;}
+.chk_all input:checked+label span {color: #fff;}
+.chk_all input:checked+label em {color: #fff;}
+.chk_all input {display: none;}
+.icon_chk_all {display: inline-block; width: 2.5rem; height: 2.5rem; background: url(../img/icon_chk_all.png) no-repeat 50% 50%; background-size: 2.5rem auto; vertical-align: middle; opacity: 0.6;}
+.chk_all input:checked+label .icon_chk_all {opacity: 1;}
+.chk_group .txt_help {margin: 1.2rem 0 2.6rem;}
+.chk_group .type_agree > li {padding: 1.5rem 0 1rem;}
+.chk_group .type_agree > li:first-child .ui_chk .txt {color: #111; font-weight: 700;}
+.chk_group .type_agree > li > .ui_chk {margin-left: 2rem;}
+.chk_group .type_agree > li  li .ui_chk {padding-left: 0;}
+.chk_group .type_agree > li > ul {margin-top: 1.5rem; padding: 1rem 0; border-top: 1px solid #e3e5e6;}
+.chk_group .type_agree > li > ul > li {padding-left: 1.7rem; padding-right: 1.3rem;}
+.chk_group .type_agree > li > ul > li:first-child .ui_chk input {margin-left: 0.4rem;}
+.chk_group .type_agree > li > ul > li > input[type="checkbox"] {margin-top: 0.8rem;}
+.chk_group .type_agree > li > ul > li > .txt {position: relative; display: inline-block; width: calc(100% - 4.1rem); padding-top: 0.5rem; padding-bottom: 0.5rem; padding-right: 2rem; font-size: 1.4rem; vertical-align: top; color: #111;}
+.chk_group .type_agree > li > ul > li a.txt::after {content:""; display: block; position: absolute; right: 0.2rem; top: 0.9rem; width: 0.8rem; height: 1.4rem; background: url(../img/icon_arrow_right_s.png); background-size: 0.8rem auto;}
+.chk_group .type_agree > li > ul > li li {display: table; width: 100%; padding-left: 2.9rem;}
+.chk_group .type_agree > li > ul > li li .txt {position: relative; display: inline-block; width: calc(100% - 4.1rem); padding-top: 0.3rem; padding-bottom: 0.3rem; font-size: 1.3rem; color: #717171; vertical-align: top;}
+.chk_group .type_agree .checkbox input[type="checkbox"] {position: relative; width: 2.3rem; height: 2.3rem; margin: 0 0.4rem 0 0; -webkit-appearance: none; border: 0; border-radius: 0; background-color: transparent; background-image: url(../img/sp_form_agree.png); background-repeat: no-repeat; background-position: 0 0; background-size: 10rem auto; vertical-align: middle;}
+.chk_group .type_agree .checkbox input[type="checkbox"]:checked {background-position: -2.5rem 0;}
+.chk_group .type_agree .checkbox input[type="checkbox"]:disabled {background-position: -5rem 0;}
+.chk_group .type_agree .checkbox input[type="checkbox"]:checked:disabled {background-position: -7.5rem 0;}
+.chk_group .type_agree .checkbox input[type="checkbox"]::-ms-check {position: relative; width: 2.3rem; height: 2.3rem; margin: 0 8px 0 0; appearance: none; border: 0; border-radius: 0; background-color: transparent; background-repeat: no-repeat; background-position: -2.5rem 0; background-size: 10rem auto; vertical-align: middle; color: transparent;}
+.chk_group .type_agree .checkbox input[type="checkbox"]:checked::-ms-check {background-position: -15rem 0;}
+.chk_group .type_agree .checkbox input[type="checkbox"]:disabled::-ms-check {background-position: 0 0;}
+.chk_group .type_agree .checkbox li input[type="checkbox"] {margin-top: 0.5rem; vertical-align: top;}
+.chk_group .type_agree .checkbox li > ul input[type="checkbox"] {margin-top: 0.1rem;}
+.chk_group .type_agree .sub li {position: relative;}
+.chk_group .type_agree .checkbox .ui_chk input {margin-left: 0.4rem;}
+.chk_group .type_agree .sub ul li .txt::after {top: 50%; margin-top: -0.7rem;}
+.chk_group .type_agree .checkbox .sub ul li input+.txt::after {display: none;}
+.chk_group .checkbox {display: none;}
+.chk_group .checkbox.open {display: block;}
+.chk_group .sub ul {margin-top: 0.3rem; display: none;}
+.chk_group .sub.open ul {display: block;} 
+.chk_group + .btn_area {margin-top: 3rem; margin-bottom: 0;}
+.txt_required {color: #d32f2f;}
+.customer_agree {height: 13.3rem; overflow-y: auto; margin: 0.6rem 0.7rem 0 0; padding: 1.5rem; border-radius: 1rem; background-color: #ecf9ff; font-size: 1.2rem; color: #8aa3b1;}
+
+.join_wrap .chk_group .checkbox li {position: relative;}
+.join_wrap .chk_group .sub ul {margin-top: 0; margin-bottom: 0.2rem;}
+.join_wrap .chk_group .checkbox > li .ui_chk {display: table; width: 100%;}
+.join_wrap .chk_group .checkbox > li li .ui_chk {width: 100%;}
+.join_wrap .chk_group .checkbox > li .txt {margin-top: 0.5rem; margin-bottom: 0.5rem; display: inline-block; width: calc(100% - 6rem); font-size: 1.4rem; font-weight: 400 !important;}
+.join_wrap .chk_group .checkbox > li li .txt {margin-top: 0; margin-bottom: 0; font-size: 1.3rem; color: #717171 !important;}
+.join_wrap .chk_group .checkbox li .btn_pdf {position: absolute; right: 1rem; top: 0; width: 3.2rem; height: 3.2rem; background: url(../img/icon_arrow_right_s.png) no-repeat 50% 50%; background-size: 0.8rem auto; display: inline-block; font-size: 0; color: transparent;}
+.join_wrap .chk_group .checkbox > li input[type="checkbox"] {margin-top: 0.5rem;}
+.join_wrap .chk_group .checkbox > li  li input[type="checkbox"] {margin-top: 0.1rem;}
+
+
+/* 유심가입 > 가입신청 > 공통 */
+.back_white {margin: -1.6rem -1.6rem 0; padding: 1.6rem 0 2.9rem; background-color: #fff;}
+.join_wrap .back_white h1.page_title {margin-top: 0; margin-bottom: 0; padding: 1.6rem;}
+.join_wrap .ui_accordion.join_reg+.btn_area {margin-top: 3rem; margin-bottom: 3rem;}
+.join_reg {margin: 3rem 0 0;}
+.join_reg > ul {border: 0;}
+.join_reg > ul > li {margin: 1.2rem 0; border: 0; border-radius: 1rem; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.join_reg > ul > li .btn.accordion_toggle {height: 5rem; border-radius: 1rem; background-color: #f7f9fa; line-height: 1.4;}
+.join_reg > ul > li .btn.accordion_toggle.active {background-color: #fff; border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.join_reg > ul > li .btn.accordion_toggle strong {display: inline-block; color: #ccc; vertical-align: middle;}
+.join_reg > ul > li .btn.accordion_toggle.active strong {color: #111;}
+.join_reg > ul > li .btn.accordion_toggle .number {display: inline-block; margin-right: 0.4rem; width: 2.3rem; height: 2.3rem;}
+.join_reg > ul > li .btn.accordion_toggle .number em {display: inline-block; width: 2.3rem; height: 2.3rem; margin: 0; padding: 0; background-color: #e1e3e5; border-radius: 100%; font-size: 1.4rem; color: #ccc; text-align: center;}
+.join_reg > ul > li.reg_done .btn.accordion_toggle,
+.join_reg > ul > li.reg_ing .btn.accordion_toggle {background-color: #fff;}
+.join_reg > ul > li.reg_done .accordion_toggle strong, 
+.join_reg > ul >li.reg_done .accordion_toggle.active strong {color: #111;}
+.join_reg > ul > li.reg_done .btn.accordion_toggle em,
+.join_reg > ul > li.reg_ing .btn.accordion_toggle em {background-color: #739cac; color: #fff;}
+.join_reg > ul > li .btn.accordion_toggle.active em {background-color: #739cac; color: #fff;}
+.join_reg > ul > li .reg_status {margin-left: 0.4rem; font-size: 1.2rem; font-weight: 700;  vertical-align: middle;}
+.join_reg > ul > li.reg_done .reg_status {color: #ccc;}
+.join_reg > ul > li.reg_ing .reg_status {color: #098aaa;}
+.join_reg > ul > li.reg_done .number em,
+.join_reg > ul > li.reg_ing .number em {background-color: #739cac; color: #fff;}
+.join_reg > ul > li .accordion_cont {background-color: #fafcfd; padding: 0 2rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.join_reg .btn_area.temp_save {width: calc(100% + 4rem); margin: 0 -2rem;}
+.join_reg .btn_area.temp_save .btn.btn_temp_save {margin: 0; border: 0; border-top-left-radius: 0; border-top-right-radius: 0; background-color: #5d8291; color: #fff;}
+.join_reg .mo_box.type_select_detail_top {border-bottom: 0;}
+.mo_box.type_select_detail_top+.select_cont .mo_box.type_select_detail {margin-top: 0; border-top: 0;}
+.mo_box.type_select_detail_top {width: calc(100% + 4rem); margin: 3rem -2rem 0; padding: 0 2rem 2rem; border-top: 1px solid #dfe2e3; border-bottom: 1px solid #e3e5e6; background-color: #f7f9fa;}
+.join_reg .mo_box.type_select_detail {width: calc(100% + 4rem); margin: 0 -2rem 0; padding: 0 2rem 3rem; border-top: 0 solid #dfe2e3; border-bottom: 1px solid #e1e3e5; background-color: #f7f9fa;}
+.join_reg .mo_select_rdo.join_types.child .titlebar  {margin-top: 2.6rem;}
+.join_reg .mo_select_rdo.join_types.child .titlebar .stitle {font-size: 1.4rem; color: #717171; font-weight: 400;}
+.mo_box.type_select_detail .label {margin-top: 0; padding-top: 2.6rem;}
+.label_sub {margin: 1.2rem 0 0.6rem; font-size: 1.4rem; color: #717171;}
+.form_group.type_select_local  {width: 100%;}
+.form_group.type_select_local select {width: calc(50% - 1rem); margin-right: 1rem;}
+.form_group.type_select_local input {display: inline-block; width: 50%; vertical-align: top;}
+.label+.mo_box.address_search .label {margin-top: 0.1rem; margin-bottom: 0.6rem;}
+.join_wrap input[type="file"] {padding: 0.6rem 1.4rem;}
+.reg_box .mo_select_rdo.join_types {margin-top: 2.6rem;}
+.mo_box.ccenter_agree .titlebar {margin-top: 2.6rem;}
+.mo_box.ccenter_agree .label:first-child {margin-top: 2.3rem;}
+.mo_box.ccenter_agree .btn_area.type_ccenter {margin-top: 2rem; margin-bottom: 0;}
+.mo_box.ccenter_agree .txt_help, .mo_box.ccenter_agree .txt_help ul {margin-top: 1.2rem;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_join_counsel {padding: 0 3.2rem 2rem;}
+.mo_box.join_counsel label:first-child .label {margin-top: 0.6rem;}
+.mo_box.join_counsel .btn_area {margin-top: 3rem;}
+
+/* 유심가입 > 가입신청 > 진행 현황 */
+.join_reg_status {display: table; width: 100%; padding: 0.8rem 0.4rem;}
+.join_reg_status > .step {position: relative; display: table-cell; width: 33.33%; padding: 0 2rem; text-align: center; }
+.join_reg_status > .step::after {content :""; position: absolute; right: -17.5%; top: 1.6rem; display: inline-block; width: 35%; height: 0.5rem; border-radius: 0.25rem; background-color: #f2f4f6;}
+.join_reg_status > .step.done::after {background-color: #e0f8fe;}
+.join_reg_status > .step:last-child::after {display: none;}
+.join_reg_status > .step > .number  {display: block; width: 3.6rem; height: 3.6rem; margin: 0 auto; border-radius: 100%; background-color: #f2f4f6; font-size: 2rem; font-weight: 700; color: #ccc; line-height: 3.6rem; text-align: center;}
+.join_reg_status > .step > .title  {margin-top: 1.6rem; font-size: 1.5rem; font-weight: 700; color: #ccc; text-align: center;}
+.join_reg_status > .step > .write  { margin: 0.7rem auto 0; border-radius: 0.5rem; background-color: #f2f4f6; font-size: 1.2rem; color: #ccc; text-align: center; line-height: 2rem;}
+.join_reg_status > .step.ing > .number  {background-image: none; background-color: #fff; border: 2px solid #0db7e1; color: #0db7e1; line-height: 3.2rem;}
+.join_reg_status > .step.ing > .title  {color: #111;}
+.join_reg_status > .step.ing > .write  {color: #098aaa;}
+.join_reg_status > .step.done > .number  {background-image: linear-gradient(#afe5f3, #39c2e4); color: #fff;}
+.join_reg_status > .step.done > .title  {color: #111;}
+.join_reg_status > .step.done > .write  {background-color: #098aaa; color: #fff;}
+.done_rate .title {padding: 0.3rem 1.4rem; font-size: 1.2rem; color: #148fae;}
+.done_rate {margin-top: 0.6rem; padding-left: 1.6rem; padding-right: 1.5rem;}
+.done_rate .chart {display: table; width: 100%; height: 2.2rem;}
+.done_rate .chart .bar {display: table-cell; width: 33.3333%; height: 2.2rem; background-color: #e0f8fe; border: 1px solid #fff; border-left: 0; font-size: 1.2rem; color: rgba(9,138,170,0.4); line-height: 2rem; text-align: center;}
+.done_rate .chart .bar.done {background-color: #0db7e1; color: #fff;}
+.done_rate .chart .bar:first-child {border-top-left-radius: 2.2rem;  border-bottom-left-radius: 2.2rem;}
+.done_rate .chart .bar:last-child  {border-top-right-radius: 2.2rem; border-bottom-right-radius: 2.2rem;}
+
+/* 유심가입 > 가입신청(1단계) > 가입자 본인확인 */
+.reg_box.step01 .mo_select_rdo.join_type > .titlebar {margin-top: 2.6rem; margin-bottom: 1.6rem;}
+.reg_box.step01 .mo_select_rdo.join_type .select_cont {margin-top: 0; padding : 0 2rem 3rem; background-color: #f7f9fa;}
+.reg_box.step01 .btn_area.temp_save {margin-top: 3rem;}
+.local_ins .form_group select {margin-bottom: 0.6rem;}
+.reg_box.step01 .mo_select_rdo.join_type .mo_box.type_default {margin: 3rem -2rem 0; padding-left: 2rem; padding-right: 2rem; border-top: 1px solid #dfe2e3; background-color: #f7f9fa;}
+.reg_box.step01 .mo_select_rdo.join_type .select_cont {background-color: #f7f9fa;}
+.reg_box.step01 .join_reg .accordion_cont {background-color: #f7f9fa;}
+.reg_box.step01 .mo_select_rdo.join_type .select_cont .mo_box.type_select_detail {border: 0;}
+.reg_box.step01 .mo_select_rdo .form_group.type_2dv li {display: table-cell; width: 50%;}
+
+/* 유심가입 > 가입신청 > 가입자 본인확인 > 신분증 진위 확인 */
+.mo_select_rdo.join_type.bizperson .mo_box > .titlebar {margin-top: 2.6rem;}
+.mo_select_rdo.join_type.bizperson  .title {font-weight: 400; color: #717171;}
+.mo_select_rdo.join_type.foreigner {margin-top: 0;}
+.mo_select_rdo.join_type.foreigner .mo_box.type_select_detail {margin-top: 2rem; padding-bottom: 3rem; border-top: 1px solid #dfe2e3;}
+.mo_select_rdo.join_types.child .titlebar .title {margin-bottom: 1rem; font-size: 1.6rem; color: #111; font-weight: 700;}
+.doc_file .titlebar {margin-bottom: 0;}
+.txt_help.type_file {margin-top: 0;}
+.join_member.bizperson .detail_info,
+.join_member.bizperson .detail_tax {margin-top: 2.6rem;}
+.join_member.bizperson .detail_info .titlebar + label .label,
+.join_member.bizperson .detail_tax .titlebar + label .label{margin-top: 1.6rem;}
+.join_member.bizperson .detail_info h3.title,
+.join_member.bizperson .detail_tax h3.title {font-size: 1.4rem; color: #717171; font-weight: 400;}
+
+/* 유심가입 > 가입신청 > 신분증 촬영 */
+.id_pic {position: relative; width: calc(100% + 4rem); margin: 3rem -2rem -3.4rem; padding: 2.5rem 2.5rem 0; border-top: 1px solid #dfe2e3; background-color: #f7f9fa;}
+.id_pic::after {content:""; display: inline-block; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; border-bottom: 1px solid #f7f9fa;}
+.txt_id_pic_help {margin-bottom: 1.2rem; font-size: 1.4rem; color: #717171;}
+.id_pic label input {display: none;}
+.id_pic .btn.btn_camera {width: 100%; height: 4rem; border: 2px solid #0db7e1; box-shadow: 0 0 1rem rgba(13,72,127,0.10);}
+.id_pic .btn.btn_camera .icon_camera {display: inline-block; margin: 0; height: 3.6rem;}
+.id_pic .btn.btn_camera span {display: inline-block; height: 3.6rem; margin-right: 0.8rem; font-size: 1.4rem; line-height: 3.6rem; vertical-align: top;}
+.dvDesktop .id_pic {display: none;}
+
+.cert_card .id_pic {position: relative; width: 100%; margin: 1.8rem 0 1rem; padding: 0; border-top: 0; background-color: transparent;}
+.cert_card .id_pic::after {display: none;}
+.cert_card .tabs_cont .id_pic .txt_help {margin-top: 0; margin-bottom: 1.2rem;}
+
+/* 유심가입 > 가입신청 > 가입자 본인확인 > 가입자 유형 선택 팝업 */
+.mlayer_pop .layer_body .cs_box.type_jointype_select {padding: 3rem 1.6rem; background-color: #f2f4f6;}
+.cs_box.type_jointype_select li {position: relative; position: relative; height: 5.3rem; margin-top: 1.2rem;}
+.cs_box.type_jointype_select li:last-child {height: 8rem;}
+.cs_box.type_jointype_select li:first-child {margin-top: 0;}
+.cs_box.type_jointype_select input {position: absolute; z-index: 2; left: 1.5rem; top: 1.7rem;}
+.cs_box.type_jointype_select label {position: absolute; z-index: 1; display: inline-block; width: 100%; padding: 1.5rem 0 1.5rem 4.5rem; background-color: #fff; border: 2px solid transparent; border-radius: 1rem; box-shadow: 0 0 0.4rem rgba(13,72,127,0.15); letter-spacing: -0.095rem;}
+.cs_box.type_jointype_select label span {color: #717171;}
+.cs_box.type_jointype_select input:checked+label {border: 2px solid #0db7e1;}
+.cs_box.type_jointype_select input:checked+label span {color: #111;}
+.mo_select_rdo.join_types ul.form_group.type_foreigner {margin-top: -0.4rem;}
+.mo_select_rdo.join_types.foreigner {margin-top: 2.6rem;}
+.mo_select_rdo.join_types.foreigner .form_group.type_foreigner li {display: inline-block; width: 50%; margin: 1rem 0;}
+.mo_select_rdo.join_types.foreigner .mo_box label:first-child .label {margin-top: 1.6rem;}
+
+/* 유심가입 > 가입신청 > 가입 내용 */
+.reg_box.step2 {margin-left: -2rem; margin-right: -2rem;}
+.reg_box.step2 .prod_item {position: relative; background-color: #fff;}
+.reg_box.step2 .prod_item::before {content:""; position: absolute; left: 0; right: 0; top: -1px; display: block; width: calc(100% + 4rem); height: 1px; border-top: 1px solid #ebedef;}
+.reg_box.step2 .prod_item::after {content:""; position: absolute; left: 0; right: 0; bottom: -1px; display: block; width: calc(100% + 4rem); height: 1px; border-top: 1px solid #e1e3e5;}
+.reg_box.step2 .prod_types {padding: 1.5rem 2rem; background-color: #fafcfd;}
+.reg_box.step2 .prod_types dl {display: table; width: 100%; padding: 1rem 0;} 
+.reg_box.step2 .prod_types dt {display: table-cell; font-size: 1.4rem; color: #717171;} 
+.reg_box.step2 .prod_types dd {display: table-cell; font-size: 1.6rem; text-align: right;} 
+.reg_box.step2 > .txt_help {margin: 0; padding: 0.7rem 2rem; background-color: #f7f9fa; border-bottom: 1px solid #ebedef;}
+.reg_box.step2 .product_lsit {border-top: 1px solid #e1e3e5; border-bottom: 1px solid #e9ebec;}
+.reg_box.step2 .temp_save {width: 100%; margin: 0;}
+.reg_box.step2 .user_guide {margin-top: 1.7rem; margin-bottom: 2.3rem;}
+.reg_box.step2 .user_guide .btn.accordion_toggle {height: 4rem; padding: 0.9rem 1.5rem; font-size: 1.5rem; background-position: right 1.5rem top 50%;}
+.reg_box.step2 .product_lsit .c_price.type_title dt {color: #717171;}
+
+/* 유심가입 > 가입신청 > 가입내용 > 특화요금제 대상 확인 */
+.target_check {padding: 2rem 2rem 0; background-color: #fafcfd;}
+.target_check .title_bar h3 {font-size: 1.6rem;}
+.target_check .prod {display: table; width: 100%; padding: 2rem 0 1.3rem;}
+.target_check .prod dt {display: table-cell; font-size: 1.4rem; color: #717171;}
+.target_check .prod dd {display: table-cell; text-align: right; font-size: 1.6rem;}
+.target_check .btn_area {width: 100%; margin: 3rem 0 2rem 0;}
+.target_check .ui_chk+.ui_chk {margin: 1.2rem 0 0.6rem;}
+.target_check .prod_info.child .btn_area {margin-top: 1rem;}
+.target_check .prod_info.child .form_group {margin-top: 1.7rem; margin-bottom: 1.2rem; padding: 1.5rem 3rem; background-color: #f7f9fa; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.target_check .prod_info.child .form_group .ui_chk {display: table-cell; width: 50%;}
+.target_check .prod_info.child  .btn_area + p {color: #111;}
+.target_check .btn_area.type_nara {margin-top: 1.6rem;}
+.target_check .prod_info.nara_sarang .btn.btn_default {margin: 0; background-color: #148fae;}
+.btn_agree {position: relative; width: 100%; height: 4rem; padding: 0 2rem; border: 0; border-radius: 1rem; background-color: #8aa3b1; text-align: left; box-shadow: 0.25rem 0.25rem 0.5rem rgba(13,72,127,0.2);}
+.btn_agree::after {content: ""; position: absolute; right: 1.5rem; top: 50%; width: 0.8rem; height: 1.4rem; margin-top: -0.7rem; background: url(../img/icon_arrow_right_w.png) no-repeat 0 0; background-size: 0.8rem auto;}
+.btn_agree strong {color: #fff; line-height: 3.8rem;}
+.btn_agree em {font-size: 1.3rem; color: #fff;}
+.btn_agree em.txt_required {color: #ffeb08;}
+
+/* 유심가입 > 가입신청 > 가입내용 > 워치 요금제 추가정보 입력 */
+.reg_box.step2 .prod_watch {padding: 0 2rem;}
+.reg_box.step2 .prod_watch .titlebar {margin-bottom: 1.6rem;}
+.reg_box.step2 .prod_watch .pw_title {margin: 2.6rem 0 2.2rem; font-size: 1.6rem; font-weight: 700; color: #111;}
+.reg_box.step2 .prod_watch h3.title {font-size: 1.4rem; font-weight: 400; color: #717171;}
+.reg_box.step2 .prod_watch .mo_box.type_select_detail_top {margin-top: 3rem; padding-bottom: 1.6rem; border-bottom: 1px solid #ebedef;}
+.reg_box.step2 .prod_watch .mo_box.type_select > .label:first-child {margin-top: 0;}
+.reg_box.step2 .form_group.type_2dv > label {width: 55%;}
+.reg_box.step2 .form_group.type_2dv > label+label {width: 45%;}
+.reg_box.step2 .mobile_conn {margin-top: 2.6rem;}
+.reg_box.step2 .mobile_conn .titlebar {margin-bottom: 1.6rem;}
+.reg_box.step2 .mobile_conn .txt_help {margin-top: 1.7rem;}
+.reg_box.step2 .mobile_info {margin: 2.3rem 0 2.6rem;}
+.reg_box.step2 .mobile_info h3.title {font-size: 1.6rem; color: #111; font-weight: 700;}
+.mobile_info .detail{display: table;  width: calc(100% + 4rem); margin: 2.4rem -2rem 0; padding: 2.5rem 2rem; border-top: 1px solid #e1e3e5; border-bottom: 1px solid #e3e5e6; background-color: #fff;}
+.mobile_info .detail dt {display: table-cell; font-size: 1.6rem; font-weight: 700;}
+.mobile_info .detail dd {display: table-cell; text-align: right; vertical-align: middle;}
+.mobile_info .detail dd .comm_type {position: relative; margin-right: 0.2rem; font-size: 1.4rem; color: #717171;}
+.mobile_info .detail dd .comm_type::after {content: "망";}
+.mobile_info .detail dd .comm_number {position: relative; padding-left: 0.6rem; font-size: 1.4rem;}
+.mobile_info .detail dd .comm_number::before {content: ""; position: absolute; left: 0; top: 50%; display: inline-block; width: 1px; height: 0.8rem; margin-top: -0.4rem; border-left: 1px solid #ced2d6;}
+.mobile_info .form_group.type_2dv {padding: 0.6rem 0;}
+
+/* 유심가입 > 가입신청 > 가입내용 > OCR 촬영 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_ocr {padding: 2rem 1.6rem; background-color: #f2f4f6;}
+.ocr_area .pic {position: relative; display: block; width: 100%; min-height: 18rem; border-radius: 1rem; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15); background: #fff url(../img/bg_pic.png) no-repeat 50% 50%; background-size: auto 18rem;}
+.ocr_area .pic p {position: absolute; left: 0; top: 50%; display: block; width: 100%; height: 5rem; margin-top: -2.5rem; font-size: 1.6rem; color: #717171; text-align: center; line-height: 5rem;}
+.ocr_area .pic img {width: 100%; border-radius: 1rem}
+.cs_box.type_ocr .ocr_help {margin: 1.6rem 0 2rem; color: #717171;}
+.ocr_type {display: table; width: 100%; height: 4rem; border-bottom: 1px solid #e6e8e9;}
+.ocr_type dt {display: table-cell; padding: 1.1rem 0; font-size: 1.4rem; color: #717171; }
+.ocr_type dd {display: table-cell; text-align: right;}
+.btn_area .form_group.type_camera {display: inline-block; width: calc(50%); height: 4rem; margin-bottom: 0; line-height: 3.8rem;}
+.btn_area .form_group.type_camera .camera_call {width: 100%;}
+.dvDesktop .btn_area .form_group.type_camera .camera_call {display: block;}
+.btn_area .form_group.type_camera .btn.btn_camera {flex: none; width: 100%; text-align: center;}
+.mlayer_pop .layer_footer .btn_area > .form_group + .btn {position:relative;}
+.mlayer_pop .layer_footer .btn_area > .form_group + .btn:before {display:inline-block; content:''; width:1px; height:2rem; background:#e3e5e6; position:absolute; top:50%; left:0; transform:translateY(-50%);}
+.mlayer_pop .layer_footer .btn_area > .btn.btn_default {color:#0db7e1;}
+
+/* 우김가입 > 가입신청 > 주소 불러오기 */
+.join_reg .reg_box .form_group.type_address > input[type="text"] {padding-right:8.3rem;}
+.join_reg .reg_box .form_group.type_address > a.btn_search {border-radius:0; width:auto; line-height:1; padding:0 1.2rem 0 0.5rem;}
+.join_reg .reg_box .form_group.type_address > a.btn_search > span {display:inline-block; vertical-align:middle; line-height:4rem; color:#717171; letter-spacing:-0.05em; font-size:1.4rem;}
+.join_reg .reg_box .form_group.type_idcheck .btn_idcheck {padding-right:1.2rem; font-size:1.4rem; letter-spacing:-0.05em}
+
+
+/* 유심가입 > 가입신청 > 가입내용 > 번호이동 동의 */
+.number_agree .label {display: block; margin: 2.6rem 0 1rem;}
+.number_agree {margin: 2rem 2rem 0;}
+.number_agree .titlebar {margin-top: 2.6rem; margin-bottom: 0;}
+.number_agree .titlebar + label .label {margin-top: 1.6rem;}
+.ui_accordion.using_company {padding-top: 0.2rem;}
+.ui_accordion.using_company.active {width: calc(100% + 4rem); margin-left: -2rem; margin-right: -2rem; margin-top: 0.8rem; border-radius: 1rem; border: 2px solid #3bc3e5; background-color: #fff; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.ui_accordion.using_company .info_group {position: relative; display: table; width: 100%;}
+.ui_accordion.using_company .info_group .txt {position: absolute; left: 0; font-size: 1.4rem; color: #717171; font-weight: 400; line-height: 5rem;}
+.ui_accordion.using_company .info_group > p {display: table; width: 100%;}
+.ui_accordion.using_company .info_group  .txt {position: relative; display: inline-block; padding-right: 0.4rem; text-align: left;}
+.ui_accordion.using_company .info_group .uc_value {display: table-cell; padding-right: 0.8rem; text-align: right; line-height: 5rem;}
+.ui_accordion.using_company .btn.accordion_toggle {position: relative; display: table-cell; margin: 0; padding: 1.3rem 0; width: 2.4rem; height: 2.4rem; background-color: transparent !important; background-image: none;}
+.ui_accordion.using_company .btn.accordion_toggle::after {content:""; position: absolute; right: 0; width: 2.4rem; height: 2.4rem; border-radius: 100%; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15); background: url(../img/icon_arrow_down_w.png) no-repeat 50% 50%; background-color: #8aa3b1; background-size: 1rem auto;}
+.join_reg > ul > li .ui_accordion.using_company .btn.accordion_toggle em {background-color: transparent; font-size: 1.6rem; color: #111; text-align: right;}
+.ui_accordion.using_company.active .info_group .txt {padding-left: 2rem;}
+.ui_accordion.using_company .accordion_cont {padding: 0; border-top: 0;}
+.ui_accordion.using_company .uc_list {padding: 1.2rem 2rem; background-color: #eff4f7;}
+.ui_accordion.using_company .uc_list:nth-child(even) {border-top: 1px solid #e3e5e6; border-bottom: 1px solid #e3e5e6; background-color: #fff;}
+.ui_accordion.using_company .uc_list:last-child {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.ui_accordion.using_company .uc_list > .label {margin:0 0 0.5rem;}
+.ui_accordion.using_company.active .btn.accordion_toggle.active::after {transform: rotate(180deg);}
+.ui_accordion.using_company.active {margin-bottom:2rem;}
+.join_reg > ul > li .ui_accordion.using_company.active {padding-top: 0;}
+.ui_accordion.using_company.active .info_group > p {padding-right: 2rem;}
+.number_agree .ui_accordion.using_company + label .label {margin-top: 0.7rem;}
+.reg_box.step2 .number_agree .txt_help.type_doc {margin-top: 0; padding-top: 0.2rem; border-top:0; background-color: transparent;}
+.reg_box.step2 .number_agree .txt_help.type_doc > ul > li {margin-top: 1.8rem;}
+.reg_box.step2 .number_agree .txt_help.type_doc > ul > li:first-child {margin-top: 0;}
+.reg_box.step2 .number_agree .txt_help.type_doc > ul ol {margin-top: 0;}
+
+/* 유심가입 > 가입신청 > 가입내용 > 자동개통 동의 */
+.new_agree {margin-top: 2.6rem; padding: 0 2rem 1rem; background-color: #fafcfd;}
+.new_agree .btn_area {margin-top: 3rem;}
+.reg_box.step2 .txt_help.type_doc {margin: 2.6rem -2rem 1.9rem; padding: 1rem 2rem 1rem; border-top: 1px solid #e9ebec; border-bottom: 1px solid #ebedef; background-color: #f7f9fa;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 */
+.reg_box.step3 btn_area.temp_save {width: 100%; margin: 0;}
+.form_group.type_idcheck input {padding-right: 10rem;}
+.form_group.type_idcheck .btn_idcheck {position: absolute; right: 1px; top: 1px; bottom: 1px; height: 3.8rem; border-radius: 0.5rem;  border-top-left-radius: 0; border-bottom-left-radius: 0; padding: 0 1.5rem 0 1.3rem; border: 0; background-color: #fff; color: #717171; line-height: 3.8rem;}
+.form_group.type_idcheck input:focus+ .btn_idcheck {right: 2px; top: 2px; height: 3.6rem; padding: 0 1.3rem 0 1.3rem; line-height: 3.6rem; }
+.form_group.type_idcheck input:focus+ .btn.btn_idcheck .icon_search {margin-top: 0.85rem;}
+.form_group.type_address .btn_search,
+.form_group.type_search_pop .btn_search{position: absolute; right: 0; top: 0; width: 4rem; height: 4rem; padding: 0; background-color: transparent; border: 0;}
+.btn.btn_search .icon_search,
+.btn.btn_idcheck .icon_search {margin-top: 0.95rem;}
+.icon_search {display: inline-block; width: 2rem; height: 2rem; background: url(../img/icon_search.png) no-repeat 50% 50%; background-size: 2rem auto; vertical-align: top;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 주소등록 방법 선택 팝업 */
+.mlayer_pop .layer_content.type_event .cs_box.type_address_select {padding: 0rem 3rem 4rem;}
+.cs_box.type_address_select .address_chk li {margin-top: 2.7rem;}
+.cs_box.type_address_select .address_chk li:first-child {margin-top: 0;}
+.cs_box.type_address_select .mo_box.address_search {margin-top: 2rem;}
+
+.address_detail {min-height: 6rem; margin: 1.6rem -1.5rem -1.5rem -4.5rem; padding: 1rem 2rem 1rem 4rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #e0e6ea; color: #098aaa;}
+.cs_box.type_address_select .txt_help {margin-bottom: 2.6rem;}
+.cs_box.type_address_select .address_chk.kb+.txt_help {margin-bottom: 0}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 유심 수령 방법 */
+.usim_receive {margin: 2.6rem -2rem 0; background-color: #fafcfd;}
+.usim_receive .titlebar {margin-bottom: 0.6rem;}
+.usim_receive .titlebar .label {margin-top: 1.6rem; margin-bottom: 0; padding-left: 2rem;}
+.usim_receive .mo_select_rdo ul {display: table; width: 100%; padding-left: 2rem; padding-right: 2rem;}
+.usim_receive .mo_select_rdo > ul li {margin: 1rem 0; display: inline-block; width: 50%;}
+.usim_receive .mo_select_rdo .select_cont {margin-top: 1.5rem; display: block; padding-bottom: 1rem; border-top: 1px solid #e9ebec; background-color: #f7f9fa;}
+.usim_receive .mo_select_rdo .txt_help {margin: 1.7rem 0 1.2rem;}
+.usim_receive .mo_select_rdo .txt_help .btn_small {min-width: 9rem; margin: 0.8rem 0;} 
+.usim_receive .same_day {padding: 0 2rem 3rem; background-color: #f7f9fa;}
+.usim_receive .txt_receive_help {margin-bottom: 1.5rem; font-size: 1.4rem; color: #098aaa;}
+.address_search .form_group {margin-bottom: 0.6rem;}
+.email_ins .form_group {margin-bottom: 0.6rem;}
+.email_ins .form_group select {display: table-cell; min-width: 14rem;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 요금 청구서 유형 */
+.mo_select_rdo.bill_types > ul {display: table; width: 100%;}
+.mo_select_rdo.bill_types > ul li {display: table-cell; width: 50%;}
+.mo_select_rdo.bill_types .label {display: block; margin: 2.6rem 0 1rem;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 요금 납부 방법 */
+.mo_select_rdo.pay_types > ul {display: table; width: 100%;}
+.mo_select_rdo.pay_types > ul li {display: table-cell;}
+.mo_select_rdo.pay_types .label {display: block; margin: 2.6rem 0 1.6rem;}
+.mo_select_rdo.pay_types .select_cont {padding-top: 3rem;}
+.mo_select_rdo.pay_types .form_group.type_pay_reg {display: flex;}
+.mo_select_rdo.pay_types .form_group.type_pay_reg + .btn_area {margin-top: 1rem;}
+.mo_select_rdo.pay_types .form_group.type_pay_reg + .c_tbar + .btn_area {margin-top: 1.6rem;}
+.mo_select_rdo.pay_types .form_group.type_pay_reg .bank_logo,
+.mo_select_rdo.pay_types .form_group.type_pay_reg .card_logo{flex: none; width: 4.8rem; height: 4rem; margin-right: 0.8rem; border-radius: 0.5rem; background-color: #efefef; font-size: 0; line-height: 0;}
+.auto_transfer .form_group li {margin: 2rem 0;}
+.auto_transfer .form_group li:first-child {margin-top: 0.6rem;}
+.auto_transfer .mo_select_rdo.cert_types {margin-top: 0;}
+.auto_transfer .mo_select_rdo.cert_types ul {margin-top: 0;}
+.auto_transfer .mo_select_rdo.cert_types .select_cont {padding-top: 0;}
+.mo_select_rdo.pay_types .form_group.type_camera + .txt_help {margin-top: 1.2rem;}
+.mo_select_rdo.pay_types .chk_transfer {margin-top: 2.6rem;}
+.dvDesktop .mo_select_rdo.pay_types .form_group.type_camera .txt_help {display: none;}
+input.i_pc {display: none;}
+.dvDesktop .i_pc {display: block;}
+.dvDesktop .i_mo {display: none;}
+.c_tbar {display: table; width: 100%; margin-top: 1.1rem;}
+.c_tbar .c_name {display: table-cell; width: 50%; font-size: 1.4rem; color: #717171; vertical-align: middle;}
+.c_tbar .c_btn {display: table-cell; text-align: right;}
+.auto_transfer .txt_help_ars {margin-top: 2.6rem; font-size: 1.4rem; color: #717171;}
+.auto_transfer .label_sub {margin: 2.2rem 0 1.1rem;}
+.auto_transfer .label_sub + input {margin-bottom: 1rem;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 요금 납부 방법 > 계좌이체(CMS) 자동이체 동의서 팝업 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_cms {padding: 0.4rem 1.5rem 3rem;}
+.cs_box.type_cms .chk_group ul {border: 0;}
+.cs_box.type_cms .chk_group > ul > li {position: relative; margin: 1.2rem 0; border: 0; padding: 2rem 1.5rem;}
+.cs_box.type_cms .chk_group > ul > li .accordion_toggle {position: absolute; right: 0.1rem; top: 1.2rem; display: inline-block; width: 4rem; height: 4rem;}
+.cs_box.type_cms .chk_group > ul > li .c_detail {display: none; margin-top: 1.2rem; padding: 1.3rem 1.6rem; border-top: 0; border-radius: 1rem; background-color: #ecf9ff; font-size: 1.2rem; color : #8aa3b1;}
+.cs_box.type_cms .chk_group li .txt {display: inline-block; padding-right: 4rem; font-size: 1.4rem; font-weight: 700;}
+.cs_box.type_cms .chk_group ul > li .c_detail .txt_help,
+.cs_box.type_cms .chk_group ul > li .c_detail .txt_help ul {margin: 0;}
+.cs_box.type_cms .chk_group > ul > li:first-child {padding: 0 1.5rem;}
+.cs_box.type_cms .chk_group > ul > li:first-child a {display: block; padding: 2rem 0 2.1rem;}
+.cs_box.type_cms .chk_group > ul > li:first-child a::after {position: absolute; right: 0; top: 50%; content:""; display: inline-block; width: 4rem; height: 4rem; margin-top: -2rem; background-image:url(../img/icon_arrow_up.png); background-repeat: no-repeat; background-position: 50% 50%; background-size: 1.4rem auto;  transform: rotate(90deg);}
+.cs_box.type_cms .txt_help ul > li.type_bullet::before {position: absolute; content: "\00B7"; left: 0; top: -0.1rem; display: inline-block; font-size: inherit; font-weight: 700;}
+.cs_box.type_cms .txt_help ul > li.type_hyphen::before {position: absolute; content: "\002D"; left: 0; top: -0.1rem; display: inline-block; font-size: inherit; font-weight: 700;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 추천인 */
+.recomm_person .label {display: block; margin: 2.6rem 0 1rem;}
+.recomm_person em {color: #8aa3b1;}
+.recomm_person .chk_list {display: table; width: calc(100% + 0.8rem); margin-left: -0.4rem; margin-right: -0.4rem; margin-bottom: 1.5rem; padding-top: 0.6rem;}
+.recomm_person .chk_list li {display: inline-block; margin-left: 0.8rem;}
+.recomm_person .chk_list li:first-child {margin-left: 0;}
+.recomm_person .chk_list input+span {display: block; min-width: 6.5rem;  height: 4rem; padding: 0; border: 2px solid transparent; border-radius: 1rem; background-color: #fff; box-shadow: 0 0 1rem rgba(13,72,127,0.1); font-size: 1.4rem; color: #111; text-align: center; line-height: 3.8rem;}
+.recomm_person .chk_list input {display: none;}
+.recomm_person .chk_list input:checked+span {border: 2px solid #0db7e1;}
+
+.reg_box.step3 .recomm_person .chk_list {width: calc(100% + 0.8rem); margin-left: 0; margin-right: 0;}
+.reg_box.step3 .recomm_person .chk_list li {width: calc(25% - 0.8rem);}
+
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_recomm_person {padding: 0 2rem;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_recomm_person .recomm_person {margin-top: 0;  margin-bottom: 2.6rem;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_recomm_person .label {margin-top: 0;}
+
+.recomm_person {margin-top: 2.2rem;}
+.recomm_person.friend {margin-top: 3rem;}
+.recomm_person .titlebar .label {display: table-cell;vertical-align: middle;}
+.recomm_person .titlebar > p+p {display: table-cell; width: 50%; text-align: right; vertical-align: middle;}
+.recomm_person_result {display: inline-block; width: 100%; padding: 0.8rem 1.2rem; border: 1px solid #ccc; border-radius: 0.5rem; background-color: #fff;}
+
+.find_result {position: relative; margin-left: -2rem; margin-right: -2rem; padding: 2rem; background-color: #f2f4f6;}
+.find_result p strong {color: #3bc3e5;}
+.find_result ul {margin-top: 0.8rem;}
+.find_result ul li {padding: 1.4rem 0; font-size: 1.4rem; border-bottom: 1px solid #e6e8e9;}
+.find_result ul li em {color: #098aaa;}
+.find_result .no_result {position: relative; padding: 2rem 0 5rem; text-align: center; font-size: 1.4rem; color: #717171;}
+.find_result .no_result .icon_no_result {display: block; width: 5rem; height: 5rem; margin: 0.5rem auto; background: url(../img/icon_no_result.png) no-repeat 0 0; background-size: 5rem auto;}
+
+/* 유심가입 > 가입신청 > 가입자 고객정보 > 요금 세부내역 */
+.prod_detail {background-color: #fff; margin-left: -2rem; margin-right: -2rem; width: calc(100% + 4rem);}
+.prod_detail .titlebar {position: relative; margin-top: 0; padding: 2.6rem 2rem ; background-color: #fafcfd;}
+.prod_detail .titlebar::before {content:""; position: absolute; left: 0; right: 0; top: -1px; display: block; width: 100%; height: 1px; border-top: 1px solid #ebedef;}
+.prod_detail .titlebar::after {content:""; position: absolute; left: 0; right: 0; bottom: -1px; display: block; width: 100%; height: 1px; border-top: 1px solid #e1e3e5;}
+
+.prod_charge {margin: 0 2rem; padding: 0.9rem 2rem 0; border-top: 1px solid #e9ebec; border-bottom: 1px solid #e9ebec; background-color: #f7f9fa;} 
+.prod_charge > dl {display: table; width: 100%; padding: 1.1rem 0.1rem 1.2rem; border-bottom: 1px dashed #e3e5e6;}
+.prod_charge dt {display: table-cell; width: 50%; font-size: 1.3rem; color: #717171;}
+.prod_charge dd {display: table-cell; width: 50%; font-size: 1.4rem; color: #444; text-align: right;}
+.prod_charge dd.txt_discount {color: #ff4a4a;}
+.prod_charge dd.txt_discount > p,
+.prod_charge dd.txt_discount > p > span {color:inherit;}
+.prod_charge .btn_detail {position: relative; display: inline-block; height: 2.6rem; line-height: 2.8rem; border: 0; font-size: 1.3rem; color: #098aaa;}
+.prod_charge .btn_detail::after {content: ""; position: absolute; left: 0.5rem; right: 0.5rem; bottom: 4px; display: block; height: 1px; border-bottom: 1px solid #098aaa;}
+.prod_charge .btn_area {display: block; margin: 0; text-align: right;}
+.prod_charge .btn_area .btn.btn_detail {background-color: transparent;}
+.prod_charge_total {padding: 1.3rem 4rem 1.7rem;}
+.prod_charge_total dl {display: table; width: 100%;}
+.prod_charge_total dl dt {display: table-cell; font-size: 1.3rem; color: #444;}
+.prod_charge_total dl dd {display: table-cell; font-size: 1.3rem; color: #717171; text-align: right;}
+.prod_charge_total > dl dd strong {display: inline-block; font-size: 2.4rem; color: #098aaa;}
+.prod_charge_total > dl dd p {font-size: 1.2rem; color: #717171;}
+.mo_box_rs.ccenter {padding: 1.5rem 2rem; text-align: center;}
+.mo_box_rs.ccenter a {position: relative; display: inline-block; padding-left: 7.2rem; text-align: left;} 
+.mo_box_rs.ccenter a::before {content:""; position: absolute; left: 0; top: 50%; display: inline-block; width: 3.2rem; height: 3.2rem; margin-top: -1.6rem; padding-right: 1.9rem; background-image: url(../img/icon_ccenter.png); background-repeat: no-repeat; background-position: 0 50%; background-size: 3.2rem auto; border-right: 1px solid #e3e5e6;}
+.mo_box_rs.ccenter p {display: inline-blockfont-size: 1.3rem; color: #717171; }
+.prod_detail .product_lsit  > li > a {padding-right: 2rem;}
+.prod_charge .ui_accordion.more {position: relative; border-bottom: 0;}
+.prod_charge .ui_accordion.more dd.txt_discount {padding-right: 2.7rem;}
+.prod_charge .ui_accordion.more dd.txt_discount p span {font-size: 1.4rem; color: #ff4a4a;}
+.prod_charge .ui_accordion.more .btn.accordion_toggle {position: absolute; right: 0; top: 1.3rem; display: inline-block; width: 2rem; height: 2rem; padding: 0; border-radius: 100%; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15); background-color: #098aaa; background-image: url(../img/icon_detail_arrow_w.png); background-position: 50% 50%; background-size: 1rem auto;}
+.prod_charge .ui_accordion.more .btn.accordion_toggle.active {transform: rotate(180deg);}
+.prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 5.3rem); margin-right: -4rem; border-top: 0; padding: 0.7rem 0 1.2rem; background-color: #f7f9fa;}
+.dvDesktop .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 6rem);}
+@media all and (max-width: 767px) {
+    .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 4.3rem);}
+    .dvDesktop .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 5.3rem);}
+}
+.prod_charge .ui_accordion.more .accordion_cont dl {display: table; width: calc(100%); padding: 0.2rem 1.6rem; border: 0;}
+.prod_charge .ui_accordion.more .accordion_cont dl dt {position: relative; width: 65%; padding-left: 1rem; color: #8aa3b1; text-align: left;}
+.prod_charge .ui_accordion.more .accordion_cont dl dt::before {content: "-"; display: inline-block; position: absolute; left: 0;}
+.prod_charge .ui_accordion.more dd.txt_discount dl dd {color: #ff4a4a;}
+.prod_charge .total_sum {width: calc(100% + 4rem); margin-left: -2rem; margin-right: -2rem; padding: 1.4rem 2rem 1.6rem; background-color: #e9ebec; border-bottom: 1px solid #dfe1e3;}
+.prod_charge .total_sum dt {color: #444;}
+.prod_charge .total_sum dd {font-size: 1.5rem; color: #111; font-weight: 700;}
+.prod_detail .txt_help {margin: 0; padding: 1.2rem 2rem 2.6rem;}
+.prod_detail .txt_help ul {margin: 0;}
+
+/* 유심가입 > 가입신청 > 신청정보 확인 */
+.reg_review  {margin-top: 2.6rem;}
+.reg_review li {margin: 1.2rem 0; border-radius: 1rem; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.reg_review h2 {padding: 1.2rem 2rem; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; background-color: #27bfe5; font-size: 1.6rem; font-weight: 700; color: #fff;}
+.reg_review .reg_cont {padding: 0.8rem 2rem; border: 2px solid #27bfe5; border-top: 0; border-radius: 1rem; border-top-left-radius: 0; border-top-right-radius: 0; background-color: #fff;}
+.reg_review .reg_cont dl {display: table; width: 100%; padding: 1rem 0; border-top: 1px solid #e8eaeb;}
+.reg_review .reg_cont dl:first-child {border-top: 0;}
+.reg_review .reg_cont dt {display: table-cell; width: 35%; font-size: 1.4rem; color: #717171;}
+.reg_review .reg_cont dd {display: table-cell; font-size: 1.6rem; text-align: right; letter-spacing: -0.065rem;}
+.reg_review+label {margin-top: 0.8em;}
+.reg_review+label+.btn_area {margin-bottom: 0;}
+
+/* 유심가입 > 가입신청 > 가입신청 완료 */
+.txt_reg_end {margin-top: 1rem; font-size: 1.6rem; font-weight: 700;}
+.opening_status {position: relative; display: flex; width: calc(100% + 1.8rem); margin-left: -0.9rem; margin-right: -0.9rem;}
+.opening_status::after {content:""; display: block; overflow: hidden; clear: both;}
+.opening_step {position: relative; flex: 1; width: calc(50% - 1.8rem); margin: 0.9rem; padding: 2rem 0; border-radius: 1rem; border: 2px solid #fff; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15); background-color: #fff; text-align: center;}
+.opening_step p {font-size: 1.4rem; color: #717171;}
+.opening_step.done {background-color: #0db7e1; border: 2px solid #0db7e1;}
+.opening_step.done p {color: #fff;}
+.opening_step.ing {border: 2px dashed #0db7e1;}
+.opening_step.ing p {color: #111;}
+.sp_open_status.icon_open_status {position: relative; display: inline-block; width: 5rem; height: 5rem;}
+.sp_open_status.icon_open_status::before {content:""; position: absolute; display: inline-block; left: 50%; top: 50%; width: 5rem; height: 5rem; margin-left: -2.5rem; margin-top: -2.5rem; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_open_step.png); background-repeat: no-repeat; background-size: 24rem auto;}
+.sp_open_status.icon_open_status.s01::before {background-position: -0.5rem -0.5rem;}
+.sp_open_status.icon_open_status.s02::before {background-position: -6.5rem -0.5rem;}
+.sp_open_status.icon_open_status.s03::before {background-position: -12.5rem -0.5rem;}
+.sp_open_status.icon_open_status.s04::before {background-position: -18.5rem -0.5rem;}
+.ing .sp_open_status.icon_open_status.s01::before {background-position: -0.5rem -6.5rem;}
+.ing .sp_open_status.icon_open_status.s02::before {background-position: -6.5rem -6.5rem;}
+.ing .sp_open_status.icon_open_status.s03::before {background-position: -12.5rem -6.5rem;}
+.ing .sp_open_status.icon_open_status.s04::before {background-position: -18.5rem -6.5rem;}
+.done .sp_open_status.icon_open_status.s01::before {background-position: -0.5rem -12.5rem;}
+.done .sp_open_status.icon_open_status.s02::before {background-position: -6.5rem -12.5rem;}
+.done .sp_open_status.icon_open_status.s03::before {background-position: -12.5rem -12.5rem;}
+.done .sp_open_status.icon_open_status.s04::before {background-position: -18.5rem -12.5rem;}
+.opening_step::after{content:""; position: absolute; display: inline-block; width: 1.8rem; height: 1.8rem; margin-left: -0.9rem; margin-top: -0.9rem; -webkit-appearance:none; appearance:none; -webkit-background-color:transparent; background-color:transparent; background-image: url(../img/sp_open_step_arrow.png); background-repeat: no-repeat; background-size: 5rem auto;}
+.opening_step::after {right: -2rem; top: 50%; background-position: 0 0;}
+.opening_step.s04::after {display: none;}
+.opening_step.s01.done::after,
+.opening_step.s02.done::after,
+.opening_step.s03.done::after,
+.opening_step.s04.done::after {background-position: -2.5rem 0;}
+.opening_status+.txt_help {margin-top: 0;}
+.join_reg_end .opening_time {margin: 1.6rem 0;}
+.join_reg_end+.btn_area {margin: 3rem 0 0;}
+.join_reg_end .event_list {margin-top: 3rem;}
+.event_list > ul li {display: block; width: 100%; margin: 1.2rem 0;}
+.event_list > ul li a {display: inline-block; width: 100%; border-radius: 1rem; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.event_list > ul li a img {width: 100%; border-radius: 1rem;}
+
+/* 유심가입 > 가입신청 > 신청현황(팝업일 경우에만 사용) */
+.opening_box .opening_status.type_dv4 {display: table;}
+.opening_box .opening_status.type_dv4 .opening_step {display: inline-block;}
+.opening_box .opening_status.type_dv4 .opening_step.s02::after  {right: auto; top: auto; bottom: -2rem; transform: rotate(90deg);}
+.opening_box .opening_status.type_dv4 .opening_step.s03 {float: right;}
+.opening_box .opening_status.type_dv4 .opening_step.s03::after  {right: auto; left: -1.1rem; transform: rotate(180deg);}
+
+/* 유심가입 > 가입신청 > 인증 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_cert_kb {padding: 2.5rem 2rem;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_cert_cc {padding: 0 0 2.2rem;}
+.self_cert_kb {margin: 0; padding: 4.8rem 0 0 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff; text-align: center;}
+
+.self_cert_kb .btn_area {margin-top: 5.1rem; margin-bottom: 1.2rem;}
+.self_cert_kb .btn_default {border-top-left-radius: 0; border-top-right-radius: 0;}
+.icon_kb_cert_b {display: block; width: 5.6rem; height: 8rem; margin: 0.7rem auto; background: url(../img/icon_kb_cert_b.png) no-repeat 0 0; background-size: 5.6rem auto; vertical-align: middle;}
+.cert_card {margin: 0.5rem 1.6rem 0; border-radius: 1rem;}
+.cert_card .tabs_move {z-index: 5; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.cert_card .tabs_move li.active a::before {width: 80%; margin-left: 10%; margin-right: 10%;}
+.cert_card .tabs_cont {padding: 0;}
+.cert_card .tabs_cont .mo_box_rs.type_tc_box {padding: 3rem 1.6rem 0; border-top-left-radius: 0; border-top-right-radius: 0; box-shadow: 0 -15px 0 rgba(255,255,255,1), 0 0 1rem rgba(13,72,127,0.1); margin-top: -1px; border-top: 1px solid #e3e5e6;}
+.cert_card .tabs_cont .txt_help {margin-top: 1.3rem; margin-bottom: 2.7rem;}
+.cert_card .tabs_cont .mo_box .label {margin-top: 2.3rem;}
+.cert_card .tabs_cont .btn_area {width: calc(100% + 4rem); margin: 3rem -2rem 0;}
+.cert_card .tabs_cont .btn_area .btn_default {border-top-left-radius: 0; border-top-right-radius: 0;}
+.cert_card .mo_select_com {padding: 0;}
+.cert_card .mo_select_com .select_list {width: calc(100% + 3.2rem); margin-left: -1.6rem; margin-right: -1.6rem;}
+.cert_card .mo_select_com .select_list ul {padding: 2.6rem 1.3rem;}
+.cert_card .chk_group {margin-top: 2rem;}
+.cert_card .chk_group .mo_box_rs.type_agree > li > .ui_chk {margin-left: 1rem; padding-left: 0;}
+.cert_card .chk_group .mo_box_rs.type_agree > li > ul > li {padding-left: 1rem;}
+.cert_card .chk_group .mo_box_rs.type_agree > li .txt {display: inline-block; min-height: 2.3rem; font-size: 1.4rem; color: #111; font-weight: 700; vertical-align: middle; line-height: 2.3rem;}
+.cert_card .chk_group .mo_box_rs.type_agree > li > ul > li > .txt {min-height: auto; font-size: 1.3rem; padding-top: 0.4rem; padding-bottom: 0.4rem; color: #111; font-weight: 400; vertical-align: middle;}
+.cert_card .chk_group .type_agree > li {padding: 1.2rem 0 1rem;}
+.cert_card .chk_group .type_agree > li > ul {margin-top: 1.4rem; padding: 1.2rem 0 0.3rem;}
+.cert_card+.txt_help {margin-top: 0.3rem; padding: 0 2rem;}
+.cert_card .appcard_info .txt_help {margin-top: 0.8rem;}
+.cert_card .appcard_info {margin-bottom: 4rem;}
+.cert_card .btn_app_install {position: relative; font-size: 1.5rem; color: #098aaa; font-weight: 700;}
+.cert_card .btn_app_install::before {content:""; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 1px; border-bottom: 1px solid #098aaa;}
+.mlayer_pop .layer_body .cs_box.card_agree_wrap {padding: 2rem;}
+.mlayer_pop .layer_content.type_event .cs_box.type_ars {padding: 0.4rem 1.5rem 2.6rem;}
+.cs_box.type_ars .mo_box_rs {margin-top: 2.2rem; padding: 4rem 1.5rem; text-align: center;}
+.icon_cert_ars {display: block; width: 7.7rem; height: 7.7rem; margin: 0 auto; background: transparent url(../img/icon_cert_ars.png) no-repeat 0 0; background-size: 7.7rem auto;}
+.txt_ars_help {margin-top: 2.2rem;}
+.ars_tel {position: relative; display: block; margin-top: 2.7rem; padding: 1.8rem 1.8rem 1.2rem; border-radius: 1rem; border: 2px solid #0db7e1; box-shadow: 0 0 1rem rgba(13,72,127,0.1); text-align: left;}
+.ars_tel::after {content: ""; position: absolute; right: 1.8rem; top: 50%; display: inline-block; width: 2.4rem; height: 2.4rem; margin-top: -1.2rem; border-radius: 100%; background: #0db7e1 url(../img/icon_arrow_right_w.png) no-repeat 50% 50%; background-size: 0.6rem auto;  box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.ars_tel p {font-size: 1.2rem; color : #717171;}
+.ars_tel dt {padding: 0.6rem 0 0.1rem; font-size: 1.2rem; color: #098aaa;}
+.ars_tel dd {font-size: 1.6rem; font-weight: 700;}
+.cs_box.type_ars .txt_help, 
+.cs_box.type_ars .txt_help ul {margin: 0;}
+.cs_box.type_ars .txt_help {padding: 0;}
+.cs_box.type_ars > .mo_box_rs.cert_ars {margin-bottom: 1.3rem; padding: 0; background-color: #f7f9fa; text-align: center;}
+.cs_box.type_ars .mo_box_rs.cert_ars h4 {padding-top: 2.1rem; font-size: 1.2rem; color: #111; font-weight: 400; text-align: center;}
+.cs_box.type_ars .mo_box_rs.cert_ars .cert_num {display: table; width: 100%; margin: 1.5rem 0 2.4rem; text-align: center;}
+.cs_box.type_ars .mo_box_rs.cert_ars .cert_num strong {display: inline-block; width: 5.2rem; height: 6rem; margin: 0 0.4rem; border-radius: 1rem; background-color: #fff; font-size: 4rem; color: #16b9e4; box-shadow: 0.1rem 0 0.4rem rgba(13,72,127,0.15);}
+.mo_box_rs.cert_ars .time_limit {display: table; width: 100%; height: 4rem; border-top:1px solid #e3e5e6; background-color: #fff; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.mo_box_rs.cert_ars .time_limit > span {display: inline-block; min-height: 1.3rem; margin: 1.3rem 0 0; font-size: 1.2rem; color: #8aa3b1; line-height: 1.3rem; vertical-align: top;}
+.mo_box_rs.cert_ars .time_limit > span::before {content:""; display: inline-block; width: 1.3rem; height: 1.3rem; margin-right: 0.4rem; background: url(../img/icon_time.png) no-repeat 50% 50%; background-size: 1.3rem auto; vertical-align: top;}
+
+/* 유심가입 > 가입신청 > 인증 > 앱설치 */
+.appcard_install .appcard_install {margin: 0.9rem 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.appcard_install > .appcard_help {border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.appcard_install > .appcard_help {display: table; width: 100%; min-height: 5.1rem; padding: 1.1rem 1.5rem 1.1rem 0; background-color: #fff;}
+.appcard_install .appcard_install .appcard_help {display: table; width: 100%; min-height: 5.1rem; padding: 1.1rem 1.5rem 1.1rem 0; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; background-color: #fff;}
+.appcard_install .appcard_help .txt {position: relative; display: table-cell; padding-left: 4.6rem; padding-bottom: 0.1rem; font-weight: 700; vertical-align: middle;}
+.appcard_install .appcard_help .txt::before {content: ""; position: absolute; left: 1.8rem; top: 50%; display: inline-block; width: 2.5rem; height: 2.5rem; margin-top: -1.25rem; background: transparent url(../img/icon_info.png) no-repeat 0 50%; background-size: 2.5rem auto;}
+.appcard_install .appcard_help .button {text-align: right;}
+.appcard_install .appcard_help .button .btn.btn_small {padding: 0 0.8rem; white-space: nowrap;}
+.appcard_install ol {padding: 2rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; border-top: 1px solid #e3e5e6; background-color: #f7f9fa;}
+.appcard_install ol li {margin: 0 1rem; font-size: 1.2rem; color: #8aa3b1;}
+.appcard_install ol .txt_code {font-size: 1.5rem; color: #007eb2; text-decoration: underline; font-weight: 700;}
+
+/* 마이페이지 > 유심관리 */
+.mypage_wrap .page_title em {font-size: 2rem; font-weight: 400;}
+.mypage_wrap .usim_admin .cert_types {margin-top: 2.6rem;}
+.usim_admin {padding-top: 0.5rem;}
+.usim_admin .brd_top {padding-top: 1rem; border-top: 1px solid #e3e5e6;}
+.usim_admin .titlebar {margin: 1.5rem 0;}
+.usim_admin .mo_box .label {margin: 2.6rem 0 1.1rem;}
+.usim_admin+.btn_area {margin-top: 3rem; margin-bottom: 0;}
+.usim_admin .tabs_content { background-color: #fafcfd; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+
+/* 마이페이지 > 유심관리 > 유심정보 이용 단말기 등록 */
+.device_reg_done .info_review {margin-top: 1.6rem;}
+.info_review .titlebar h3 {font-size: 1.6rem;}
+.info_review .info_review_cont {border-radius: 1rem;  padding: 1.2rem 2rem; background-color: #fafcfd;}
+.info_review .info_review_cont dl {display: table; width: 100%; border-top: 1px solid #e8eaeb;}
+.info_review .info_review_cont dl:first-child {border-top: 0;}
+.info_review .info_review_cont dt {display: table-cell; width: 35%; padding: 1.5rem 0;font-size: 1.4rem; color: #717171;}
+.info_review .info_review_cont dd {display: table-cell; padding: 1.5rem 0; font-size: 1.6rem; text-align: right; letter-spacing: -0.055rem;}
+.info_review .info_review_cont dd p {font-size: inherit;}
+.line_apply {margin-top: 2.5rem;}
+.line_apply .titlebar {margin: 1.5rem 0;}
+.usim_admin .line_info .usim_mod {margin-top: 2.6rem;}
+.txt_usim_help {margin-bottom: 1.1rem; font-size: 1.4rem; color: #717171;}
+.usim_admin .line_info .usim_mod .btn_area {margin-top: 1rem;}
+.usim_admin .tabs_move li:first-child {flex: 2;}
+.usim_admin .tabs_move li:last-child {flex: 2;}
+.usim_admin .tabs_move li a span {font-weight: 400; color: #ccc;}
+.usim_admin .tabs_move li.active a span {color: #111; font-weight: 700;}
+.usim_admin .tabs_move li.active a::before {width: calc(100%); margin-left: 0; margin-right:0;}
+.usim_admin .tabs_move li:first-child.active a::before,
+.usim_admin .tabs_move li:last-child.active a::before {width: calc(100% - 4rem); margin-left: 2rem; margin-right: 2rem;}
+.usim_admin .tabs_content {padding: 2.1rem 2rem 2.5rem;}
+.usim_check .tabs_content {padding: 0.5rem 1.1rem; background-color: #fafcfd; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.usim_admin .tabs_content .tc_box .pic_info img {width: 100%; border-bottom: 1px solid #e3e5e6;}
+.usim_admin .usim_check {margin-top: 2.5rem;}
+.usim_admin .usim_check .titlebar{margin: 1.6rem 0 1.5rem;}
+.usim_check .tabs_content .tc_box .pic_info img {width: 100%; border-bottom: none;}
+.usim_check .pic_info+.txt_help {margin: -0.7rem 0.9rem 1.5rem;}
+.usim_check .pic_info+.txt_help ul {margin: 0;}
+.usim_check .pic_info+.txt_help strong {display: block; font-size: 1.2rem; color: #098aaa; font-weight: 400;}
+
+.dvDesktop .usim_mod .txt_usim_help + .txt_help {display: none;}
+.usim_admin .device_reg_help .titlebar {margin: 1.6rem 0 1.1rem;}
+.device_reg_help .title {font-size: 1.8rem;}
+.device_reg_help .txt_info {font-size: 1.4rem;}
+.device_reg_help .usim_help_box {margin-top: 2.6rem;} 
+.usim_admin .ui_accordion.user_guide.usim {margin-top: 3rem;}
+.usim_admin .ui_accordion.user_guide.usim .btn.accordion_toggle {font-weight: 700;}
+.usim_admin .ui_accordion.user_guide.usim .accordion_cont {padding: 2.1rem 2rem 2.5rem;}
+.usim_admin .ui_accordion.user_guide.usim .video_box {margin: 0;}
+.usim_admin .video_box li {margin-top: 2.6rem;}
+.usim_admin .video_box li:first-child {margin-top: 0;}
+.usim_admin .video_box .v_tit {padding: 0 0 1.1rem; border-bottom: 1px solid #e8eaeb; font-size: 1.4rem; color: #717171;}
+.usim_admin .video_box .video_cont {position: relative; width: 100%; height: 16rem; margin-top: 2rem; background-color: #969798; text-align: center;}
+.usim_admin .video_box .video_cont iframe {width: 100%; height: auto; margin: 0; padding: 0; border: 0;}
+.usim_admin .device_reg_cert {margin-bottom: 2.6rem;}
+.usim_admin .device_reg_cert .mo_select_rdo.cert_types ul li {display: inline-block; width: 49.5%;}
+.usim_admin .device_type {margin: 0;}
+.usim_admin .device_type .txt_help {margin-top: -0.8rem; margin-bottom: 1.6rem;}
+.usim_admin .device_type .type_check {margin-bottom: 2.1rem;}
+.usim_admin .device_type .type_check li {display: inline-block; width: 49%; margin: 0.9rem 0;}
+.usim_admin .form_group.type_2dv li {display: inline-block; width: 50%;}
+.usim_admin .mo_box > .label:first-child {margin-top: 0; margin-bottom: 1.6rem;}
+.location_info {margin-bottom: 1.6rem;}
+.location_info dt {font-size: 1.4rem; color: #717171;}
+.location_info dd.txt_help {margin-top: 0.8rem;}
+
+.device_reg_done.brd_top {padding-top: 2.6rem;}
+.device_reg_done .txt_reg_done {font-size: 1.6rem; font-weight: 700;}
+.device_reg_done .doc_review.type_no_title {margin-top: 1.6rem;}
+
+/* 마이페이지 > 유심관리 > 휴대폰 모델명 검색 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_model_search {padding:0 3rem 4rem;}
+.cs_box.type_model_search .usim_admin {padding-top: 0.6rem;}
+.cs_box.type_model_search .usim_admin .titlebar {margin: 0 0 1.1rem;}
+.cs_box.type_model_search .usim_admin .titlebar .title {font-size: 1.4rem; color: #717171;}
+.cs_box.type_model_search .usim_admin .txt_help {margin: 1.2rem 0 2.5rem;}
+.model_result {margin-top: 2.2rem;}
+.model_selected {margin-top: 2.6rem;}
+.model_result {width: calc(100% + 6rem); margin-left: -3rem; margin-right: -3rem; padding: 3rem; background-color: #f2f4f6;}
+.model_result .mo_box_rs {padding: 0.8rem 2rem;}
+.model_result .mo_box_rs ul {height: 18rem; overflow: auto;}
+.model_result .mo_box_rs li {border-top: 1px solid #e9eaeb;}
+.model_result .mo_box_rs li:first-child {border-top: 0;}
+.model_result .mo_box_rs li input {display: none;}
+.model_result .mo_box_rs li input+.txt_model {display: inline-block; width: 100%; padding: 1.2rem 1.8rem; background-color: transparent; font-size: 1.4rem; color: #111;}
+.model_result .mo_box_rs li input:checked+.txt_model {background-color: #e5faff; color: #0db7e1; font-weight: 700;}
+
+/* 마이페이지 > 유심관리 > 무선 개통(OTA) */
+.opening_pic {position: relative; min-height: 14rem; border-radius: 1rem; background-color: #fff;}
+.opening_pic::after {content:""; position: absolute; left: 50%; top: 50%; display: inline-block; width: 20rem; height: 10rem; margin-left: -10rem; margin-top: -5rem; background: url(../img/img_ota.png) no-repeat 50% 50%; background-size: 20rem auto;}
+.usim_help_box .mo_box_rs.info_help {padding: 0;}
+.usim_admin .info_help .tit {position: relative; display: inline-block;  width: 100%; height: 5rem; padding: 0 5rem; border-top-left-radius: 1rem; border-top-right-radius: 1rem; border-bottom: 1px solid #e3e5e6; background-color: #fff; font-size: 1.6rem; font-weight: 700; line-height: 4.8rem;}
+.usim_help_box .info_help .tit::before {left: 2rem; top: 50%; margin-top: -1.15rem;}
+.usim_help_box .info_help .txt_help {margin: 0;}
+.usim_help_box .info_help .txt_help li::before {content: "-";}
+
+/* 마이페이지 > 유심관리 > eSIM 정보 */
+.esim_info .help_box .info_help_cont {padding: 2.2rem 2rem;}
+.esim_info .info_default .btn_area {margin-top: 1rem;}
+.esim_info .info_add {margin-top: 2.6rem;}
+.esim_info .info_add .txt_help_esim {font-size: 1.6rem; font-weight: 700;}
+.esim_info .info_add .label:first-child {margin-top: 2.1rem;}
+.esim_info .btn_area {margin-top: 3rem; margin-bottom: 0;}
+.esim_info .btn_area ~ .help_box {margin-top: 3rem;}
+.esim_info .btn_area ~ .help_box .txt_link {font-size:inherit; text-decoration:underline;}
+.usim_check.esim_info .tabs_content {padding: 3rem 1.1rem 1.1rem;}
+.usim_check.esim_info .tabs_content .txt_help ul > li::before {display: none;}
+.usim_check.esim_info .help_box {margin-top: 2rem;}
+.usim_check.esim_info .pic_info {margin: 0 auto 3.4rem; width: 13rem;}
+.usim_check.esim_info .help_box .txt_help h4 {font-size: 1.3rem; font-weight: 700;}
+.usim_check.esim_info .help_box .txt_help ul > li:before {content:"*";}
+.usim_check.esim_info .help_box .txt_help ul > li li:before {content:"-";}
+
+/* 이용안내글 공통 */
+.help_box .mo_box_rs.info_help {margin: 0; padding: 0;}
+.info_help {margin: 2rem 0; padding: 1.6rem 2rem;}
+.info_help > p,
+.info_help .tit {position: relative; padding-left: 3.3rem; font-size: 1.4rem; vertical-align: top;}
+.info_help > p::before,
+.info_help .tit::before  {content:""; display: block; position: absolute; left: 0;  width: 2.5rem; height: 2.5rem; background: url(../img/icon_info.png) no-repeat 0 0; background-size: 2.5rem auto;}
+.info_help_cont {padding: 1.2rem 2rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #f7f9fa;}
+.info_help_cont .txt_help {margin: 0;}
+.usim_help_box .info_help .dv_step {margin: 1.3rem 0;}
+.usim_help_box .info_help .dv_step .txt_step {margin-bottom: 0.8rem; font-size: 1.3rem;}
+.usim_help_box .info_help .dv_step .txt_step_sub {font-size: 1.2rem; color: #717171;}
+.usim_help_box .info_help .dv_step .txt_help ul {margin: 0 0 1.3rem;}
+.ota_info {margin-top: 1.6rem;}
+.txt_ota_help {font-size: 1.4rem;}
+.txt_cert_done {font-size: 1.6rem; font-weight: 700;}
+
+/* 마이페이지 > 증빙서류 관리 */
+.doc_review li > .titlebar {margin: 0; padding: 1.3rem 2rem; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom: 1px solid #e1e3e5; background-color: #fff; }
+.doc_review li > .titlebar .title {display: table-cell; width: 70%; font-size: 1.6rem;}
+.doc_review li > .titlebar .link {display: table-cell; width: 30%; text-align: right; vertical-align: middle;}
+.btn_link {position: relative; display: inline-block; padding: 0.2rem 0; font-size: 1.3rem; color: #098aaa; vertical-align: top;}
+.btn_link::after {content:""; position: absolute; left: 0; bottom: 0.3rem; width: 100%; height: 1px; border-bottom: 1px solid #098aaa;} 
+.mlayer_pop .layer_body .cs_box.type_help {padding: 2.6rem 3rem 3rem;}
+.doc_guide dt {margin-top: 2.3rem; margin-bottom: 1.4rem; font-weight: 700;}
+.doc_guide dt:first-child {margin-top: 0;}
+.doc_guide dd {position: relative; padding-left: 0.8rem; font-size: 1.4rem; color: #717171;}
+.doc_guide dd::before {content: "-"; display: inline-block; position: absolute; left: 0;}
+
+.titlebar .label {display: table-cell; width: 50%;  vertical-align: middle;}
+.titlebar .link {display: table-cell; width: 30%; text-align: right;}
+.doc_review .titlebar .txt {padding: 0.5rem 0; font-size: 1.4rem; color: #717171;}
+.doc_review > li {margin: 1.2rem 0; border-radius: 1rem; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.doc_review .doc_review_cont {padding: 1.2rem 2rem; border-radius: 1rem; border-top-left-radius: 0; border-top-right-radius: 0; background-color: #fafcfd;}
+.doc_review .doc_review_cont dl {display: table; width: 100%; border-top: 1px solid #e8eaeb;}
+.doc_review .doc_review_cont dl:first-child {border-top: 0;}
+.doc_review .doc_review_cont dt {display: table-cell; width: 35%; padding: 1.5rem 0;font-size: 1.4rem; color: #717171;}
+.doc_review .doc_review_cont dd {display: table-cell; padding: 1.5rem 0; font-size: 1.6rem; text-align: right;}
+.doc_review+.btn_area {margin-top: 3rem; margin-bottom: 0;}
+.doc_item_select .label {display: block; margin: 1.4rem 0 1rem;}
+.doc_item_select input[type="text"]:read-only {background-color: #fff;}
+.doc_item_select input[type="text"]:read-only:focus {border: 1px solid #ccc;}
+.doc_review .doc_attach {border-top: 1px solid #e8eaeb;}
+.doc_attach+.txt_help {margin-top: 1.2rem;} 
+.doc_review .doc_item_select+.doc_attach {margin-top: 2.5rem; border-top: 0;}
+.doc_review .issue_purpose .titlebar,
+.doc_review .email_ins .titlebar {display: table; width: 100%; margin: 0; padding-bottom: 1.1rem;}
+.doc_review .issue_purpose dd  {display: block; width: 100%; padding-top: 0;}
+.doc_review .issue_purpose textarea {height: 9rem; margin-top: 0.6rem;}
+.doc_review .doc_review_cont .email_ins dd {display: block; width: 100%; padding: 0;}
+.doc_review .email_ins+.txt_help {margin-top: 1.2rem;} 
+.btn_file_upload {display: inline-block; position: absolute; right: 0; top: 0; width: 4rem; height: 4rem; background: transparent url(../img/icon_file_upload.png) no-repeat 50% 50%; background-size: 4rem auto;}
+.form_group.type_file_upload input[type="file"]{display: none;}
+.form_group .file_name {height: 4rem; padding: 0 3rem 0 1.4rem; border: 1px solid #ccc; border-radius: 0.5rem; background-color: #fff; line-height: 3.8rem;}
+.doc_review+.btn_area {margin-top: 3rem; margin-bottom: 0;}
+.doc_review.type_no_title .doc_review_cont{border-radius: 1rem;}
+.doc_review .doc_review_cont .mo_attach_file {border-top: 1px solid #e8eaeb;}
+.doc_review .doc_review_cont .doc_attach .mo_attach_file {border-top: 0;}
+
+/* 마이페이지 > 법정대리인관리 */
+.mod_info_reg {margin-top: 2.6rem;}
+.mod_info_reg .titlebar {margin-bottom: 1.6rem; padding: 0; border-bottom: 0;}
+.mod_info_reg .titlebar h2.title {font-size: 1.6rem;}
+.mod_info_reg .mo_box_rs {padding: 0.1rem 2rem 2rem; }
+.mod_info_reg .mo_select_rdo.join_types {margin-top: 2.8rem;}
+.mod_info_reg+.btn_area {margin-top: 3rem; margin-bottom: 0;}
+.mod_info_reg .select_cont .btn_area {display: block; width: 100%; margin: 0.7rem 0 0; text-align: right;}
+.mod_info_reg .mo_select_rdo.bill_types .mo_box.email_ins {margin-top: 2.2rem;}
+.mod_info_reg .mo_select_rdo.bill_types > .label {margin-top: 2.3rem; margin-bottom: 2rem;}
+.mod_info_reg .mo_select_rdo.bill_types .txt_help {margin-top: 1.4rem;} 
+.legal_rep .mo_box_rs.info_mod {padding: 0.1rem 2rem 2.6rem;}
+.legal_rep .info_mod+.btn_area {margin-bottom: 0;}
+.legal_rep .info_help {padding: 1.6rem 1.8rem;}
+.legal_rep .target_check {padding: 0; background-color: transparent;}
+.legal_rep .target_check .prod_info.child .btn_area {margin-bottom: 1.6rem;}
+.legal_rep .target_check .prod_info.child .form_group {margin-top: 1.6rem;}
+.legal_rep + .btn_area {margin-top: 3rem; margin-bottom: 0;}
+.legal_rep .mo_box.type_select_detail .form_group.type_camera + .txt_help {margin-bottom: 0;}
+.dvDesktop .legal_rep .mo_box.type_select_detail .form_group.type_camera + .txt_help{display: none;}
+.dvDesktop .legal_rep .mo_box.type_select_detail .form_group.type_camera {margin-bottom: 0;}
+.mo_select_rdo.join_types .mo_box.type_select_detail {width: calc(100% + 4rem); margin: 3rem -2rem 2rem; padding: 0 2.5rem 3rem; background-color: #f7f9fa; border-top:1px solid #dfe2e3; border-bottom: 1px solid #e3e5e6;}
+.mo_select_rdo.cert_types ul {margin-top: 1.6rem;}
+.mo_select_rdo.cert_types > ul li {margin-bottom: 2rem;}
+.legal_rep .mo_select_rdo.pay_types ul {margin-top: 1.6rem;}
+.legal_rep .info_help + .mo_attach_file .titlebar {margin-top: 2.6rem; margin-bottom: 1.6rem;}
+.legal_rep .auto_transfer > .label {margin: 2.1rem 0 1.6rem;}
+.mo_select_rdo.join_types .mo_box.type_select_detail .id_pic {margin: 0 -2rem 0; padding: 2.5rem 2rem 0; border-top: 0; background-color: transparent;}
+
+
+/* 마이페이지 > 정보제공동의 */
+.info_agree {border-radius: 1rem;}
+.info_agree .tabs_move {z-index: 5; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.info_agree .tabs_move li:first-child a {padding-left: 2.1rem;}
+.info_agree .tabs_move li:first-child.active a::before {width: calc(100% - 2rem); margin-left: 2rem; margin-right: 0rem;}
+.info_agree .tabs_move li:last-child a {padding-right: 2rem;}
+.info_agree .tabs_move li:last-child.active a::before {width: calc(100% - 2rem); margin-left: 0; margin-right: 2rem;}
+.info_agree .tabs_cont {padding: 0;}
+.info_agree .tabs_cont .mo_box_rs.type_tc_box {padding: 0 2rem; border-top-left-radius: 0; border-top-right-radius: 0; box-shadow: 0 -1.25rem 0 rgba(255,255,255,1), 0 0 1rem rgba(13,72,127,0.1); margin-top: -1px; border-top: 1px solid #e3e5e6;}
+.info_agree .tabs_cont .tc_box:first-child .mo_box_rs {padding: 0; background-color: #fafcfd; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.info_agree .chk_group  {padding: 2.4rem 2rem 1.4rem}
+.info_agree .chk_group > ul > li > .ui_chk {margin-left: 0; padding-left: 0;}
+.info_agree .chk_group .checkbox {margin-top: 1.4rem; border-top: 1px solid #e3e5e6;}
+.info_agree .chk_group .type_agree > li {padding: 0;}
+.info_agree .chk_group .type_agree > li > ul > li {padding-left: 0; padding-right: 0;}
+.info_agree .chk_group .type_agree > li:first-child .ui_chk .txt {font-weight: 400; color: #717171;}
+.info_agree .chk_group .type_agree > li:first-child .ui_chk input:checked+span {color: #111;}
+.chk_group .txt_option {color: #717171;}
+.prod_service_send {margin: 1.3rem -2rem 0.9rem -4.9rem; padding: 0 0 1.4rem 5rem; background-color: #f7f9fa; border-top: 1px solid #dfe2e3; border-bottom: 1px solid #e1e3e5;}
+.prod_service_send .label {margin: 1.7rem 0 1rem; font-size: 1.3rem;}
+.chk_group .type_agree > li > ul > li .prod_service_send ul {margin-left: -0.5rem;}
+.chk_group .type_agree > li > ul > li .prod_service_send li {display: inline-block; width: 30%; margin: 0.6rem 0; padding-left: 0;}
+.chk_group .type_agree > li > ul > li .prod_service_send li .txt {width: auto; padding: 0;}
+.chk_group .type_agree > li > ul > li .prod_service_send li input[type="checkbox"] {background-image: url(../img/sp_form.png); background-position: 0 -2.5rem;}
+.chk_group .type_agree > li > ul > li .prod_service_send li input[type="checkbox"]:checked {background-position: -2.5rem -2.5rem;}
+.chk_group .type_agree > li > ul > li .prod_service_send li input+span {font-size: 1.5rem;}
+.chk_group .type_agree > li > ul > li .prod_service_send li input:checked+span {color: #111;}
+.info_agree .mo_box_rs.type_tc_box+.btn_area,
+.info_agree .txt_help+.btn_area {margin-top: 3rem; margin-bottom: 0;}    
+.mo_box.type_target_info {width: calc(100% + 4rem); margin: 0 -2rem 2rem; padding: 0 2rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.mo_box.type_target_info .step01 .info_help {margin: 0; padding: 2.6rem 0;}
+.mo_box.type_target_info .step01 .target_search {width: calc(100% + 4rem); margin: 0 -2rem; padding: 1.6rem 2rem 3rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #fafcfd;}
+.mo_box.type_target_info .step01 .target_search .label {margin: 1.3rem 0 1.6rem;}
+.mo_box.type_target_info .step01 .target_search .apply_status {margin-top: 2.6rem;}
+.mo_box.type_target_info .step01 .target_search .apply_status .titlebar {margin-bottom: 1.7rem;}
+.mo_box.type_target_info .step01 .target_search .apply_status .mo_box_rs {padding: 2.3rem 2rem;}
+.mo_box.type_target_info .step01 .target_search .apply_status .mo_box_rs li {padding: 1.6rem 0; border-top: 1px solid #e9eaeb;}
+.mo_box.type_target_info .step01 .target_search .apply_status .mo_box_rs li:first-child {border-top: 0;}
+.mo_box.type_target_info .step02 .txt_help {width: calc(100% + 4rem); margin: 3rem -2rem 0; padding: 1.6rem 2rem; border-top: 1px solid #edeeef; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #fdfdfd;}
+.mo_box.type_target_info .step03 .target_check {padding: 2rem 0 1.6rem; background-color: transparent;}
+.mo_box.type_target_info .step03 .target_check  .btn_area {margin-bottom: 1.5rem;}
+.mo_box.type_target_info .step03 .target_check .prod_info.child .form_group {margin: 1.2rem 0;}
+
+/* 마이페이지 > Liiv M 해지 */
+.doc_review.liivm_cancel .doc_review_cont {padding-top: 0.9rem; padding-bottom: 0; border-radius: 1rem; background-color: #fff;}
+.doc_review.liivm_cancel li .titlebar+.doc_review_cont {padding-top: 0.1rem; padding-bottom: 3rem; border-top-left-radius: 0; border-top-right-radius: 0; background-color: #fafcfd;}
+.doc_review.liivm_cancel .doc_review_cont .mo_select_rdo.cert_types .txt_help {margin-bottom: 0;}
+.mo_box.type_top_brd .label {margin-top: 1.7rem;}
+.mo_box.type_top_brd {border-top: 1px solid #e9eaeb;}
+.doc_review.liivm_cancel .mo_select_rdo.join_types {margin-top: 2.6rem;}
+.doc_review.liivm_cancel .mo_select_rdo.join_types .mo_box.type_select_detail {width: calc(100% + 4rem); margin: 3rem -2rem 0; padding: 0 2rem 1.6rem; border-top: 1px solid #dfe2e3; border-bottom: 1px solid #e1e3e5; background-color: #f7f9fa;}
+.txt_help.type_livvm_cancel {width: calc(100% + 4rem); margin: 0 -2rem 0; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; padding: 0.7rem 2rem; border-top: 1px solid #eeeff0; background-color: #f7f9fa;}
+.doc_review.liivm_cancel .txt_unpaid {color: #ff4a4a;}
+.liivm_cancel .refund_acc {margin-top: 2rem; border-top: 1px solid #e9eaeb;}
+.refund_acc .titlebar {margin-top: 1.6rem;}
+.refund_acc .titlebar .title {display: table-cell;}
+.refund_acc .titlebar p {display: table-cell; text-align: right;}
+.refund_acc .txt_help, .refund_acc .txt_help ul {margin: 1.2rem 0 2.6rem;}
+.apply_chk {margin: 3rem 0 2.6rem;}
+.apply_chk+.btn_area {margin-bottom: 0;}
+.apply_chk .ui_chk {margin-top: 1.5rem;}
+.apply_chk .ui_chk:first-child {margin-top: 0;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_unpaid {padding: 0.6rem 3rem 2.7rem; font-size: 1.5rem; color: #717171;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_cancel_prod {padding: 0.5rem 3rem; background-color: #f2f4f6;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_cancel_prod li {margin: 2rem 0;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_cancel_prod li textarea {margin-top: 1.2rem;}
+.doc_review .doc_review_cont .thismonth_charge dt {width: 65%;}
+.doc_review .doc_review_cont .thismonth_charge dd {width: 35%;}
+.c_period {font-size: 1.2rem; color: #8aa3b1;}
+.txt_help.type_liivm_cancel,
+.txt_help.type_liivm_cancel ul {margin-top: 0;}
+.txt_help.type_liivm_cancel li {font-size: 1.5rem; color: #717171;}
+.type_liivm_cancel .txt_sub_help {margin-top: 0.9rem; font-size: 1.2rem; color: #8aa3b1;}
+.cs_box.type_unpaid p {margin-top: 1.3rem; color: #717171;}
+.cs_box.type_unpaid p:first-child {margin-top: 0;}
+.cs_box.type_unpaid p strong {color: #111;}
+
+/* 마이페이지 > 확정기변 */
+#wifiIosView {display: none;}
+body.ios #macAddrView {display: none;}
+body.ios #wifiIosView {display: block !important;}
+
+/* 개통 > 신청현황조회 */
+.opening_wrap {position: relative; padding: 1.6rem 1.6rem 3rem;}
+.opening_wrap h1.page_title {margin-bottom: 1.1rem;}
+.ctrl_area {position: absolute; right: 1.6rem; top: 1.6rem; display: table; height: 3rem;}
+.ctrl_area .btn_link {margin: 0.35rem 0 0.35rem 0.6rem;}
+.ctrl_area .btn  {margin-top: 0.1rem; margin-left: 0.6rem;}
+.opening_wrap .mo_box_rs.ccenter {margin-top: 3rem; }
+.opening_wrap .txt_help + .mo_box_rs.ccenter {margin-top: 2.6rem;}
+.opening_wrap .event_list {margin-top: 3rem;}
+.opening_wrap .event_list > ul li:last-child {margin-bottom: 0;}
+.opening_wrap .apply_prod_detail + .btn_area + .txt_help {margin-top: 2.7rem;}
+.opening_wrap .usim_check .titlebar {margin-top: 2.5rem;}
+.opening_wrap .usim_check .title {font-size: 1.8rem;}
+.usim_check .tabs_move li a span::after {content:"망";}
+
+.apply_info {margin-top: 2rem; padding-bottom: 2rem;}
+.apply_info .titlebar {display: table; padding: 1.6rem 2rem; border-bottom: 0;}
+.apply_info .titlebar h2, .apply_info .titlebar .date {display: table-cell;}
+.apply_info .titlebar .date {font-size: 1.3rem; color: #8aa3b1; text-align: right;}
+.apply_info .detail {margin: 0 2rem; padding: 1.8rem 2rem 2rem; border-radius: 1rem; background-color: #ecf9ff;}
+.apply_info .detail .detail_top {display: table; width: 100%;}
+.apply_info .detail .left_area {display: table-cell;}
+.apply_info .detail .apply_name {margin-left: 0.2rem; display: inline-block; font-size: 1.5rem; font-weight: 700;}
+.apply_info .detail .apply_number {display: table-cell; font-size: 1.4rem; text-align: right;}
+.apply_type {display: inline-block; min-width: 5.9rem; height: 2rem; border-radius: 1rem; border: 1px solid #098aaa; background-color: #fff; font-size: 1.2rem; color: #098aaa; line-height: 1.9rem; text-align: center; padding:0 0.6rem;}
+.apply_info .detail .legal_rep_info {margin-top: 2rem; padding-top: 1.1rem; border-top: 1px solid #d7e7ee; text-align: right;}
+.apply_info .detail .legal_rep_info {font-size: 1.3rem; line-height: 1;}
+.apply_info .detail .legal_rep_info .tit {color: #098aaa;}
+.apply_info .detail .legal_rep_info .name {color: inherit;}
+.apply_info .detail .legal_rep_info .relationship {color: #717171;}
+.apply_prod {margin-top: 2.5rem;}
+.apply_prod .titlebar {margin-bottom: 1.5rem;}
+.apply_prod_detail {margin-top: 3rem; margin-bottom: 3rem;}
+.delivery_status {font-size: 1.6rem;}
+.apply_prod_detail .btn_area {margin-top: 0;}
+.apply_prod_detail .btn_point {height: 4rem; line-height: 3.8rem;}
+.ico_detail::before {display:inline-block; content:''; width: 1.5rem; height: 1.5rem; background:url(../img/icon_search_w.png) no-repeat; background-size: 1.5rem auto; background-position:0 0; margin-right: 0.7rem; vertical-align: middle;}
+.number_select .num_result + .btn_area {margin-top: 1.2rem; margin-bottom: 3rem;}
+.number_select .num_result ul {height: auto;}
+.txt_color06 {color: #717171 !important;}
+
+.txt_num_search_help {margin-bottom: 1rem; font-size: 1.4rem; color: #717171;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_apply {padding: 0 4rem 1rem;}
+.apply_all_list li {margin-bottom: 2rem;}
+.apply_all_list input[type="radio"] + .apply_type {border-color: #717171;}
+.apply_all_list input[type="radio"] + .apply_type + .apply_date {color: #717171;}
+.apply_all_list input[type="radio"]:checked +.apply_type {border-color: #098aaa; color: #098aaa;}
+.apply_all_list input[type="radio"]:checked +.apply_type + .apply_date {color: #111;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_contract {padding: 0 3rem 4rem;}
+.mo_box_rs.selected_prod {padding: 1.7rem 2rem; border: 2px solid #3bc3e5; background-color: #ecf9ff; text-align: center}
+.mo_box_rs.selected_prod dt {margin-bottom: 0.7rem; font-size: 1.3rem; color: #717171;}
+.mo_box_rs.selected_prod dd p:first-child {font-size: 1.6rem; font-weight: 700;}
+.mo_box_rs.selected_prod dd p:first-child strong {color: #098aaa;}
+.mo_box_rs.selected_prod .txt_vat {margin-top: 0.5rem; font-size: 1.2rem; color: #aaa;}
+.mo_box_rs.selected_prod + .txt_help,
+.mo_box_rs.selected_prod + .txt_help ul {margin-top: 1.2rem; margin-bottom: 0.6rem}
+.cs_box.type_contract .help_box .titlebar .title {font-weight: 700;}
+
+.type_contract .help_box {margin-top: 2.6rem; overflow:inherit}
+.usim_reg .usim_mod .btn_area {margin-top: 0.8rem;}
+.usim_reg  + .btn_area {margin-top: 3rem; margin-bottom: 3rem;}
+.usim_check + .btn_area {margin-top: 3rem;}
+.usim_reg .usim_mod .txt_help {margin-top: -0.3rem; margin-bottom: 1.1rem;}
+.dvDesktop .usim_reg .usim_mod .txt_help {display: none;}
+
+/* 개통 > 신청현황조회 > 번호이동 동의 */
+.numchange_agree {margin-top: -0.4rem;}
+.numchange_agree + .btn_area {margin-bottom: 0;}
+.numchange_agree .numchange_target {margin-bottom: 3rem;}
+.numchange_target .ui_accordion.using_company {padding-top: 0;}
+.numchange_target .ui_accordion.using_company.active {width: calc(100% + 3.2rem); margin: 2rem -1.6rem 1.5rem;  border-radius: 1rem}
+.numchange_target .ui_accordion.using_company .accordion_cont {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.numchange_target .ui_accordion.using_company .ico_help {margin-bottom: 0.2rem;}
+.numchange_agree .numchange_target .number {display: table; width: 100%; padding: 0.6rem 0 1.2rem; border-bottom: 1px solid #e6e8e9;}
+.numchange_agree .numchange_target .number dt {display: table-cell; font-size: 1.4rem; color: #717171;}
+.numchange_agree .numchange_target .number dd {display: table-cell; text-align: right;}
+.numchange_agree .info_review_cont {padding: 1.7rem 2rem 3rem;}
+.numchange_agree .info_review_cont .btn_area {margin-top: 1rem; margin-bottom: 0;}
+.numchange_agree .cert_chk {margin-top: 2.6rem; margin-bottom: 3rem;}
+.numchange_agree .cert_chk li {margin-top: 2rem;}
+.numchange_agree .cert_chk li:last-child {margin-top: 1.6rem;}
+.numchange_agree .cert_chk li .txt_help {margin-top: 1.2rem; margin-bottom: 0;}
+.numchange_agree .cert_chk .ico_help {margin-bottom: 0.3rem; margin-left: 0.4rem;}
+.com_ccenter {margin: 1rem 0 1.7rem 0; padding: 1.1rem 0 1.0rem; display: table; width: 100%; border-top: 1px solid #e3e5e6; border-bottom: 1px solid #e3e5e6;}
+.com_ccenter dt {float: left; display: inline-block; width: 50%; margin: 0.18rem 0; font-size: 1.3rem; color: #717171;}
+.com_ccenter dd {display: inline-block; width: 50%; margin: 0.1rem 0; font-size: 1.4rem; text-align: right;}
+.numchange_agree .agree_chk {margin-top: 1rem; margin-bottom: 2.7rem;}
+.numchange_agree .agree_chk .txt_numchange_help {padding-top: 0.4rem; padding-left: 3.1rem; font-size: 1.2rem; color: #8aa3b1;}
+.ui_accordion.type_com_tel {margin: 3rem 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.10);}
+.ui_accordion.type_com_tel .btn.accordion_toggle {border-radius: 1rem; font-weight: 700;}
+.ui_accordion.type_com_tel .btn.accordion_toggle.active {border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui_accordion.type_com_tel .accordion_cont {padding: 2rem 2rem 1.6rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+
+/* 개통 > 신청현황조회 > 가입신청취소 */
+.join_cancel .txt_cancel_chk_help {margin: 2.4rem 0 1.6rem; color: #111; font-size: 1.8rem; font-weight: 700;}
+.join_cancel .cancel_chk li {margin-bottom: 2rem;}
+.join_cancel + .btn_area {margin-top: 2.5rem; margin-bottom: 0;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_selfopening {padding: 0 3rem 4rem;}
+.cs_box.type_selfopening .message {padding: 0.5rem 0 0;}
+.mo_box_rs.error_code {margin-top: 2.6rem; text-align: center;}
+.error_code .error_title {padding-top: 1.7rem; font-size: 1.3rem; color :#d32f2f;}
+.error_code .error_name {padding-bottom: 1.4rem; font-size: 1.8rem; font-weight: 700;}
+.error_code .ccenter {padding: 1rem; background-color: #f7f9fa; font-size: 1.3rem; color: #8aa3b1;}
+.error_code .ccenter > em {color: #111; font-weight: 400;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_apply_status {padding: 0;}
+.mlayer_pop .txt_apply_help {padding: 0 3rem 3.7rem;}
+.mlayer_pop .txt_apply_help strong {font-size: 1.8rem;}
+.mlayer_pop .txt_apply_help em {display: block; margin-top: 0.3rem; color: #717171;}
+.mlayer_pop .opening_box {padding: 2.1rem 3rem 4rem; background-color: #f2f4f6;}
+.mlayer_pop .opening_box .opening_time {margin: 1.1rem 0 0;}
+.mlayer_pop .opening_box .opening_time dl:last-child dd em {display: block;}
+.mlayer_pop .pop_title.ico_help_b {position: relative; padding-left: 3rem;}
+.mlayer_pop .pop_title.ico_help_b::before {content: ""; position: absolute; left: 0; top: 50%; display: inline-block; width: 2rem; height: 2rem; margin-top: -0.9rem; border-radius: 100%; background: #8aa3b1 url(../img/icon_tooltip.png) no-repeat; background-size: 2rem auto; background-position: center center;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_help {padding: 0 3rem 4rem;}
+.brand_list li {position: relative; margin-top: 0.4rem; padding-left: 1rem; color: #717171;}
+.brand_list li::before {content:"-"; display: inline-block; position: absolute; left: 0;}
+
+/* 부가서비스 > 통신사별 부가서비스 */
+.addservice_wrap {position: relative; padding: 1.6rem 1.6rem 3rem;}
+.addservice_wrap h1.page_title {margin-bottom: 1.6rem;}
+.addservice_wrap .ui_accordion.addservice + .btn_area {margin-top: 3rem; margin-bottom: 0;}
+.mo_box_rs.addservice_select {background-color: #f7f9fa;}
+.addservice_select {border-radius: 1rem;}
+.addservice_select .nodata {padding-bottom: 7rem;}
+.addservice_select .company_sort {position: relative; display: flex; width: 100%; padding: 0 2rem; border-top-left-radius: 1rem; border-top-right-radius: 1rem; background-color: #fff;}
+.addservice_select .company_sort::after {content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; height: 1px; border-bottom: 1px solid #e3e5e6;}
+.addservice_select .company_sort li {flex: 1; /*display: table-cell;*/ text-align: center;}
+.addservice_select .company_sort li label input {display: none;}
+.addservice_select .company_sort li label input+span {position: relative; z-index: 2; display: block; padding: 2rem 0 1rem; font-size: 1.6rem; color: #ccc; text-align: center;} 
+.addservice_select .company_sort li label input+span::after {content: "망";}
+.addservice_select .company_sort li label input:checked+span {border-bottom: 3px solid #16b9e4; font-weight: 700; color: #111;}
+.addservice_select .service_sort {display: table; width: calc(100% + 0.8rem); margin-left: -0.8rem; padding: 2rem;}
+.addservice_select .service_sort li {display: table-cell; width: 25%; text-align: center;}
+.addservice_select .service_sort label input {display: none;}
+.addservice_select .service_sort span {display: inline-block; width: calc(100% - 0.8rem); height: 4rem; margin-left: 0.8rem; border-radius: 1rem; border: 2px solid transparent; background-color: #fff; line-height: 3.6rem; box-shadow: 0 0 1rem rgba(13,72,127,0.10); color: #111;}
+.addservice_select .service_sort input:checked+span {border: 2px solid #0db7e1;}
+.addservice_select .keyword_sort {margin-bottom: 1.5rem; padding: 1.5rem 2rem; background-color: #fff;}
+.addservice_select .keyword_sort .form_group .btn_prod_search {position: absolute; right: 0; top: 0; width: 4rem; height: 4rem;}
+.addservice_select .addservice_list {padding: 0 2rem 3rem;}
+.addservice_select .addservice_list li {margin-top: 1.2rem;}
+.addservice_select .addservice_list li:first-child {margin-top: 0;}
+.addservice_select .addservice_list > li .item {display: block; padding: 1.5rem 2rem 1.7rem; border-radius: 1rem; background-color: #fff; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.addservice_select .addservice_list > li .item:focus {border: 2px solid #16b8e4;}
+.addservice_select .addservice_list li .as_title {position: relative; display: table; width: 100%; padding-right: 0.3rem;}
+.addservice_select .addservice_list li .as_title strong {display: inline-block; padding-right: 0.7rem; font-size: 1.4rem; vertical-align: middle;}
+.addservice_select .addservice_list li .as_title em {position: relative; display: inline-block; padding-left: 0.7rem; font-size: 1.2rem; line-height: 1; color: #8aa3b1;}
+.addservice_select .addservice_list li .as_title em::before {content :""; position: absolute; left: 0; top: 50%; display: inline-block; width: 1px; height: 0.8rem; margin-top: -0.4rem; border-left: 1px solid #dadada;}
+.addservice_select .addservice_list li .as_title em::after {content:"망"; display: inline-block;}
+.addservice_select .addservice_list li .as_detail {margin-top: 0.6rem; font-size: 1.2rem; color: #717171;}
+.addservice_select .addservice_list li .as_price {position: relative; margin-top: 0.4rem; padding-right: 1.6rem; color: #098aaa; font-weight: 700; text-align: right;}
+.addservice_select .addservice_list li .as_price::after,
+.addservice_select .addservice_list > li .item.arrow .as_title::after {content:""; position: absolute; right: 0; top: 50%; display: inline-block; width: 0.8rem; height: 1.4rem; margin-top: -0.7rem; background: transparent url(../img/icon_arrow_right_s.png) no-repeat 50% 50%; background-size: 0.8rem auto;}
+.addservice_select .addservice_list > li .item.arrow {position: relative; display: block; padding: 1.5rem 2rem 1.3rem;}
+.addservice_select .addservice_list > li .item.arrow .as_price::after {display: none;}
+.addservice_select .addservice_list > li .item.arrow .as_title::after {right: 0; top: 1.3rem;}
+.mo_box_rs.addservice_summary {background-color: #098aaa; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.addservice_summary > .item {position: relative; padding: 1.9rem 2rem;}
+.addservice_summary > .item dt {position: relative; display: table; width: 100%; margin: 0; padding-bottom: 1.1rem; border-bottom: 1px solid rgba(227,229,230,0.3); text-align: right;}
+.addservice_summary > .item dd {padding-top: 1.4rem; font-size: 1.3rem; color: rgba(255,255,255,0.9);}
+.addservice_summary > .item .as_title {display: table-cell; text-align: left; vertical-align: top;}
+.addservice_summary > .item .as_title strong {position: relative; display: inline-block; padding-right: 1rem; font-size: 1.6rem; color: #fff;}
+.addservice_summary > .item .as_title em {position: relative; display: inline-block; padding-left: 1.4rem; font-size: 1.2rem; line-height: 1; color: rgba(255,255,255,0.9); vertical-align: top; margin-top: 0.7rem;}
+.addservice_summary > .item .as_title em::before {content :""; position: absolute; left: 0.7rem; top: 50%; display: inline-block; width: 1px; height: 0.8rem; margin-top: -0.4rem; border-left: 1px solid rgba(227,229,230,0.3);}
+.addservice_summary > .item .as_title em::after {content:"망"; display: inline-block;}
+.addservice_summary > .item .as_price {display: inline-block; white-space: nowrap; color: #ffdf9c; font-weight: 700; text-align: right;}
+.addservice_summary > .item .as_price .btn_link {position: relative; padding: 0.3rem 0 0.2rem; font-size: 1.5rem; color: #ffdf9c; font-weight: 700;}
+.addservice_summary > .item .as_price .btn_link::before {content:""; position: absolute; left: 0; right: 0; bottom: 0.2rem; height: 1px; border-bottom: 1px solid #ffdf9c;}
+.addservice_summary > .item dd .txt_help, .addservice > .item dd .txt_help ul {margin: 0;}
+.addservice_summary > .item dd .txt_help li {color: rgba(255,255,255,0.9);}
+.call_forwarding .label {margin: 1.6rem 0;}
+.ui_accordion.addservice {margin-top: 2rem; background-color: transparent; box-shadow: none;}
+.ui_accordion.addservice ul {border-top: 0;}
+.ui_accordion.addservice li {margin-top: 1.2rem; border: 0; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.ui_accordion.addservice .btn.accordion_toggle {border-radius: 1rem; font-weight: 700;}
+.ui_accordion.addservice .btn.accordion_toggle.active {border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.addservice_wrap .ui_accordion.addservice .accordion_cont {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; font-size: 1.4rem; color: #717171;}
+.addservice_apply {margin-top: 2rem; margin-bottom: 3rem;}
+.addservice_apply > ul > li {margin-top: 1.2rem;}
+.addservice_apply > ul > li .info_review .info_review_cont {padding: 2rem; border-top-left-radius: 0; border-bottom-right-radius: 0; background-color: #f7f9fa; font-size: 1.4rem; color: #717171;}
+.addservice_apply > ul > li .info_review .info_review_cont .txt_help,
+.addservice_apply > ul > li .info_review .info_review_cont .txt_help ul {margin: 0;}
+.addservice_apply > ul > li .info_review .info_review_cont .txt_help li {font-size: 1.4rem;}
+.addservice_apply > ul > li .info_review .info_review_cont .txt_help li::before {top: 0.3rem;}
+.addservice_apply + .btn_area {margin-top: 3rem; margin-bottom: 3rem;}
+.addservice_help > li {margin-top: 1.2rem;}
+.addservice_help .info_review .titlebar {text-align: center;}
+.addservice_help .info_review .titlebar .title {font-weight: 400; font-size: 1.5rem;}
+.addservice_help .info_review .titlebar .title span {vertical-align: middle;}
+.addservice_help .info_review .info_review_cont {padding: 2rem;}
+.addservice_help .romaing_inside p {font-size: 1.3rem;}
+.addservice_help .romaing_inside strong {font-size: 1.4rem; font-weight: 400;}
+.addservice_help .romaing_inside em {font-size: 1.3rem;color: #717171;}
+.addservice_help .romaing_overseas dl {display: table; width: auto; margin-top: 0.6rem; border-top: 0;}
+.addservice_help .romaing_overseas dl:first-child {margin-top: 0;}
+.addservice_help .romaing_overseas dt {display: table-cell; width: auto; padding: 0 1.2rem 0 0; vertical-align: top;}
+.addservice_help .romaing_overseas dd {float: left; display: inline-block; padding: 0; text-align: left;}
+.addservice_help .romaing_overseas dd p {font-size: 1.5rem;}
+.addservice_help .romaing_overseas dd em {font-size: 1.3rem; color: #717171;}
+.addservice_help .roaming_airport li {margin-top: 0.8rem; font-size: 1.4rem;}
+.addservice_help .roaming_airport li:first-child {margin-top: 0;}
+.addservice_help .roaming_airport li em {font-size: 1.3rem; color: #717171;}
+.icon_roaming_callcenter,
+.icon_roaming_airport {position: relative; display: inline-block; width: 1.6rem; height: 1.6rem; margin-right: 0.5rem; vertical-align: middle;}
+.icon_roaming_callcenter::before {content:""; display: inline-block; left: 0; top: 0; width: 1.6rem; height: 1.6rem; background: url(../img/icon_roaming_callcenter.png) no-repeat 0 0; background-size: 1.6rem auto;}
+.icon_roaming_airport::before {content:""; display: inline-block; left: 0; top: 0; width: 1.6rem; height: 1.6rem; background: url(../img/icon_roaming_airport.png) no-repeat 0 0; background-size: 1.6rem auto;}
+.addservice_help + .ui_accordion.user_guide {margin-top: 3rem;}
+
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_roaming {padding: 0 3rem 2.7rem;}
+.mlayer_pop .company_type {display: inline-block; height: 1.6rem; margin: 0.6rem 0 0 0.2rem; padding: 0 0.65rem; background-color: #098aaa; border-radius: 1.4rem; font-size: 1rem; color: #fff; line-height: 1.4rem; vertical-align: top;}
+.mlayer_pop .company_type::after {content: "망";}
+.cs_box.type_roaming .form_group {position: relative;}
+.mlayer_pop .layer_header .pop_title.roaming {line-height: 1.5;}
+
+.cs_box.type_roaming .mo_box > .label:first-child {margin-top: 0;}
+.cs_box.type_roaming .search_result {display: none; width: calc(100% + 6rem); margin-left: -3rem; margin-right; 3rem; padding: 1.4rem 3rem 3rem; background-color: #f2f4f6;}
+.cs_box.type_roaming .search_result li {border-bottom: 1px solid #e6e8e9;}
+.cs_box.type_roaming .search_result li button {min-width: 30%; margin-left: -1rem; padding: 1.1rem 1rem; text-align: left;}
+.cs_box.type_roaming .form_group.type_2dv {display:flex; width: 100%;}
+.cs_box.type_roaming .form_group.type_2dv select {display: table-cell; width: calc(50% - 0.4rem); margin-right: 0.4rem;}
+.cs_box.type_roaming .form_group.type_2dv select+select {display: table-cell; width: calc(50% - 0.4rem); margin-left: 0.4rem;}
+.roaming_data {display: table; width: calc(100% + 0.8rem); margin: 2.2rem -0.4rem 0;}
+.roaming_data li,
+.data_select .data_list > ul li {display: inline-block; width: 50%; padding: 0.4rem; vertical-align: top;}
+.roaming_data label input,
+.data_list label input {display: none;}
+.roaming_data label input:checked + .ro_data_select,
+.data_list label input:checked + .ro_data_select {position: relative; border: 0;}
+.roaming_data label input:checked + .ro_data_select::before,
+.data_list label input:checked + .ro_data_select::before {content:""; position: absolute; display: block; width: calc(100% - 4px); height: calc(100% - 4px); left: 0; top: 0; border: 2px solid #0db7e1; border-radius: 0.8rem;}
+.ro_data_select {margin: 0; border-radius: 1rem; box-shadow: 0 0 0.5rem rgba(13,72,127,0.2);}
+.ro_data_select {display: table; width: 100%; min-height: 8rem;}
+.ro_data_select .cell {display: table-cell; padding: 0.5rem; text-align: center; vertical-align: middle;}
+.ro_data_select .cell+.cell {width: 55%; padding: 0.5rem 0.5rem 0.5rem 0.9rem; border-top-right-radius: 1rem; border-bottom-right-radius: 1rem; border-left: 1px solid #e3e5e6; background-color: #f7f9fa; text-align: left;}
+.ro_data_select .ro_data {font-weight: 700; color: #0db7e1;}
+.ro_data_select .ro_period {font-size: 1.2rem; color: #717171;}
+.ro_data_select .ro_price {font-size: 1.3rem; color: #098aaa; font-weight: 700;}
+.ro_data_select .ro_voice {font-size: 1.2rem; color: #717171;}
+.search_box.active .mo_search .btn_search {display:none;}
+.search_box.active .mo_search .btn_search_del {display:block;}
+.search_box.active .search_result {display:block !important;}
+.cs_box.type_roaming .ro_data_select .ro_data {color: #111;}
+.addservice_wrap .ctrl_area .ui_switch.type2 {margin-top: -0.1rem;}
+.addservice_wrap .ctrl_area .ui_switch.type2 input[type="checkbox"]:checked + .chk_ani:after {content: "해제"; color: #0db7e1;}
+.addservice_wrap .ctrl_area .ui_switch.type2 input[type="checkbox"] + .chk_ani:after {content: "차단"; color: #717171;}
+
+.addservice_summary {display: border:1px solid red;}/*확인*/
+.roaming_off {display: none; height: 14.4rem; margin-bottom: 2rem; padding: 4rem; background-color: #f7f9fa; text-align: center;}
+.roaming_off p {font-size: 1.4rem; color: #717171;}
+.roaming_off p::before {content:""; display: block; width: 3rem; height: 3.6rem; margin: 0 auto 1.1rem; background: url(../img/icon_roaming_off.png) no-repeat 50% 50%; background-size: 3rem auto;}
+
+/* 부가서비스 > 데이터 충전/선물하기 */
+.data_select {padding: 2.6rem 2rem 0;}
+.data_select .data_list .titlebar {margin-top: 0;}
+.data_select .data_list .titlebar p {display: table-cell; text-align: right; vertical-align: middle;}
+.data_select .data_list > ul {display: table; width: calc(100% + 0.8rem); margin: 1.2rem -0.4rem 0;}
+.data_select .ro_data_select {min-height: auto;background-color: #fff;}
+.data_select .cell {display: block; width: 100%; padding: 1.9rem 0 2rem; text-align: center;}
+.data_select .cell + .cell {display: block; width: 100%; padding: 0.8rem 0;border-left: 0; border-top: 1px solid #e3e5e6; border-top-right-radius: 0; border-bottom-left-radius: 1rem; background-color: #f7f9fa;} 
+.data_select .ro_data_select .ro_price {font-size: 1.4rem; text-align: center;}
+.data_select .ro_data_select .ro_unit {font-size: 1.6rem; font-weight: 700; color: #0db7e1;}
+.data_select .ro_data_select .ro_vat {font-size: 1.2rem; color: #717171;}
+.data_select .ro_data_select .ro_data {position: relative; padding-left: 3.5rem; font-size: 2.3rem;}
+.data_select .ro_data_select .ro_data::before {content:""; position: absolute; left: 0; top: 50%; display: inline-block;  width: 2.9rem; height: 2.3rem; margin-top: -1.15rem; background: url(../img/sp_data.png) no-repeat; background-size: auto 2.3rem;}
+.data_select .ro_data_select .ro_data.lgu::before {background-position: 0 0; }
+.data_select .ro_data_select .ro_data.kt::before {background-position: -5rem 0;}
+.data_select .ro_data_select .ro_data.skt::before {background-position: -10rem 0; width: 2.6rem;}
+.data_select .coupon_list {margin-top: 2.3rem;}
+.data_select .coupon_list .titlebar {margin-bottom: 1.6rem;}
+.data_select .prod_detail.pay_amount {padding-bottom: 3rem; background-color: #fff; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.data_select .prod_detail.pay_amount .titlebar {padding-bottom: 1.7rem; background-color: #f7f9fa;}
+.data_select .prod_detail.pay_amount .titlebar::before {display: none;}
+.data_select .prod_detail.pay_amount .prod_charge_total {padding: 0.9rem 2rem 1.9rem; background-color: #fff;}
+.data_select .prod_detail.pay_amount .prod_charge {border-top: 0; border-bottom: 0;}
+.data_select .prod_detail.pay_amount .prod_charge .total_sum {border-bottom: 0;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_data_history {padding: 0;}
+.cs_box.type_data_history .data_select {padding: 0.8rem 0 2rem;}
+.cs_box.type_data_history .tabs_move li a {padding: 0.7rem 0 1.3rem;}
+.cs_box.type_data_history .tabs_cont {padding-top: 1.6rem; padding-bottom: 3rem; background-color: #f2f4f6;}
+.cs_box.type_data_history .tabs_cont .titlebar {margin-bottom: 1.7rem;}
+.cs_box.type_data_history .data_select .cell {display: table-cell; width: 50%; padding: 0; text-align: left; vertical-align: top;}
+.cs_box.type_data_history .data_select .cell + .cell {display:table-cell; width: 50%; padding: 00; border: 0; border-top-right-radius: 0; border-bottom-left-radius: 1rem; background-color: transparent; text-align: right;}
+.cs_box.type_data_history .data_select .ro_data_select {padding: 1.4rem 2rem;}
+.cs_box.type_data_history .data_select .ro_data_select .ro_price {font-size: 2.3rem; text-align: right;}
+.cs_box.type_data_history .gift_detail_list {position: relative;}
+.cs_box.type_data_history .gift_detail_list .tabs_move {position: absolute; right: 0; top: 0;}
+.cs_box.type_data_history .gift_detail_list .tabs_move {width: auto;}
+.cs_box.type_data_history .gift_detail_list .tabs_move li+li {margin-left: 1.2rem;}
+.cs_box.type_data_history .gift_detail_list .tabs_move li a {padding: 0rem;}
+.cs_box.type_data_history .gift_detail_list .tabs_move li.active {border-bottom: 1px solid #64a8be;}
+.cs_box.type_data_history .gift_detail_list .tabs_move li.active a::before {display: none;}
+.cs_box.type_data_history .gift_detail_list .tabs_move li a span {font-size: 1.3rem; color: #717171; font-weight: 400;}
+.cs_box.type_data_history .gift_detail_list .tabs_move li.active a span {color: #098aaa;}
+.cs_box.type_data_history .gift_detail_list .tabs_cont {padding: 0;}
+.cs_box.type_data_history .gift_detail_list .data_select .cell {width: 100%; text-align: center;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_friend_search {padding: 0 2rem 3rem;} 
+.cs_box.type_friend_search .titlebar {margin-top: 0.6rem}
+.cs_box.type_friend_search .title {font-size: 1.5rem; color: #111;}
+.cs_box.type_friend_search .data_select {padding: 0.7rem 0 0;}
+.cs_box.type_friend_search .ro_data_select .cell {display: table-cell; width: 50%;}
+.cs_box.type_friend_search .ro_data_select .cell+.cell {display: table-cell; padding-right: 2rem; border-top: 0; background-color: transparent; vertical-align: middle; text-align: right;}
+.cs_box.type_friend_search .data_select .ro_data_select .ro_price {font-size: 2.3rem; text-align: right;}
+.cs_box.type_friend_search .send_friend {margin-top: 2.2rem;}
+.cs_box.type_friend_search .send_friend label .label {margin: 1.3rem 0 1.6rem;}
+.cs_box.type_friend_search .send_friend label + label .label {margin: 2.6rem 0 1.6rem;}
+
+/* 부가서비스 > 휴대폰 소액결제 */
+.addservice_summary + .micro_pay {margin-top: 2rem;}
+.opening_num_wrap + .addservice_summary {margin-top: 2rem;}
+.micro_pay + .btn_area {margin-top: 3rem; margin-bottom: 0;}
+.micro_pay .mo_box {display: table; width: 100%;}
+.micro_pay .mo_box .label {display: table-cell; font-size: 1.5rem; color: #111; font-weight: 700; vertical-align: middle;}
+.micro_pay .agree_check {display: table-cell; text-align: right;}
+.micro_pay .agree_check .ui_switch.type2 {width:10rem;}
+.micro_pay .agree_check .ui_switch.type2 input[type="checkbox"] +.chk_ani:after  {content: "미동의"; width: 7rem; text-align: right;}
+.micro_pay .agree_check .ui_switch.type2 input[type="checkbox"]:checked +.chk_ani:after {content: "동의";}
+.micro_pay .opening_num_wrap {margin: 1.6rem 0 2rem;}
+.micro_pay .opening_num_wrap .unit {display: table; width: 100%; padding: 2.3rem 2rem;}/*padding: 1.4rem 2rem 2.1rem;*/
+.micro_pay .opening_num_wrap .unit > dt {display: table-cell; width: 45%;}
+.micro_pay .opening_num_wrap .unit > dd {display: table-cell; width: 55%;}
+.micro_pay .opening_num_wrap .unit .opening_num .phone_unit {line-height: 1.5;}
+.micro_pay .opening_num_wrap .apply_line {display: inline-block; margin-right: 0.3rem; margin-bottom: 0.2rem;padding: 0 0.8rem; height: 2rem; border-radius: 1rem; border: 1px solid #098aaa; font-size: 1.2rem; color: #098aaa; line-height: 1.8rem; text-align: center; vertical-align: middle;}
+.micro_pay .pay_select {margin-top: 2.1rem; margin-bottom: 2.2rem;}
+.micro_pay .pay_select .form_group.type_2dv li {display: table-cell; width: 50%;}
+.micro_pay .pay_select .txt_help {margin-top: 1.2rem;}
+.micro_pay .pay_select .txt_help li {font-size: 1.3rem;}
+.micro_pay .ui_accordion.type_guide {margin-top: 2.1rem;}
+.micro_pay .ui_accordion.type_guide .btn.accordion_toggle h3 {font-size: 1.6rem; font-weight: 700;}
+.micro_pay .ui_accordion.type_guide .accordion_cont {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+.micro_pay .help_call {margin-top: 2.6rem;}
+.micro_pay .help_call .btn_area {margin-top: 2.6rem;}
+.micro_pay .help_call + .ui_accordion.type_guide {margin-top: 3rem;}
+.dvDesktop .micro_pay .help_call.m_skt .btn_area {display: none;}
+
+/* 부가서비스 > 휴대폰 소액결제 > 이용내역 */
+.use_detail .mo_box_rs {margin-top: 1.2rem;}
+.use_detail .titlebar {margin-bottom: 1.7rem;}
+.use_detail .title {font-size: 1.5rem; color: #111; font-weight: 700;}
+.use_detail .type_2dv {margin-bottom: 2rem;}
+.use_detail .type_2dv li {display: inline-block; padding-right: 0.4rem;}
+.use_detail .type_2dv li + li {display: inline-block; padding-right: 0;}
+.spend_sum {padding: 2rem 2rem 3rem;}
+.spend_sum dl {display: table; width: 100%;}
+.spend_sum dt {display: table-cell; width: 50%; font-size: 1.3rem;  vertical-align: middle;}
+.spend_sum dd {display: table-cell; width: 50%; text-align: right;}
+.spend_sum .s_total {margin: 0.7rem 0 1.6rem;}
+.spend_sum .s_total dt .s_sum {font-size: 1.3rem; color: #444;}
+.spend_sum .s_total dt .s_date {font-size: 1.3rem; color: #8aa3b1; white-space: nowrap}
+.spend_sum .s_total dd {font-size: 2.4rem; color: #098aaa; font-weight: 700; line-height: 1.2;}
+.spend_sum .s_detail {border-top: 1px solid #e9ebec; border-bottom: 1px solid #dfe1e3;}
+.spend_sum .s_detail dl {padding: 2.1rem 2rem 2.2rem 1.6rem; background-color: #f7f9fa;}
+.spend_sum .s_detail dl dt {padding-left: 0.7rem; font-size: 1.3rem; color: #717171;}
+.spend_sum .s_detail dl dd {font-size: 1.4rem; color: #444;}
+
+.info_review.spend_list .info_review_cont {padding: 0;}
+.info_review.spend_list .info_review_cont ul {padding: 0.9rem 2rem 1rem;}
+.info_review.spend_list .titlebar {display: table; width: 100%; margin-bottom: 0;}
+.info_review.spend_list .u_num,
+.info_review.spend_list .u_sum,
+.info_review.spend_list .u_title,
+.info_review.spend_list .u_price,
+.info_review.spend_list .u_type,
+.info_review.spend_list .u_date {display: table-cell; width: 50%;}
+.info_review.spend_list .u_num strong {color: #0db7e1;} 
+.info_review.spend_list .u_sum {font-size: 1.8rem; font-weight: 700; color: #098aaa; text-align: right;}
+.info_review.spend_list .u_title {font-size: 1.4rem; color: #717171;}
+.info_review.spend_list .u_price {font-size: 1.6rem; text-align: right;}
+.info_review.spend_list .u_type {font-size: 1.2rem; color: #8aa3b1;}
+.info_review.spend_list .u_date {font-size: 1.2rem; color: #8aa3b1; text-align: right;}
+.info_review.spend_list .table {display: table; width: 100%; padding: 0.3rem 0;}
+.info_review.spend_list ul > li {border-top: 1px solid #e8eaeb;}
+.info_review.spend_list ul > li:first-child {border-top: 0;}
+.info_review.spend_list ul > li a {position: relative; display: block; padding: 0.7rem 0 0.8rem 0;}
+.info_review.spend_list .nodata {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #fff;}
+.info_review.spend_list .nodata::before {background: url(../img/icon_nodata2.png) no-repeat; background-size: 100% auto;}
+
+/* 부가서비스 > 휴대폰 소액결제 > 팝업 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_setting_change {padding: 0.2rem 2rem 3rem;}
+.cs_box.type_setting_change .micro_pay .opening_num_wrap .unit {padding: 1.4rem 2rem 2.1rem;}
+.cs_box.type_setting_change .micro_pay .opening_num_wrap .unit > dt {display: table-cell; width: 30%; vertical-align: bottom;}
+.cs_box.type_setting_change .micro_pay .opening_num_wrap .unit > dt p {margin: 1.1rem 0; display: block; width: 7rem;}
+.cs_box.type_setting_change .micro_pay .opening_num_wrap .unit > dd {display: table-cell; width: 70%; vertical-align: bottom;}
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_limit_change {padding: 0 2rem 1.8rem;}
+.cs_box.type_limit_change .info_review {margin-bottom: 1.2rem;;}
+.cs_box.type_limit_change .info_review .info_review_cont {padding: 0.5rem 2rem;}
+.cs_box.type_limit_change .titlebar {display: table; width: 100%;}
+.cs_box.type_limit_change .info_review:first-child .titlebar {border-bottom: 0; border-radius: 1rem;}
+.cs_box.type_limit_change .title {display: table-cell; font-size: 1.6rem; color: #111; font-weight: 700;}
+.cs_box.type_limit_change .limit_sum {display: table-cell; text-align: right; font-size: 1.4rem; color: #444;}
+.cs_box.type_limit_change .pay_limit_select dd {padding: 0.7rem 0; font-size: 1.6rem;}
+.cs_box.type_limit_change .pay_limit_select dd input {width: 9.5rem; margin-right: 1rem;}
+
+/* 부가서비스 > 통신 부가서비스 > 로밍(KT) */
+.prd_romaing_list > li {margin-top: 2rem;}
+.prd_romaing_list > li:first-child {margin-top: 0;}
+.prd_romaing_list + .addservice_help {margin-top: 3rem;}
+.prd_romaing_list + .addservice_help + .user_guide {margin-top: 3rem;}
+.prd_romaing_list .mo_box_rs.addservice_summary {background-color: transparent;}
+.prd_romaing_list .mo_box_rs.addservice_summary .item {border-top-left-radius: 1rem; border-top-right-radius: 1rem; background-color: #098aaa;}
+.prd_romaing_list .item_detail {display: none; padding: 1rem 2rem 1.1rem; background-color: #f7f9fa;}
+.prd_romaing_list .item_detail .txt_help ul {margin-top: 0.9rem;}
+.prd_romaing_list .item_detail .txt_help strong {font-size: 1.4rem;}
+.prd_romaing_list .item_btn {display: flex; width: 100%; height: 4.8rem; border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; background-color: #fff; text-align: center;}
+.prd_romaing_list .item_btn .btn_item_view {position: relative; flex: 1; display: inline-block; color: #717171; font-weight: 400; text-align: center; line-height: 4.6rem; outline: none;}
+.prd_romaing_list .item_btn .btn_item_view::after {content: ""; position: absolute; top: 50%; display: inline-block; width: 1.4rem; height: 0.8rem; margin-top: -0.4rem; margin-left: 0.6rem; background: url(../img/icon_arrow_down.png) no-repeat; background-size: 1.4rem auto;}
+.prd_romaing_list .item_btn .btn_item_view.active::after {content: ""; position: absolute; top: 50%; display: inline-block; width: 1.4rem; height: 0.8rem; margin-top: -0.4rem; margin-left: 0.6rem; background: url(../img/icon_arrow_up.png) no-repeat; background-size: 1.4rem auto;}
+.prd_romaing_list .item_btn .btn_item_apply {position: relative; flex: 1; display: inline-block; color: #111; font-weight: 400; text-align: center; line-height: 4.6rem; outline: none;}
+.prd_romaing_list .item_btn .btn_item_view + .btn_item_apply::before {content: ""; position: absolute; left: -1px; top: 50%; width: 1px; height: 1.3rem; margin-top: -0.65rem; border-left: 1px solid #ccc;}
+.prd_romaing_list a {color: #8aa3b1;}
+.prd_romaing_list .item_btn .btn_item_apply.disabled {color: #ccc;cursor: default; pointer-events: none;}
+
+/*
+@media all and (max-width: 1024px) {
+    .dimmed_responsive {display: none;}
+}
+@media all and (min-width: 1025px) {
+    .login_wrap {position: absolute; left: 50%; top: 5%; bottom: 5%; width: 414px; height: calc(90%); margin-left: -207px; overflow-y: auto;}  
+    .idfind_result {height: calc(100% - 17rem);}
+    .ctrl_area  {top: 4.6rem;}
+}
+*/

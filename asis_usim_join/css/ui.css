@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+/*
+Form/Button/Jquery UI/Customized UI(탭,버튼,스위치,어코디언,목록,검색,데이타 없을 때 등)/공통속성
+Header : z-index:20, Left Slide Menu : z-index:30, mLayer/fLayer : z-index:100, Basic Layer:10 이하 사용
+Html Font Size : 62.5%(1rem) - margin, padding
+Basic Font Size : 15px(1.5rem);
+모바일 기준 : 360px
+*/
+
+/* FORM>Input */
+input[type="text"],
+input[type="search"],
+input[type="date"],
+input[type="file"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="password"] {width: 100%; height: 4rem; padding:0 1.4rem; -webkit-appearance: none; border-radius: 0.5rem; border: 1px solid #ccc; background: #fff; line-height:normal;}
+
+/* FORM>Input>화살표 없애기 */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+
+/* FORM>Input>자동완성 배경 제거 */
+input:-webkit-autofill, 
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {-webkit-box-shadow: 0 0 0 10rem white inset !important;}
+
+/* FORM>Textarea */
+textarea {width: 100%; padding: 1.4rem; -webkit-appearance: none; border: 1px solid #ccc; border-radius: 0.5rem;}
+
+/* FORM>Select */
+select {position: relative; width: 100%; height: 4rem; padding: 0 3rem 0 1.4rem; -webkit-appearance: none; border: 1px solid #ccc; border-radius: 0.5rem; background-color: #fff; background-image:url(../img/icon_arrow_down.png); background-repeat: no-repeat; background-position: right 1.45rem top 50%; background-size: 14px auto; line-height: 3.8rem;}
+select::-ms-expand {display: none;}
+select:focus {background-image:url(../img/icon_arrow_up.png); border: 2px solid #0db7e1;}
+select:disabled {background-color: #efefef; background-image:url(../img/icon_arrow_disabled.png); color: #ccc;}
+select option:checked {background-color: #e5faff; color: #111;}
+
+/* FORM>Checkbox */
+input[type="checkbox"] {position: relative; width: 2.3rem; height: 2.3rem; margin: 0 0.8rem 0 0; -webkit-appearance: none; border: 0; border-radius: 0; background-color: transparent; background-image: url(../img/sp_form.png); background-repeat: no-repeat; background-position: 0 -2.5rem; background-size: 10rem auto; vertical-align: middle;}
+input[type="checkbox"]:checked {background-position: -2.5rem -2.5rem;}
+input[type="checkbox"]:disabled {background-position: -5rem -2.5rem;}
+input[type="checkbox"]:checked:disabled {background-position: -7.5rem -2.5rem;}
+
+input[type="checkbox"]::-ms-check {position: relative; width: 2.3rem; height: 2.3rem; margin: 0 8px 0 0; appearance: none; border: 0; border-radius: 0; background-color: transparent; background-repeat: no-repeat; background-position: -2.5rem -2.5rem; background-size: 10rem auto; vertical-align: middle; color: transparent;}
+input[type="checkbox"]:checked::-ms-check {background-position: -15rem -2.5rem;}
+input[type="checkbox"]:disabled::-ms-check {background-position: 0 -2.5rem;}
+input[type="checkbox"].error::-ms-check {background-position: -5rem -5rem; border: 0;}
+input[type="checkbox"]+span {color: #717171;}
+input[type="checkbox"]:checked+span {color: #111;}
+input[type="checkbox"]:disabled+span {color: #ccc;}
+
+/* FORM > Radio */
+input[type="radio"] {position: relative; width: 2.3rem; height: 2.3rem; margin: 0 0.8rem 0 0; border: 0; -webkit-appearance: none; background-color: transparent; background-image: url(../img/sp_form.png); background-repeat: no-repeat; background-position: 0 0; background-size: 10rem auto; vertical-align: middle;}
+input[type="radio"]:checked {background-position: -2.5rem 0;}
+input[type="radio"]:disabled {background-position: -5rem 0;}
+input[type="radio"]:checked:disabled {background-position: -7.5rem 0;}
+
+input[type="radio"]::-ms-check {position: relative; width: 2.3rem; height: 2.3rem; margin: 0 8rem 0 0; border: 0; appearance: none; background-color: transparent; background-repeat: no-repeat; background-position: 0 0; background-size: 10rem auto; vertical-align: middle; color: transparent;}
+input[type="radio"]:checked::-ms-check  {background-position: -2.5rem 0;}
+input[type="radio"]:disabled::-ms-check {background-position: -5rem 0;}
+input[type="radio"]:checked:disabled::-ms-check {background-position: -7.5rem 0;}
+input[type="radio"]+span {color: #717171;}
+input[type="radio"]:checked+span {color: #111;}
+input[type="radio"]:disabled+span {color: #ccc;}
+
+/* FORM > Placeholder */
+:placeholder{color: #ccc;}
+::-webkit-input-placeholder {color: #ccc;} /* WebKit browsers */
+:-moz-placeholder {color: #ccc;} /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {color: #ccc;}/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {font-size: 1.5rem !important; color: #ccc !important;}/* Internet Explorer 10 + 11 */
+::-ms-input-placeholder {color: #ccc;}/* Internet Explorer Edge */
+
+/* FORM > Focus/Disabled/Error */
+input:focus, 
+textarea:focus, 
+select:focus {outline: none; border: 2px solid #0db7e1; color: #111;}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {outline: none; border: 0;}
+input[type="checkbox"]:disabled+label,
+input[type="radio"]:disabled+label {color: #ccc;}
+
+input[type="text"]:disabled,
+input[type="search"]:disabled,
+input[type="date"]:disabled,
+input[type="file"]:disabled,
+input[type="email"]:disabled,
+input[type="tel"]:disabled,
+input[type="url"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled {background-color: #eee; color: #ccc;}
+.disabled {color: #ccc;}
+input.error {border: 2px solid #d32f2f; background-color: #fffafa;}/*에러표시*/
+input.txt_security {-webkit-text-security: disc; }/*font-size: 1.2rem;*/
+
+/* FORM > Input Value Del */
+.mo_value input {padding-right: 3rem;}
+.mo_value input::-ms-clear {display:none;}
+.mo_value .btn_keyword_del {position: absolute; right: 1.5rem; top: 50%; display: none; margin-top: -0.8rem;}
+.btn_keyword_del {width: 1.6rem; height: 1.6rem; border-radius: 100%; background-color: #ccc; font-size: 0; background-image: url(../img/icon_value_del.png); background-repeat: no-repeat; background-size: 1.6rem auto;}
+
+/* FORM > Grouping */
+.form_group {position: relative; display: table; width: 100%;}   
+.form_group.type_2dv li {display: table-cell; width: 50%;}
+.form_group input {display: table-cell;}
+.form_group .txt_count {display: table-cell; width: 4rem; text-align: right; vertical-align: middle}
+.form_group .txt_dash {display: table-cell; width: 1.8rem; text-align: center; color: #ccc; vertical-align: middle}
+
+/* FORM > radio > Customizing */
+.ui_rdo {position: relative; display: inline-block; min-height: 23px; padding-left: 3.1rem; vertical-align: top;}
+.ui_rdo input {position: absolute; left: 0;}
+
+/* FORM > Checkbox > Customizing */
+.ui_chk {position: relative; display: inline-block; min-height: 23px; padding-left: 3.1rem; vertical-align: top;}
+.ui_chk input {position: absolute; left: 0;}
+
+/* FORM > Checkbox > Switch - No Text */
+.ui_switch {position: relative; display: inline-block; overflow: hidden; width: 5.3rem; height: 3.3rem;}
+.ui_switch input[type="checkbox"] {position: absolute; width: 5.3rem; height: 2.3rem; opacity: 0;}
+.ui_switch .chk_ani {position: absolute; top: 0.5rem; left: 0.3rem; z-index: 1; width: 4.7rem; height: 2.3rem; border-radius: 2.3rem; background-color: #cccccc; -webkit-transition: background 0.25s ease-out 0s; transition: background 0.25s ease-out 0s;}
+.ui_switch .chk_ani::before {content: ""; position: absolute; top: 0; left: 0; z-index: 2; width: 2.3rem; height: 2.3rem; border-radius: 2.3rem; background-color: #fff; -webkit-transition: left 0f.3s ease-out 0s; transition: left 0.3s ease-out 0s; box-shadow: 0 2px 4px rgba(145,145,145,0.54);}
+.ui_switch input[type="checkbox"]:checked+.chk_ani {background-color: #d1f2fa;}
+.ui_switch input[type="checkbox"]:checked+.chk_ani::before {left: calc(100% - 2.3rem); background-color: #0db7e1;}
+.ui_switch .chk_off,
+.ui_switch .chk_on {position: relative; float: left ; -webkit-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; font-size: 0; line-height: 0;}
+
+/* FORM > Checkbox > SWITCH - Text */
+.ui_switch.type_txt {width: 7.1rem;}
+.ui_switch.type_txt input[type="checkbox"] {width: 7.1rem; height: 2.3rem;}
+.ui_switch.type_txt .chk_ani {position: relative; width: 6.5rem; height: 2.3rem; background-color: #ccc;}
+.ui_switch.type_txt .chk_ani::before {width: 2.3rem; height: 2.3rem; background-color: #7d8285;}
+.ui_switch.type_txt input[type="checkbox"]:checked+.chk_ani {background-color: #1a4b57;}
+.ui_switch.type_txt input[type="checkbox"]:checked+.chk_ani::before {background-color: #0db7e1;}
+
+.ui_switch.type_txt .chk_off,
+.ui_switch.type_txt .chk_on  {width: 4.2rem; font-size: 1.2rem; line-height: 2; text-align: center; vertical-align: middle;}
+.ui_switch.type_txt .chk_off {margin-left: 2rem; color: #fff;}
+.ui_switch.type_txt .chk_on  {display: none; margin-left: 0; color: #0db7e1;}
+.ui_switch.type_txt input[type="checkbox"]:checked+.chk_ani .chk_off {display: none; opacity: 0;}
+.ui_switch.type_txt input[type="checkbox"]:checked+.chk_ani .chk_on  {display: block; opacity: 1;}
+
+/* FORM > Datepicker(JQUERY UI) */
+.ui-datepicker {box-shadow:0 0 10px rgba(0,0,0,0.2);}
+.ui-datepicker table {border:0;}
+.ui-datepicker .ui-datepicker-title, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font-family:inherit;}
+.ui-datepicker.ui-widget.ui-widget-content {width: calc(100% - 36px); padding: 0; border: 0; border-radius: 10px; /*z-index:2 !important;*/}
+.ui-datepicker .ui-datepicker-header.ui-widget-header.ui-corner-all {border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui-datepicker .ui-datepicker-header.ui-widget-header {padding: 0;}
+.ui-datepicker .ui-datepicker-title {margin: 10px 30px 9px; line-height: 1; font-size: 1.6rem; font-weight: 700; color: #fff; text-align: center;}    
+.ui-datepicker .ui-datepicker-title select {width: auto; height: 25px; margin: 0 18px; padding: 0 18px 0 0; border: 0; background-image: url(../img/bg_select_jq.png); background-position: right 0; background-size: 22px auto; background-color: transparent; font-size:inherit; font-weight: 700; color: #fff; text-align: left; line-height: 2.3rem;}
+.ui-datepicker .ui-datepicker-title select:first-child {margin-right: 8px;}
+.ui-datepicker .ui-datepicker-title option {color: #111;}
+.ui-datepicker-month {font-size: 1.8rem; color: #000; font-weight: 700;}
+.ui-widget-header {border: 0;}
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {border: 0; background: #fff; font-size: 1.5rem; font-weight: normal; color: #000;}
+.ui-widget-header .ui-icon {background-image: url(../img/sp_datepicker.png); background-size: 50px auto;}
+.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-next span {margin-left: -10px; margin-top: -10px;}
+.ui-datepicker td {padding: 2px;}
+.ui-datepicker td span, 
+.ui-datepicker td a {padding: 7.5px; line-height: 1; text-align: center;}
+.ui-datepicker-prev.ui-datepicker-prev-hover,
+.ui-datepicker-next.ui-datepicker-next-hover {border: 0; background-color: transparent;}
+.ui-icon.ui-icon-circle-triangle-w  {background-position: 0 0; width: 20px; height: 20px;}
+.ui-icon.ui-icon-circle-triangle-e  {background-position: -25px 0; width: 20px; height: 20px;}
+.ui-datepicker-calendar tr:first-child td {padding-top: 5px;}
+.ui-widget-header {background-color: #31aae6;}
+.ui-datepicker .ui-datepicker-next {right: 19px;}
+.ui-datepicker .ui-datepicker-prev {left: 18px;}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {position: absolute; top: 9px; width: 25px; height: 25px; text-align: center;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {border: 0; background: #ededef; color: #000;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {border: 0; background: #8aa3b1;font-weight: 400; color: #fff; text-align: center;}
+.ui-datepicker-calendar thead th {padding: 4px 10px; background-color: #f1f1f1; border-bottom: 1px solid #ddd; font-weight: 700;}
+.ui-datepicker-calendar .ui-state-default {text-align: center;}
+.ui-datepicker-trigger {width: 4rem; height: 4rem; background-image: url(../img/bg_calendar.png); background-position: 0 0; background-repeat: no-repeat; background-size: 4rem auto; font-size: 0; line-height: 0;}
+.ui-datepicker-year {color: #000;}
+.form_group.type_datepicker label {position: relative; display: table-cell}    
+.form_group.type_datepicker input {padding-right: 3.8rem;}
+.form_group.type_datepicker .ui-datepicker-trigger {position: absolute; right: 0; top: 50%; margin-top: -2rem;}
+.form_group.type_datepicker em {display: inline-block; flex: none; -ms-flex: none; width: 4rem; height: 4rem; line-height: 3.8rem; text-align: center;}
+
+/* BUTTON */ 
+.btn_area {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; width: calc(100% + 0.8rem); margin: 2rem 0 2rem -0.4rem; text-align: center;}
+.layer_footer .btn_area {margin: 0; box-shadow: none;}
+.layer_footer .btn_area .btn {height: 4rem; box-shadow: none; line-height: 3.8rem;}
+
+.btn_area .btn {flex: 1; margin: 0 0.4rem;}
+.btn {display: inline-block; height: 5rem; padding: 0 0.5rem; border-radius: 1rem; background-color: #fff; text-align: center; color: #111; line-height: 4.8rem;}
+.btn.btn_default {background-color: #16b9e4; color: #fff; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.btn.btn_white   {background-color: #fff; color: #717171; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.btn.btn_white.text_point {height: 4rem; color: #098aaa;  box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15); font-size: 1.3rem; line-height: 3.8rem;}
+.btn.btn_point   {background-color: #148fae; color: #fff; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15);}
+.btn.btn_small {height: 2.9rem; padding: 0 1.5rem; background-color: #fff; border: 1px solid #098aaa; border-radius: 2.9rem; font-size: 1.3rem; color: #098aaa; line-height: 2.7rem;}
+.btn.btn_white.text_point:disabled,
+.btn.btn_white.text_point.disabled,
+.btn.btn_small:disabled,
+.btn.btn_small.disabled {border-color: #dbdbdb; background-color: #f7f9fa; color: #ccc; cursor: default;}
+.btn.btn_default:disabled,
+.btn.btn_default.disabled,
+.btn.btn_white:disabled,
+.btn.btn_white.disabled,
+.btn.btn_point:disabled,
+.btn.btn_point.disabled {background-color: #f7f9fa !important; color: #ccc; cursor: default;}
+
+/* Tabs > Basic */
+.tabs_move {display: flex; overflow: hidden; width: 100%; margin: 0;}            
+.tabs_move li {flex: 1;} 
+.tabs_move li a {position: relative; display: block; padding: 2rem 0 1.2rem; border: 0; border-bottom: 1px solid #e3e5e6;}
+.tabs_move li a::before {position: absolute; left: 0; top: 0; bottom: -1px; z-index: 2; content: "";}  
+.tabs_move li.active a::before {width: calc(100% - 4.8rem); margin-left: 2.4rem; margin-right: 2.4rem; border-bottom: 3px solid #16b9e4;}
+.tabs_move li a span {display: block; font-size: 1.6rem; color: #ccc; text-align: center;}
+.tabs_move li.active a span {color: #111; font-weight: 700;}
+.tabs_cont {margin: 0; padding: 1.5rem 2.4rem 0;}
+.tc_box {display: none; padding: 0;}
+.tc_box.active {display: block;}
+
+/* Accordion */
+.ui_accordion > ul {border-top: 1px solid #e3e5e6;}
+.ui_accordion > ul > li {margin: 0; border-bottom: 1px solid #e3e5e6;}
+.ui_accordion .btn.accordion_toggle {position: relative; display: block; padding: 1.4rem 2rem; height: auto; border: 0; border-radius: 0; background-image:url(../img/icon_arrow_down.png); background-repeat: no-repeat; background-position: right 1.45rem top 50%; background-size: 1.4rem auto; font-size: 1.6rem; color: #111; text-align: left; line-height: 1.5; font-weight: 400;}
+.ui_accordion .btn.accordion_toggle em {font-weight: 400;}
+.ui_accordion .btn.accordion_toggle.active {background-image:url(../img/icon_arrow_up.png);}
+.accordion_cont {display: none; padding: 2rem; background-color: #f7f9fa; border-top: 1px solid #e3e5e6;}
+.accordion_cont.active {display: block}  
+.txt_ellipsis {display: inline-block; width: 80%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+
+/* Table */
+table {width: 100%; border: 1px solid #ddd;}
+table th {padding: 1rem; background-color: #eee; border: 1px solid #ddd; text-align: center; font-weight: 700}
+table td {padding: 1rem; background-color: #fff; border: 1px solid #ddd; text-align: center;}
+table tfoot td {background-color: #f6f6f6; color: #777; font-weight: 700;}
+
+/* Title */
+.page_title {font-size: 2rem; font-weight: 700;}
+
+/* Box */
+.mo_box {margin: 0;}
+.mo_box .title {font-size: 1.4rem; color: #717171; font-weight: 400;}
+.mo_box .label {display: block; margin: 2.6rem 0 1rem;}
+.mo_box_rs {border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1); background-color: #fff;}
+.mo_box_rs .header {padding: 1.4rem 2.4rem; border-bottom: 1px solid #e3e5e6; font-size: 1.6rem; font-weight: 700;}  
+.mo_box_rs .content {padding: 2.4rem;}
+.titlebar {display: table; width: 100%; margin: 1rem 0;}
+.label {font-size: 1.4rem; color: #717171; font-weight: 400;}
+.mo_box_rs > .titlebar {margin: 0; padding: 1.4rem 2rem 1.3rem; border-radius: 1rem; border-bottom-left-radius: 0; border-bottom-right-radius: 0; border-bottom: 1px solid #e3e5e6; background-color: #fff;}
+.mo_box_rs .titlebar h2 {font-size: 1.6rem; font-weight: 700;}
+.mo_box_rs .mo_box_cont {padding: 0.8rem 2rem; border-radius: 1rem; border-top-left-radius: 0; border-top-right-radius: 0; background-color: #fafcfd;}
+.mo_box_rs .mo_box_cont dl {display: table; width: 100%; padding: 1rem 0; border-top: 1px solid #e8eaeb;}
+.mo_box_rs .mo_box_cont dl:first-child {border-top: 0;}
+.mo_box_rs .mo_box_cont dt {display: table-cell; width: 35%; font-size: 1.4rem; color: #717171;}
+.mo_box_rs .mo_box_cont dd {display: table-cell; font-size: 1.6rem; text-align: right;}
+
+/* 공통 > 텍스트 */
+.txt_ellipsis {display: inline-block; width: 80%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.txt_center {text-align: center !important;}
+.txt_right {text-align: right !important;}
+.txt_left {text-align: left !important;}
+.txt_color01 {color: #007eb2 !important;}/*강조컬러1(설명문구)*/
+.txt_color02 {color: #098aaa !important;}/*강조컬러2(설명문구)*/
+.txt_color03 {color: #3bc3e5 !important;;}/*강조컬러3(설명문구)*/
+.txt_color04 {color: #d32f2f !important;}/*강조컬러4(설명문구) - liiv m 관련 확인필요*/
+
+.txt_big01 {font-size: 1.6rem !important;}/*큰폰트1*/
+.txt_big02 {font-size: 1.7rem !important;}/*큰폰트2*/
+
+.txt_small01 {font-size: 1.2rem !important;}/*작은폰트1*/
+.txt_small02 {font-size: 1.3rem !important;}/*작은폰트2*/
+.txt_small03 {font-size: 1.4rem !important;}/*작은폰트3*/
+
+.bold {font-weight:700;}
+
+/* 공통 > 가로사이즈 */
+.w10p {width: 10% !important;}
+.w20p {width: 20% !important;}
+.w30p {width: 30% !important;}
+.w40p {width: 40% !important;}
+.w50p {width: 50% !important;}
+.w60p {width: 60% !important;}
+.w70p {width: 70% !important;}
+.w80p {width: 80% !important;}
+.w80p {width: 90% !important;}
+.w100p {width: 100% !important;}
+
+/* 공통 > 여백 */
+.mt5 {margin-top: 5rem !important;}
+.mt10 {margin-top: 1rem !important;}
+.mt15 {margin-top: 1.5rem !important;}
+.mt20 {margin-top: 2rem !important;}
+.mt25 {margin-top: 2.5rem !important;}
+.mt30 {margin-top: 3rem !important;}
+.mt35 {margin-top: 3.5rem !important;}
+.mt40 {margin-top: 4rem !important;}
+.mt45 {margin-top: 4.5rem !important;}
+.mt50 {margin-top: 5.rem !important;}
+
+/* 공통 > 데이타 없을 경우 */
+.nodata {font-size:1.4rem; color:#cccccc; text-align:center; padding:5rem 0; line-height:0;}
+.nodata:before {display:inline-block; content:''; width:3.6rem; height:3.6rem; background:url(../img/icon_nodata.png) no-repeat; background-size:100% auto;}
+.nodata > p {display:block; margin-top:1.5rem; font-size: 1.4rem; color: #717171; line-height: 1;}
+
+/* 공통 > 설명글 */
+.txt_help,
+.txt_help ul {margin: 1rem 0;}        
+.txt_help p,
+.txt_help ul > li {position: relative; padding-left: 0.8rem; font-size: 1.2rem; color: #8aa3b1; list-style-type: none;}
+.txt_help p::before,
+.txt_help ul > li::before {position: absolute; content: "\002A"; left: 0; top: 0.1rem; display: inline-block; font-size: inherit;}
+.txt_help ul > li li::before {position: absolute; content: "\002D"; left: 0; top: -0.1rem; display: inline-block; font-size: inherit;}
+.txt_help ul ul {margin: 0.5rem;}
+.txt_help ul ol {margin: 0.5rem 0 0.5rem 0.5rem;}
+.txt_help ol li {font-size: 1.2rem; color: #8aa3b1;}
+
+/* 공통 > 에러문구 */
+.txt_error,
+.txt_error ul {margin: 1rem 0;}        
+.txt_error p, 
+.txt_error ul > li {position: relative; padding-left: 0.8rem; font-size: 1.2rem; color: #d32f2f; list-style-type: none;}
+.txt_error p::before,
+.txt_error ul > li::before {position: absolute; content: "\002A"; left: 0; top: 0.1rem; display: inline-block; font-size: 1.2rem;}
+            
+/* 공통 > 이용안내 */  
+.ui_accordion.type_guide {border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.ui_accordion.type_guide .accordion_toggle {display: inline-block; width: 100%; border-radius: 1rem;}
+.ui_accordion.type_guide .accordion_toggle.active {border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui_accordion.type_guide .accordion_toggle h3 {font-size: 1.5rem; font-weight: 500;}
+.txt_guide {margin: 0 1.6rem; }  
+.txt_guide li > ol {margin: 0 0 0 1.2rem; padding: 0;}
+.txt_guide li {position: relative; margin: 0.2rem 0;  list-style-type: decimal; font-size: 1.2rem;}
+.txt_guide > ol li li {list-style-type: decimal}
+
+/* 공통 > Layer Show/Hide (radio) */
+.mo_select_rdo {margin: 0;}
+.mo_select_rdo .select_cont [data-show] {display: none;}
+.mo_select_rdo .select_cont [data-show]:first-child {display: block;}
+
+/* 공통 > 리스트 */
+.list {margin: 0;}
+.list + .btn_area {margin-top: 0.8rem;}
+.list > li {border-bottom: 1px solid #e9eaeb;}
+.list li a {position: relative; display: block; padding:1.6rem 0;}
+
+/* 2022.05.03 */
+/* 공통 > 아이템 선택 > 선택된 아이템 */
+.mlayer_pop .layer_content.type_event .layer_body .cs_box.type_reg {padding: 1rem 0 0;}
+.mo_select_com {position: relative; padding: 0 3rem;}    
+.mo_select_com .btn_toggle {float: left; display: inline-block; width: 4.8rem; height: 4rem; font-size: 0;}     
+
+/* 공통 > 아이템 선택 > 아이템 목록 */
+.mo_select_com .select_list {display: none; position: relative; padding: 0;}
+.mo_select_com .btn_toggle.active+.select_list {display: block;} 
+.mo_select_com .select_list {width: calc(100% + 6rem); margin-left: -3rem; margin-right: -3rem; margin-top: 3rem;}
+.mo_select_com .select_list.block {display: block !important;}
+.mo_select_com .select_list ul {width: 100%; padding: 2.6rem; background-color: #f2f4f6; overflow-y: auto;}
+.mo_select_com .select_list ul:after {content:""; display: block; clear: both;}
+.mo_select_com .select_list li {display: inline-block; float: left; width: 33.33%; padding: 0.4rem; text-align: center;}  
+.mo_select_com .select_list li button {display: table; width: 100%; padding: 1.2rem 0 0.8rem; background-color: #fff; border: 2px solid transparent; border-radius: 1rem; text-align: center; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.mo_select_com .select_list li.active button {border: 2px solid #16b9e4;}
+.mo_select_com .select_list li button:focus {outline: none;}
+.mo_select_com .select_list li button p {width: calc(100% + 1.6rem); margin: 0.4rem -0.8rem; font-size: 1.2rem; color: #717171; letter-spacing: -0.05rem; line-height: 1; text-align: center; white-space: nowrap}
+.mo_select_com .label_txt {position: absolute; right: 0;}
+.select_label.type_name {display: inline-block; width: calc(100% - 5rem); height: 4rem; padding-left: 1rem; line-height: 4rem; vertical-align: top;}
+.select_label.type_name .label_active {font-size: 1.6rem; line-height: 4rem;}
+.select_label.type_num {display: block;}
+.select_label.type_num dt {margin: 1.5rem 0 0.6rem;}
+.select_label.type_num+dl {margin-top: 2rem;}
+.select_label.type_num label {font-size: 1.4rem; color: #717171;}
+.select_label.type_unpaid {display: block;}
+.select_label.type_unpaid dt {margin: 1.5rem 0 0.6rem;}
+.select_label.type_unpaid+dl {margin-top: 1.5rem;}
+.select_label.type_unpaid label {font-size: 1.4rem; color: #717171;}
+        
+/* 공통 > 은행 선택 > 은행 이미지 */
+.sp_bank {position: relative; display: inline-block; width: 4.8rem; height: 4rem;}
+.sp_bank::after {position: absolute; left: 0; top: 0; content: ""; display: inline-block; width: 100%; height: 100%; -webkit-appearance: none; appearance: none; border-radius: 0.5rem; background-color: transparent; background-image: url(../img/sp_bank.png); background-repeat: no-repeat; background-size: 60rem auto; vertical-align: middle; overflow: hidden;}
+.btn_toggle .sp_bank.c_none {border-radius: 0.5rem; border: 1px solid #dbdbdb; background-color: #efefef;}
+
+.mo_select_com.type_bank .select_list ul {max-height: 18rem;}
+.sp_bank.c_004::after {background-position: 0 0;}/* 국민 */
+.sp_bank.c_003::after {background-position: 0 -5rem;}/* 기업 */
+.sp_bank.c_011::after {background-position: 0 -10rem;}/* 농협중앙회 */
+.sp_bank.c_012::after {background-position: 0 -15rem;}/* 농협회원조합 */
+.sp_bank.c_088::after {background-position: 0 -20rem;}/* 신한 */
+.sp_bank.c_002::after {background-position: 0 -25rem;}/* 산업 */
+.sp_bank.c_020::after {background-position: 0 -30rem;}/* 우리 */
+.sp_bank.c_027::after {background-position: 0 -35rem;}/* 한국씨티 */
+.sp_bank.c_081::after {background-position: 0 -40rem;}/* 하나 */
+.sp_bank.c_023::after {background-position: 0 -45rem;}/* SC제일 */
+.sp_bank.c_039::after {background-position: 0 -50rem;}/* 경남 */
+.sp_bank.c_034::after {background-position: 0 -55rem;}/* 광주 */
+
+.sp_bank.c_031::after {background-position: -15rem 0;}/* 대구 */
+.sp_bank.c_060::after {background-position: -15rem -5rem;}/* 뱅크오프아메리카 */
+.sp_bank.c_032::after {background-position: -15rem -10rem;}/* 부산 */
+.sp_bank.c_064::after {background-position: -15rem -15rem;}/* 산림조합중앙회 */
+.sp_bank.c_050::after {background-position: -15rem -20rem;}/* 저축은행 */
+.sp_bank.c_045::after {background-position: -15rem -25rem;}/* 새마을금고중앙회 */
+.sp_bank.c_007::after {background-position: -15rem -30rem;}/* 수협은행 */
+.sp_bank.c_048::after {background-position: -15rem -35rem;}/* 신협중앙회 */
+.sp_bank.c_071::after {background-position: -15rem -40rem;}/* 우체국 */
+.sp_bank.c_037::after {background-position: -15rem -45rem;}/* 전북은행 */
+.sp_bank.c_035::after {background-position: -15rem -50rem;}/* 제주은행 */
+.sp_bank.c_090::after {background-position: -15rem -55rem;}/* 카카오뱅크 */
+
+.sp_bank.c_089::after {background-position: -30rem 0;}/* 케이뱅크 */
+.sp_bank.c_218::after {background-position: -30rem -5rem;}/* KB증권 */
+.sp_bank.c_261::after {background-position: -30rem -10rem;}/* 교보증권 */
+.sp_bank.c_267::after {background-position: -30rem -15rem;}/* 대신증권 */
+.sp_bank.c_279::after {background-position: -30rem -20rem;}/* DB금융투자 */
+.sp_bank.c_287::after {background-position: -30rem -25rem;}/* 메리츠종합금융증권 */
+.sp_bank.c_238::after {background-position: -30rem -30rem;}/* 미래에셋대우 */
+.sp_bank.c_290::after {background-position: -30rem -35rem;}/* 부국증권 */
+.sp_bank.c_240::after {background-position: -30rem -40rem;}/* 삼성증권 */
+.sp_bank.c_291::after {background-position: -30rem -45rem;}/* 신영증권 */
+.sp_bank.c_278::after {background-position: -30rem -50rem;}/* 신한금융투자 */
+.sp_bank.c_266::after {background-position: -30rem -55rem;}/* 에스케이증권 */
+
+.sp_bank.c_263::after {background-position: -45rem 0;}/* 현대차증권 */
+.sp_bank.c_209::after {background-position: -45rem -5rem;}/* 유안타증권 */
+.sp_bank.c_280::after {background-position: -45rem -10rem;}/* 유진투자증권 */
+.sp_bank.c_265::after {background-position: -45rem -15rem;}/* 이베스트투자증권 */
+.sp_bank.c_292::after {background-position: -45rem -20rem;}/* 케이프투자증권 */
+.sp_bank.c_264::after {background-position: -45rem -25rem;}/* 키움증권 */
+.sp_bank.c_270::after {background-position: -45rem -30rem;}/* 하나금융투자 */
+.sp_bank.c_262::after {background-position: -45rem -35rem;}/* 하이투자증권 */
+.sp_bank.c_243::after {background-position: -45rem -40rem;}/* 한국투자증권 */
+.sp_bank.c_269::after {background-position: -45rem -45rem;}/* 한화투자증권 */
+.sp_bank.c_247::after {background-position: -45rem -50rem;}/* NH투자증권 */   
+
+.select_list .sp_bank {width: 6rem; height: 2.5rem;}
+.select_list .sp_bank.c_004::after {background-position: -6rem 0;}/* 국민 */
+.select_list .sp_bank.c_003::after {background-position: -6rem -5rem;}/* 기업 */
+.select_list .sp_bank.c_011::after {background-position: -6rem -10rem;}/* 농협중앙회 */
+.select_list .sp_bank.c_012::after {background-position: -6rem -15rem;}/* 농협회원조합 */
+.select_list .sp_bank.c_088::after {background-position: -6rem -20rem;}/* 신한 */
+.select_list .sp_bank.c_002::after {background-position: -6rem -25rem;}/* 산업 */
+.select_list .sp_bank.c_020::after {background-position: -6rem -30rem;}/* 우리 */
+.select_list .sp_bank.c_027::after {background-position: -6rem -35rem;}/* 한국씨티 */
+.select_list .sp_bank.c_081::after {background-position: -6rem -40rem;}/* 하나 */
+.select_list .sp_bank.c_023::after {background-position: -6rem -45rem;}/* SC제일 */
+.select_list .sp_bank.c_039::after {background-position: -6rem -50rem;}/* 경남 */
+.select_list .sp_bank.c_034::after {background-position: -6rem -55rem;}/* 광주 */
+
+.select_list .sp_bank.c_031::after {background-position: -21rem 0;}/* 대구 */
+.select_list .sp_bank.c_060::after {background-position: -21rem -5rem;}/* 뱅크오프아메리카 */
+.select_list .sp_bank.c_032::after {background-position: -21rem -10rem;}/* 부산 */
+.select_list .sp_bank.c_064::after {background-position: -21rem -15rem;}/* 산림조합중앙회 */
+.select_list .sp_bank.c_050::after {background-position: -21rem -20rem;}/* 저축은행 */
+.select_list .sp_bank.c_045::after {background-position: -21rem -25rem;}/* 새마을금고중앙회 */
+.select_list .sp_bank.c_007::after {background-position: -21rem -30rem;}/* 수협은행 */
+.select_list .sp_bank.c_048::after {background-position: -21rem -35rem;}/* 신협중앙회 */
+.select_list .sp_bank.c_071::after {background-position: -21rem -40rem;}/* 우체국 */
+.select_list .sp_bank.c_037::after {background-position: -21rem -45rem;}/* 전북은행 */
+.select_list .sp_bank.c_035::after {background-position: -21rem -50rem;}/* 제주은행 */
+.select_list .sp_bank.c_090::after {background-position: -21rem -55rem;}/* 카카오뱅크 */
+
+.select_list .sp_bank.c_089::after {background-position: -36rem 0;}/* 케이뱅크 */
+.select_list .sp_bank.c_218::after {background-position: -36rem -5rem;}/* KB증권 */
+.select_list .sp_bank.c_261::after {background-position: -36rem -10rem;}/* 교보증권 */
+.select_list .sp_bank.c_267::after {background-position: -36rem -15rem;}/* 대신증권 */
+.select_list .sp_bank.c_279::after {background-position: -36rem -20rem;}/* DB금융투자 */
+.select_list .sp_bank.c_287::after {background-position: -36rem -25rem;}/* 메리츠종합금융증권 */
+.select_list .sp_bank.c_238::after {background-position: -36rem -30rem;}/* 미래에셋대우 */
+.select_list .sp_bank.c_290::after {background-position: -36rem -35rem;}/* 부국증권 */
+.select_list .sp_bank.c_240::after {background-position: -36rem -40rem;}/* 삼성증권 */
+.select_list .sp_bank.c_291::after {background-position: -36rem -45rem;}/* 신영증권 */
+.select_list .sp_bank.c_278::after {background-position: -36rem -40rem;}/* 신한금융투자 */
+.select_list .sp_bank.c_266::after {background-position: -36rem -55rem;}/* 에스케이증권 */
+
+.select_list .sp_bank.c_263::after {background-position: -51rem 0;}/* 현대차증권 */
+.select_list .sp_bank.c_209::after {background-position: -51rem -5rem;}/* 유안타증권 */
+.select_list .sp_bank.c_280::after {background-position: -51rem -10rem;}/* 유진투자증권 */
+.select_list .sp_bank.c_265::after {background-position: -51rem -15rem;}/* 이베스트투자증권 */
+.select_list .sp_bank.c_292::after {background-position: -51rem -20rem;}/* 케이프투자증권 */
+.select_list .sp_bank.c_264::after {background-position: -51rem -25rem;}/* 키움증권 */
+.select_list .sp_bank.c_270::after {background-position: -51rem -30rem;}/* 하나금융투자 */
+.select_list .sp_bank.c_262::after {background-position: -51rem -35rem;}/* 하이투자증권 */
+.select_list .sp_bank.c_243::after {background-position: -51rem -40rem;}/* 한국투자증권 */
+.select_list .sp_bank.c_269::after {background-position: -51rem -45rem;}/* 한화투자증권 */
+.select_list .sp_bank.c_247::after {background-position: -51rem -50rem;}/* NH투자증권 */ 
+
+/* 공통 > 카드 선택 > 카드 이미지 */
+.sp_card {position: relative; display: inline-block; width: 4.8rem; height: 4rem; margin: 0;}
+.sp_card::after {position: absolute; left: 0; top: 0; content: ""; display: inline-block; width: 100%; height: 100%; -webkit-appearance: none; appearance: none; border-radius: 0.5rem; background-color: transparent; background-image: url(../img/sp_card.png); background-repeat: no-repeat; background-size: 15rem auto; vertical-align: middle; overflow: hidden;}
+.sp_card.c_none,
+.sp_bank.c_none {border-radius: 0.5rem; border: 1px solid #dbdbdb; background: #efefef url(../img/bg_logo_none.png) no-repeat 50% 50%; background-size: auto 4rem;}
+.mo_select_com.type_card .select_list ul {width: 100%; max-height: 18rem;}
+.mo_select_com.type_card .select_label.type_num input {padding-right: 0.4rem; letter-spacing: -0.065rem;}
+.c_none::after {display: none;}       /* 기본이미지(circle형태) */
+.c_kb::after {background-position: 0 0;}     /* 국민카드(circle형태) */
+.c_sh::after {background-position: 0  -5rem;}/* 신한카드(circle형태) */
+.c_ss::after {background-position: 0 -10rem;}/* 삼성카드(circle형태) */
+.c_hd::after {background-position: 0 -15rem;}/* 현대카드(circle형태) */
+.c_bc::after {background-position: 0 -20rem;}/* 비씨카드(circle형태) */
+.c_ha::after {background-position: 0 -25rem;}/* 하나카드(circle형태) */
+.c_hn::after {background-position: 0 -25rem;}/* 하나카드(circle형태) */
+.c_nh::after {background-position: 0 -30rem;}/* NH카드(circle형태) */
+.c_lt::after {background-position: 0 -35rem;}/* 롯데카드(circle형태) */
+.c_ct::after {background-position: 0 -40rem;}/* 시티카드(circle형태) */
+.c_kk::after {background-position: 0 -45rem;}/* 카카오뱅크(circle형태)*/
+
+.select_list .sp_card {width: 6rem; height: 2.5rem;}
+.select_list .c_kb::after {background-position: -6rem 0;}     /* 국민카드(circle형태) */
+.select_list .c_sh::after {background-position: -6rem  -5rem;}/* 신한카드(circle형태) */
+.select_list .c_ss::after {background-position: -6rem -10rem;}/* 삼성카드(circle형태) */
+.select_list .c_hd::after {background-position: -6rem -15rem;}/* 현대카드(circle형태) */
+.select_list .c_bc::after {background-position: -6rem -20rem;}/* 비씨카드(circle형태) */
+.select_list .c_ha::after {background-position: -6rem -25rem;}/* 하나카드(circle형태) */
+.select_list .c_hn::after {background-position: -6rem -25rem;}/* 하나카드(circle형태) */
+.select_list .c_nh::after {background-position: -6rem -30rem;}/* NH카드(circle형태) */
+.select_list .c_lt::after {background-position: -6rem -35rem;}/* 롯데카드(circle형태) */
+.select_list .c_ct::after {background-position: -6rem -40rem;}/* 시티카드(circle형태) */
+.select_list .c_kk::after {background-position: -6rem -45rem;}/* 카카오뱅크(circle형태)*/
+
+.mlayer_pop .layer_footer .btn_area > .btn_white + .type_camera:before {display:inline-block; content:''; width:1px; height:2rem; background:#e3e5e6; position:absolute; top:50%; left:0; transform:translateY(-50%);}
+.mlayer_pop .layer_footer .btn_area > .btn_white + .type_camera .btn_camera{color: #0db7e1; font-weight: 700;}
+
+
+/* 공통 > 아이템 선택 */
+.mo_select_item {position: relative; width: 100%; height: 6rem; vertical-align: middle;}
+.mo_select_item .select_item {display: flex; height: 100%;}
+.mo_select_item .select_default {flex: 1; display: table; width: calc(100% - 6rem); height: 100%; padding: 0.5rem 1.5rem; border: 1px solid #ddd; background-color: #fff;}
+.mo_select_item .select_default .item {display: table-cell; vertical-align: middle;}
+.mo_select_item .btn.list_toggle {flex: none; position: relative; display: block; width: 6rem; height: 100%; border: 1px solid #ddd; border-radius: 0; line-height: 1;}
+.mo_select_item .btn.list_toggle.active {background-color: #e2e2e2; -webkit-transform: rotate(180deg); transform: rotate(180deg);}
+.mo_select_item .ico_arrow {position: relative; display: inline-block; width: 3rem; height: 3rem;}
+.ico_arrow::after {position: absolute; left: 50%; top: 50%; content:""; width: 100%; height: 100%; margin-left: -1.5rem; margin-top: -1.5rem; background-color: #8aa3b1; border-radius: 100%;} 
+.mo_select_item .select_list ul {position: absolute; z-index: 1; width: 100%; margin: 0;}
+.mo_select_item .select_list li {position: relative; display: none; width: 100%; background-color: #fff; padding: 1rem 3rem 1rem; list-style-type: none; border: 1px solid #ddd; border-top: 0;}
+.mo_select_item .select_list li.active {position: relative; width: 100%; background-color: #eee; color: #111; font-weight: 700;}
+.mo_select_item .select_list li.active::after {position: absolute; right: 1rem; top: 50%; content: ""; display: inline-block; width: 1rem; height: 1rem; margin-top: -0.5rem; background-color: red;}
+.mo_select_item .select_list li .item {display: table-row; width: 100%; vertical-align: middle;}
+
+/* 공통 > 검색 */  
+.mo_search .btn_search_del {position: absolute; right: 0; top: 0; display: none; width: 4.0rem; height: 4.0rem; font-size: 0;}
+.mo_search .btn_keyword_del {position: absolute; right: 1.5rem; top: 50%; display: none; margin-top: -0.8rem;}
+.mo_search .btn_search {position: absolute; right: 0; top: 0; width: 4rem; height: 4rem;}
+.btn_search_del, .search_result {display: none;}
+.btn_keyword_del, .keyword_list {display: none;}
+.mo_search .btn_search_del::before {display: inline-block; content: ''; width: 1.8rem; height: 1.8rem; background: url(../img/icon_search_set.png) no-repeat; background-size: 100% auto; background-position: 0 -1.8rem; background-color: #e5e5e5; border-radius: 50%;}
+
+/* 공통 > 이용안내 */ 
+.ui_accordion.user_guide {margin-top: 0.8rem; border-radius: 1rem; box-shadow: 0 0 1rem rgba(13,72,127,0.1);}
+.ui_accordion.user_guide .btn.accordion_toggle {border-radius: 1rem; font-weight: 700;}
+.ui_accordion.user_guide .btn.accordion_toggle.active {border-bottom-left-radius: 0; border-bottom-right-radius: 0;}
+.ui_accordion.user_guide .accordion_cont {border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;}
+
+/* 공통 > 파일첨부 */
+.mo_attach_file > .file_list ul {margin-top: 1.5rem; display: flex;}
+.mo_attach_file > .file_list li {flex: 1; position: relative; margin-left: 0.8rem;}
+.mo_attach_file > .file_list li:first-child {margin-left: 0;}
+.mo_attach_file > .file_list li .file_pic {position: relative; display: inline-block; width: 100%; height: 100%; min-height: 4.2rem; background: #efefef url(../img/bg_logo_none.png) no-repeat 50% 50%; background-size: 5.9rem auto;}
+.mo_attach_file > .file_list li .file_pic::before {content: ""; position: absolute; display: inline-block; width: 100%; height: 100%; border: 1px dashed #ccc; box-sizing: border-box;}
+.mo_attach_file > .file_list li .file_pic .btn_file_del {position: absolute; right: 0; top: 0; z-index: 1; display: inline-block; width: 2rem; height: 2rem; background: url(../img/btn_file_del.png) no-repeat 50% 50%; background-size: 2rem auto; background-color: rgba(0,0,0,0.8); }
+.mo_attach_file > .file_list li .file_pic img {position: relative; width: 100%; height: 100%; border: 1px dashed #717171;}
+.mo_attach_file > .txt_help, .mo_file_attach .txt_help ul {margin-top: 0.7rem;}
+.dvDesktop .mo_attach_file .form_group.type_camera {display: none;}
+.dvDesktop .mo_attach_file .form_group.type_file_upload {display: block;}
+.mo_attach_file .form_group.type_file_upload {display: none;}
