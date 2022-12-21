@@ -248,14 +248,10 @@
         });
 
         $("a").click(function(e){ 
-            if($(this).hasClass('disabled') || $(this).hasClass('disabled-type2')){
+            if($(this).hasClass('disabled') || $(this).hasClass('disabled-type2') || $(this).attr('href') == '#'){
                 e.preventDefault(); 
             }
         }); 
-
-        $(document).on("click", ".disabled", ".disabled-type2", function (e) {
-            e.preventDefault();
-        });
         
         $(document).on("click", ".toastpopup", function (e) {
             e.preventDefault();
