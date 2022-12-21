@@ -51,3 +51,8 @@ table {
 
 a {text-decoration: none;}
 img{vertical-align:top;}
+
+input {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}
