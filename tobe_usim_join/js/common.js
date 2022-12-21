@@ -228,6 +228,11 @@ $(document).ready(function(){
 
   
 
+  // disabled check - step1
+  $(document).on("click", "section[class*=section__step1] .img_radio", function(){
+    $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+  })
+
   // disabled check - 가입유형 선택 (개인/개인사업자)
   $(document).on("click", ".section__jointype .img_radio", function(){
       $(document).find(".section__jointype .foot__btn .link__item").removeClass("disabled");
@@ -349,6 +354,7 @@ $(document).ready(function(){
   $('.agr__group').off('click').on('click', '.chk__all', function(){
     $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
     $(this).closest('.check__list__wrap').addClass('active');
+    $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
   });
   $('.inp__all').off('click').on('click', function(){
       $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
@@ -356,11 +362,16 @@ $(document).ready(function(){
   $('.agr__group').each(function(){
     var inpChk = $(this).find('.inp__chk');
     inpChk.on('click', function(){
-    var is_checked = true;
-    inpChk.each(function(){
-      is_checked = is_checked && $(this).is(':checked');
-    });
-    $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
+      var is_checked = true;
+      inpChk.each(function(){
+        is_checked = is_checked && $(this).is(':checked');
+      });
+      $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
+      $(this).closest('.agr__group').find('.chk__all').closest('.check__list__wrap').addClass('active');
+    
+      if($(this).closest('.agr__group').find('.chk__all').is(':checked')){
+        $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+      }
     })
   });
 
