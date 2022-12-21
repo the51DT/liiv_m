@@ -197,33 +197,148 @@ $(document).ready(function(){
         if( count < 1 ){ $(this).parents(".form__item").removeClass("active"); }
     })
 
-    // help open
-    $(document).find(".link__help").on("click", function(e){
-        e.preventDefault();
-        $(document).find(".section__joinhelp").addClass("open");
+
+    // // help toast open
+    // $(document).find(".link__help").on("click", function(e){
+    //     e.preventDefault();
+    //     $(document).find(".section__joinhelp").addClass("open");
+    // })
+    // // help close
+    // $(document).find(".link__help-close").on("click", function(e){
+    //     e.preventDefault();
+    //     if( $(this).hasClass("disabled") ){ return false }
+    //     $(document).find(".section__joinhelp").removeClass("open");
+    // })
+
+    // leave popup open
+    // $(document).find(".link__leave").on("click", function(e){
+    //     e.preventDefault();
+    //     $(document).find(".section__leave").addClass("open");
+    // })
+    // $(document).find(".link__leave-close").on("click", function(e){
+    //     e.preventDefault();
+    //     $(document).find(".section__leave").removeClass("open");
+    // })
+
+
+
+
+    
+
+    // disabled check - 가입유형 선택 (개인/개인사업자)
+    $(document).on("click", ".section__jointype .img_radio", function(){
+        $(document).find(".section__jointype .foot__btn .link__item").removeClass("disabled");
     })
-    // help close
-    $(document).find(".link__help-close").on("click", function(e){
-        e.preventDefault();
-        $(document).find(".section__joinhelp").removeClass("open");
+    // disabled check - 가입유형 선택 (만 19세 이상 성인)
+    $(document).on("click", ".section__jointype2 .radio__item", function(){
+        $(document).find(".section__jointype2 .foot__btn .link__item").removeClass("disabled");
+    })
+    // disabled check - 가입자 유형 선택 (신분증 확인)
+    $(document).on("click", ".section__jointype3 .img_radio", function(){
+        $(document).find(".section__jointype3 .foot__btn .link__item").removeClass("disabled");
+    })
+    // disabled check - 가입자 유형 선택 (이름/주빈먼호/발급일자)
+    $(document).on("input click", ".section__jointype4 .form__group", function(){
+        $(document).find(".section__jointype4 .foot__btn .link__item").addClass("disabled");
+
+        const name = $(document).find(".section__jointype4 form .jointype4_name");
+        const regNo = $(document).find(".section__jointype4 form .regNo");
+        const regNo2 = $(document).find(".section__jointype4 form .regNo2");
+        const date = $(document).find(".section__jointype4 form .jointype4_date");
+
+        if( name.val().length < 1 ){ return false }
+        if( regNo.val().length < 1 ){ return false }
+        if( regNo2.val().length < 1 ){ return false }
+        if( date.val().length < 1 ){ return false }
+
+        $(document).find(".section__jointype4 .foot__btn .link__item").removeClass("disabled");
+    })
+    // disabled check - 인증방법(KB모바일인증서, 신용카드 인증)
+    $(document).on("click", ".section__joinauth .img_radio", function(){
+        $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled");
     })
 
-    // 약관 동의
-    $('.agr__group').off('click').on('click', '.chk__all', function(){
-        $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
-        $(this).closest('.check__list__wrap').addClass('active');
-    });
-    $('.inp__all').off('click').on('click', function(){
-        $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
-    });
-    $('.agr__group').each(function(){
-        var inpChk = $(this).find('.inp__chk');
-        inpChk.on('click', function(){
-            var is_checked = true;
-            inpChk.each(function(){
-                is_checked = is_checked && $(this).is(':checked');
-            });
-            $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
-        })
-    });
+    // disabled check - 로그인정보 필요
+    $(document).on("input click", ".section__joininfo form", function(){
+        $(document).find(".section__joininfo .foot__btn .link__item").addClass("disabled");
+
+        const id = $(document).find(".section__joininfo .section__joininfo_id");
+        const pw = $(document).find(".section__joininfo .section__joininfo_pw");
+        const pw2 = $(document).find(".section__joininfo .section__joininfo_pw2");
+
+        if( id.val().length < 1 ){ return false }
+        if( pw.val().length < 1 ){ return false }
+        if( pw2.val().length < 1 ){ return false }
+
+        $(document).find(".section__joininfo .foot__btn .link__item").removeClass("disabled");
+    })
+
+    // disabled check - 기본 정보입력 ( 이메일 )
+    $(document).on("input click change", ".section__joininfo2 form", function(){
+        $(document).find(".section__joininfo2 .foot__btn .link__item").addClass("disabled");
+
+        const email = $(document).find(".section__joininfo2 .section__joininfo2_email");
+        const email2 = $(document).find(".section__joininfo2 .section__joininfo2_email2");
+
+        if( email.val().length < 1 ){ return false }
+        if( email2.find("option:selected").val() < 1 ){ return false }
+
+        $(document).find(".section__joininfo2 .foot__btn .link__item").removeClass("disabled");
+    })
+
+    // disabled check - 기본 정보입력 ( 주소지 )
+    $(document).on("input click", ".section__joinaddress form", function(){
+        $(document).find(".section__joinaddress .foot__btn .link__item").addClass("disabled");
+
+        const address1 = $(document).find(".section__joinaddress .section__joinaddress_address1");
+        const address2 = $(document).find(".section__joinaddress .section__joinaddress_address2");
+
+        if( address1.val().length < 1 ){ return false }
+        if( address2.val().length < 1 ){ return false }
+
+        $(document).find(".section__joinaddress .foot__btn .link__item").removeClass("disabled");
+    })
+    // disabled check - 요금 청구서 수령방법(문자, 이메일)
+    $(document).on("click", ".section__joinbill .img_radio", function(){
+        $(document).find(".section__joinbill .foot__btn .link__item").removeClass("disabled");
+    })
+    // disabled check - 요금 납부 방법 (신용카드, 계좌이체)
+    $(document).on("click", ".section__joinpay .img_radio", function(){
+        $(document).find(".section__joinpay .section__joinpay-btn .link__item").removeClass("disabled");
+        // $(document).find(".section__joinpay .foot__btn .link__item").removeClass("disabled");
+    })
+
+    // disabled check - 요금 납부 방법
+    $(document).on("input click", ".section__joincard form", function(){
+        $(document).find(".section__joincard .foot__btn .link__item").addClass("disabled");
+
+        const input1 = $(document).find(".section__joincard .section__joincard_1");
+        const input2 = $(document).find(".section__joincard .section__joincard_2");
+        const input3 = $(document).find(".section__joincard .section__joincard_3");
+        const input4 = $(document).find(".section__joincard .section__joincard_4");
+        const input5 = $(document).find(".section__joincard .section__joincard_5");
+
+        if( input1.val().length < 1 ){ return false }
+        if( input2.val().length < 1 ){ return false }
+        if( input3.val().length < 1 ){ return false }
+        if( input4.val().length < 1 ){ return false }
+        if( input5.val().length < 1 ){ return false }
+
+        $(document).find(".section__joincard .foot__btn .link__item").removeClass("disabled");
+    })
+
+    // disabled check - 가입상담 신청하세요
+    // $(document).on("input click change", ".section__joinhelp form, .section__joinhelp .section__joinhelp-checkbox", function(){
+    //     $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").addClass("disabled");
+
+    //     const name = $(document).find(".section__joinhelp .section__joinhelp_name");
+    //     const name2 = $(document).find(".section__joinhelp .section__joinhelp_name2");
+    //     const checkbox = $(document).find(".section__joinhelp .section__joinhelp-checkbox");
+
+    //     if( name.val().length < 1 ){ return false }
+    //     if( name2.val().length < 1 ){ return false }
+    //     if( checkbox.is(":checked") ){
+    //         $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").removeClass("disabled");
+    //     }
+    // })
 })
