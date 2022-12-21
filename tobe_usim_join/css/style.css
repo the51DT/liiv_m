@@ -193,6 +193,7 @@ input:disabled,
 
 /** header ************/
 header{position:fixed; left:50%; top:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:11;}
+.link__leave{position:absolute; right: 1rem; top: 1rem; display:block; width:4.5rem; height:4rem; text-indent:-9999px;}
 
 /** footer ************/
 footer{position:fixed; left:50%; bottom:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:9;}
@@ -269,15 +270,6 @@ form.jointype4{padding:0 2rem;}
 .form__item.focus ::placeholder{color:#999;}
 .form__item.focus label{line-height:initial; font-size:1.4rem; color:#222; font-weight:700;}
 
-/** section__joinhelp *******************************/
-.section__joinhelp{position:absolute; left:0; top:0; width:100%; height: 100%; background:rgba(0,0,0, 0.6); z-index:999;}
-.section__joinhelp-wrap{position:absolute; left:0; bottom:0; width:100%; background:#fff; border-radius:1.2rem 1.2rem 0 0; padding:0 0 2rem; box-shadow:0 0 2rem rgba(0,0,0, 0.07)}
-.section__joinhelp-wrap .form__group{padding-top:3rem;}
-.section__joinhelp-wrap .check-type1{padding:0 2rem;}
-.section__joinhelp-btn{padding:0 2rem;}
-.section__joinhelp-close{position:absolute; right:2rem; top:2rem; width:2.3rem; height:2.3rem;}
-.section__joinhelp.open{display: block; animation:pageLoad .5s;}
-
 
 /** section__joinauth *********************/
 .section__joinauth-ttl{padding:1rem 0 0;}
@@ -313,6 +305,23 @@ form.jointype4{padding:0 2rem;}
 .section__joincard-card .form__group{padding:4rem 0 0;}
 
 
+/** section__joinhelp toast *******************************/
+.section__joinhelp{position:absolute; left:0; top:0; width:100%; height: 100%; background:rgba(0,0,0, 0.6); z-index:999;}
+.section__joinhelp-wrap{position:absolute; left:0; bottom:0; width:100%; background:#fff; border-radius:1.2rem 1.2rem 0 0; padding:0 0 2rem; box-shadow:0 0 2rem rgba(0,0,0, 0.07)}
+.section__joinhelp-wrap .form__group{padding-top:3rem;}
+.section__joinhelp-wrap .check-type1{padding:0 2rem;}
+.section__joinhelp-btn{padding:0 2rem;}
+.section__joinhelp-close{position:absolute; right:2rem; top:2rem; width:2.3rem; height:2.3rem;}
+.section__joinhelp.open{display: block; animation:pageLoad .5s;}
+
+
+/** section__leave popup ************************************/
+.section__leave{position:absolute; left:0; top:0; width:100%; height: 100%; background:rgba(0,0,0, 0.6); z-index:999; align-items:center; justify-content: center;}
+.section__leave-btn{display:flex; align-items:center; justify-content: center;}
+.section__leave-btn a{flex:0 0 50%;}
+.section__leave.open{display: flex; animation:pageLoad .5s;}
+
+
 
 
 
@@ -326,9 +335,9 @@ form.jointype4{padding:0 2rem;}
 .result__wrap .result__item + .result__item {border-top:1px solid #E7E8EA}
 .rdo__result {color:#222; font-size:1.4rem; line-height:1.8rem; letter-spacing:-0.03rem;}
 
-.dim {display:none; position:fixed; left:0; right:0; top:0; bottom:0; max-width:360px; margin:0 auto; background:rgba(0,0,0,0.6); z-index:10}
+/* .dim {display:none; position:fixed; left:0; right:0; top:0; bottom:0; max-width:360px; margin:0 auto; background:rgba(0,0,0,0.6); z-index:10}
 .dim.active {display:block}
 .pop__layer {display:none; position:fixed; left:0; right:0; top:0; bottom:0; z-index:100}
 .pop__layer.active {display:block}
 .pop__layer > img {position:absolute; top:26%; left:calc(50% - 180px); max-width:360px!important; margin:0 auto}
-.btn__close {position:absolute; display:block; width:6rem; height:6rem; top:0; right:0}
+.btn__close {position:absolute; display:block; width:6rem; height:6rem; top:0; right:0} */

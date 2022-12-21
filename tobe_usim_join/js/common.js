@@ -8,16 +8,16 @@ window.addEventListener("load", ()=>{
 
     containerPad();
     window.addEventListener("resize", containerPad);
-
-    if(isMobile){
-        document.querySelector("body").classList.add("mobile");
-        // getFootPad();
-        // window.addEventListener("resize", getFootPad);
-    }
+    isMobile ? document.querySelector("body").classList.add("mobile") : null;   // mobile check
     
+    // ink__item
     const linkItem = Array.from(document.querySelectorAll(".link__item"));
     linkItem.forEach((item)=>{
-        item.addEventListener("click", (e)=>{ e.preventDefault(); pageChange(item.dataset.link) })
+        item.addEventListener("click", (e)=>{
+            e.preventDefault();
+            if( $(item).hasClass("disabled") || $(item).attr("disabled") !== undefined  ){ return } // disabled check
+            pageChange(item.dataset.link)
+        })
     })
 
     // step1 유심 라디오버튼 임시
@@ -40,26 +40,24 @@ window.addEventListener("load", ()=>{
     })
 
     // close 버튼 팝업
-    const btnClose = document.querySelector('header .btn__close');
-    const leavepop = document.querySelector('#leave__pop');
-    const dim = document.querySelector('.dim');
+    // const btnClose = document.querySelector('header .btn__close');
+    // const leavepop = document.querySelector('#leave__pop');
+    // const dim = document.querySelector('.dim');
 
-    btnClose.addEventListener("click", function(e){
-        e.preventDefault;
-        leavepop.classList.toggle("active");
-        dim.classList.toggle("active");
-    });
-    leavepop.addEventListener("click", function(e){
-        e.preventDefault;
-        leavepop.classList.toggle("active");
-        dim.classList.toggle("active");
-    });
+    // btnClose.addEventListener("click", function(e){
+    //     e.preventDefault;
+    //     leavepop.classList.toggle("active");
+    //     dim.classList.toggle("active");
+    // });
+    // leavepop.addEventListener("click", function(e){
+    //     e.preventDefault;
+    //     leavepop.classList.toggle("active");
+    //     dim.classList.toggle("active");
+    // });
 })
 
 // 모바일 100vh 대응
-const setVh = () => {
-    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
-};
+const setVh = () => { document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`) };
 
 // mobile check
 function chkMobile(agent) {
@@ -187,7 +185,7 @@ $(document).ready(function(){
         if( count < 1 ){ $(this).parents(".form__item").removeClass("active"); }
     })
 
-    // help open
+    // help toast open
     $(document).find(".link__help").on("click", function(e){
         e.preventDefault();
         $(document).find(".section__joinhelp").addClass("open");
@@ -196,5 +194,15 @@ $(document).ready(function(){
     $(document).find(".link__help-close").on("click", function(e){
         e.preventDefault();
         $(document).find(".section__joinhelp").removeClass("open");
+    })
+
+    // leave popup open
+    $(document).find(".link__leave").on("click", function(e){
+        e.preventDefault();
+        $(document).find(".section__leave").addClass("open");
+    })
+    $(document).find(".link__leave-close").on("click", function(e){
+        e.preventDefault();
+        $(document).find(".section__leave").removeClass("open");
     })
 })
