@@ -1,0 +1,95 @@
+@charset "utf-8";
+/**/
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  font-style: normal;
+  font-weight: 300;
+  
+  src: url('../webfont/SpoqaHanSansNeo-Light.eot?#iefix') format('embedded-opentype'), 
+       url('../webfont/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+       url('../webfont/SpoqaHanSansNeo-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  font-style: normal;
+  font-weight: 400;
+  
+  src: url('../webfont/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'), 
+       url('../webfont/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+       url('../webfont/SpoqaHanSansNeo-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  font-style: normal;
+  font-weight: 500;
+  
+  src: url('../webfont/SpoqaHanSansNeo-Medium.eot?#iefix') format('embedded-opentype'), 
+       url('../webfont/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+       url('../webfont/SpoqaHanSansNeo-Medium.woff') format('woff');
+}
+
+
+@font-face {
+  font-family: Spoqa Han Sans Neo;
+  font-style: normal;
+  font-weight: 700;
+  
+  src: url('../webfont/SpoqaHanSansNeo-Bold.eot?#iefix') format('embedded-opentype'), 
+       url('../webfont/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+       url('../webfont/SpoqaHanSansNeo-Bold.woff') format('woff');
+}
+
+html {font-size: 62.5%; height: 100%;}
+body {width:100%; min-width:320px; height: 100%; background-color:#fff; color:#111; word-break:break-all; -webkit-text-size-adjust:none;}
+body,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,figure,form,fieldset,legend,input,label,em, textarea,legend,button,table,td,th,button, select {margin:0; padding:0; font-family:"Spoqa Han Sans Neo","Roboto","Noto Sans","Helvetical Neue","맑은 고딕","Malgun Gothic",sans-serif; font-size:1.5rem; font-weight:400; color:#111; line-height:1.5; word-break:keep-all;}
+fieldset,iframe,img {border:0}
+img {vertical-align:top;}
+ul li {list-style:none;}
+table {border-collapse:collapse; table-layout:fixed;}
+article,aside,footer,header,nav,main,sec,tion,summary,details,hgroup,figure,figcaption {display:block;}
+button {overflow:visible; border:0; background:none; color:inherit; line-height:inherit; cursor:pointer;}
+a {color:#111; text-decoration:none;}
+a:active, a:hover {text-decoration:none;}
+address,caption,cite,code,dfn,em,i,const {font-style:normal; font-weight:normal;}
+strong,h1,h2,h3 {font-weight:700;}
+.blind, legend, caption {position:absolute; clip:rect(0 0 0 0); clip-path:inset(50%); width:1px; height:1px; margin:-1px; padding:0; border:0; overflow:hidden; white-space:nowrap;}
+*{box-sizing:border-box;}
+
+@media all and (max-width: 767px){/* 모바일 */   
+    html {font-size: 62.5%;} /* 15px // 62.5% // 2.75vw */
+}        
+@media all and (min-width: 768px) and (max-width: 1024px) {/* 태블릿 */
+    html {font-size: 75.0%;} /* 18px ///   7.68 : 11.52 = 10.47 : 15  1.36vw */ 
+}        
+@media all and (min-width: 1025px) {/* 데스크탑 */
+    html {font-size:calc(18px/1.5);} /* 16.032px // 62.5%  63.5% // 12px // 18px */ 
+}
+
+/* 반응형 추가 */
+@media only screen and (max-width: 359px){
+    html {font-size: 2.77vw;}
+}
+@media only screen and (max-width:360px)and (max-width: 499px){  
+    html {font-size: 10px;}
+}
+@media only screen and (min-width: 500px) and (max-width: 767px){
+    html {font-size:calc(2.4vw - 2px); /* 1.9vw; */}
+}        
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    html {font-size: 80.0%;}
+}        
+@media all and (min-width: 1025px) {
+    html {font-size: 75.0%;}
+}
+
+/* 
+    50%   -> 8px
+    56.3% -> 9px
+    62.5  -> 10px
+    66.8% -> 16.032px
+    68.8% -> 11px
+    75.0% -> 12px
+    100%  -> 16px
+*/

@@ -45,8 +45,8 @@ input:disabled,
 .img_radio_wrap{display: flex;justify-content: center;width: 100%;}
 .img_radio_wrap.type2{flex-direction: column;}
 .img_radio{width: 49%;border: 0.1rem solid #E7E8EA;height: 15.5rem;text-align: center;border-radius: 1.2rem;box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);}
-.img_radio_wrap.type2 .img_radio{width: 100%; padding: 1.9rem 1.9rem 1.5rem}
-.img_radio_wrap.type2 .img_radio.active{padding: 1.8rem 1.8rem 1.4rem}
+.img_radio_wrap.type2 .img_radio{width: 100%; padding: 1.9rem 1.7rem 1.5rem 1.9rem}
+.img_radio_wrap.type2 .img_radio.active{padding: 1.8rem 1.6rem 1.4rem 1.8rem}
 .img_radio+.img_radio{margin-left: 3.1%;}
 .img_radio_wrap.type2 .img_radio+.img_radio{margin-left: 0;margin-top: 3.1%;}
 .img_radio p{color:#555; font-size: 1.6rem; line-height: 2rem; letter-spacing: -0.03rem;}
@@ -370,10 +370,17 @@ form.jointype4{padding:0 2rem;}
 .acco__wrap.active .acco__cont {display:block}
 .acco__wrap.active .acco__btn {display:none}
 
-.result__wrap {padding:0 2rem; border:1px solid #E7E8EA; border-radius:0 0 1.6rem 1.6rem; box-shadow:0 0 2rem rgba(0,0,0,0.07)}
-.result__wrap .result__item {display:block; padding:1.5rem 0}
-.result__wrap .result__item + .result__item {border-top:1px solid #E7E8EA}
-.rdo__result {color:#222; font-size:1.4rem; line-height:1.8rem; letter-spacing:-0.03rem;}
+/* .result__wrap {padding:0 2rem; border:1px solid #E7E8EA; border-radius:0 0 1.6rem 1.6rem; box-shadow:0 0 2rem rgba(0,0,0,0.07)} */
+/* .result__wrap .result__item {display:block; padding:1.5rem 0} */
+/* .result__wrap .result__item + .result__item {border-top:1px solid #E7E8EA} */
+/* .rdo__result {color:#222; font-size:1.4rem; line-height:1.8rem; letter-spacing:-0.03rem;} */
+
+.rdo__result {opacity:0; padding:1.5rem 0; border-radius:1.6rem 1.6rem 0 0; box-shadow:0 0 1.6rem rgba(0,0,0,0.15); background-color:#fff; text-align:center; letter-spacing:-0.02rem}
+.rdo__result.active {opacity:1}
+.rdo__result .flag {display:inline-block; padding:0 2rem; border-radius:2rem; background-color:#F0F7FF; color:#222; font-size:1.2rem; font-weight:bold; line-height:2.6rem}
+.rdo__result .charge {display:block; margin-top:1.3rem; color:#222; font-size:1.6rem; line-height:2.8rem}
+.rdo__result .charge strong {color:#2480FF; font-size:2.2rem; font-weight:bold}
+.rdo__result .info {display:block; margin-top:0.8rem; color:#999; font-size:1.2rem; line-height:1.5rem}
 
 /* .dim {display:none; position:fixed; left:0; right:0; top:0; bottom:0; max-width:360px; margin:0 auto; background:rgba(0,0,0,0.6); z-index:10}
 .dim.active {display:block}

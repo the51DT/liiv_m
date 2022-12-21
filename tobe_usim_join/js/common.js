@@ -21,21 +21,40 @@ window.addEventListener("load", ()=>{
     })
   
     // step1 유심 라디오버튼 임시
+    // const radioSelect = Array.from(document.querySelectorAll(".rdo__item"));
+    // const radioResult = document.querySelectorAll(".rdo__result");
+    // radioSelect.forEach((rdo)=>{
+    //     const rdoTxt = rdo.getAttribute("data-txt");
+    //     console.log(document.querySelector('input[type=radio]:checked').value);
+    //     if(rdo.classList.contains("active")){
+    //         radioResult.forEach((result)=>{
+    //             result.innerHTML = rdoTxt;
+    //         })
+    //     };
+    //     rdo.addEventListener("click", (e)=>{
+    //         console.log(document.querySelector('input[type=radio]:checked').value);
+    //         radioResult.forEach((result)=>{
+    //             result.innerHTML = rdoTxt;
+    //         })
+    //     })
+    // })
+
+    // step1 요금제 라디오버튼
     const radioSelect = Array.from(document.querySelectorAll(".rdo__item"));
-    const radioResult = document.querySelectorAll(".rdo__result");
+    // const rdoResult = document.querySelectorAll(".rdo__result");
+    const flag = document.querySelectorAll(".rdo__result .flag");
+    const charge = document.querySelectorAll(".rdo__result .charge [data-charge]");
     radioSelect.forEach((rdo)=>{
-        const rdoTxt = rdo.getAttribute("data-txt");
-        console.log(document.querySelector('input[type=radio]:checked').value);
-        if(rdo.classList.contains("active")){
-            radioResult.forEach((result)=>{
-                result.innerHTML = rdoTxt;
-            })
-        };
-        rdo.addEventListener("click", (e)=>{
-            console.log(document.querySelector('input[type=radio]:checked').value);
-            radioResult.forEach((result)=>{
-                result.innerHTML = rdoTxt;
-            })
+        const rdoFlag = rdo.getAttribute("data-flag");
+        const rdoCharge = rdo.getAttribute("data-charge");
+        rdo.addEventListener("click", ()=>{
+          document.querySelector(".rdo__result").classList.add("active");
+          flag.forEach((result)=>{
+              result.innerHTML = rdoFlag;
+          });
+          charge.forEach((result)=>{
+              result.innerHTML = rdoCharge;
+          });
         })
     })
   
@@ -92,6 +111,7 @@ window.addEventListener("load", ()=>{
         item.style.paddingTop = `${head.offsetHeight}px`;
         item.style.paddingBottom = `${foot.offsetHeight}px`;
     });
+
   }
   
   // page link
