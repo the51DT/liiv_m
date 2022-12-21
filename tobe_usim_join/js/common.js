@@ -8,16 +8,16 @@ window.addEventListener("load", ()=>{
 
     containerPad();
     window.addEventListener("resize", containerPad);
-    isMobile ? document.querySelector("body").classList.add("mobile") : null;   // mobile check
+
+    if(isMobile){
+        document.querySelector("body").classList.add("mobile");
+        // getFootPad();
+        // window.addEventListener("resize", getFootPad);
+    }
     
-    // ink__item
     const linkItem = Array.from(document.querySelectorAll(".link__item"));
     linkItem.forEach((item)=>{
-        item.addEventListener("click", (e)=>{
-            e.preventDefault();
-            if( $(item).hasClass("disabled") || $(item).attr("disabled") !== undefined  ){ return } // disabled check
-            pageChange(item.dataset.link)
-        })
+        item.addEventListener("click", (e)=>{ e.preventDefault(); pageChange(item.dataset.link) })
     })
 
     // step1 유심 라디오버튼 임시
@@ -40,24 +40,36 @@ window.addEventListener("load", ()=>{
     })
 
     // close 버튼 팝업
-    // const btnClose = document.querySelector('header .btn__close');
-    // const leavepop = document.querySelector('#leave__pop');
-    // const dim = document.querySelector('.dim');
+    const btnClose = document.querySelectorAll("header .btn__close");
+    const leavepop = document.querySelector("#leave__pop");
+    const dim = document.querySelector(".dim");
 
-    // btnClose.addEventListener("click", function(e){
-    //     e.preventDefault;
-    //     leavepop.classList.toggle("active");
-    //     dim.classList.toggle("active");
-    // });
-    // leavepop.addEventListener("click", function(e){
-    //     e.preventDefault;
-    //     leavepop.classList.toggle("active");
-    //     dim.classList.toggle("active");
-    // });
+    btnClose.forEach((close)=>{
+        close.addEventListener("click", function(e){
+            e.preventDefault;
+            leavepop.classList.toggle("active");
+            dim.classList.toggle("active");
+        });
+    })
+    leavepop.addEventListener("click", function(e){
+        e.preventDefault;
+        leavepop.classList.toggle("active");
+        dim.classList.toggle("active");
+    });
+
+    // step1 아코디언 버튼
+    const accoBtn = document.querySelectorAll(".acco__btn");
+    accoBtn.forEach((item)=>{
+        item.addEventListener("click", function(){
+            item.parentNode.classList.add("active");
+        });
+    })
 })
 
 // 모바일 100vh 대응
-const setVh = () => { document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`) };
+const setVh = () => {
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+};
 
 // mobile check
 function chkMobile(agent) {
@@ -133,17 +145,10 @@ $(document).ready(function(){
 
 
     // radio group active
-    // $(document).find('.radio__group .radio__item input').on("change", function(){
-    //     const radioGroup = $(this).parents(".radio__group");
-    //     radioGroup.find(".radio__item").removeClass("active");
-    //     $(this).parents(".radio__item").addClass("active")
-    // })
-    $(document).find('.radio__group .radio__item').on("click", function(){
+    $(document).find('.radio__group .radio__item input').on("change", function(){
         const radioGroup = $(this).parents(".radio__group");
         radioGroup.find(".radio__item").removeClass("active");
-        $(this).addClass("active");
-        radioGroup.find(".radio__item input").prop("checked", false);
-        $(this).find("input").prop("checked", true);
+        $(this).parents(".radio__item").addClass("active")
     })
 
     // form focus
@@ -152,7 +157,7 @@ $(document).ready(function(){
     })
     $(document).find(".form__item input").on("blur", function(){
         $(this).parents(".form__item").removeClass("focus");
-        if( $(this).val().length > 0 ){
+        if( $(this).val().length > 1 ){
             $(this).parents(".form__item").addClass("active");
         } else {
             $(this).parents(".form__item").removeClass("active");
@@ -161,7 +166,7 @@ $(document).ready(function(){
 
     // form active
     $(document).find(".form__group input").on("propertychange change keyup keypress keydown paste input", function(){
-        if( $(this).val().length > 0 ){
+        if( $(this).val().length > 1 ){
             $(this).parents(".form__item").addClass("active");
             $(this).parents('.form__item-hasbtn').addClass("active");
         } else {
@@ -188,9 +193,10 @@ $(document).ready(function(){
         let input = $(this).parents(".form__item").find("input");
         let count = 0;
 
-        input.each((idx, item)=>{ if( $(item).val().length > 0 ){ count++ } })
+        input.each((idx, item)=>{ if( $(item).val().length > 1 ){ count++ } })
         if( count < 1 ){ $(this).parents(".form__item").removeClass("active"); }
     })
+
 
     // // help toast open
     // $(document).find(".link__help").on("click", function(e){
@@ -335,5 +341,4 @@ $(document).ready(function(){
     //         $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").removeClass("disabled");
     //     }
     // })
-
 })
