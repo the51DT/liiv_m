@@ -8,13 +8,44 @@
     <title>To-be usim/join | Liiv M(리브모바일)</title>
     <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/common.js"></script>
 </head>
 <body>
     <div id="wrap">
         <section class="content__section section__type">
+            <header>
+                <!-- <img src="./img/common-status.png" class="mobile-hidden"> -->
+                <img src="./img/head_step1_intro.png">
+                <a href="#" class="btn__close"></a>
+            </header>
+            <div class="container__wrap">
+                <div class="step1__intro__slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/step1_intro_slide1.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/step1_intro_slide2.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/step1_intro_slide3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item" data-link="section__step1_1"><img src="./img/btn_step1_start.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="content__section section__step1_1">
             <header>
                 <!-- <img src="./img/common-status.png" class="mobile-hidden"> -->
                 <img src="./img/head_step1_1.png">
@@ -43,7 +74,7 @@
             <footer>
                 <img src="./img/step1_cont1_btm.png" alt="">
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__step1_2"><img src="./img/common-btn_next.png"></a>
+                    <a href="#" class="link__item" data-link="section__step1_2"><img src="./img/btn-next.png"></a>
                 </div>
             </footer>
         </section>
@@ -69,12 +100,19 @@
                         </div>
                     </div>
                 </div>
-                <img src="./img/step1_cont2_2.png" alt="">
+                <div class="acco__wrap">
+                    <button type="button" class="acco__btn">
+                        <img src="./img/step1_cont2_2_acco.png" alt="">
+                    </button>
+                    <div class="acco__cont">
+                        <img src="./img/step1_cont2_2.png" alt="">
+                    </div>
+                </div>
             </div>
             <footer>
                 <img class="shadow__top br__top16" src="./img/step1_cont2_btm.png" alt="">
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__step1_3"><img src="./img/common-btn_next.png"></a>
+                    <a href="#" class="link__item" data-link="section__step1_3"><img src="./img/btn-next.png"></a>
                 </div>
             </footer>
         </section>
@@ -103,12 +141,19 @@
                         </div>
                     </div>
                 </div>
-                <img src="./img/step1_cont3_2.png" alt="">
+                <div class="acco__wrap">
+                    <button type="button" class="acco__btn">
+                        <img src="./img/step1_cont2_2_acco.png" alt="">
+                    </button>
+                    <div class="acco__cont">
+                        <img src="./img/step1_cont3_2.png" alt="">
+                    </div>
+                </button>
             </div>
             <footer>
                 <img class="shadow__top br__top16" src="./img/step1_cont2_btm.png" alt="">
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__step1_4"><img src="./img/common-btn_next.png"></a>
+                    <a href="#" class="link__item" data-link="section__step1_4"><img src="./img/btn-next.png"></a>
                 </div>
             </footer>
         </section>
@@ -122,7 +167,7 @@
             <div class="container__wrap">
                 <img src="./img/step1_cont4.png" alt="">
                 <div class="cont__inner">
-                    <div class="img_radio_wrap">
+                    <!-- <div class="img_radio_wrap">
                         <div class="img_radio rdo__item" data-txt="유심이 없어요">
                             <label>
                                 <div class="img_radio_thum">
@@ -141,6 +186,20 @@
                                 <p>유심이 있어요</p>
                             </label>
                         </div>
+                    </div> -->
+                    <div class="img_radio_wrap">
+                        <div class="img_radio">
+                            <div class="img_radio_thum big">
+                                <img src="./img/step1_cont4_rdo1.svg" alt="">
+                            </div>
+                            <p>유심이 없어요</p>
+                        </div>
+                        <div class="img_radio active">
+                            <div class="img_radio_thum big">
+                                <img src="./img/step1_cont4_rdo2.svg" alt="">
+                            </div>
+                            <p>유심이 있어요</p>
+                        </div>
                     </div>
                 </div>
                 <img src="./img/step1_cont4_2.png" alt="">
@@ -153,9 +212,9 @@
             </footer>
         </section>
 
-        <section class="content__section section__step1_5">
+        <!-- <section class="content__section section__step1_5">
             <header>
-                <!-- <img src="./img/common-status.png" class="mobile-hidden"> -->
+                <img src="./img/common-status.png" class="mobile-hidden">
                 <img src="./img/head_step1_3_line.png">
                 <a href="#" class="btn__close"></a>
             </header>
@@ -191,9 +250,9 @@
                     <a href="#" class="link__item" data-link="section__step1_6"><img src="./img/btn_step1_5.png"></a>
                 </div>
             </footer>
-        </section>
+        </section> -->
 
-        <section class="content__section section__step1_6">
+        <section class="content__section section__step1_5">
             <header>
                 <!-- <img src="./img/common-status.png" class="mobile-hidden"> -->
                 <img src="./img/head_step1_4.png">
@@ -202,120 +261,122 @@
             <div class="container__wrap">
                 <img src="./img/step1_cont6.png" alt="">
                 <div class="cont__inner">
-                    <div class="check__list__wrap">
-                        <p class="check-type1">
-                            <label for="chk1">
-                                <input type="checkbox" name="chk1" id="chk1">
-                                <span>약관 및 개인(신용)정보 이용에 <br>모두 동의합니다.</span>
-                            </label>
-                        </p>
-                    </div>
-                    <p class="check__alert">모든 필수 약관에 동의해 주세요.</p>
-                    <div class="check__list__wrap">
-                        <p class="check-type1">
-                            <label for="chk2">
-                                <input type="checkbox" name="chk2" id="chk2">
-                                <span>이동통신 이용약관 주요 내용 설명서 <br><strong>(필수)</strong></span>
-                            </label>
-                            <a href="#" class="btn__terms"></a>
-                        </p>
-                        <p class="check-type1">
-                            <label for="chk3">
-                                <input type="checkbox" name="chk3" id="chk3">
-                                <span>홈페이지 이용약관 <strong>(필수)</strong></span>
-                            </label>
-                            <a href="#" class="btn__terms"></a>
-                        </p>
-                        <div class="check__wrap">
+                    <div class="agr__group">
+                        <div class="check__list__wrap">
                             <p class="check-type1">
-                                <label for="chk4">
-                                    <input type="checkbox" name="chk4" id="chk4">
-                                    <span>개인(신용)정보 수집&middot;이용&middot;제공 동의 <br><strong>(필수)</strong></span>
+                                <label for="chk1">
+                                    <input type="checkbox" name="chk1" id="chk1" class="chk__all">
+                                    <span>약관 및 개인(신용)정보 이용에 <br>모두 동의합니다.</span>
                                 </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk4_1">
-                                    <input type="checkbox" name="chk4_1" id="chk4_1">
-                                    <span>고유식별정보 수집&middot;이용 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk4_2">
-                                    <input type="checkbox" name="chk4_2" id="chk4_2">
-                                    <span>개인(신용)정보 수집&middot;이용 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk4_3">
-                                    <input type="checkbox" name="chk4_3" id="chk4_3">
-                                    <span>개인위치정보 수집&middot;이용 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk4_4">
-                                    <input type="checkbox" name="chk4_4" id="chk4_4">
-                                    <span>고유식별정보 제공 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
                             </p>
                         </div>
-                        <div class="check__wrap">
+                        <p class="check__alert">모든 필수 약관에 동의해 주세요.</p>
+                        <div class="check__list__wrap">
                             <p class="check-type1">
-                                <label for="chk5">
-                                    <input type="checkbox" name="chk5" id="chk5">
-                                    <span>개인(신용)정보 조회 동의 <strong>(필수)</strong></span>
+                                <label for="chk2">
+                                    <input type="checkbox" name="chk2" id="chk2" class="inp__chk">
+                                    <span>이동통신 이용약관 주요 내용 설명서 <br><strong>(필수)</strong></span>
                                 </label>
                                 <a href="#" class="btn__terms"></a>
                             </p>
-                            <p class="check-type2">
-                                <label for="chk5_1">
-                                    <input type="checkbox" name="chk5_1" id="chk5_1">
-                                    <span>고유식별정보 수집&middot;이용 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk5_2">
-                                    <input type="checkbox" name="chk5_2" id="chk5_2">
-                                    <span>개인(신용)정보 수집&middot;이용 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk5_3">
-                                    <input type="checkbox" name="chk5_3" id="chk5_3">
-                                    <span>개인위치정보 수집&middot;이용 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                            <p class="check-type2">
-                                <label for="chk5_4">
-                                    <input type="checkbox" name="chk5_4" id="chk5_4">
-                                    <span>고유식별정보 제공 동의</span>
-                                </label>
-                                <a href="#" class="btn__terms"></a>
-                            </p>
-                        </div>
-                        <div class="check__wrap">
                             <p class="check-type1">
-                                <label for="chk6">
-                                    <input type="checkbox" name="chk6" id="chk6">
-                                    <span>고객 확인 사항 <strong>(필수)</strong></span>
+                                <label for="chk3">
+                                    <input type="checkbox" name="chk3" id="chk3" class="inp__chk">
+                                    <span>홈페이지 이용약관 <strong>(필수)</strong></span>
                                 </label>
                                 <a href="#" class="btn__terms"></a>
                             </p>
-                            <div class="term__box">
-                                <p class="term__txt">
-                                    1.최근 대출업자, SNS 등을 통해 이동전화 개통시 
-                                    자금을 제공해주겠다고 권유한 후, 개통된 휴대폰 / 
-                                    유심을 대출 사기, 보이스피싱 조직에 유통하는 등의
-                                    악용하는 사례가 다수 적발되고 있습니다. 
-                                    이러한 제3자에게 본인명의의 휴대폰, / 유심을 개통
+                            <div class="check__wrap">
+                                <p class="check-type1">
+                                    <label for="chk4">
+                                        <input type="checkbox" name="chk4" id="chk4" class="inp__chk inp__all">
+                                        <span>개인(신용)정보 수집&middot;이용&middot;제공 동의 <br><strong>(필수)</strong></span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
                                 </p>
+                                <p class="check-type2">
+                                    <label for="chk4_1">
+                                        <input type="checkbox" name="chk4_1" id="chk4_1" class="inp__chk">
+                                        <span>고유식별정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_2">
+                                        <input type="checkbox" name="chk4_2" id="chk4_2" class="inp__chk">
+                                        <span>개인(신용)정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_3">
+                                        <input type="checkbox" name="chk4_3" id="chk4_3" class="inp__chk">
+                                        <span>개인위치정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_4">
+                                        <input type="checkbox" name="chk4_4" id="chk4_4" class="inp__chk">
+                                        <span>고유식별정보 제공 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                            </div>
+                            <div class="check__wrap">
+                                <p class="check-type1">
+                                    <label for="chk5">
+                                        <input type="checkbox" name="chk5" id="chk5" class="inp__chk inp__all">
+                                        <span>개인(신용)정보 조회 동의 <strong>(필수)</strong></span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_1">
+                                        <input type="checkbox" name="chk5_1" id="chk5_1" class="inp__chk">
+                                        <span>고유식별정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_2">
+                                        <input type="checkbox" name="chk5_2" id="chk5_2" class="inp__chk">
+                                        <span>개인(신용)정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_3">
+                                        <input type="checkbox" name="chk5_3" id="chk5_3" class="inp__chk">
+                                        <span>개인위치정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_4">
+                                        <input type="checkbox" name="chk5_4" id="chk5_4" class="inp__chk">
+                                        <span>고유식별정보 제공 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                            </div>
+                            <div class="check__wrap">
+                                <p class="check-type1">
+                                    <label for="chk6">
+                                        <input type="checkbox" name="chk6" id="chk6" class="inp__chk">
+                                        <span>고객 확인 사항 <strong>(필수)</strong></span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <div class="term__box">
+                                    <p class="term__txt">
+                                        1.최근 대출업자, SNS 등을 통해 이동전화 개통시 
+                                        자금을 제공해주겠다고 권유한 후, 개통된 휴대폰 / 
+                                        유심을 대출 사기, 보이스피싱 조직에 유통하는 등의
+                                        악용하는 사례가 다수 적발되고 있습니다.<br>
+                                        이러한 제3자에게 본인명의의 휴대폰, / 유심을 개통
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -323,7 +384,7 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__step1_6"><img src="./img/btn_step1_6.png"></a>
+                    <a href="#" class="link__item" data-link="section__step1_5"><img src="./img/btn_step1_6.png"></a>
                 </div>
             </footer>
         </section>
@@ -334,5 +395,12 @@
         </div>
     </div>
     <div class="homebar mobile-hidden"></div>
+    <script>
+        const step1Slide = new Swiper(".step1__intro__slide", {
+            pagination: {
+                el: ".pagination",
+            },
+        });
+    </script>
 </body>
 </html>
