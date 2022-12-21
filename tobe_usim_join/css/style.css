@@ -258,7 +258,7 @@ form.jointype4{padding:0 2rem;}
 .form__item-input.flex{display:flex; align-items:center; justify-content: space-between; font-size:1.8rem;}
 
 .form__item-hasbtn{position:relative;}
-.form__item-hasbtn .inp-del{position:absolute; right:0; bottom:1rem; display:none; text-indent:-9999px; width:2rem; height:2rem; background:url(../img/inp_del.png) no-repeat 0 0; background-size:100% auto;}
+.form__item-hasbtn .inp-del{position:absolute; right:0; bottom:1rem; display:none; text-indent:-9999px; width:2rem; height:2rem; background:url(../img/inp_del.png) no-repeat 0 0; background-size:100% auto; z-index:5;}
 .form__item-hasbtn.active .inp-del{display:block;}
     /* active */
 .form__item.active{padding-top:2em;}
