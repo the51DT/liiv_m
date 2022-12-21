@@ -53,8 +53,10 @@ input:disabled,
 .img_radio.active{border: 0.2rem solid #FFD338}
 .img_radio.active p{color:#222; font-weight: bold;}
 
-.img_radio_thum{margin:3rem auto 1rem; width: 7.4rem; height: 7rem;}
-.img_radio.active .img_radio_thum{margin:2.9rem auto 1rem;}
+.img_radio_thum{margin:3.1rem auto 1.4rem; width: 7.4rem; height: 7rem;}
+.img_radio_thum.big{margin:0.9rem auto 1rem; width: 9.6rem; height: 9.6rem;}
+.img_radio.active .img_radio_thum{margin:3rem auto 1.4rem;}
+.img_radio.active .img_radio_thum.big{margin:0.8rem auto 1rem;}
 .img_radio_wrap.padding{padding-left: 2rem;padding-right: 2rem;}
     /* type3 */
     .img_radio_wrap.type3{flex-direction: column;}
@@ -100,6 +102,8 @@ input:disabled,
 
 /* form */
 .check__list__wrap {padding:2rem; border:0.1rem solid #E7E8EA; border-radius:1.2rem}
+.check__list__wrap.active {border-color:#FFD338}
+.check__list__wrap:last-of-type {margin-bottom:5rem}
 .check__list__wrap .check-type1 + .check-type1 {margin-top:2rem}
 .check__list__wrap .check-type2 + .check-type2 {margin-top:1rem}
 .check__list__wrap .check-type1 + .check-type2 {margin-top:1.7rem}
@@ -344,6 +348,17 @@ form.jointype4{padding:0 2rem;}
 .pos__btm {position:fixed; max-width:360px!important; left:0; right:0; bottom:var(--fh); margin:0 auto}
 .shadow__top {box-shadow:0 0 1.6rem rgba(0,0,0,0.15)}
 .br__top16 {border-radius:1.6rem 1.6rem 0 0}
+
+.step1__intro__slide .swiper-wrapper {padding:5rem 0}
+.step1__intro__slide .pagination {display:flex; justify-content:center}
+.step1__intro__slide .pagination .swiper-pagination-bullet {width:0.6rem; height:0.6rem; margin:0 0.4rem; border-radius:0.6rem; background-color:#D1D1D1; opacity:1; transition:all 0.2s}
+.step1__intro__slide .pagination .swiper-pagination-bullet-active {width:1.6rem; background-color:#000}
+
+.acco__btn {display:block}
+.acco__wrap .acco__cont {display:none}
+.acco__wrap.active .acco__cont {display:block}
+.acco__wrap.active .acco__btn {display:none}
+
 .result__wrap {padding:0 2rem; border:1px solid #E7E8EA; border-radius:0 0 1.6rem 1.6rem; box-shadow:0 0 2rem rgba(0,0,0,0.07)}
 .result__wrap .result__item {display:block; padding:1.5rem 0}
 .result__wrap .result__item + .result__item {border-top:1px solid #E7E8EA}

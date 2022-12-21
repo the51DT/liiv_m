@@ -1,5 +1,50 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css); */
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Neo Bold'),
+    url('./fonts/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansNeo-Bold.woff') format('woff'),
+    url('./fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: local('Spoqa Han Sans Neo Medium'),
+    url('./fonts/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansNeo-Medium.woff') format('woff'),
+    url('./fonts/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Neo Regular'),
+    url('./fonts/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansNeo-Regular.woff') format('woff'),
+    url('./fonts/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 300;
+    src: local('Spoqa Han Sans Neo Light'),
+    url('./fonts/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansNeo-Light.woff') format('woff'),
+    url('./fonts/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 100;
+    src: local('Spoqa Han Sans Neo Thin'),
+    url('./fonts/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+    url('./fonts/SpoqaHanSansNeo-Thin.woff') format('woff'),
+    url('./fonts/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -29,7 +74,7 @@ footer, header, hgroup, menu, nav, section {
 html{ font-size:16px; }
 body {
 	line-height: 1;
-	font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+	font-family: 'Spoqa Han Sans Neo', sans-serif;
 }
 ol, ul {
 	list-style: none;
