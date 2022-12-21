@@ -188,7 +188,14 @@
                         <a href="#" class="clear-text inp-del">취소</a>
                     </div>
                 </div>
-                <img src="./img/img_billtype3_5_2.png">
+                <img src="./img/img_billtype3_5_2_1.png">
+                <a href="#" class="btn-dropdown"><img src="./img/img_billtype3_5_2_2.png"></a>
+                <div class="dropdown1">
+                    <img src="./img/img_billtype3_5_2_3.png">
+                </div>
+                <div class="dropdown2">
+                    <img src="./img/img_billtype3_5_2.png">
+                </div>
             </div>
             <footer>
                 <div class="foot__btn">
@@ -282,7 +289,6 @@
         });
 
         $(document).on("click", ".section__billtype3-3 .img_radio", function (e) {
-            console.log($(this).index())
             if($(this).index() == 0){
                 $('.section__billtype3-3 .foot__btn a').removeClass('disabled');
             }else{
@@ -322,6 +328,11 @@
             $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
         });
 
+        $(document).on("click", ".btn-dropdown", function (e) {
+            $(this).hide().addClass('active');
+            $('.dropdown1').hide();
+            $('.dropdown2').fadeIn();   
+        });
         
 
     </script>
