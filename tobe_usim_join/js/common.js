@@ -248,9 +248,30 @@ window.addEventListener("load", ()=>{
   
     
   
-    // disabled check - step1
-    $(document).on("click", "section[class*=section__step1] .img_radio", function(){
-      $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+    // disabled check - 가입유형 선택 (번호이동/신규가입)
+    $(document).on("click", ".section__step1_1 .img_radio", function(){
+      $(document).find(".section__step1_1 .foot__btn .link__item").addClass("disabled");
+        const elem = $(document).find(".section__step1_1 .img_radio").eq(0);
+        elem.hasClass("active") ? $(document).find(".section__step1_1 .foot__btn .link__item").removeClass("disabled") : null;
+    })
+
+    // disabled check - 요금제 선택
+    $(document).on("click", ".section__step1_2 .img_radio", function(){
+      $(document).find(".section__step1_2 .foot__btn .link__item").removeClass("disabled");
+    })
+
+    // disabled check - 개통유형 선택 (유심 개통/eSIM 개통)
+    $(document).on("click", ".section__step1_3 .img_radio", function(){
+      $(document).find(".section__step1_3 .foot__btn .link__item").addClass("disabled");
+        const elem = $(document).find(".section__step1_3 .img_radio").eq(0);
+        elem.hasClass("active") ? $(document).find(".section__step1_3 .foot__btn .link__item").removeClass("disabled") : null;
+    })
+
+    // disabled check - 유심정보 선택 (유심이 없어요/유심이 있어요)
+    $(document).on("click", ".section__step1_4 .img_radio", function(){
+      $(document).find(".section__step1_4 .foot__btn .link__item").addClass("disabled");
+        const elem = $(document).find(".section__step1_4 .img_radio").eq(0);
+        elem.hasClass("active") ? $(document).find(".section__step1_4 .foot__btn .link__item").removeClass("disabled") : null;
     })
   
     // disabled check - 가입유형 선택 (개인/개인사업자)
