@@ -29,12 +29,12 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__billtype3-1"><img src="./img/img_billtype3_2_2.png"></a>
+                    <a href="#" class="link__item" data-link="section__billtype3-2"><img src="./img/img_billtype3_2_2.png"></a>
                 </div>
             </footer>
         </section>
 
-        <section class="content__section section__billtype3-1">
+        <!-- <section class="content__section section__billtype3-1">
             <header>
                 <img src="./img/head_billtype3_1.png">
             </header>
@@ -68,7 +68,7 @@
                     <img src="./img/img_billtype3_1_2.png">
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="content__section section__billtype3-2">
             <header>
@@ -89,22 +89,47 @@
                 <img src="./img/head_billtype3_3.png">
             </header>
             <div class="container__wrap">
-                <img src="./img/img_billtype3_3_1.png">
+                <img src="./img/img_billtype3_3_7.png">
                 <div class="img_radio_wrap padding">
                     <div class="img_radio">
-                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_3.png"></div>
-                        <p>개인</p>
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_5.png"></div>
+                        <p>우체국 등기</p>
                     </div>
-                    <div class="img_radio active">
-                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_4.png"></div>
-                        <p>개인사업자</p>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_6.png"></div>
+                        <p>당일 배송 서비스</p>
                     </div>
                 </div>
                 <img src="./img/img_billtype3_3_2.png">
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__billtype3-4"><img src="./img/img_billtype3_2_2.png"></a>
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-3-1"><img src="./img/img_billtype3_2_2.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="content__section section__billtype3-3-1">
+            <header>
+                <img src="./img/head_billtype3_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/img_billtype3_3_1.png">
+                <div class="img_radio_wrap padding">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_3.png"></div>
+                        <p>동일합니다.</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_4.png"></div>
+                        <p>다릅니다</p>
+                    </div>
+                </div>
+                <img src="./img/img_billtype3_3_2.png">
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-4"><img src="./img/img_billtype3_2_2.png"></a>
                 </div>
             </footer>
         </section>
@@ -140,7 +165,7 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__billtype3-5"><img src="./img/img_billtype3_2_2.png"></a>
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-5"><img src="./img/img_billtype3_2_2.png"></a>
                 </div>
             </footer>
         </section>
@@ -167,7 +192,7 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item" data-link="section__billtype3-6"><img src="./img/img_billtype3_2_2.png"></a>
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-6"><img src="./img/img_billtype3_2_2.png"></a>
                 </div>
             </footer>
         </section>
@@ -183,7 +208,7 @@
             <footer>
                 <div class="foot__btn type2">
                     <a href="#" class="disabled-type2"><img src="./img/btn_billtype3_6_1.png"></a>
-                    <a href="#" class="link__item" data-link="section__billtype3-7"><img src="./img/btn_billtype3_6_2.png"></a>
+                    <a href="#"><img src="./img/btn_billtype3_6_2.png"></a>
                 </div>
             </footer>
         </section>
@@ -197,11 +222,11 @@
                     <img src="./img/img_billtype3_7_1.png">
                     <div class="img-ani-billtype3-7"><img src="./img/img_billtype3_7_2.png"></div>
                 </div>
-                <div class="card__item-toastpopup">
+                <!-- <div class="card__item-toastpopup">
                     <div class="container">
                         <a href="#" class="toastpopup-close"><img src="./img/img_billtype3_8_1.png"></a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <footer>
                 <div class="foot__btn">
@@ -220,6 +245,16 @@
             }else{
                 $('.float_billtype3_6').stop().fadeOut('fast');
             }
+        });
+
+        $("a").click(function(e){ 
+            if($(this).hasClass('disabled') || $(this).hasClass('disabled-type2')){
+                e.preventDefault(); 
+            }
+        }); 
+
+        $(document).on("click", ".disabled", ".disabled-type2", function (e) {
+            e.preventDefault();
         });
         
         $(document).on("click", ".toastpopup", function (e) {
@@ -241,10 +276,6 @@
             $('html').css('overflow','auto');
         });
 
-        $(document).on("change",".section__billtype3-1 .email_row.secend select",function(){
-            $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
-        });
-
         $(document).on("click", ".billtype3-2", function (e) {
             if(!$(this).hasClass('disabled')){
                 $('.section__billtype3-1').removeClass('active');
@@ -254,16 +285,48 @@
             }
         });
 
-        $(document).on("click", ".disabled", ".disabled-type2", function (e) {
-            console.log('disabled')
-            e.preventDefault();
+        $(document).on("click", ".section__billtype3-3 .img_radio", function (e) {
+            console.log($(this).index())
+            if($(this).index() == 0){
+                $('.section__billtype3-3 .foot__btn a').removeClass('disabled');
+            }else{
+                $('.section__billtype3-3 .foot__btn a').addClass('disabled');
+            }
         });
 
-        $("a").click(function(e){ 
-            if($(this).hasClass('disabled') || $(this).hasClass('disabled-type2')){
-                e.preventDefault(); 
+        $(document).on("click", ".section__billtype3-3-1 .img_radio", function (e) {
+            if($(this).index() == 1){
+                $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
+            }else{
+                $('.section__billtype3-3-1 .foot__btn a').addClass('disabled');
             }
-        }); 
+        });
+
+        $(document).on("keyup", "#usim-address2", function (e) {            
+            if($(this).val() != ''){
+                $('.section__billtype3-4 .foot__btn a').removeClass('disabled');
+            }else{
+                e.preventDefault();
+            }
+        });
+
+        $(document).on("keyup", "#user_phone", function (e) {            
+            if($(this).val() != ''){
+                $('.section__billtype3-5 .foot__btn a').removeClass('disabled');
+            }else{
+                e.preventDefault();
+            }
+        });
+        
+        $(document).on("change",".section__billtype3-1 .email_row.secend select",function(){
+            $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
+        });
+
+        $(document).on("change",".section__billtype3-1 .email_row.secend select",function(){
+            $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
+        });
+
+        
 
     </script>
 </body>
