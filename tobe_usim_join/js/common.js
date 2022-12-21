@@ -292,9 +292,10 @@ window.addEventListener("load", ()=>{
 
     // disabled check - 인증방법(KB모바일인증서, 신용카드 인증)
     $(document).on("click", ".section__joinauth .img_radio", function(){
-        $(document).find(".section__joinauth .foot__btn .link__item").addClass("disabled");
-        const elem = $(document).find(".section__joinauth .img_radio_wrap .img_radio").eq(0);
-        elem.hasClass("active") ? $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled") : null;
+        // $(document).find(".section__joinauth .foot__btn .link__item").addClass("disabled");
+        // const elem = $(document).find(".section__joinauth .img_radio_wrap .img_radio").eq(0);
+        // elem.hasClass("active") ? $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled") : null;
+        $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled")
     })
   
     // disabled check - 로그인정보 필요

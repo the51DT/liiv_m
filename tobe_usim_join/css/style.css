@@ -241,12 +241,14 @@ footer .foot__help img{width: 20rem;}
 
 
 /** (가입자 유형 선택) section__jointype **************/
+.section__jointype{padding-bottom:10rem;}
 .section__jointype-text{padding:4.2rem 0 0}
 .section__jointype .img_radio:nth-of-type(2) .img_radio_thum{width:8.2rem;}
 .section__jointype-btn{padding:3.4rem 2.1rem 0;}
 
 
 /** (가입자 유형 선택) section__jointype2 **************/
+.section__jointype2{padding-bottom:10rem;}
 .radio__group{display:flex; flex-direction:column; gap:1rem; padding: 0 2rem;}
 .radio__item{border:0.1rem solid #E7E8EA; box-shadow:0 0 1rem rgba(0,0,0, 0.05); border-radius:1.2rem; box-sizing:border-box; padding:2rem 1.5rem 2rem 2rem;}
 .radio__item.active{border:0.2rem solid #FFD338; padding:1.9rem 1.4rem 1.9rem 1.9rem;}
@@ -254,11 +256,13 @@ footer .foot__help img{width: 20rem;}
 
 
 /** (가입자 유형 선택) section__jointype3 **************/
+.section__jointype3{padding-bottom:10rem;}
 .section__jointype3-text{padding:1rem 0 0;}
 .section__jointype3-btn{padding:3.4rem 2.0rem 0;}
 
 
 /** (가입자 유형 선택) section__jointype4 **************/
+.section__jointype4{padding-bottom:10rem;}
 form.jointype4{padding:0 2rem;}
 .section__jointype4 .basic-form{margin:0}
 
@@ -280,45 +284,52 @@ form.jointype4{padding:0 2rem;}
 .form__item-hasbtn.active .inp-del{display:block;}
     /* active */
 .form__item.active{padding-top:2em;}
-.form__item.active ::placeholder{color:#999;}
+/* .form__item.active ::placeholder{color:#999;} */
 .form__item.active label{line-height:initial; font-size:1.2rem; color:#999;}
 /* focus */
 .form__item.focus{padding-top:4em;}
 .form__item.focus input{border-bottom:0.2rem solid #222;}
-.form__item.focus ::placeholder{color:#999;}
+/* .form__item.focus ::placeholder{color:#999;} */
 .form__item.focus label{line-height:initial; font-size:1.4rem; color:#222; font-weight:700;}
 
 
 /** section__joinauth *********************/
+.section__joinauth{padding-bottom:10rem}
 .section__joinauth-ttl{padding:1rem 0 0;}
 
 
 /** section__joininfo *********************/
+.section__joininfo{padding-bottom:10rem;}
 .section__joininfo-ttl{padding:1rem 0 0;}
 .section__joininfo .form__group{padding:3.4rem 0 0;}
 
 
 /** section__joininfo2 *************************/
+.section__joininfo2{padding-bottom:10rem;}
 .section__joininfo2-ttl{padding:1rem 0 0;}
 .section__joininfo2 .form__group{padding:3.4rem 0 0;}
 
 
 /** section__joinaddress *************************/
+.section__joinaddress{padding-bottom:10rem;}
 .section__joinaddress-ttl{padding:1rem 0 0;}
 .section__joinaddress .form__group{padding:3.4rem 0 0;}
 
 
 /** section__joinbill ****************************/
+.section__joinbill{padding-bottom:10rem;}
 .section__joinbill-ttl{padding: 1rem 0 0;}
 
 
 /** section__joinpay ****************************/
+.section__joinpay{padding-bottom:10rem;}
 .section__joinpay-ttl{padding:1rem 0 0;}
 .section__joinpay .check-type1{padding:1.5rem 0 0; margin:0 2rem;}
 .section__joinpay-btn{padding:2rem 2rem 0;}
 
 
 /** section__joincard ****************************/
+.section__joincard{padding-bottom:10rem;}
 .section__joincard-card{padding:1rem 0 0;}
 .section__joincard-card .form__group{padding:4rem 0 0;}
 
