@@ -40,22 +40,22 @@ window.addEventListener("load", ()=>{
     })
 
     // close 버튼 팝업
-    const btnClose = document.querySelectorAll("header .btn__close");
-    const leavepop = document.querySelector("#leave__pop");
-    const dim = document.querySelector(".dim");
+    // const btnClose = document.querySelectorAll("header .btn__close");
+    // const leavepop = document.querySelector("#leave__pop");
+    // const dim = document.querySelector(".dim");
 
-    btnClose.forEach((close)=>{
-        close.addEventListener("click", function(e){
-            e.preventDefault;
-            leavepop.classList.toggle("active");
-            dim.classList.toggle("active");
-        });
-    })
-    leavepop.addEventListener("click", function(e){
-        e.preventDefault;
-        leavepop.classList.toggle("active");
-        dim.classList.toggle("active");
-    });
+    // btnClose.forEach((close)=>{
+    //     close.addEventListener("click", function(e){
+    //         e.preventDefault;
+    //         leavepop.classList.toggle("active");
+    //         dim.classList.toggle("active");
+    //     });
+    // })
+    // leavepop.addEventListener("click", function(e){
+    //     e.preventDefault;
+    //     leavepop.classList.toggle("active");
+    //     dim.classList.toggle("active");
+    // });
 
     // step1 아코디언 버튼
     const accoBtn = document.querySelectorAll(".acco__btn");
@@ -341,4 +341,23 @@ $(document).ready(function(){
     //         $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").removeClass("disabled");
     //     }
     // })
+
+    // 약관 동의
+    $('.agr__group').off('click').on('click', '.chk__all', function(){
+        $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
+        $(this).closest('.check__list__wrap').addClass('active');
+    });
+    $('.inp__all').off('click').on('click', function(){
+        $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
+    });
+    $('.agr__group').each(function(){
+        var inpChk = $(this).find('.inp__chk');
+        inpChk.on('click', function(){
+            var is_checked = true;
+            inpChk.each(function(){
+                is_checked = is_checked && $(this).is(':checked');
+            });
+            $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
+        })
+    });
 })
