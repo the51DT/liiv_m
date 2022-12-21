@@ -297,9 +297,15 @@ $(document).ready(function(){
         $(document).find(".section__joinbill .foot__btn .link__item").removeClass("disabled");
     })
     // disabled check - 요금 납부 방법 (신용카드, 계좌이체)
-    $(document).on("click", ".section__joinpay .img_radio", function(){
-        $(document).find(".section__joinpay .section__joinpay-btn .link__item").removeClass("disabled");
-        // $(document).find(".section__joinpay .foot__btn .link__item").removeClass("disabled");
+    $(document).on("click change", ".section__joinpay .img_radio, .section__joinpay .check-type1 input", function(){
+        $(document).find(".section__joinpay .section__joinpay-btn .link__item").addClass("disabled");
+
+        const imgRadio = $(document).find(".section__joinpay .img_radio");
+        const checkbox = $(document).find(".section__joinpay .check-type1 input");
+
+        if( imgRadio.hasClass("active") && checkbox.is(":checked") ){
+            $(document).find(".section__joinpay .section__joinpay-btn .link__item").removeClass("disabled");
+        }
     })
 
     // disabled check - 요금 납부 방법
