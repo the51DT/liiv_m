@@ -310,10 +310,17 @@ $(document).ready(function(){
   $(document).on("click", ".section__joinbill .img_radio", function(){
       $(document).find(".section__joinbill .foot__btn .link__item").removeClass("disabled");
   })
+
   // disabled check - 요금 납부 방법 (신용카드, 계좌이체)
-  $(document).on("click", ".section__joinpay .img_radio", function(){
-      $(document).find(".section__joinpay .section__joinpay-btn .link__item").removeClass("disabled");
-      // $(document).find(".section__joinpay .foot__btn .link__item").removeClass("disabled");
+  $(document).on("click change", ".section__joinpay .img_radio, .section__joinpay .check-type1 input", function(){
+      $(document).find(".section__joinpay .section__joinpay-btn .link__item").addClass("disabled");
+
+      const imgRadio = $(document).find(".section__joinpay .img_radio");
+      const checkbox = $(document).find(".section__joinpay .check-type1 input");
+
+      if( imgRadio.hasClass("active") && checkbox.is(":checked") ){
+          $(document).find(".section__joinpay .section__joinpay-btn .link__item").removeClass("disabled");
+      }
   })
 
   // disabled check - 요금 납부 방법
@@ -350,29 +357,29 @@ $(document).ready(function(){
   //     }
   // })
 
-  // 약관 동의
-  $('.agr__group').off('click').on('click', '.chk__all', function(){
-    $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
-    $(this).closest('.check__list__wrap').addClass('active');
-    $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
-  });
-  $('.inp__all').off('click').on('click', function(){
-      $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
-  });
-  $('.agr__group').each(function(){
-    var inpChk = $(this).find('.inp__chk');
-    inpChk.on('click', function(){
-      var is_checked = true;
-      inpChk.each(function(){
-        is_checked = is_checked && $(this).is(':checked');
-      });
-      $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
-      $(this).closest('.agr__group').find('.chk__all').closest('.check__list__wrap').addClass('active');
-    
-      if($(this).closest('.agr__group').find('.chk__all').is(':checked')){
-        $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
-      }
-    })
-  });
 
+    // 약관 동의
+    $('.agr__group').off('click').on('click', '.chk__all', function(){
+        $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
+        $(this).closest('.check__list__wrap').addClass('active');
+        $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+    });
+    $('.inp__all').off('click').on('click', function(){
+        $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
+    });
+    $('.agr__group').each(function(){
+        var inpChk = $(this).find('.inp__chk');
+        inpChk.on('click', function(){
+            var is_checked = true;
+            inpChk.each(function(){
+            is_checked = is_checked && $(this).is(':checked');
+            });
+            $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
+            $(this).closest('.agr__group').find('.chk__all').closest('.check__list__wrap').addClass('active');
+
+            if($(this).closest('.agr__group').find('.chk__all').is(':checked')){
+            $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+            }
+        })
+    })
 })
