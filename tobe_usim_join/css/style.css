@@ -280,12 +280,12 @@ form.jointype4{padding:0 2rem;}
 .form__item-hasbtn.active .inp-del{display:block;}
     /* active */
 .form__item.active{padding-top:2em;}
-.form__item.active ::placeholder{color:#999;}
+/* .form__item.active ::placeholder{color:#999;} */
 .form__item.active label{line-height:initial; font-size:1.2rem; color:#999;}
 /* focus */
 .form__item.focus{padding-top:4em;}
 .form__item.focus input{border-bottom:0.2rem solid #222;}
-.form__item.focus ::placeholder{color:#999;}
+/* .form__item.focus ::placeholder{color:#999;} */
 .form__item.focus label{line-height:initial; font-size:1.4rem; color:#222; font-weight:700;}
 
 
