@@ -54,6 +54,15 @@ window.addEventListener("load", ()=>{
   //     leavepop.classList.toggle("active");
   //     dim.classList.toggle("active");
   // });
+
+  // step1 아코디언 버튼
+  const accoBtn = document.querySelectorAll(".acco__btn");
+  accoBtn.forEach((item)=>{
+      item.addEventListener("click", function(){
+          item.parentNode.classList.add("active");
+      });
+  })
+
 })
 
 // 모바일 100vh 대응
@@ -335,5 +344,24 @@ $(document).ready(function(){
   //         $(document).find(".section__joinhelp .section__joinhelp-btn .link__help-close").removeClass("disabled");
   //     }
   // })
+
+  // 약관 동의
+  $('.agr__group').off('click').on('click', '.chk__all', function(){
+    $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
+    $(this).closest('.check__list__wrap').addClass('active');
+  });
+  $('.inp__all').off('click').on('click', function(){
+      $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
+  });
+  $('.agr__group').each(function(){
+    var inpChk = $(this).find('.inp__chk');
+    inpChk.on('click', function(){
+    var is_checked = true;
+    inpChk.each(function(){
+      is_checked = is_checked && $(this).is(':checked');
+    });
+    $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
+    })
+  });
 
 })
