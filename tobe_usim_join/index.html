@@ -607,8 +607,9 @@
                                 <div style="flex:0 0 7rem"><img src="./img/joininfo-idcheck.png"></div>
                             </div>
                         </div>
+                        <div class="section__joininfo-midttl">비밀번호 생성</div>
                         <div class="form__item">
-                            <label>비밀번호 생성</label>
+                            <label>비밀번호를 입력해주세요</label>
                             <div class="form__item-input">
                                 <div class="form__item-hasbtn">
                                     <input type="password" class="wfull section__joininfo_pw" placeholder="입력해주세요" autocomplete="off">
@@ -795,19 +796,19 @@
                             <label>카드번호</label>
                             <div class="form__item-input flex">
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_1" placeholder="입력해주세요" autocomplete="off" maxlength="4">
+                                    <input type="text" class="wfull section__joincard_1" pattern="[0-9]*" inputmode="numeric" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_2" placeholder="입력해주세요" autocomplete="off" maxlength="4">
+                                    <input type="text" class="wfull section__joincard_2" pattern="[0-9]*" inputmode="numeric" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_3" placeholder="입력해주세요" autocomplete="off" maxlength="4">
+                                    <input type="text" class="wfull section__joincard_3" pattern="[0-9]*" inputmode="numeric" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_4" placeholder="입력해주세요" autocomplete="off" maxlength="4">
+                                    <input type="text" class="wfull section__joincard_4" pattern="[0-9]*" inputmode="numeric" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                             </div>
@@ -940,6 +941,7 @@
             </header>
             <div class="container__wrap">
                 <img src="./img/img_billtype3_5_1.png">
+                <form>
                 <div class="basic-form-wrap">
                     <div class="basic-form mt0">
                         <input type="text" class="form-text" id="user_name" autocomplete="off" required placeholder="이름을 입력해주세요">
@@ -952,6 +954,7 @@
                         <a href="#" class="clear-text inp-del">취소</a>
                     </div>
                 </div>
+                </form>
                 <img src="./img/img_billtype3_5_2_1.png">
                 <div class="acco__wrap">
                     <button type="button" class="acco__btn" style="margin-bottom:-0.8rem; padding-top:0">
