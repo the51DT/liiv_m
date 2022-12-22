@@ -180,16 +180,19 @@ window.addEventListener("load", ()=>{
         $(this).parents(".form__item").addClass("focus");
     })
     $(document).find(".form__item input").on("blur", function(){
-        $(this).parents(".form__item").removeClass("focus");
-        if( $(this).val().length > 0 ){
-            $(this).parents(".form__item").addClass("active");
-        } else {
-            $(this).parents(".form__item").removeClass("active");
-        }
+        // $(this).parents(".form__item").removeClass("focus");
+
+        // console.log( $(this).parents(".form_item").find("input") )
+
+        // if( $(this).val().length > 0 ){
+        //     $(this).parents(".form__item").addClass("active");
+        // } else {
+        //     $(this).parents(".form__item").removeClass("active");
+        // }
     })
   
     // form active
-    $(document).find(".form__group input").on("propertychange change keyup keypress keydown paste input", function(){
+    $(document).find(".form__group input").on("propertychange change keyup keypress keydown paste input blur", function(){
         if( $(this).val().length > 0 ){
             $(this).parents(".form__item").addClass("active");
             $(this).parents('.form__item-hasbtn').addClass("active");
@@ -313,10 +316,10 @@ window.addEventListener("load", ()=>{
 
     // disabled check - 인증방법(KB모바일인증서, 신용카드 인증)
     $(document).on("click", ".section__joinauth .img_radio", function(){
-        // $(document).find(".section__joinauth .foot__btn .link__item").addClass("disabled");
-        // const elem = $(document).find(".section__joinauth .img_radio_wrap .img_radio").eq(0);
-        // elem.hasClass("active") ? $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled") : null;
-        $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled")
+        $(document).find(".section__joinauth .foot__btn .link__item").addClass("disabled");
+        const elem = $(document).find(".section__joinauth .img_radio_wrap .img_radio").eq(0);
+        elem.hasClass("active") ? $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled") : null;
+        // $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled")
     })
   
     // disabled check - 로그인정보 필요
@@ -395,6 +398,9 @@ window.addEventListener("load", ()=>{
         if( input5.val().length < 1 ){ return false }
   
         $(document).find(".section__joincard .foot__btn .link__item").removeClass("disabled");
+    })
+    $(document).on("input", ".section__joincard_1, .section__joincard_2, .section__joincard_3, .section__joincard_4", function(){
+        // $(document).find(".section__joincard_1")
     })
   
     // disabled check - 가입상담 신청하세요
