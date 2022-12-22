@@ -339,8 +339,8 @@ table tfoot td {background-color: #f6f6f6; color: #777; font-weight: 700;}
 
 /* 공통 > Layer Show/Hide (radio) */
 .mo_select_rdo {margin: 0;}
-.mo_select_rdo .select_cont [data-show] {display: none;}
-.mo_select_rdo .select_cont [data-show]:first-child {display: block;}
+/* .mo_select_rdo .select_cont [data-show] {display: none;} */
+/* .mo_select_rdo .select_cont [data-show]:nth-of-type(2){display: block;} */
 
 /* 공통 > 리스트 */
 .list {margin: 0;}
