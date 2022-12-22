@@ -18,6 +18,13 @@
     <div id="wrap">
         <!-- section1  -->
         <section class="content__section section__type">
+            <header></header>
+            <div class="container__wrap">
+                <a href="#" class="link__item" data-link="section__step1_0"><img src="./img/index_b.png"></a>
+            </div>
+        </section>
+
+        <section class="content__section section__step1_0">
             <header>
                 <img src="./img/head_step1_intro.png">
             </header>
@@ -993,9 +1000,16 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#"><img src="./img/btn-next.png"></a>
+                    <a href="#" class="link__item" data-link="section__last"><img src="./img/btn-next.png"></a>
                 </div>
             </footer>
+        </section>
+
+        <section class="content__section section__last">
+            <header></header>
+            <div class="container__wrap">
+                <img src="./img/lastpage.png">
+            </div>
         </section>
         <!-- //section3 -->
 
@@ -1101,7 +1115,7 @@
             $('.dropdown2').fadeIn();   
         });
 
-        $(".section__joincard.active .form__item-input.flex input").keyup (function () {
+        $(".section__joincard .form__item-input.flex input").keyup (function () {
             var charLimit = $(this).attr("maxlength");
             if (this.value.length >= charLimit) {
                 $(this).parent().next().find('input').focus();
