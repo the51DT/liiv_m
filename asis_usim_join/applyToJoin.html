@@ -13,23 +13,18 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/common_v3.css">
 
-    <style>
-    /* input masking */
-    input.txt_security {-webkit-text-security: disc; }/*font-size: 1.2rem;*/
-    </style>
-
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/common_v3.js"></script>
-    <script src="./js/common_v3_pc.js"></script>
+    <!-- <script src="./js/common_v3_pc.js"></script> -->
     <!-- <script src="./js/ajaxprod.js"></script> -->
-    <script src="./js/util.js"></script>
-    <script src="./js/formatter.js"></script>
+    <!-- <script src="./js/util.js"></script> -->
+    <!-- <script src="./js/formatter.js"></script> -->
 </head>
-<body class="dvPhone">
+<body>
 
-    <div class="wrap mo_footer_hidden"> 
-        <header id="header" class="reHeader fixed_header"><div class="hoverbg"></div>
+    <!-- <div class="wrap mo_footer_hidden">  -->
+        <!-- <header id="header" class="reHeader fixed_header"><div class="hoverbg"></div>
             <div class="max_wrap">
                 <div class="mo_header">
                     <span class="txt_hide kb_ci">국민은행</span>
@@ -37,17 +32,17 @@
                     <button type="button" class="side_menu">메뉴</button>
                 </div>
             </div>
-        </header>
+        </header> -->
 
-        <button type="button" class="btn_gotop" id="gotoTop" title="Top으로 이동">TOP</button>
-
-
-        <section class="container">
-            <div id="content" class="content">
+        <!-- <button type="button" class="btn_gotop" id="gotoTop" title="Top으로 이동">TOP</button> -->
 
 
-            <form id="frm" name="frm" method="post" class="MultiFile-intercepted">
-            <input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624">
+        <!-- <section class="container">
+            <div id="content" class="content"> -->
+
+
+            <!-- <form id="frm" name="frm" method="post" class="MultiFile-intercepted">
+            <input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624"> -->
             <!-- 변경되는 컨텐츠 작업 시작 --> 
                 <div class="join_wrap max_wrap" id="applyToJoinDiv">                    
                     <div class="back_white">
@@ -160,99 +155,98 @@
                                                         <div data-show="select-id-car">
                                                             <p class="label">면허번호</p>
                                                             <p class="label_sub">지역</p>
-                                                                <div class="form_group type_select_local">
-                                                                    <select id="driverRgn" name="driverRgn" title="면허 지역을 선택해주세요">
-                                                                        <option value="">지역</option>                       
-                                                                        <option value="13">경기(13)</option>
-                                                                        <option value="11">서울(11)</option>
-                                                                        <option value="28">경기북부(28)</option>
-                                                                        <option value="13">경기남부(13)</option>
-                                                                        <option value="14">강원(14)</option>
-                                                                        <option value="15">충북(15)</option>
-                                                                        <option value="16">충남(16)</option>
-                                                                        <option value="17">전북(17)</option>
-                                                                        <option value="18">전남(18)</option>
-                                                                        <option value="19">경북(19)</option>
-                                                                        <option value="20">경남(20)</option>
-                                                                        <option value="21">제주(21)</option>
-                                                                        <option value="22">대구(22)</option>
-                                                                        <option value="23">인천(23)</option>
-                                                                        <option value="24">광주(24)</option>
-                                                                        <option value="25">대전(25)</option>
-                                                                        <option value="26">울산(26)</option>
-                                                                        <option value="12">부산(12)</option>                                                                    
-                                                                </select>
-                                                                <input type="number" id="driverNo" name="driverNo" placeholder="00-000000-00" maxlength="10">
-                                                            </div>  
-                                                            <label>
-                                                                <p class="label_sub">발급일자</p>
-                                                                <input type="number" id="driverIssDt" name="driverIssDt" placeholder="YYYYMMDD" maxlength="8" title="면허증 발급일자를 입력해주세요">
-                                                            </label>    
-                                                        </div>
-                                                        <!-- //운전면허선택시 -->
-                                                            
-                                                        <!-- 주민등록선택시 -->
-                                                        <div data-show="select-id-jumin" style="display:none;"> 
-                                                            <label id="JIssDtDiv">
-                                                                <p class="label">발급일자</p>
-                                                                <input type="number" id="JIssDt" name="JIssDt" placeholder="YYYYMMDD" maxlength="8" title="주민등록증 발급일자를 입력해주세요">
-                                                            </label>
-                                                        </div>
-                                                        <!-- //주민등록선택시 -->
+                                                            <div class="form_group type_select_local">
+                                                                <select id="driverRgn" name="driverRgn" title="면허 지역을 선택해주세요">
+                                                                    <option value="">지역</option>                       
+                                                                    <option value="13">경기(13)</option>
+                                                                    <option value="11">서울(11)</option>
+                                                                    <option value="28">경기북부(28)</option>
+                                                                    <option value="13">경기남부(13)</option>
+                                                                    <option value="14">강원(14)</option>
+                                                                    <option value="15">충북(15)</option>
+                                                                    <option value="16">충남(16)</option>
+                                                                    <option value="17">전북(17)</option>
+                                                                    <option value="18">전남(18)</option>
+                                                                    <option value="19">경북(19)</option>
+                                                                    <option value="20">경남(20)</option>
+                                                                    <option value="21">제주(21)</option>
+                                                                    <option value="22">대구(22)</option>
+                                                                    <option value="23">인천(23)</option>
+                                                                    <option value="24">광주(24)</option>
+                                                                    <option value="25">대전(25)</option>
+                                                                    <option value="26">울산(26)</option>
+                                                                    <option value="12">부산(12)</option>                                                                    
+                                                            </select>
+                                                            <input type="number" id="driverNo" name="driverNo" placeholder="00-000000-00" maxlength="10">
+                                                        </div>  
+                                                        <label>
+                                                            <p class="label_sub">발급일자</p>
+                                                            <input type="number" id="driverIssDt" name="driverIssDt" placeholder="YYYYMMDD" maxlength="8" title="면허증 발급일자를 입력해주세요">
+                                                        </label>    
                                                     </div>
+                                                    <!-- //운전면허선택시 -->
+                                                            
+                                                    <!-- 주민등록선택시 -->
+                                                    <div data-show="select-id-jumin" style="display:none;"> 
+                                                        <label id="JIssDtDiv">
+                                                            <p class="label">발급일자</p>
+                                                            <input type="number" id="JIssDt" name="JIssDt" placeholder="YYYYMMDD" maxlength="8" title="주민등록증 발급일자를 입력해주세요">
+                                                        </label>
+                                                    </div>
+                                                    <!-- //주민등록선택시 -->
                                                 </div>
                                             </div>
-                                        </div>    
-                                        <!-- //Case 01. 가입자 개인 >  성인 선택 시 -->
+                                        </div>
+                                    </div>    
+                                    <!-- //Case 01. 가입자 개인 >  성인 선택 시 -->
 
 
-                                        <!-- 인증 방법 -->  
-                                        <!-- Case 01. KB국민 인증서, Case 02. 신용카드 인증 --->     
-                                        <div id="defaultDiv" class="mo_select_rdo cert_types">     
-                                            <div class="titlebar">
-                                                <h3 class="title">인증방법</h3>
-                                            </div>                        
-                                            <ul data-rdo="select">
-                                                <li>
-                                                    <label class="ui_rdo" id="rdoKbsignAuth">
-                                                        <input type="radio" name="c-cert-type" id="select-cert-kb" checked="">
-                                                        <span>KB 국민 인증서</span>
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="ui_rdo" id="rdoCardAuth">
-                                                    <input type="radio" name="c-cert-type" id="select_cert_card">
-                                                        <span>신용카드</span>
-                                                    </label>
-                                                </li> 
-                                            </ul>                        
-                                            <div class="select_cont">                      
-                                                <div data-show="select-cert-kb"><!-- Case 01. KB국민 인증서 인증 ---> 
-                                                    <a href="javascript:" class="btn_cert_type" disabled="">
-                                                        <i class="sp_cert icon_kbmobile2"></i><span>KB국민 인증서</span>
-                                                    </a> 
-                                                    <a href="javascript:" class="btn_cert_type disabled" style="display:none;" disabled="">
-                                                        <i class="sp_cert icon_kbmobile2"></i><span>KB국민인증서 본인인증 완료</span>
-                                                    </a>
-                                                </div>
-                                                <div data-show="select_cert_card" style="display:none;"><!-- Case 02. 신용카드 인증 --->  
-                                                    <a href="javascript:" class="btn_cert_type">
-                                                        <i class="sp_cert icon_card"></i><span>신용카드 인증</span>
-                                                    </a>
-                                                    <!-- 인증완료시 -->
-                                                    <a href="javascript:" class="btn_cert_type disabled" id="btnCardAuthCmp" style="display:none;" disabled="">
-                                                        <i class="sp_cert icon_card"></i><span>신용카드 본인인증 완료</span>
-                                                    </a>
+                                    <!-- 인증 방법 -->  
+                                    <!-- Case 01. KB국민 인증서, Case 02. 신용카드 인증 --->     
+                                    <div id="defaultDiv" class="mo_select_rdo cert_types">     
+                                        <div class="titlebar">
+                                            <h3 class="title">인증방법</h3>
+                                        </div>                        
+                                        <ul data-rdo="select">
+                                            <li>
+                                                <label class="ui_rdo" id="rdoKbsignAuth">
+                                                    <input type="radio" name="c-cert-type" id="select-cert-kb" checked="">
+                                                    <span>KB 국민 인증서</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="ui_rdo" id="rdoCardAuth">
+                                                <input type="radio" name="c-cert-type" id="select_cert_card">
+                                                    <span>신용카드</span>
+                                                </label>
+                                            </li> 
+                                        </ul>                        
+                                        <div class="select_cont">                      
+                                            <div data-show="select-cert-kb"><!-- Case 01. KB국민 인증서 인증 ---> 
+                                                <a href="javascript:" class="btn_cert_type" disabled="">
+                                                    <i class="sp_cert icon_kbmobile2"></i><span>KB국민 인증서</span>
+                                                </a> 
+                                                <a href="javascript:" class="btn_cert_type disabled" style="display:none;" disabled="">
+                                                    <i class="sp_cert icon_kbmobile2"></i><span>KB국민인증서 본인인증 완료</span>
+                                                </a>
+                                            </div>
+                                            <div data-show="select_cert_card" style="display:none;"><!-- Case 02. 신용카드 인증 --->  
+                                                <a href="javascript:" class="btn_cert_type">
+                                                    <i class="sp_cert icon_card"></i><span>신용카드 인증</span>
+                                                </a>
+                                                <!-- 인증완료시 -->
+                                                <a href="javascript:" class="btn_cert_type disabled" id="btnCardAuthCmp" style="display:none;" disabled="">
+                                                    <i class="sp_cert icon_card"></i><span>신용카드 본인인증 완료</span>
+                                                </a>
                                             </div>                        
                                         </div>
-                                    </div>                                       
 
-                                    <div class="btn_area temp_save">
-                                        <a href="javascript:" class="btn btn_temp_save" id="strgBtn1">임시저장</a>
-                                    </div>
-                                </div>    
-                            </div>
-                        </li>
+                                        <div class="btn_area temp_save">
+                                            <a href="javascript:" class="btn btn_temp_save" id="strgBtn1">임시저장</a>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
                             <!-- //가입자 본인 확인 -->
                             
 
@@ -886,17 +880,22 @@
                     <div class="btn_area">
                         <a href="javascript:" id="btnPrev" class="btn btn_white">이전</a>
                         <a href="javascript:" id="btnNext" class="btn btn_default">작성완료</a>
-                    </div>  
+                    </div>
+                    
+                    <form>
+                        <input type="hidden" id="custId" name="custId"><!-- 첫번째 임시저장 관련 -->
+                        <input type="hidden" id="chrgPln" name="chrgPln" value="PD00000702"><!-- 요금제선택 관련 -->
+                        <input type="hidden" id="applTp" name="applTp" value="N"><!-- 두번째 임시저장 관련 -->
+                    </form>
                 </div>
 
-                <form>
-                    <input type="hidden" id="custId" name="custId"><!-- 첫번째 임시저장 관련 -->
-                    <input type="hidden" id="chrgPln" name="chrgPln" value="PD00000702"><!-- 요금제선택 관련 -->
-                    <input type="hidden" id="applTp" name="applTp" value="N"><!-- 두번째 임시저장 관련 -->
-                </form>
-            </section>
+
+                <!-- </div> -->
+
+            <!-- </section> -->
             <!-- //contents -->
-    </div><!-- .wrap -->
+    <!-- </div> -->
+    <!-- .wrap -->
     
     <script>
         $(document).ready(function(){	
