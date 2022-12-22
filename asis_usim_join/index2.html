@@ -724,42 +724,42 @@
                                                 <li>
                                                     <label for="B0" class="ui_chk">
                                                         <input type="checkbox" id="B0" name="B0" data="M" value="B11"
-                                                            class="cate_1_1_3_1 inp__chk">
+                                                            class="cate_1_1_3_1 inp__chk inp__sub">
                                                         <span class="txt">고유식별정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="B1" class="ui_chk">
                                                         <input type="checkbox" id="B1" name="B1" data="M" value="B12"
-                                                            class="cate_1_1_3_2 inp__chk">
+                                                            class="cate_1_1_3_2 inp__chk inp__sub">
                                                         <span class="txt">개인(신용)정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="B2" class="ui_chk">
                                                         <input type="checkbox" id="B2" name="B2" data="M" value="B13"
-                                                            class="cate_1_1_3_3 inp__chk">
+                                                            class="cate_1_1_3_3 inp__chk inp__sub">
                                                         <span class="txt">개인위치정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="B3" class="ui_chk">
                                                         <input type="checkbox" id="B3" name="B3" data="M" value="B14"
-                                                            class="cate_1_1_3_4 inp__chk">
+                                                            class="cate_1_1_3_4 inp__chk inp__sub">
                                                         <span class="txt">고유식별정보 제공 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="B4" class="ui_chk">
                                                         <input type="checkbox" id="B4" name="B4" data="M" value="B15"
-                                                            class="cate_1_1_3_5 inp__chk">
+                                                            class="cate_1_1_3_5 inp__chk inp__sub">
                                                         <span class="txt">개인(신용)정보 제공 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="B5" class="ui_chk">
                                                         <input type="checkbox" id="B5" name="B5" data="M" value="B16"
-                                                            class="cate_1_1_3_6 inp__chk">
+                                                            class="cate_1_1_3_6 inp__chk inp__sub">
                                                         <span class="txt">혁신금융서비스 이용 동의</span>
                                                     </label>
                                                 </li>
@@ -778,42 +778,42 @@
                                                 <li>
                                                     <label for="C6" class="ui_chk">
                                                         <input type="checkbox" id="C6" name="C6" data="M" value="C11"
-                                                            class="cate_1_1_4_7 inp__chk">
+                                                            class="cate_1_1_4_7 inp__chk inp__sub">
                                                         <span class="txt">고유식별정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="C7" class="ui_chk">
                                                         <input type="checkbox" id="C7" name="C7" data="M" value="C12"
-                                                            class="cate_1_1_4_8 inp__chk">
+                                                            class="cate_1_1_4_8 inp__chk inp__sub">
                                                         <span class="txt">개인(신용)정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="C8" class="ui_chk">
                                                         <input type="checkbox" id="C8" name="C8" data="M" value="C13"
-                                                            class="cate_1_1_4_9 inp__chk">
+                                                            class="cate_1_1_4_9 inp__chk inp__sub">
                                                         <span class="txt">고유식별정보 제공 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="C9" class="ui_chk">
                                                         <input type="checkbox" id="C9" name="C9" data="M" value="C14"
-                                                            class="cate_1_1_4_10 inp__chk">
+                                                            class="cate_1_1_4_10 inp__chk inp__sub">
                                                         <span class="txt">개인(신용)정보 제공 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="C10" class="ui_chk">
                                                         <input type="checkbox" id="C10" name="C10" data="M" value="C15"
-                                                            class="cate_1_1_4_11 inp__chk">
+                                                            class="cate_1_1_4_11 inp__chk inp__sub">
                                                         <span class="txt">고유식별정보 조회 동의</span>
                                                     </label>
                                                 </li>
                                                 <li>
                                                     <label for="C11" class="ui_chk">
                                                         <input type="checkbox" id="C11" name="C11" data="M" value="C16"
-                                                            class="cate_1_1_4_12 inp__chk">
+                                                            class="cate_1_1_4_12 inp__chk inp__sub">
                                                         <span class="txt">개인(신용)정보 조회 동의</span>
                                                     </label>
                                                 </li>
@@ -2366,54 +2366,43 @@
             })
 
             // 약관 동의
-            $('.chk_group').off('click').on('click', '.chk__all', function(){
+            $('.chk_group').on('click', '.chk__all', function(){
                 $(this).closest('.chk_group').find('input').prop('checked', $(this).is(':checked'));
-                $(this).closest('.chk_all').toggleClass('active');
                 if($('.chk__all').is(':checked')){
-                    $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", false);
+                    $('.chk__all').closest(".join_wrap").find(".link__area").prop('disabled', false);
                 } else {
-                    $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", true);
+                    $('.chk__all').closest(".join_wrap").find(".link__area").prop('disabled', true);
                 }
             });
-            $('.inp__all').off('click').on('click', function(){
-                $(this).closest('.sub').find('input').prop('checked', $(this).is(':checked'));
-            });
-            $('.chk_group').each(function(){
-                var inpChk = $(this).find('.inp__chk');
-                inpChk.on('click', function(){
-                    var is_checked = true;
-                    inpChk.each(function(){
+            $('.chk_group').on('click', '.inp__chk', function(){
+                var is_checked = true;
+                $('.chk_group .inp__chk').each(function(){
                     is_checked = is_checked && $(this).is(':checked');
-                    });
-                    $(this).closest('.chk_group').find('.chk__all').prop('checked', is_checked);
-                    $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", is_checked);
-            
-                    if($(this).closest('.chk_group').find('.chk__all').is(':checked')){
-                        $(this).closest('.chk_group').find('.chk__all').closest('.chk_all').addClass('active');
-                        $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", false);
-                    } else {
-                        $(this).closest('.chk_group').find('.chk__all').closest('.chk_all').removeClass('active');
-                        $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", true);
-                    }
                 });
+                $('.chk__all').prop('checked', is_checked);
             });
             $('.sub').each(function(){
-                var inpChk2 = $(this).find('.inp__chk').not('.inp__all');
-                inpChk2.on('click', function(){
+                let inpAll = $(this).find('.inp__all');
+                let inpSub = $(this).find('.inp__sub');
+                inpAll.on('click', function(){
+                    $(this).closest('.sub').find('.inp__sub').prop('checked', $(this).is(':checked'));
+                })
+                inpSub.on('click', function(){
                     var is_checked2 = true;
-                    inpChk2.each(function(){
-                    is_checked2 = is_checked2 && $(this).is(':checked');
-                });
+                    inpSub.each(function(){
+                        is_checked2 = is_checked2 && $(this).is(':checked');
+                    });
+                    $(this).closest('.sub').find('.inp__all').prop('checked', is_checked2)
                     console.log(is_checked2);
-                    $(this).closest('.sub').find('.inp__all').prop('checked', is_checked2);
-                    $(this).closest('.chk_group').find('.chk__all').prop('checked', is_checked2);
-                    if(is_checked2== true){
-                        $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", false);
-                    } else {
-                        $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", true)
-                    }
-                });
+                })
             });
+            $('.chk_group').on('click', function(){
+                if($('.chk__all').is(':checked')){
+                    $('.chk__all').closest(".join_wrap").find(".link__area").prop('disabled', false);
+                } else {
+                    $('.chk__all').closest(".join_wrap").find(".link__area").prop('disabled', true);
+                }
+            })
         })
 
         // 02 usim join
