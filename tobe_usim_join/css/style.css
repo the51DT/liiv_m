@@ -34,7 +34,7 @@ select{font-size:1.8rem; font-family:inherit;}
 
 input[type=checkbox],
 input[type=radio] {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
-select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
+select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0; color:inherit}
 *{box-sizing:border-box;}
 button{border: 0;outline: 0;background: none;padding: 0; margin: 0;}
 img{width: 100%;}
