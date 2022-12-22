@@ -17,7 +17,7 @@ header .liivm {width:7.4rem; height:100%; background-size:100% auto; background-
 header .side_menu {width:4.4rem; height:100%; float:right; text-align:center; font-size:1.1rem;}
 header .side_menu:before {display:block; content:''; width:20px; height:20px; margin:0 auto; background-image:url(../img/icon_header_set.png);  background-repeat:no-repeat; background-size:100% auto; background-position:0 0;}
 
-.container{width:100%; max-width:390px; margin:0 auto;}
+.container{width:100%; max-width:420px; margin:0 auto;}
 
 .link__area-parent{position:relative;}
 .link__area{cursor:pointer; box-sizing:border-box;}
@@ -63,7 +63,7 @@ header .side_menu:before {display:block; content:''; width:20px; height:20px; ma
 /* content__usim-join */
 #wrap .content__usim-join .content__wrap{position:relative;}
 #wrap .content__usim-join .link__area-parent{margin:25px 5px 0}
-#wrap .content__usim-join .link__area{position:absolute; bottom:2%; width:46%; height:0.8%;}
+/* #wrap .content__usim-join .link__area{position:absolute; bottom:2%; width:46%; height:0.8%;} */
 #wrap .content__usim-join .link__area.prev{left:3%;}
 #wrap .content__usim-join .link__area.next{ right:3%;}
 
@@ -71,7 +71,7 @@ header .side_menu:before {display:block; content:''; width:20px; height:20px; ma
 /* content__usim-check */
 #wrap .check__item-ttl{width:109px; padding:28px 0 0 1rem}
 .check__item-contents{padding:23px 10px 0;}
-#wrap .content__usim-check .link__area{position:absolute; bottom:1%; width:44%; height:4.5%;}
+/* #wrap .content__usim-check .link__area{position:absolute; bottom:1%; width:44%; height:4.5%;} */
 #wrap .content__usim-check .link__area.prev{left:5%;}
 #wrap .content__usim-check .link__area.next{ right:5%;}
 
@@ -96,7 +96,7 @@ header .side_menu:before {display:block; content:''; width:20px; height:20px; ma
 
 /* content__usim-card */
 .content__usim-card{height:100vh; overflow-y: hidden;}
-.card__item-popup{position: fixed; left: 50%; top: 0; transform:translateX(-50%); width: 100%; max-width:390px; height: 100%; background:rgba(0,0,0,.8); z-index:10;}
+.card__item-popup{position: fixed; left: 50%; top: 0; transform:translateX(-50%); width: 100%; max-width:420px; height: 100%; background:rgba(0,0,0,.8); z-index:10;}
 
 .card__item-popup .container{position:fixed; left:0; top:50%; transform:translateY(-50%); box-sizing:border-box; padding:0 4%;}
 .card__item-popup .container img{animation: popup .3s ease-in-out;}
