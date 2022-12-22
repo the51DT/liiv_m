@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="wrap">
-        <!-- section1 -->
+        <!-- section1  -->
         <section class="content__section section__type">
             <header>
                 <img src="./img/head_step1_intro.png">
@@ -787,19 +787,19 @@
                             <label>카드번호</label>
                             <div class="form__item-input flex">
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_1" placeholder="입력해주세요" autocomplete="off">
+                                    <input type="text" class="wfull section__joincard_1" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_2" placeholder="입력해주세요" autocomplete="off">
+                                    <input type="text" class="wfull section__joincard_2" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_3" placeholder="입력해주세요" autocomplete="off">
+                                    <input type="text" class="wfull section__joincard_3" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                                 <div class="form__item-hasbtn w20">
-                                    <input type="text" class="wfull section__joincard_4" placeholder="입력해주세요" autocomplete="off">
+                                    <input type="text" class="wfull section__joincard_4" placeholder="입력해주세요" autocomplete="off" maxlength="4">
                                     <a href="#" class="clear-text inp-del">취소</a>
                                 </div>
                             </div>
@@ -1100,6 +1100,15 @@
             $('.dropdown1').hide();
             $('.dropdown2').fadeIn();   
         });
+
+        $(".section__joincard.active .form__item-input.flex input").keyup (function () {
+            var charLimit = $(this).attr("maxlength");
+            if (this.value.length >= charLimit) {
+                $(this).parent().next().find('input').focus();
+                return false;
+            }
+        });
+
     </script>
 
 </body>
