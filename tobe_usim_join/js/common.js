@@ -251,7 +251,7 @@ window.addEventListener("load", ()=>{
     // disabled check - 가입유형 선택 (번호이동/신규가입)
     $(document).on("click", ".section__step1_1 .img_radio", function(){
       $(document).find(".section__step1_1 .foot__btn .link__item").addClass("disabled");
-        const elem = $(document).find(".section__step1_1 .img_radio").eq(0);
+        const elem = $(document).find(".section__step1_1 .img_radio").eq(1);
         elem.hasClass("active") ? $(document).find(".section__step1_1 .foot__btn .link__item").removeClass("disabled") : null;
     })
 
