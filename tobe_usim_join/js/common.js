@@ -75,11 +75,11 @@ window.addEventListener("load", ()=>{
     // });
   
     // step1 아코디언 버튼
-    const accoBtn = document.querySelectorAll(".acco__btn");
-    accoBtn.forEach((item)=>{
-        item.addEventListener("click", function(){
-            item.parentNode.classList.add("active");
-        });
+    $(".acco__btn").each(function(){
+        $(this).on('click', function(){
+            $(this).closest('.acco__wrap').toggleClass('active');
+            $(this).siblings('.acco__cont').slideToggle(200);
+        })
     })
   
   })
