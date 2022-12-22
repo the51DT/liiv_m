@@ -5,14 +5,16 @@
 
 ::-webkit-scrollbar{display:none;}
 
-html{font-size:calc(100vw*10/360)}
-@media (min-width:360px) {
-    html{font-size:10px}
+html{
+    font-size:calc(100vw*11.66666/420);
+}
+@media (min-width:420px) {
+    html{font-size:11.66666px}
 }
 
 html,body{height:100%;font-family:'Spoqa Han Sans Neo', 'sans-serif'}
 
-#wrap{position:relative; width:100%; max-width:360px; min-height:100%; margin:0 auto; overflow-y:scroll; overflow-x:hidden;}
+#wrap{position:relative; width:100%; max-width:420px; min-height:100%; margin:0 auto; overflow-y:scroll; overflow-x:hidden;}
 #wrap img{max-width:100%}
 
 .blind {
@@ -32,7 +34,7 @@ select{font-size:1.8rem; font-family:inherit;}
 
 input[type=checkbox],
 input[type=radio] {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
-select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
+select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0; color:inherit}
 *{box-sizing:border-box;}
 button{border: 0;outline: 0;background: none;padding: 0; margin: 0;}
 img{width: 100%;}
@@ -125,7 +127,7 @@ input:disabled,
 .check-type1 label span {vertical-align: middle;display: inline-block; font-size: 1.4rem; color: #222; line-height: 1.8rem; letter-spacing: -0.02rem;}
 .check-type1 label span strong {color:#FF2E00}
 .check-type1 label input[type=checkbox]:checked{background-position: 0 100%;}
-.check-type1 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;background: url(../img/check.png) no-repeat 0 0;}
+.check-type1 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;background: url(../img/check.png) no-repeat 0 0; background-size:cover;}
 
 
 .check-type2 label {position: relative;padding-left: 3rem;}
@@ -133,12 +135,12 @@ input:disabled,
 
 .check-type2 label span {vertical-align: middle;white-space: nowrap;display: inline-block; font-size: 1.2rem; color: #222; line-height:1.5rem}
 .check-type2 label input[type=checkbox]:checked{background-position: 0 100%;}
-.check-type2 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;top: -0.25rem;background: url(../img/check2.png) no-repeat 0 0;}
+.check-type2 label input[type=checkbox] {position: absolute;left: 0;width: 2rem;height: 2rem;top: -0.25rem; background: url(../img/check2.png) no-repeat 0 0; background-size:cover;}
 
 
 .radio-type1 label span {/* vertical-align: middle; */white-space: nowrap; display: block; padding-top:0.3rem;}
 .radio-type1 label{position: relative;padding-left: 3rem; display: block;}
-.radio-type1 label input[type=radio] {position: absolute;left: 0;top: 0;width: 2rem;height: 2rem;margin-right: 1rem;background: url(../img/radio.png) 0 0 no-repeat; background-size:100% auto;}
+.radio-type1 label input[type=radio] {position: absolute;left: 0;top: 0;width: 2rem;height: 2rem;margin-right: 1rem;background: url(../img/radio.png) 0 0 no-repeat; background-size:cover;}
 .radio-type1 label input[type=radio]:checked{background-position: 0 100%;}
 
 
@@ -210,11 +212,11 @@ input:disabled,
 
 
 /** header ************/
-header{position:fixed; left:50%; top:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:11;}
+header{position:fixed; left:50%; top:0; width:100%; max-width:420px; transform:translateX(-50%); z-index:11;}
 .link__leave{position:absolute; right: 1rem; top: 1rem; display:block; width:4.5rem; height:4rem; text-indent:-9999px;}
 
 /** footer ************/
-footer{position:fixed; left:50%; bottom:0; width:100%; max-width:360px; transform:translateX(-50%); z-index:9;}
+footer{position:fixed; left:50%; bottom:0; width:100%; max-width:420px; transform:translateX(-50%); z-index:9;}
 footer .foot__help{text-align:right; padding:0 1rem 1rem}
 footer .foot__help img{width: 20rem;}
 
@@ -356,7 +358,7 @@ form.jointype4{padding:0 2rem;}
 
 /* step1 */
 .cont__inner {padding:0 2rem}
-.pos__btm {position:fixed; max-width:360px!important; left:0; right:0; bottom:var(--fh); margin:0 auto}
+.pos__btm {position:fixed; max-width:420px!important; left:0; right:0; bottom:var(--fh); margin:0 auto}
 .shadow__top {box-shadow:0 0 1.6rem rgba(0,0,0,0.15)}
 .br__top16 {border-radius:1.6rem 1.6rem 0 0}
 
