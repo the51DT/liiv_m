@@ -464,12 +464,9 @@ window.addEventListener("load", ()=>{
             });
             $(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2);
             $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked2);
-            if(is_checked2== true){
+            if(is_checked2 == true){
                 $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
                 $('.chk__all').closest('.check__list__wrap').addClass('active');
-            } else {
-                $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").addClass("disabled");
-                $('.chk__all').closest('.check__list__wrap').removeClass('active');
             }
         });
     });
