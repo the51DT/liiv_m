@@ -30,6 +30,11 @@
                 
         </section>
 
+
+        <section class="content__section content__start">
+            <div class="link__area next" data-link="content__usim"><img src="./img/index_a.png"></div>
+        </section>
+
         <section class="content__section content__usim">
             <div class="content__wrap">
                 <!-- <img src="./img/usim_contents.png"> -->
@@ -1930,10 +1935,15 @@
                     <div class="container">
                         <img src="./img/card_popup.png">
                         <div class="link__area prev" data-link="content__usim-done"></div>
-                        <div class="link__area next" data-link="content__usim-card"></div>
+                        <div class="link__area next" data-link="content__last"></div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        
+        <section class="content__section content__last">
+            <div><img src="./img/lastpage.png"></div>
         </section>
     </div>
 
@@ -1956,14 +1966,16 @@
             window.addEventListener("resize", getHeadPad);
             window.addEventListener("scroll", joinHeadScrollChk);
 
+            const start = document.querySelector(".content__start")
             const usim = document.querySelector(".content__usim");
             const usimAgree = document.querySelector(".content__usim-agree");
             const usimJoin = document.querySelector(".content__usim-join");
             const usimCheck = document.querySelector(".content__usim-check");
             const usimDone = document.querySelector(".content__usim-done");
             const usimCard = document.querySelector(".content__usim-card");
+            const last = document.querySelector(".content__last")
 
-            usim.classList.add("active");
+            start.classList.add("active");
 
             const linkArea = Array.from(document.querySelectorAll(".link__area"));
             linkArea.forEach((item) => {
