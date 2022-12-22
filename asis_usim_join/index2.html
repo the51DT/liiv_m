@@ -2092,6 +2092,11 @@
                     console.log(is_checked2);
                     $(this).closest('.sub').find('.inp__all').prop('checked', is_checked2);
                     $(this).closest('.chk_group').find('.chk__all').prop('checked', is_checked2);
+                    if(is_checked2== true){
+                        $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", false);
+                    } else {
+                        $('.chk__all').closest('.join_wrap').find('.link__area').prop("disabled", true)
+                    }
                 });
             });
         })
