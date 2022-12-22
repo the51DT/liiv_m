@@ -537,7 +537,7 @@ a.btn.btn_point {width: 100%; background-color: #148fae !important;}
 .id_pic .btn.btn_camera {width: 100%; height: 4rem; border: 2px solid #0db7e1; box-shadow: 0 0 1rem rgba(13,72,127,0.10);}
 .id_pic .btn.btn_camera .icon_camera {display: inline-block; margin: 0; height: 3.6rem;}
 .id_pic .btn.btn_camera span {display: inline-block; height: 3.6rem; margin-right: 0.8rem; font-size: 1.4rem; line-height: 3.6rem; vertical-align: top;}
-.dvDesktop .id_pic {display: none;}
+/* .dvDesktop .id_pic {display: none;} */
 
 .cert_card .id_pic {position: relative; width: 100%; margin: 1.8rem 0 1rem; padding: 0; border-top: 0; background-color: transparent;}
 .cert_card .id_pic::after {display: none;}

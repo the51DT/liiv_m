@@ -75,295 +75,167 @@
             // location.replace(usrMain);
         }
     </script>
-
-</head>
-
-
-<!-- <!DOCTYPE html> -->
-<!-- saved from url=(0055)https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin -->
-<!-- <html lang="ko" class="dvPhone"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
-
-
-
-
-
-<!-- <link rel="canonical" href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin"> -->
-<!-- <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="format-detection" content="telephone=no"> -->
-<!-- <meta name="robots" content="index,follow"> -->
-
-<!-- Naver Search Advisor site-verification -->
-<!-- <meta name="naver-site-verification" content="8cf73bea15d42e9b7ee18e44df171b442e78208e"> -->
-<!-- SNS -->
-<!-- <meta property="og:title" content="가입신청 | Liiv M 가입하기">
-<meta property="og:description" content="리브모바일 알뜰폰 가입 신청서를 작성해주세요.">
-<meta property="og:image" content="/img/kbliivm.jpg">
-<meta property="og:url" content="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin">    
-<meta name="twitter:title" content="가입신청 | Liiv M 가입하기">
-<meta name="twitter:description" content="리브모바일 알뜰폰 가입 신청서를 작성해주세요.">
-<meta name="twitter:image" content="/img/kbliivm.jpg">
-<meta name="twitter:card" content="「Liiv M」은 KB국민은행의 품질 좋은 통신서비스를 합리적인 가격으로 제공하며, 편리하고 안전한 금융거래가 가능한 금융 · 통신 종합 플랫폼입니다.">     -->
-
-<!-- <meta http-equiv="Cache-Control" content="No-Cache">
-<meta http-equiv="Pragma" content="No-Cache">
-<meta http-equiv="Expires" content="-1">
-<meta name="_csrf" content="2e93841d-2123-4108-93f0-adc9f561f624">
-<meta name="_csrf_header" content="X-XSRF-TOKEN"> -->
-
-<!-- <link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon.png">
-<link rel="icon" href="./img/favicon.ico"> -->
-
-
-<!-- SEO관련 DB또는 script로 페이지 마다 재셋팅 되는 내용 -->
-<!-- <meta name="description" content="리브모바일 알뜰폰 가입 신청서를 작성해주세요.">
-<title>가입신청 | Liiv M 가입하기</title> -->
-<!-- //SEO관련 DB또는 script로 페이지 마다 재셋팅 되는 내용 -->
-
-
-<!-- <link rel="stylesheet" type="text/css" href="./가입신청 _ Liiv M 가입하기_files/jquery-ui.min.css">
-<link rel="stylesheet" type="text/css" href="./가입신청 _ Liiv M 가입하기_files/common_v3.css">      -->
-
-
-<script type="text/javascript" async="" src="./가입신청 _ Liiv M 가입하기_files/analytics.js.다운로드"></script><script type="text/javascript" async="" src="./가입신청 _ Liiv M 가입하기_files/analytics.js.다운로드"></script><script async="" src="./가입신청 _ Liiv M 가입하기_files/gtm.js.다운로드"></script><script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jquery-3.3.1.min.js.다운로드"></script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jquery-ui.min.js.다운로드"></script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/common_v3.js.다운로드"></script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/common_v3_pc.js.다운로드"></script>
-
-<script src="./가입신청 _ Liiv M 가입하기_files/ajaxprod.js.다운로드"></script>
-<script src="./가입신청 _ Liiv M 가입하기_files/util.js.다운로드"></script>
-<script src="./가입신청 _ Liiv M 가입하기_files/formatter.js.다운로드"></script> 
-
-<script type="text/javascript">
-
-$(document).ready(function() {
-	
-	// 로그인
-	$("#btn_moveToLogin").click(function(){
-		$("form[name=frmMenuHandle]").attr("action", "/system/login/login");
-		$("form[name=frmMenuHandle]").attr("method", "post");
-		$("form[name=frmMenuHandle]").submit();
-	});
-
-	// 로그아웃
-	$("#btn_actionLogout").click(function(){
-		console.log('in');
-		popalarm("로그아웃 하시겠습니까?", "info", true, null, logout);
-	});
-});
-
-//default func.
-function makeCM559Init(){}
-
-//로그아웃
-function logout() {
-	$.ajax({
-	    url:  '/system/login/logoutAction',
-	    type: 'POST',
-	    success: function(data) {
-	    	location.replace('/system/login/logout');
-	    },
-	    error: function(e) {
-			console.log(e.responseText.trim());
-	    },
-	    complete: function() {}
-	});
-}
-
-//메인페이지로 이동
-function goToMain() {
-	var checkLoginStep = $("#checkLoginStep").val();
-	var usrMain="/";
-	if("2" == checkLoginStep ) {
-		//usrMain = "/mypage/applinfo/applinfo/getApplInfo";
-	} else if("3" == checkLoginStep ) {
-		//usrMain = "/change/rateplan/rateplan/searchRatePlan";
-	}
-
-	location.replace(usrMain);
-}
-</script>
-
-
-
-
-
-<!-- Global site tag (gtag.js) - Google Analytics --> 
-<script async="" src="./가입신청 _ Liiv M 가입하기_files/js"></script> 
+    <!-- Global site tag (gtag.js) - Google Analytics --> 
+<!-- <script async="" src="./가입신청 _ Liiv M 가입하기_files/js"></script>  -->
 <script> 
-  window.dataLayer = window.dataLayer || []; 
-  function gtag(){dataLayer.push(arguments);} 
-  gtag('js', new Date()); 
+    window.dataLayer = window.dataLayer || []; 
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date()); 
+  
+    gtag('config', 'UA-114116675-9'); 
+  </script> 
+  <script>
+      try{
+          console.log = function() {};
+      } catch(e) {
+      
+      };
+      
+      try{
+          console.info = function() {};
+      } catch(e) {
+      
+      };
+      
+      // Mobile Web Google Tag Manager START
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+      });
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PN2QVRB');
+      // Mobile Web Google Tag Manager END
+  </script>
+  <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+  <script type="text/javascript">
+      if(!wcs_add) var wcs_add = {};
+          wcs_add["wa"]="2d35b7bce667a0";
+          if(window.wcs){
+              wcs_do();
+          }
+  </script>
+  <script type="text/javascript" src="https://static.kbdmp.com/ma/kb_v0.01.js"></script>
+  <script type="text/javascript">
+      try{
+          ma.config('client_id','WA-0010');
+          ma.config('isCookie',true);
+          
+          var page_location = window.location.pathname;  //현재 location 정보
+          var page_referrer = document.referrer;         //이전 page location 정보
+          
+          if ( page_location.indexOf('/join/steps/self/usimRegPopup') >= 0
+                  || page_location.indexOf('/join/steps/self/usimRegNpPopup') >= 0 )
+          {
+              ma.config('page_location' ,page_location);
+              ma.config('page_referrer' ,page_referrer);
+          }
+          
+          ma.init();	
+      }
+      catch(e){}
+  </script>
+  <script id="tg360degree" src="https://wan.kbdmp.com/provider?client_id=WA-0010&amp;isCookie=true&amp;page_location=https%3A%2F%2Fwww.liivm.com%2Fjoin%2FnxtSteps%2FnxtStep%2FapplyToJoin&amp;page_referrer=https%3A%2F%2Fwww.liivm.com%2Fjoin%2FnxtSteps%2FnxtStep%2FjoinAgree&amp;session_id=%7C1671670937074&amp;session_start=1671670937074&amp;language=ko&amp;country=undefined&amp;page_title=%EC%95%8C%EB%9C%B0%ED%8F%B0%20%EC%84%9C%EB%B9%84%EC%8A%A4%20-%20KB%EA%B5%AD%EB%AF%BC%EC%9D%80%ED%96%89%20Liiv%20M(%EB%A6%AC%EB%B8%8C%EB%AA%A8%EB%B0%94%EC%9D%BC)&amp;screen_resolution=390X853&amp;_m_uid=fb0ebddd-3f0c-38c3-a0b2-25b794f5b150&amp;user_attribute=%7B%7D&amp;event_type=page_view&amp;event_category=&amp;event_label=&amp;search_term=&amp;_oaid=&amp;event_attribute=%7B%7D" async=""></script>
+  
+  
+  
+  
+  
+  
+  <script>
+      $(document).ajaxSend(function(e, xhr, options) {
+        //   var token = $("meta[name='_csrf']").attr("content");
+        //   var header = $("meta[name='_csrf_header']").attr("content");
+        //   xhr.setRequestHeader(header, token);
+      });
+  
+      
+      function duplicateLoginCheck(successCallback){
+        //   if('' != '' ){
+        //       $.ajax({
+        //           url:  '/system/login/duplicateLoginCheckAction',
+        //           type: 'POST',
+        //           success: function(data) {
+        //               successCallback(data);
+        //           },
+        //           error: function(e) {
+        //               console.log(e.responseText.trim());
+        //           },
+        //           complete: function() {
+                      
+        //           }
+        //       });
+        //   }
+      }
+      
+      function goLogin(){
+        //   location.replace("/system/login/login");
+      }
+  </script>
+  <!-- 로그인 전 -->
+</head>
+<body class="dvPhone">
+    <input type="hidden" id="checkLoginStep" value="1">
+    <script type="text/javascript">
+        var lng = 'null';
+    </script>
 
-  gtag('config', 'UA-114116675-9'); 
-</script> 
-<script>
-	try{
-		console.log = function() {};
-	} catch(e) {
-	
-	};
-	
-	try{
-		console.info = function() {};
-	} catch(e) {
-	
-	};
-	
-	// Mobile Web Google Tag Manager START
-	window.dataLayer = window.dataLayer || [];
-	dataLayer.push({
-	});
-	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-PN2QVRB');
-	// Mobile Web Google Tag Manager END
-</script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/wcslog.js.다운로드"></script>
-<script type="text/javascript">
-	if(!wcs_add) var wcs_add = {};
-		wcs_add["wa"]="2d35b7bce667a0";
-		if(window.wcs){
-			wcs_do();
-		}
-</script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/kb_v0.01.js.다운로드"></script>
-<script type="text/javascript">
-	try{
-		ma.config('client_id','WA-0010');
-		ma.config('isCookie',true);
-		
-		var page_location = window.location.pathname;  //현재 location 정보
-		var page_referrer = document.referrer;         //이전 page location 정보
-		
-		if ( page_location.indexOf('/join/steps/self/usimRegPopup') >= 0
-				|| page_location.indexOf('/join/steps/self/usimRegNpPopup') >= 0 )
-		{
-			ma.config('page_location' ,page_location);
-			ma.config('page_referrer' ,page_referrer);
-		}
-		
-		ma.init();	
-	}
-	catch(e){}
-</script><script id="tg360degree" src="./가입신청 _ Liiv M 가입하기_files/provider" async=""></script>
-
-
-
-
-
-
-<script>
-	$(document).ajaxSend(function(e, xhr, options) {
-		var token = $("meta[name='_csrf']").attr("content");
-		var header = $("meta[name='_csrf_header']").attr("content");
-		xhr.setRequestHeader(header, token);
-	});
-
-    
-    function duplicateLoginCheck(successCallback){
-		if('' != '' ){
-			$.ajax({
-			    url:  '/system/login/duplicateLoginCheckAction',
-			    type: 'POST',
-			    success: function(data) {
-			    	successCallback(data);
-			    },
-			    error: function(e) {
-					console.log(e.responseText.trim());
-			    },
-			    complete: function() {
-			    	
-			    }
-			});
-		}
-	}
-    
-    function goLogin(){
-		location.replace("/system/login/login");
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.liivm.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.liivm.com/info/faq/faq/faqMng?myInput={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
     }
-</script>
+    </script>
 
-
-<!-- 로그인 전 -->
-
-	
-	
-
-
-	</head><body class="dvPhone"><input type="hidden" id="checkLoginStep" value="1">
-
-
-
-<script type="text/javascript">
-    var lng = 'null';
-</script>
-
-
-
-
-
-
-
-	
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.liivm.com/",
-    "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.liivm.com/info/faq/faq/faqMng?myInput={search_term_string}",
-        "query-input": "required name=search_term_string"
-    }
-}
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-	try{
-		//SEO - title, meta tag 설정 
-		
-			document.title = '가입신청 | Liiv M 가입하기';
-			$('meta[property="og:title"]').attr('content','가입신청 | Liiv M 가입하기');
-			$('meta[name="twitter:title"]').attr('content','가입신청 | Liiv M 가입하기');
-		
-		
-		
-		
-		
-			var metaTag = document.getElementsByName('description')[0];
-			if(!metaTag==false){
-				metaTag.setAttribute('name','description');
-				metaTag.setAttribute('content','리브모바일 알뜰폰 가입 신청서를 작성해주세요.');
-				$('meta[property="og:description"]').attr('content','리브모바일 알뜰폰 가입 신청서를 작성해주세요.');
-				$('meta[name="twitter:description"]').attr('content','리브모바일 알뜰폰 가입 신청서를 작성해주세요.');
-			}
-		
-		
-		
-			var linkTag = document.createElement('link');
-			linkTag.setAttribute('rel','canonical');
-			linkTag.setAttribute('href','https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin');
-			document.getElementsByTagName('head')[0].insertBefore(linkTag,document.getElementsByTagName('meta')[0]);
-			$('meta[property="og:url"]').attr('content','https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin');
-		
-		//SEO 설정 끝
-	}
-	catch(e){
-		console.log(e);
-	}
-	
-	
-		//서브타이틀 세팅
-		$("#liivmSubTitle").text("가입신청");
-	
-	
-});
-</script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        try{
+            //SEO - title, meta tag 설정 
+            
+                document.title = '가입신청 | Liiv M 가입하기';
+                $('meta[property="og:title"]').attr('content','가입신청 | Liiv M 가입하기');
+                $('meta[name="twitter:title"]').attr('content','가입신청 | Liiv M 가입하기');
+            
+            
+            
+            
+            
+                var metaTag = document.getElementsByName('description')[0];
+                if(!metaTag==false){
+                    metaTag.setAttribute('name','description');
+                    metaTag.setAttribute('content','리브모바일 알뜰폰 가입 신청서를 작성해주세요.');
+                    $('meta[property="og:description"]').attr('content','리브모바일 알뜰폰 가입 신청서를 작성해주세요.');
+                    $('meta[name="twitter:description"]').attr('content','리브모바일 알뜰폰 가입 신청서를 작성해주세요.');
+                }
+            
+            
+            
+                var linkTag = document.createElement('link');
+                linkTag.setAttribute('rel','canonical');
+                linkTag.setAttribute('href','https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin');
+                document.getElementsByTagName('head')[0].insertBefore(linkTag,document.getElementsByTagName('meta')[0]);
+                $('meta[property="og:url"]').attr('content','https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin');
+            
+            //SEO 설정 끝
+        }
+        catch(e){
+            console.log(e);
+        }
+        
+        
+            //서브타이틀 세팅
+            $("#liivmSubTitle").text("가입신청");
+        
+        
+    });
+    </script>
 
 
 <!-- Google Tag Manager (noscript) -->
@@ -394,13 +266,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 	
 
-<header id="header" class="reHeader fixed_header"><div class="hoverbg"></div>
-	<div class="max_wrap">
-		<div class="mo_header">
-		    <span class="txt_hide kb_ci">국민은행</span>
-			<a href="javascript:" class="liivm" onclick="location.replace(&#39;/&#39;);" title="메인 페이지로 이동">Liiv M</a>
-			<button type="button" class="side_menu" onclick="sideMenu(&#39;open&#39;)">메뉴</button>
-		</div>
+    <header id="header" class="reHeader fixed_header"><div class="hoverbg"></div>
+        <div class="max_wrap">
+            <div class="mo_header">
+                <span class="txt_hide kb_ci">국민은행</span>
+                <a href="#" class="liivm" title="메인 페이지로 이동">Liiv M</a>
+                <button type="button" class="side_menu" onclick="sideMenu('open')">메뉴</button>
+            </div>
 		
 		<!-- 이하 PC용 -->		
 		
@@ -493,23 +365,24 @@ function gotoTop() {
 
 
 
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.MultiFile.min.js.다운로드"></script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.Form.min.js.다운로드"></script>
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.MultiFile.min.js.다운로드"></script> -->
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.Form.min.js.다운로드"></script> -->
 
 
 
 
 	
-	<script src="./가입신청 _ Liiv M 가입하기_files/postcode.v2.js.다운로드"></script>
+	<!-- <script src="./가입신청 _ Liiv M 가입하기_files/postcode.v2.js.다운로드"></script> -->
 
 
 
 <!-- include OCR인식 팝업 -->
 
 
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.MultiFile.min.js.다운로드"></script> 
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.Form.min.js.다운로드"></script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/recogOcrAttach.js.다운로드"></script> <!-- OCR인식 JS -->
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.MultiFile.min.js.다운로드"></script>  -->
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/jQuery.Form.min.js.다운로드"></script> -->
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/recogOcrAttach.js.다운로드"></script> -->
+<!-- OCR인식 JS -->
 
 		  	
 	<!-- 업로드방법 선택 팝업 -->
@@ -618,12 +491,12 @@ function gotoTop() {
 						        <option value="26">울산</option>
 						        <option value="12">부산</option>                                                                  
                             </select>
-                            <input type="text" id="ocrDrvLicNo" maxlength="10" oninput="maxLengthCheck(this); this.value = this.value.replace(/[^0-9]/g,&#39;&#39;);" inputmode="numeric" pattern="[0-9]*" onfocus="driverFormat(this);" onblur="driverFormat(this);" spellcheck="false"> <!-- placeholder="00-000000-00" -->
+                            <input type="text" id="ocrDrvLicNo" maxlength="10" oninput="maxLengthCheck(this); this.value = this.value.replace(/[^0-9]/g,'');" inputmode="numeric" pattern="[0-9]*" onfocus="driverFormat(this);" onblur="driverFormat(this);" spellcheck="false"> <!-- placeholder="00-000000-00" -->
                         </div>                         
 
                         <label>
                             <p class="label">발급일자</p>
-                            <input type="text" id="ocrCertDate" maxlength="10" oninput="maxLengthCheck(this); this.value = this.value.replace(/[^0-9]/g,&#39;&#39;);" inputmode="numeric" pattern="[0-9]*" spellcheck="false">  
+                            <input type="text" id="ocrCertDate" maxlength="10" oninput="maxLengthCheck(this); this.value = this.value.replace(/[^0-9]/g,'');" inputmode="numeric" pattern="[0-9]*" spellcheck="false">  
                         </label>    
                        
                     </div>    
@@ -641,7 +514,7 @@ function gotoTop() {
                     <button type="button" class="btn btn_default" onclick="javascript:popOCRConfirmClick();">완료</button> 
                 </div>                    
             </div>            
-            <button type="button" class="btn layer_close" data-dismiss="modal" onclick="javascript:$(&#39;#OCRIdcardLayer&#39;).find(&#39;#ocrAfFormInfo&#39;).text(&#39;&#39;);"><span>닫기</span></button>
+            <button type="button" class="btn layer_close" data-dismiss="modal" onclick="javascript:$('#OCRIdcardLayer').find('#ocrAfFormInfo').text('');"><span>닫기</span></button>
         </div>    
     </div>
     <!-- //신분증 OCR촬영 팝업 -->
@@ -1441,283 +1314,283 @@ function gotoTop() {
                             	<!-- 은행사 반복 -->
 								
 								<li id="bank004" class="closed" style="z-index: 47;">
-									<button type="button" data-label=" 국민은행" onclick="setBankComp_4( &#39;004&#39;,&#39; 국민은행&#39;)"><i class="sp_bank c_004"></i>
+									<button type="button" data-label=" 국민은행" onclick="setBankComp_4( '004',' 국민은행')"><i class="sp_bank c_004"></i>
 									<p>국민은행</p>
 									</button>
 								</li>
 								
 								<li id="bank003" class="closed" style="z-index: 46;">
-									<button type="button" data-label=" 기업은행" onclick="setBankComp_4( &#39;003&#39;,&#39; 기업은행&#39;)"><i class="sp_bank c_003"></i>
+									<button type="button" data-label=" 기업은행" onclick="setBankComp_4( '003',' 기업은행')"><i class="sp_bank c_003"></i>
 									<p>기업은행</p>
 									</button>
 								</li>
 								
 								<li id="bank011" class="closed" style="z-index: 45;">
-									<button type="button" data-label=" NH농협은행" onclick="setBankComp_4( &#39;011&#39;,&#39; NH농협은행&#39;)"><i class="sp_bank c_011"></i>
+									<button type="button" data-label=" NH농협은행" onclick="setBankComp_4( '011',' NH농협은행')"><i class="sp_bank c_011"></i>
 									<p>NH농협은행</p>
 									</button>
 								</li>
 								
 								<li id="bank012" class="closed" style="z-index: 44;">
-									<button type="button" data-label=" 농협회원조합" onclick="setBankComp_4( &#39;012&#39;,&#39; 농협회원조합&#39;)"><i class="sp_bank c_012"></i>
+									<button type="button" data-label=" 농협회원조합" onclick="setBankComp_4( '012',' 농협회원조합')"><i class="sp_bank c_012"></i>
 									<p>농협회원조합</p>
 									</button>
 								</li>
 								
 								<li id="bank088" class="closed" style="z-index: 43;">
-									<button type="button" data-label=" 신한은행" onclick="setBankComp_4( &#39;088&#39;,&#39; 신한은행&#39;)"><i class="sp_bank c_088"></i>
+									<button type="button" data-label=" 신한은행" onclick="setBankComp_4( '088',' 신한은행')"><i class="sp_bank c_088"></i>
 									<p>신한은행</p>
 									</button>
 								</li>
 								
 								<li id="bank002" class="closed" style="z-index: 42;">
-									<button type="button" data-label=" 산업은행" onclick="setBankComp_4( &#39;002&#39;,&#39; 산업은행&#39;)"><i class="sp_bank c_002"></i>
+									<button type="button" data-label=" 산업은행" onclick="setBankComp_4( '002',' 산업은행')"><i class="sp_bank c_002"></i>
 									<p>산업은행</p>
 									</button>
 								</li>
 								
 								<li id="bank020" class="closed" style="z-index: 41;">
-									<button type="button" data-label=" 우리은행" onclick="setBankComp_4( &#39;020&#39;,&#39; 우리은행&#39;)"><i class="sp_bank c_020"></i>
+									<button type="button" data-label=" 우리은행" onclick="setBankComp_4( '020',' 우리은행')"><i class="sp_bank c_020"></i>
 									<p>우리은행</p>
 									</button>
 								</li>
 								
 								<li id="bank027" class="closed" style="z-index: 40;">
-									<button type="button" data-label=" 한국씨티은행" onclick="setBankComp_4( &#39;027&#39;,&#39; 한국씨티은행&#39;)"><i class="sp_bank c_027"></i>
+									<button type="button" data-label=" 한국씨티은행" onclick="setBankComp_4( '027',' 한국씨티은행')"><i class="sp_bank c_027"></i>
 									<p>한국씨티은행</p>
 									</button>
 								</li>
 								
 								<li id="bank081" class="closed" style="z-index: 39;">
-									<button type="button" data-label=" 하나은행" onclick="setBankComp_4( &#39;081&#39;,&#39; 하나은행&#39;)"><i class="sp_bank c_081"></i>
+									<button type="button" data-label=" 하나은행" onclick="setBankComp_4( '081',' 하나은행')"><i class="sp_bank c_081"></i>
 									<p>하나은행</p>
 									</button>
 								</li>
 								
 								<li id="bank023" class="closed" style="z-index: 38;">
-									<button type="button" data-label=" SC제일은행" onclick="setBankComp_4( &#39;023&#39;,&#39; SC제일은행&#39;)"><i class="sp_bank c_023"></i>
+									<button type="button" data-label=" SC제일은행" onclick="setBankComp_4( '023',' SC제일은행')"><i class="sp_bank c_023"></i>
 									<p>SC제일은행</p>
 									</button>
 								</li>
 								
 								<li id="bank039" class="closed" style="z-index: 37;">
-									<button type="button" data-label=" 경남은행" onclick="setBankComp_4( &#39;039&#39;,&#39; 경남은행&#39;)"><i class="sp_bank c_039"></i>
+									<button type="button" data-label=" 경남은행" onclick="setBankComp_4( '039',' 경남은행')"><i class="sp_bank c_039"></i>
 									<p>경남은행</p>
 									</button>
 								</li>
 								
 								<li id="bank034" class="closed" style="z-index: 36;">
-									<button type="button" data-label=" 광주은행" onclick="setBankComp_4( &#39;034&#39;,&#39; 광주은행&#39;)"><i class="sp_bank c_034"></i>
+									<button type="button" data-label=" 광주은행" onclick="setBankComp_4( '034',' 광주은행')"><i class="sp_bank c_034"></i>
 									<p>광주은행</p>
 									</button>
 								</li>
 								
 								<li id="bank031" class="closed" style="z-index: 35;">
-									<button type="button" data-label=" 대구은행" onclick="setBankComp_4( &#39;031&#39;,&#39; 대구은행&#39;)"><i class="sp_bank c_031"></i>
+									<button type="button" data-label=" 대구은행" onclick="setBankComp_4( '031',' 대구은행')"><i class="sp_bank c_031"></i>
 									<p>대구은행</p>
 									</button>
 								</li>
 								
 								<li id="bank060" class="closed" style="z-index: 34;">
-									<button type="button" data-label=" 뱅크오프아메리카" onclick="setBankComp_4( &#39;060&#39;,&#39; 뱅크오프아메리카&#39;)"><i class="sp_bank c_060"></i>
+									<button type="button" data-label=" 뱅크오프아메리카" onclick="setBankComp_4( '060',' 뱅크오프아메리카')"><i class="sp_bank c_060"></i>
 									<p>뱅크오프아메리카</p>
 									</button>
 								</li>
 								
 								<li id="bank032" class="closed" style="z-index: 33;">
-									<button type="button" data-label=" 부산은행" onclick="setBankComp_4( &#39;032&#39;,&#39; 부산은행&#39;)"><i class="sp_bank c_032"></i>
+									<button type="button" data-label=" 부산은행" onclick="setBankComp_4( '032',' 부산은행')"><i class="sp_bank c_032"></i>
 									<p>부산은행</p>
 									</button>
 								</li>
 								
 								<li id="bank064" class="closed" style="z-index: 32;">
-									<button type="button" data-label=" 산림조합중앙회" onclick="setBankComp_4( &#39;064&#39;,&#39; 산림조합중앙회&#39;)"><i class="sp_bank c_064"></i>
+									<button type="button" data-label=" 산림조합중앙회" onclick="setBankComp_4( '064',' 산림조합중앙회')"><i class="sp_bank c_064"></i>
 									<p>산림조합중앙회</p>
 									</button>
 								</li>
 								
 								<li id="bank050" class="closed" style="z-index: 31;">
-									<button type="button" data-label=" 저축은행" onclick="setBankComp_4( &#39;050&#39;,&#39; 저축은행&#39;)"><i class="sp_bank c_050"></i>
+									<button type="button" data-label=" 저축은행" onclick="setBankComp_4( '050',' 저축은행')"><i class="sp_bank c_050"></i>
 									<p>저축은행</p>
 									</button>
 								</li>
 								
 								<li id="bank045" class="closed" style="z-index: 30;">
-									<button type="button" data-label=" 새마을금고중앙회" onclick="setBankComp_4( &#39;045&#39;,&#39; 새마을금고중앙회&#39;)"><i class="sp_bank c_045"></i>
+									<button type="button" data-label=" 새마을금고중앙회" onclick="setBankComp_4( '045',' 새마을금고중앙회')"><i class="sp_bank c_045"></i>
 									<p>새마을금고중앙회</p>
 									</button>
 								</li>
 								
 								<li id="bank007" class="closed" style="z-index: 29;">
-									<button type="button" data-label=" 수협은행" onclick="setBankComp_4( &#39;007&#39;,&#39; 수협은행&#39;)"><i class="sp_bank c_007"></i>
+									<button type="button" data-label=" 수협은행" onclick="setBankComp_4( '007',' 수협은행')"><i class="sp_bank c_007"></i>
 									<p>수협은행</p>
 									</button>
 								</li>
 								
 								<li id="bank048" class="closed" style="z-index: 28;">
-									<button type="button" data-label=" 신협중앙회" onclick="setBankComp_4( &#39;048&#39;,&#39; 신협중앙회&#39;)"><i class="sp_bank c_048"></i>
+									<button type="button" data-label=" 신협중앙회" onclick="setBankComp_4( '048',' 신협중앙회')"><i class="sp_bank c_048"></i>
 									<p>신협중앙회</p>
 									</button>
 								</li>
 								
 								<li id="bank071" class="closed" style="z-index: 27;">
-									<button type="button" data-label=" 우체국" onclick="setBankComp_4( &#39;071&#39;,&#39; 우체국&#39;)"><i class="sp_bank c_071"></i>
+									<button type="button" data-label=" 우체국" onclick="setBankComp_4( '071',' 우체국')"><i class="sp_bank c_071"></i>
 									<p>우체국</p>
 									</button>
 								</li>
 								
 								<li id="bank037" class="closed" style="z-index: 26;">
-									<button type="button" data-label=" 전북은행" onclick="setBankComp_4( &#39;037&#39;,&#39; 전북은행&#39;)"><i class="sp_bank c_037"></i>
+									<button type="button" data-label=" 전북은행" onclick="setBankComp_4( '037',' 전북은행')"><i class="sp_bank c_037"></i>
 									<p>전북은행</p>
 									</button>
 								</li>
 								
 								<li id="bank035" class="closed" style="z-index: 25;">
-									<button type="button" data-label=" 제주은행" onclick="setBankComp_4( &#39;035&#39;,&#39; 제주은행&#39;)"><i class="sp_bank c_035"></i>
+									<button type="button" data-label=" 제주은행" onclick="setBankComp_4( '035',' 제주은행')"><i class="sp_bank c_035"></i>
 									<p>제주은행</p>
 									</button>
 								</li>
 								
 								<li id="bank090" class="closed" style="z-index: 24;">
-									<button type="button" data-label=" 카카오뱅크" onclick="setBankComp_4( &#39;090&#39;,&#39; 카카오뱅크&#39;)"><i class="sp_bank c_090"></i>
+									<button type="button" data-label=" 카카오뱅크" onclick="setBankComp_4( '090',' 카카오뱅크')"><i class="sp_bank c_090"></i>
 									<p>카카오뱅크</p>
 									</button>
 								</li>
 								
 								<li id="bank089" class="closed" style="z-index: 23;">
-									<button type="button" data-label=" 케이뱅크" onclick="setBankComp_4( &#39;089&#39;,&#39; 케이뱅크&#39;)"><i class="sp_bank c_089"></i>
+									<button type="button" data-label=" 케이뱅크" onclick="setBankComp_4( '089',' 케이뱅크')"><i class="sp_bank c_089"></i>
 									<p>케이뱅크</p>
 									</button>
 								</li>
 								
 								<li id="bank218" class="closed" style="z-index: 22;">
-									<button type="button" data-label=" KB증권" onclick="setBankComp_4( &#39;218&#39;,&#39; KB증권&#39;)"><i class="sp_bank c_218"></i>
+									<button type="button" data-label=" KB증권" onclick="setBankComp_4( '218',' KB증권')"><i class="sp_bank c_218"></i>
 									<p>KB증권</p>
 									</button>
 								</li>
 								
 								<li id="bank261" class="closed" style="z-index: 21;">
-									<button type="button" data-label=" 교보증권" onclick="setBankComp_4( &#39;261&#39;,&#39; 교보증권&#39;)"><i class="sp_bank c_261"></i>
+									<button type="button" data-label=" 교보증권" onclick="setBankComp_4( '261',' 교보증권')"><i class="sp_bank c_261"></i>
 									<p>교보증권</p>
 									</button>
 								</li>
 								
 								<li id="bank267" class="closed" style="z-index: 20;">
-									<button type="button" data-label=" 대신증권" onclick="setBankComp_4( &#39;267&#39;,&#39; 대신증권&#39;)"><i class="sp_bank c_267"></i>
+									<button type="button" data-label=" 대신증권" onclick="setBankComp_4( '267',' 대신증권')"><i class="sp_bank c_267"></i>
 									<p>대신증권</p>
 									</button>
 								</li>
 								
 								<li id="bank279" class="closed" style="z-index: 19;">
-									<button type="button" data-label=" DB금융투자" onclick="setBankComp_4( &#39;279&#39;,&#39; DB금융투자&#39;)"><i class="sp_bank c_279"></i>
+									<button type="button" data-label=" DB금융투자" onclick="setBankComp_4( '279',' DB금융투자')"><i class="sp_bank c_279"></i>
 									<p>DB금융투자</p>
 									</button>
 								</li>
 								
 								<li id="bank287" class="closed" style="z-index: 18;">
-									<button type="button" data-label=" 메리츠종합금융증권" onclick="setBankComp_4( &#39;287&#39;,&#39; 메리츠종합금융증권&#39;)"><i class="sp_bank c_287"></i>
+									<button type="button" data-label=" 메리츠종합금융증권" onclick="setBankComp_4( '287',' 메리츠종합금융증권')"><i class="sp_bank c_287"></i>
 									<p>메리츠종합금융증권</p>
 									</button>
 								</li>
 								
 								<li id="bank238" class="closed" style="z-index: 17;">
-									<button type="button" data-label=" 미래에셋대우" onclick="setBankComp_4( &#39;238&#39;,&#39; 미래에셋대우&#39;)"><i class="sp_bank c_238"></i>
+									<button type="button" data-label=" 미래에셋대우" onclick="setBankComp_4( '238',' 미래에셋대우')"><i class="sp_bank c_238"></i>
 									<p>미래에셋대우</p>
 									</button>
 								</li>
 								
 								<li id="bank290" class="closed" style="z-index: 16;">
-									<button type="button" data-label=" 부국증권" onclick="setBankComp_4( &#39;290&#39;,&#39; 부국증권&#39;)"><i class="sp_bank c_290"></i>
+									<button type="button" data-label=" 부국증권" onclick="setBankComp_4( '290',' 부국증권')"><i class="sp_bank c_290"></i>
 									<p>부국증권</p>
 									</button>
 								</li>
 								
 								<li id="bank240" class="closed" style="z-index: 15;">
-									<button type="button" data-label=" 삼성증권" onclick="setBankComp_4( &#39;240&#39;,&#39; 삼성증권&#39;)"><i class="sp_bank c_240"></i>
+									<button type="button" data-label=" 삼성증권" onclick="setBankComp_4( '240',' 삼성증권')"><i class="sp_bank c_240"></i>
 									<p>삼성증권</p>
 									</button>
 								</li>
 								
 								<li id="bank291" class="closed" style="z-index: 14;">
-									<button type="button" data-label=" 신영증권" onclick="setBankComp_4( &#39;291&#39;,&#39; 신영증권&#39;)"><i class="sp_bank c_291"></i>
+									<button type="button" data-label=" 신영증권" onclick="setBankComp_4( '291',' 신영증권')"><i class="sp_bank c_291"></i>
 									<p>신영증권</p>
 									</button>
 								</li>
 								
 								<li id="bank278" class="closed" style="z-index: 13;">
-									<button type="button" data-label=" 신한금융투자" onclick="setBankComp_4( &#39;278&#39;,&#39; 신한금융투자&#39;)"><i class="sp_bank c_278"></i>
+									<button type="button" data-label=" 신한금융투자" onclick="setBankComp_4( '278',' 신한금융투자')"><i class="sp_bank c_278"></i>
 									<p>신한금융투자</p>
 									</button>
 								</li>
 								
 								<li id="bank266" class="closed" style="z-index: 12;">
-									<button type="button" data-label=" 에스케이증권" onclick="setBankComp_4( &#39;266&#39;,&#39; 에스케이증권&#39;)"><i class="sp_bank c_266"></i>
+									<button type="button" data-label=" 에스케이증권" onclick="setBankComp_4( '266',' 에스케이증권')"><i class="sp_bank c_266"></i>
 									<p>에스케이증권</p>
 									</button>
 								</li>
 								
 								<li id="bank263" class="closed" style="z-index: 11;">
-									<button type="button" data-label=" 현대차증권" onclick="setBankComp_4( &#39;263&#39;,&#39; 현대차증권&#39;)"><i class="sp_bank c_263"></i>
+									<button type="button" data-label=" 현대차증권" onclick="setBankComp_4( '263',' 현대차증권')"><i class="sp_bank c_263"></i>
 									<p>현대차증권</p>
 									</button>
 								</li>
 								
 								<li id="bank209" class="closed" style="z-index: 10;">
-									<button type="button" data-label=" 유안타증권" onclick="setBankComp_4( &#39;209&#39;,&#39; 유안타증권&#39;)"><i class="sp_bank c_209"></i>
+									<button type="button" data-label=" 유안타증권" onclick="setBankComp_4( '209',' 유안타증권')"><i class="sp_bank c_209"></i>
 									<p>유안타증권</p>
 									</button>
 								</li>
 								
 								<li id="bank280" class="closed" style="z-index: 9;">
-									<button type="button" data-label=" 유진투자증권" onclick="setBankComp_4( &#39;280&#39;,&#39; 유진투자증권&#39;)"><i class="sp_bank c_280"></i>
+									<button type="button" data-label=" 유진투자증권" onclick="setBankComp_4( '280',' 유진투자증권')"><i class="sp_bank c_280"></i>
 									<p>유진투자증권</p>
 									</button>
 								</li>
 								
 								<li id="bank265" class="closed" style="z-index: 8;">
-									<button type="button" data-label=" 이베스트투자증권" onclick="setBankComp_4( &#39;265&#39;,&#39; 이베스트투자증권&#39;)"><i class="sp_bank c_265"></i>
+									<button type="button" data-label=" 이베스트투자증권" onclick="setBankComp_4( '265',' 이베스트투자증권')"><i class="sp_bank c_265"></i>
 									<p>이베스트투자증권</p>
 									</button>
 								</li>
 								
 								<li id="bank292" class="closed" style="z-index: 7;">
-									<button type="button" data-label=" 케이프투자증권" onclick="setBankComp_4( &#39;292&#39;,&#39; 케이프투자증권&#39;)"><i class="sp_bank c_292"></i>
+									<button type="button" data-label=" 케이프투자증권" onclick="setBankComp_4( '292',' 케이프투자증권')"><i class="sp_bank c_292"></i>
 									<p>케이프투자증권</p>
 									</button>
 								</li>
 								
 								<li id="bank264" class="closed" style="z-index: 6;">
-									<button type="button" data-label=" 키움증권" onclick="setBankComp_4( &#39;264&#39;,&#39; 키움증권&#39;)"><i class="sp_bank c_264"></i>
+									<button type="button" data-label=" 키움증권" onclick="setBankComp_4( '264',' 키움증권')"><i class="sp_bank c_264"></i>
 									<p>키움증권</p>
 									</button>
 								</li>
 								
 								<li id="bank270" class="closed" style="z-index: 5;">
-									<button type="button" data-label=" 하나금융투자" onclick="setBankComp_4( &#39;270&#39;,&#39; 하나금융투자&#39;)"><i class="sp_bank c_270"></i>
+									<button type="button" data-label=" 하나금융투자" onclick="setBankComp_4( '270',' 하나금융투자')"><i class="sp_bank c_270"></i>
 									<p>하나금융투자</p>
 									</button>
 								</li>
 								
 								<li id="bank262" class="closed" style="z-index: 4;">
-									<button type="button" data-label=" 하이투자증권" onclick="setBankComp_4( &#39;262&#39;,&#39; 하이투자증권&#39;)"><i class="sp_bank c_262"></i>
+									<button type="button" data-label=" 하이투자증권" onclick="setBankComp_4( '262',' 하이투자증권')"><i class="sp_bank c_262"></i>
 									<p>하이투자증권</p>
 									</button>
 								</li>
 								
 								<li id="bank243" class="closed" style="z-index: 3;">
-									<button type="button" data-label=" 한국투자증권" onclick="setBankComp_4( &#39;243&#39;,&#39; 한국투자증권&#39;)"><i class="sp_bank c_243"></i>
+									<button type="button" data-label=" 한국투자증권" onclick="setBankComp_4( '243',' 한국투자증권')"><i class="sp_bank c_243"></i>
 									<p>한국투자증권</p>
 									</button>
 								</li>
 								
 								<li id="bank269" class="closed" style="z-index: 2;">
-									<button type="button" data-label=" 한화투자증권" onclick="setBankComp_4( &#39;269&#39;,&#39; 한화투자증권&#39;)"><i class="sp_bank c_269"></i>
+									<button type="button" data-label=" 한화투자증권" onclick="setBankComp_4( '269',' 한화투자증권')"><i class="sp_bank c_269"></i>
 									<p>한화투자증권</p>
 									</button>
 								</li>
 								
 								<li id="bank247" class="closed" style="z-index: 1;">
-									<button type="button" data-label=" NH투자증권" onclick="setBankComp_4( &#39;247&#39;,&#39; NH투자증권&#39;)"><i class="sp_bank c_247"></i>
+									<button type="button" data-label=" NH투자증권" onclick="setBankComp_4( '247',' NH투자증권')"><i class="sp_bank c_247"></i>
 									<p>NH투자증권</p>
 									</button>
 								</li>
@@ -1757,8 +1630,8 @@ function gotoTop() {
             </div>
             <div class="layer_footer">
                 <div class="btn_area">                                        
-                    <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#cardRegLayer" onclick="modalLayer.hide(&#39;cardRegTypeLayer&#39;, this); modalLayer.show(&#39;cardRegLayer&#39;, this)" class="btn btn_white">직접입력</a> 
-                    <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#cardRegCallOCRLayer" onclick="modalLayer.hide(&#39;cardRegTypeLayer&#39;, this); modalLayer.show(&#39;cardRegCallOCRLayer&#39;, this)" class="btn btn_default">카드촬영</a> 
+                    <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#cardRegLayer" onclick="modalLayer.hide('cardRegTypeLayer', this); modalLayer.show('cardRegLayer', this)" class="btn btn_white">직접입력</a> 
+                    <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#cardRegCallOCRLayer" onclick="modalLayer.hide('cardRegTypeLayer', this); modalLayer.show('cardRegCallOCRLayer', this)" class="btn btn_default">카드촬영</a> 
                 </div>                    
             </div>                                 
         </div>
@@ -1799,7 +1672,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 9;">
-											<button type="button" data-label="국민카드" onclick="setCardComp_4(&#39;02&#39;,&#39;국민카드&#39;)"> <i class="sp_card c_kb"></i>
+											<button type="button" data-label="국민카드" onclick="setCardComp_4('02','국민카드')"> <i class="sp_card c_kb"></i>
 												<p>국민카드</p>
 											</button>
 		                                            
@@ -1818,7 +1691,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 8;">
-											<button type="button" data-label="신한카드" onclick="setCardComp_4(&#39;26&#39;,&#39;신한카드&#39;)"> <i class="sp_card c_sh"></i>
+											<button type="button" data-label="신한카드" onclick="setCardComp_4('26','신한카드')"> <i class="sp_card c_sh"></i>
 												<p>신한카드</p>
 											</button>
 		                                            
@@ -1837,7 +1710,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 7;">
-											<button type="button" data-label="삼성카드" onclick="setCardComp_4(&#39;04&#39;,&#39;삼성카드&#39;)"> <i class="sp_card c_ss"></i>
+											<button type="button" data-label="삼성카드" onclick="setCardComp_4('04','삼성카드')"> <i class="sp_card c_ss"></i>
 												<p>삼성카드</p>
 											</button>
 		                                            
@@ -1856,7 +1729,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 6;">
-											<button type="button" data-label="현대카드" onclick="setCardComp_4(&#39;07&#39;,&#39;현대카드&#39;)"> <i class="sp_card c_hd"></i>
+											<button type="button" data-label="현대카드" onclick="setCardComp_4('07','현대카드')"> <i class="sp_card c_hd"></i>
 												<p>현대카드</p>
 											</button>
 		                                            
@@ -1875,7 +1748,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 5;">
-											<button type="button" data-label="롯데카드" onclick="setCardComp_4(&#39;08&#39;,&#39;롯데카드&#39;)"> <i class="sp_card c_lt"></i>
+											<button type="button" data-label="롯데카드" onclick="setCardComp_4('08','롯데카드')"> <i class="sp_card c_lt"></i>
 												<p>롯데카드</p>
 											</button>
 		                                            
@@ -1894,7 +1767,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 4;">
-											<button type="button" data-label="BC카드" onclick="setCardComp_4(&#39;01&#39;,&#39;BC카드&#39;)"> <i class="sp_card c_bc"></i>
+											<button type="button" data-label="BC카드" onclick="setCardComp_4('01','BC카드')"> <i class="sp_card c_bc"></i>
 												<p>BC카드</p>
 											</button>
 		                                            
@@ -1913,7 +1786,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 3;">
-											<button type="button" data-label="하나카드" onclick="setCardComp_4(&#39;03&#39;,&#39;하나카드&#39;)"> <i class="sp_card c_ha"></i>
+											<button type="button" data-label="하나카드" onclick="setCardComp_4('03','하나카드')"> <i class="sp_card c_ha"></i>
 												<p>하나카드</p>
 											</button>
 		                                            
@@ -1944,7 +1817,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 2;">
-											<button type="button" data-label="NH카드" onclick="setCardComp_4(&#39;71&#39;,&#39;NH카드&#39;)"> <i class="sp_card c_nh"></i>
+											<button type="button" data-label="NH카드" onclick="setCardComp_4('71','NH카드')"> <i class="sp_card c_nh"></i>
 												<p>NH카드</p>
 											</button>
 		                                            
@@ -2167,7 +2040,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li class="closed" style="z-index: 1;">
-											<button type="button" data-label="씨티, 한미카드" onclick="setCardComp_4(&#39;72&#39;,&#39;씨티, 한미카드&#39;)"> <i class="sp_card c_ct"></i>
+											<button type="button" data-label="씨티, 한미카드" onclick="setCardComp_4('72','씨티, 한미카드')"> <i class="sp_card c_ct"></i>
 												<p>씨티, 한미카드</p>
 											</button>
 		                                            
@@ -2233,11 +2106,11 @@ function gotoTop() {
                             <dt><label for="c-acc">카드번호</label></dt>
                             <dd>                 
                                 <div class="form_group">                                                       
-                                    <input type="number" name="cardNo6_1" id="cardNo6_1" title="카드번호 첫째 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length &gt;=4) $(&#39;#cardNo6_2&#39;).focus(); maxLengthCheck_join(this);">   
+                                    <input type="number" name="cardNo6_1" id="cardNo6_1" title="카드번호 첫째 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length &gt;=4) $('#cardNo6_2').focus(); maxLengthCheck_join(this);">   
                                     <span class="txt_dash">~</span>
-                                    <input type="number" name="cardNo6_2" id="cardNo6_2" title="카드번호 둘째 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length &gt;=4) $(&#39;#cardNo6_3&#39;).focus(); maxLengthCheck_join(this);">
+                                    <input type="number" name="cardNo6_2" id="cardNo6_2" title="카드번호 둘째 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length &gt;=4) $('#cardNo6_3').focus(); maxLengthCheck_join(this);">
                                     <span class="txt_dash">~</span>
-                                    <input type="number" class="txt_security" name="cardNo6_3" id="cardNo6_3" title="카드번호 셋째 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length &gt;=4) $(&#39;#cardNo6_4&#39;).focus(); maxLengthCheck_join(this);">
+                                    <input type="number" class="txt_security" name="cardNo6_3" id="cardNo6_3" title="카드번호 셋째 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length &gt;=4) $('#cardNo6_4').focus(); maxLengthCheck_join(this);">
                                     <span class="txt_dash">~</span>
                                     <input type="number" class="txt_security" name="cardNo6_4" id="cardNo6_4" title="카드번호 마지막 자리 입력" onblur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onfocus="setCardNo_4(this)" onkeyup="maxLengthCheck_join(this);">
                                 </div>    
@@ -2271,7 +2144,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card02" class="closed active" style="z-index: 9;">
-											<button type="button" data-label="국민카드" onclick="setCardComp_4(&#39;02&#39;,&#39;국민카드&#39;)"> <i class="sp_card c_kb"></i>
+											<button type="button" data-label="국민카드" onclick="setCardComp_4('02','국민카드')"> <i class="sp_card c_kb"></i>
 												<p>국민카드</p>
 											</button>
 		                                            
@@ -2290,7 +2163,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card26" class="closed" style="z-index: 8;">
-											<button type="button" data-label="신한카드" onclick="setCardComp_4(&#39;26&#39;,&#39;신한카드&#39;)"> <i class="sp_card c_sh"></i>
+											<button type="button" data-label="신한카드" onclick="setCardComp_4('26','신한카드')"> <i class="sp_card c_sh"></i>
 												<p>신한카드</p>
 											</button>
 		                                            
@@ -2309,7 +2182,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card04" class="closed" style="z-index: 7;">
-											<button type="button" data-label="삼성카드" onclick="setCardComp_4(&#39;04&#39;,&#39;삼성카드&#39;)"> <i class="sp_card c_ss"></i>
+											<button type="button" data-label="삼성카드" onclick="setCardComp_4('04','삼성카드')"> <i class="sp_card c_ss"></i>
 												<p>삼성카드</p>
 											</button>
 		                                            
@@ -2328,7 +2201,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card07" class="closed" style="z-index: 6;">
-											<button type="button" data-label="현대카드" onclick="setCardComp_4(&#39;07&#39;,&#39;현대카드&#39;)"> <i class="sp_card c_hd"></i>
+											<button type="button" data-label="현대카드" onclick="setCardComp_4('07','현대카드')"> <i class="sp_card c_hd"></i>
 												<p>현대카드</p>
 											</button>
 		                                            
@@ -2347,7 +2220,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card08" class="closed" style="z-index: 5;">
-											<button type="button" data-label="롯데카드" onclick="setCardComp_4(&#39;08&#39;,&#39;롯데카드&#39;)"> <i class="sp_card c_lt"></i>
+											<button type="button" data-label="롯데카드" onclick="setCardComp_4('08','롯데카드')"> <i class="sp_card c_lt"></i>
 												<p>롯데카드</p>
 											</button>
 		                                            
@@ -2366,7 +2239,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card01" class="closed" style="z-index: 4;">
-											<button type="button" data-label="BC카드" onclick="setCardComp_4(&#39;01&#39;,&#39;BC카드&#39;)"> <i class="sp_card c_bc"></i>
+											<button type="button" data-label="BC카드" onclick="setCardComp_4('01','BC카드')"> <i class="sp_card c_bc"></i>
 												<p>BC카드</p>
 											</button>
 		                                            
@@ -2385,7 +2258,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card03" class="closed" style="z-index: 3;">
-											<button type="button" data-label="하나카드" onclick="setCardComp_4(&#39;03&#39;,&#39;하나카드&#39;)"> <i class="sp_card c_ha"></i>
+											<button type="button" data-label="하나카드" onclick="setCardComp_4('03','하나카드')"> <i class="sp_card c_ha"></i>
 												<p>하나카드</p>
 											</button>
 		                                            
@@ -2416,7 +2289,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card71" class="closed" style="z-index: 2;">
-											<button type="button" data-label="NH카드" onclick="setCardComp_4(&#39;71&#39;,&#39;NH카드&#39;)"> <i class="sp_card c_nh"></i>
+											<button type="button" data-label="NH카드" onclick="setCardComp_4('71','NH카드')"> <i class="sp_card c_nh"></i>
 												<p>NH카드</p>
 											</button>
 		                                            
@@ -2639,7 +2512,7 @@ function gotoTop() {
 	                                
 	                                
 		                                <li id="card72" class="closed" style="z-index: 1;">
-											<button type="button" data-label="씨티, 한미카드" onclick="setCardComp_4(&#39;72&#39;,&#39;씨티, 한미카드&#39;)"> <i class="sp_card c_ct"></i>
+											<button type="button" data-label="씨티, 한미카드" onclick="setCardComp_4('72','씨티, 한미카드')"> <i class="sp_card c_ct"></i>
 												<p>씨티, 한미카드</p>
 											</button>
 		                                            
@@ -2910,7 +2783,7 @@ function gotoTop() {
 	                                           		  <!-- <div class="ui_chk_agree" id="divO"> -->
 												<label for="cate_1_1" class="ui_chk"></label> 
 												<input type="checkbox" class="cate_1_1" id="chk5" name="chk5" data="O" value="L01"> 
-												<a href="javascript:" onclick="agreeConPDF(&#39;/html/usimJoinTerms/(선택) 개인(신용)정보 수집∙이용 동의서(상품 서비스 안내 등).pdf&#39;,&#39;chk5&#39;)" class="txt"><span>개인(신용)정보 수집∙이용 동의서(상품서비스 안내 등)[선택]</span></a>
+												<a href="javascript:" onclick="agreeConPDF('/html/usimJoinTerms/(선택) 개인(신용)정보 수집∙이용 동의서(상품 서비스 안내 등).pdf','chk5')" class="txt"><span>개인(신용)정보 수집∙이용 동의서(상품서비스 안내 등)[선택]</span></a>
 	
 												<ul>
 													<!-- 약관구분-->
@@ -2988,7 +2861,7 @@ function gotoTop() {
 	                                           		  <!-- <div class="ui_chk_agree" id="divO"> -->
 												<label for="cate_1_1" class="ui_chk"></label> 
 												<input type="checkbox" class="cate_1_1" id="chk6" name="chk6" data="O" value="J01"> 
-												<a href="javascript:" onclick="agreeConPDF(&#39;/html/usimJoinTerms/(선택) 계열사 개인(신용)정보 수집∙이용∙제공.pdf&#39;,&#39;chk6&#39;)" class="txt"><span>개인(신용)정보 수집∙이용∙제공 동의서(상품서비스 안내 등)[계열사정보제공용][선택]</span></a>
+												<a href="javascript:" onclick="agreeConPDF('/html/usimJoinTerms/(선택) 계열사 개인(신용)정보 수집∙이용∙제공.pdf','chk6')" class="txt"><span>개인(신용)정보 수집∙이용∙제공 동의서(상품서비스 안내 등)[계열사정보제공용][선택]</span></a>
 	
 												<ul>
 													<!-- 약관구분-->
@@ -3104,7 +2977,7 @@ function gotoTop() {
                         
                         <ul class="ui_accordion" id="divCms">
                             <li class="mo_box_rs"> 
-                                <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#agreeConPDFLayer" onclick="modalLayer.show(&#39;agreeConPDFLayer&#39;, this)"><span class="txt">계좌이체(CMS) 자동이체 동의서</span></a> 
+                                <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#agreeConPDFLayer" onclick="modalLayer.show('agreeConPDFLayer', this)"><span class="txt">계좌이체(CMS) 자동이체 동의서</span></a> 
                             </li>
                             
                             <li class="mo_box_rs">
@@ -3193,17 +3066,17 @@ function gotoTop() {
 				<div class="cs_box type_pdf">
 		            <!--  pdf.js 플러그인 들어갈 자리(자체 제공 ui 모두 사용X) -->
 		            <input type="hidden" id="agreeCode" name="agreeCode">
-		            <iframe id="pdfViewPage" src="./가입신청 _ Liiv M 가입하기_files/viewer.html" style="width:95%; height:750px; border:1px solid #blue;"></iframe>
+		            <!-- <iframe id="pdfViewPage" src="./가입신청 _ Liiv M 가입하기_files/viewer.html" style="width:95%; height:750px; border:1px solid #blue;"></iframe> -->
 	            </div>
 	        </div>
 	        <div class="layer_footer">
 	            <div class="btn_area">                    
-	                <a href="javascript:" onclick="$(&#39;#cate_cms_1&#39;).click();" class="btn btn_default">동의</a> 
+	                <a href="javascript:" onclick="$('#cate_cms_1').click();" class="btn btn_default">동의</a> 
 	            </div>
 	        </div>
 	        <!-- 우상단 닫기 및 버튼 영역 -->
 	        <span class="head_btn_area">
-	            <button type="button" class="btn btn_pdf_download" onclick="$(&#39;#pdfViewPage&#39;)[0].contentWindow.fnDown();"><span class="blind">다운로드</span></button>
+	            <button type="button" class="btn btn_pdf_download" onclick="$('#pdfViewPage')[0].contentWindow.fnDown();"><span class="blind">다운로드</span></button>
 	            <button type="button" class="btn layer_close" data-dismiss="modal"><span>닫기</span></button>
 	        </span>           
 	    </div>    
@@ -3273,7 +3146,7 @@ function gotoTop() {
                 </div>
             </div>
             <div class="btn_area">                 
-                <button type="button" class="btn btn_default" data-dismiss="modal" id="btnCheckEvt1G2" onclick="fnLMPM000001(&#39;PD00000644&#39;);">확인</button> <!-- 20120217 확인 --> 
+                <button type="button" class="btn btn_default" data-dismiss="modal" id="btnCheckEvt1G2" onclick="fnLMPM000001('PD00000644');">확인</button> <!-- 20120217 확인 --> 
             </div>
         </div>    
     </div>
@@ -3286,594 +3159,595 @@ function gotoTop() {
         
         //PDF 열기
         function agreeConPDF(PDF,agreeCode){
-        	if(PDF != ""){
-        		$("#agreeCode").val(agreeCode);
-        		$("#pdfViewPage").attr("src","/js/lib/pdfjs/viewer.html?file="+PDF);
-        		modalLayer.show('agreeConPDFLayer', this);
-        	}
+        	// if(PDF != ""){
+        	// 	$("#agreeCode").val(agreeCode);
+        	// 	$("#pdfViewPage").attr("src","/js/lib/pdfjs/viewer.html?file="+PDF);
+        	// 	modalLayer.show('agreeConPDFLayer', this);
+        	// }
         }
 	</script>
 
 <!-- include KCB 인증 팝업 -->
 
 
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/apiKcb.js.다운로드"></script><!-- KCB 인터페이스 전용 JS -->
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/apiKcb.js.다운로드"></script> -->
+<!-- KCB 인터페이스 전용 JS -->
 <script type="text/javascript">
 var isOcrAcc = false;
 $(document).ready(function() {
 	
-	getCardList_includeNormal();		// 카드목록조회
-	getCardTermList_includeNormal();	// 카드사약관조회
+	// getCardList_includeNormal();		// 카드목록조회
+	// getCardTermList_includeNormal();	// 카드사약관조회
 
-	// 카드사 약관 전체동의 선택
-	$("input:checkbox[name='includeCardTAllChk']").click(function() {
-		checkAllCardTermsIntro($(this).prop("checked"));
-	});
+	// // 카드사 약관 전체동의 선택
+	// $("input:checkbox[name='includeCardTAllChk']").click(function() {
+	// 	checkAllCardTermsIntro($(this).prop("checked"));
+	// });
 	
-	// 카드번호, 휴대전화번호, 주민번호7 입력란 input :: maxlength 체크, 숫자입력여부 체크
-	$("#includeCardNo1, #includeCardNo2, #includeCardNo3, #includeCardNo4, #includeCellPhoneNo").on("input",function() {
-		onlyNumInput(this);
-		maxLengthCheck(this);
-	});
-	// 카드번호, 휴대전화번호, 주민번호7 입력란 액션처리 :: focus
-	$("#includeCardNo1, #includeCardNo2, #includeCardNo3, #includeCardNo4, #includeCellPhoneNo").on("focus",function() {
-		if(this.id == "includeCardNo1" || this.id == "includeCardNo2" || this.id == "includeCardNo3" || this.id == "includeCardNo4") {
-			$("#errMsg_includeCardNo").hide();
-			$("#div_includeCardNos").removeClass("error");
-		}
-		if(this.id == "includeCellPhoneNo") {
-			$("#errMsg_includeCellPhoneNo").hide();
-			$("#includeCellPhoneNo").removeClass("error");
-		}
-	});
-	// 카드번호, 휴대전화번호, 주민번호7 입력란 액션처리 :: keyup
-	$("#includeCardNo1, #includeCardNo2, #includeCardNo3").on("keyup",function() {
-		var maxlen = $(this).attr("maxlength");
-		if(this.value.length >= maxlen) {
-			if(this.id=="includeCardNo1") { $("#includeCardNo2").focus(); }
-			if(this.id=="includeCardNo2") { $("#includeCardNo3").focus(); }
-			if(this.id=="includeCardNo3") { $("#includeCardNo4").focus(); }		
-			return false;
-		}
-	});
+	// // 카드번호, 휴대전화번호, 주민번호7 입력란 input :: maxlength 체크, 숫자입력여부 체크
+	// $("#includeCardNo1, #includeCardNo2, #includeCardNo3, #includeCardNo4, #includeCellPhoneNo").on("input",function() {
+	// 	onlyNumInput(this);
+	// 	maxLengthCheck(this);
+	// });
+	// // 카드번호, 휴대전화번호, 주민번호7 입력란 액션처리 :: focus
+	// $("#includeCardNo1, #includeCardNo2, #includeCardNo3, #includeCardNo4, #includeCellPhoneNo").on("focus",function() {
+	// 	if(this.id == "includeCardNo1" || this.id == "includeCardNo2" || this.id == "includeCardNo3" || this.id == "includeCardNo4") {
+	// 		$("#errMsg_includeCardNo").hide();
+	// 		$("#div_includeCardNos").removeClass("error");
+	// 	}
+	// 	if(this.id == "includeCellPhoneNo") {
+	// 		$("#errMsg_includeCellPhoneNo").hide();
+	// 		$("#includeCellPhoneNo").removeClass("error");
+	// 	}
+	// });
+	// // 카드번호, 휴대전화번호, 주민번호7 입력란 액션처리 :: keyup
+	// $("#includeCardNo1, #includeCardNo2, #includeCardNo3").on("keyup",function() {
+	// 	var maxlen = $(this).attr("maxlength");
+	// 	if(this.value.length >= maxlen) {
+	// 		if(this.id=="includeCardNo1") { $("#includeCardNo2").focus(); }
+	// 		if(this.id=="includeCardNo2") { $("#includeCardNo3").focus(); }
+	// 		if(this.id=="includeCardNo3") { $("#includeCardNo4").focus(); }		
+	// 		return false;
+	// 	}
+	// });
 	
-	// 카드번호 입력값 체크
-	$("#includeCardNo1, #includeCardNo2, #includeCardNo3, #includeCardNo4").on("blur",function() {
-		checkValidCardNoLengthIntro();
-	});
-	// 휴대전화번호 입력값 체크
-	$("#includeCellPhoneNo").on("blur",function() {
-		checkValidCellPhoneNoLengthIntro();
-	});
+	// // 카드번호 입력값 체크
+	// $("#includeCardNo1, #includeCardNo2, #includeCardNo3, #includeCardNo4").on("blur",function() {
+	// 	checkValidCardNoLengthIntro();
+	// });
+	// // 휴대전화번호 입력값 체크
+	// $("#includeCellPhoneNo").on("blur",function() {
+	// 	checkValidCellPhoneNoLengthIntro();
+	// });
 	
-	// ARS 인증요청 버튼 클릭
-	$("#btnIntroArsRequest").click(function(){
-		// checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
-		checkValidIntroInputValues("ARS");
-	});
+	// // ARS 인증요청 버튼 클릭
+	// $("#btnIntroArsRequest").click(function(){
+	// 	// checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
+	// 	checkValidIntroInputValues("ARS");
+	// });
 
-	// ARS, 앱카드 인증확인 버튼 클릭
-	$("#btnIntroArsAuthComplete, #btnAppAuthComplete").click(function(){
-		onclickbtnIntroArsAuthComplete();
-	});
+	// // ARS, 앱카드 인증확인 버튼 클릭
+	// $("#btnIntroArsAuthComplete, #btnAppAuthComplete").click(function(){
+	// 	onclickbtnIntroArsAuthComplete();
+	// });
 	
-	// 앱카드 인증요청 버튼 클릭
-	$('#btnAppAuthReq').click(function(){
-		checkValidIntroInputValues("APP");
-	});
+	// // 앱카드 인증요청 버튼 클릭
+	// $('#btnAppAuthReq').click(function(){
+	// 	checkValidIntroInputValues("APP");
+	// });
 	
 });
 
 /** 화면 오픈 시 초기화 */
 function initKCBCertPopupNormal() {
 
-	domDisabled(["btnIntroArsAuthComplete","btnAppAuthComplete"]);	// 비활성화
-	domEnabled(["btnIntroArsRequest","btnAppRequest"]); // 활성화
-	domHides(['includeNormalGuideAppLT','includeNormalGuideApp-LT','includeNormalGuideAppInstall', 'includeNormalGuideAppSelect']); // 숨김
-	$("div.card_selectbox > .card_toggle").addClass("active");	// 카드 목록 활성화
-	$("#btnSelectCardComp > i, #btnSelectCardCompApp > i").removeClass().addClass("sp_card c_none");
-	$("#includeLayerCardCertNormal").find("input:checkbox").prop("checked", false);
-	$("#includeLayerCardCertNormal").find("input[type=hidden]").val(""); // 팝업 내의 모든 인풋 값 비움(체크박스제외)
-	$("#includeLayerCardCertNormal").find("input[type=number]").val("").removeClass("error"); // 팝업 내의 모든 인풋 값 비움(체크박스제외)
-	$("#includeLayerCardCertNormal").find("input[type=password]").val("").removeClass("error"); // 팝업 내의 모든 인풋 값 비움(체크박스제외)
-	$("#div_includeCardNos").removeClass("error");
-	$("#includeLayerCardCertNormal").find(".txt_error").hide();
-	$("#includeLayerCardCertNormal > div > div.layer_body > div > div > div > ul > li:nth-child(1) > a").click();
+	// domDisabled(["btnIntroArsAuthComplete","btnAppAuthComplete"]);	// 비활성화
+	// domEnabled(["btnIntroArsRequest","btnAppRequest"]); // 활성화
+	// domHides(['includeNormalGuideAppLT','includeNormalGuideApp-LT','includeNormalGuideAppInstall', 'includeNormalGuideAppSelect']); // 숨김
+	// $("div.card_selectbox > .card_toggle").addClass("active");	// 카드 목록 활성화
+	// $("#btnSelectCardComp > i, #btnSelectCardCompApp > i").removeClass().addClass("sp_card c_none");
+	// $("#includeLayerCardCertNormal").find("input:checkbox").prop("checked", false);
+	// $("#includeLayerCardCertNormal").find("input[type=hidden]").val(""); // 팝업 내의 모든 인풋 값 비움(체크박스제외)
+	// $("#includeLayerCardCertNormal").find("input[type=number]").val("").removeClass("error"); // 팝업 내의 모든 인풋 값 비움(체크박스제외)
+	// $("#includeLayerCardCertNormal").find("input[type=password]").val("").removeClass("error"); // 팝업 내의 모든 인풋 값 비움(체크박스제외)
+	// $("#div_includeCardNos").removeClass("error");
+	// $("#includeLayerCardCertNormal").find(".txt_error").hide();
+	// $("#includeLayerCardCertNormal > div > div.layer_body > div > div > div > ul > li:nth-child(1) > a").click();
 	
-	$("#tc-cert-ars .label_active").text("카드종류 선택");
-	$("#tc-cert-ars .label_active").text("카드종류 선택");
-	$("ul[data-id='normalCardList'] li").removeClass("active");
+	// $("#tc-cert-ars .label_active").text("카드종류 선택");
+	// $("#tc-cert-ars .label_active").text("카드종류 선택");
+	// $("ul[data-id='normalCardList'] li").removeClass("active");
 	
 }
 
 /** KCB 카드목록(ars, app) */
 function getCardList_includeNormal() {
-	var data = new Object();
-	data.commonGrp = "CM00007";
-	data.refCode   = "1";
-	var url = "/system/main/getCommonCodeListByRef1";
-	$.ajax({
-		type : "post",
-		url : url,
-		data: data,
-		success : function(data) {
-			var cardCorpList = "";
-			for(var i=0; i<data.commonData.length; i++) {
-				cardCorpList += "<li class='' style='z-index:"+(data.commonData.length-i)+";' onClick='onClickCardCompIntro(\""+data.commonData[i].refCode2+"\", this)'>";
-				cardCorpList += "	<button type='button' data-label='"+data.commonData[i].commonCdNm+"'>";
-				cardCorpList += "		<i class='sp_card c_"+(data.commonData[i].refCode2).toLowerCase()+"' ></i>";
-				cardCorpList += "		<p>"+data.commonData[i].commonCdNm+"</p>";
-				cardCorpList += "	</button>";
-				cardCorpList += "</li>";
-			}
-			$("ul[data-id='normalCardList']").html(cardCorpList);
+	// var data = new Object();
+	// data.commonGrp = "CM00007";
+	// data.refCode   = "1";
+	// var url = "/system/main/getCommonCodeListByRef1";
+	// $.ajax({
+	// 	type : "post",
+	// 	url : url,
+	// 	data: data,
+	// 	success : function(data) {
+	// 		var cardCorpList = "";
+	// 		for(var i=0; i<data.commonData.length; i++) {
+	// 			cardCorpList += "<li class='' style='z-index:"+(data.commonData.length-i)+";' onClick='onClickCardCompIntro(\""+data.commonData[i].refCode2+"\", this)'>";
+	// 			cardCorpList += "	<button type='button' data-label='"+data.commonData[i].commonCdNm+"'>";
+	// 			cardCorpList += "		<i class='sp_card c_"+(data.commonData[i].refCode2).toLowerCase()+"' ></i>";
+	// 			cardCorpList += "		<p>"+data.commonData[i].commonCdNm+"</p>";
+	// 			cardCorpList += "	</button>";
+	// 			cardCorpList += "</li>";
+	// 		}
+	// 		$("ul[data-id='normalCardList']").html(cardCorpList);
 			
-			moSelectCom();
-		}
-	});
+	// 		moSelectCom();
+	// 	}
+	// });
 }
 
 /** KCB 인증 약관 목록(ars, app) */
 function getCardTermList_includeNormal() {
-	var data = new Object();
-	data.commonGrp = "CM00060";
-	var url = "/system/main/getCommonData";
-	$.ajax({
-		type : "post",
-		url : url,
-		data: data,
-		success : function(data) {
-			var cardTermListNormalHtml = "";		// 카드사 약관 선택 리스트
-			for(var i=0; i<data.commonData.length; i++) {
-				/*
-				cardTermListNormalHtml += "<div class='ui_chk_agree'>";
-				cardTermListNormalHtml += "<label class='ui_chk'><input type='checkbox' value='"+data.commonData[i].commonCd+"' ><span class='blind'>"+data.commonData[i].commonCdNm+"</span></label>";
-				cardTermListNormalHtml += "<button type='button' onclick='openCardTermPopupIncludeIntro(\""+data.commonData[i].commonCdNm+"\", \""+data.commonData[i].commonCd+"\");' >";
-				cardTermListNormalHtml += "(필수) "+data.commonData[i].commonCdNm+"<span class='blind'>상세보기</span></button>";
-				cardTermListNormalHtml += "</div>";
-				*/
-                cardTermListNormalHtml += "<li>";
-                cardTermListNormalHtml += "<label class='ui_chk'><input type='checkbox' id='s"+data.commonData[i].commonCd+"' value='"+data.commonData[i].commonCd+"' ></label>";
-                cardTermListNormalHtml += "<a href='javascript:' onclick='openCardTermPopupIncludeIntro(\""+data.commonData[i].commonCdNm+"\", \""+data.commonData[i].commonCd+"\");' class='txt'>(필수) "+data.commonData[i].commonCdNm+"</a>";
-                cardTermListNormalHtml += "</li>";
-			}
-			//$("div[data-id='cardTermListNormal']").html(cardTermListNormalHtml); 
-			$("ul[data-id='cardTermListNormal']").html(cardTermListNormalHtml);
-		}
-	});
+	// var data = new Object();
+	// data.commonGrp = "CM00060";
+	// var url = "/system/main/getCommonData";
+	// $.ajax({
+	// 	type : "post",
+	// 	url : url,
+	// 	data: data,
+	// 	success : function(data) {
+	// 		var cardTermListNormalHtml = "";		// 카드사 약관 선택 리스트
+	// 		for(var i=0; i<data.commonData.length; i++) {
+	// 			/*
+	// 			cardTermListNormalHtml += "<div class='ui_chk_agree'>";
+	// 			cardTermListNormalHtml += "<label class='ui_chk'><input type='checkbox' value='"+data.commonData[i].commonCd+"' ><span class='blind'>"+data.commonData[i].commonCdNm+"</span></label>";
+	// 			cardTermListNormalHtml += "<button type='button' onclick='openCardTermPopupIncludeIntro(\""+data.commonData[i].commonCdNm+"\", \""+data.commonData[i].commonCd+"\");' >";
+	// 			cardTermListNormalHtml += "(필수) "+data.commonData[i].commonCdNm+"<span class='blind'>상세보기</span></button>";
+	// 			cardTermListNormalHtml += "</div>";
+	// 			*/
+    //             cardTermListNormalHtml += "<li>";
+    //             cardTermListNormalHtml += "<label class='ui_chk'><input type='checkbox' id='s"+data.commonData[i].commonCd+"' value='"+data.commonData[i].commonCd+"' ></label>";
+    //             cardTermListNormalHtml += "<a href='javascript:' onclick='openCardTermPopupIncludeIntro(\""+data.commonData[i].commonCdNm+"\", \""+data.commonData[i].commonCd+"\");' class='txt'>(필수) "+data.commonData[i].commonCdNm+"</a>";
+    //             cardTermListNormalHtml += "</li>";
+	// 		}
+	// 		//$("div[data-id='cardTermListNormal']").html(cardTermListNormalHtml); 
+	// 		$("ul[data-id='cardTermListNormal']").html(cardTermListNormalHtml);
+	// 	}
+	// });
 }
 
 
 /** 약관 상세보기 팝업(ars, app) */
 function openCardTermPopupIncludeIntro(title, code) {
 
-	var fileUrl = "";
-	var cardComp = "";
-	$("#subCardAgree").unbind();
-	if ($("#tc-cert-ars").hasClass("active")) {
-		cardComp = $("#cardCompARSIntro").val();
+	// var fileUrl = "";
+	// var cardComp = "";
+	// $("#subCardAgree").unbind();
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// 	cardComp = $("#cardCompARSIntro").val();
 
-		$("#subCardAgree").click(function() { //동의버튼
-			$("#tc-cert-ars #s"+code).prop("checked",true);
-		});
-	} else {
-		cardComp = $("#cardCompAPPIntro").val();
+	// 	$("#subCardAgree").click(function() { //동의버튼
+	// 		$("#tc-cert-ars #s"+code).prop("checked",true);
+	// 	});
+	// } else {
+	// 	cardComp = $("#cardCompAPPIntro").val();
 
-		$("#subCardAgree").click(function() { //동의버튼
-			$("#tc-cert-appcard #s"+code).prop("checked",true);
-		});
-	}
-	if(cardComp != ""){
-		if("1" == code.charAt(2)) {
-			fileUrl = "/html/cardTerm/indivInfo/"+cardComp+"00"+code.charAt(2)+".html";
-		}
-		if("2" == code.charAt(2)) {
-			fileUrl = "/html/cardTerm/cardServ/"+cardComp+"00"+code.charAt(2)+".html";
-		}
-		if("3" == code.charAt(2)) {
-			fileUrl = "/html/cardTerm/privacyInfo/"+cardComp+"00"+code.charAt(2)+".html";
-		}
-		if("4" == code.charAt(2)) {
-			fileUrl = "/html/cardTerm/uniqueInfo/"+cardComp+"00"+code.charAt(2)+".html";
-		}
-		$("div[data-id='certTermContent']").load(fileUrl); 
+	// 	$("#subCardAgree").click(function() { //동의버튼
+	// 		$("#tc-cert-appcard #s"+code).prop("checked",true);
+	// 	});
+	// }
+	// if(cardComp != ""){
+	// 	if("1" == code.charAt(2)) {
+	// 		fileUrl = "/html/cardTerm/indivInfo/"+cardComp+"00"+code.charAt(2)+".html";
+	// 	}
+	// 	if("2" == code.charAt(2)) {
+	// 		fileUrl = "/html/cardTerm/cardServ/"+cardComp+"00"+code.charAt(2)+".html";
+	// 	}
+	// 	if("3" == code.charAt(2)) {
+	// 		fileUrl = "/html/cardTerm/privacyInfo/"+cardComp+"00"+code.charAt(2)+".html";
+	// 	}
+	// 	if("4" == code.charAt(2)) {
+	// 		fileUrl = "/html/cardTerm/uniqueInfo/"+cardComp+"00"+code.charAt(2)+".html";
+	// 	}
+	// 	$("div[data-id='certTermContent']").load(fileUrl); 
 	
-		$("#divDrawCardCertTerm .pop_title").text(title); //제목
+	// 	$("#divDrawCardCertTerm .pop_title").text(title); //제목
 		
-		modalLayer.show('divDrawCardCertTerm');//fullLayer.show('divDrawCardCertTerm'); //약관내용
+	// 	modalLayer.show('divDrawCardCertTerm');//fullLayer.show('divDrawCardCertTerm'); //약관내용
 		
-	}
-	else{
-		popalarm("카드사를 선택해주세요.", "check", false);
-	}
+	// }
+	// else{
+	// 	popalarm("카드사를 선택해주세요.", "check", false);
+	// }
 }
 
 /** 카드사 약관 동의 체크박스  세팅(ars, app) */
 function checkAllCardTermsIntro(isChecked) {
 
-	if ($("#tc-cert-ars").hasClass("active")) {
-		$("#tc-cert-ars #role_02 > li > label > input[type=checkbox]").prop("checked", isChecked);
-	} else {
-		$("#tc-cert-appcard #role_02 > li > label > input[type=checkbox]").prop("checked", isChecked);
-	}
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// 	$("#tc-cert-ars #role_02 > li > label > input[type=checkbox]").prop("checked", isChecked);
+	// } else {
+	// 	$("#tc-cert-appcard #role_02 > li > label > input[type=checkbox]").prop("checked", isChecked);
+	// }
 }
 
 /** 카드회사 선택(ars, app) */
 function onClickCardCompIntro(comp_cd, object) {
-	var certType = "";
-	if ($("#tc-cert-ars").hasClass("active")) {
-		$("#cardCompARSIntro").val(comp_cd);
-		certType = "#tc-cert-ars";
-	} else {
-		$("#cardCompAPPIntro").val(comp_cd);
-		certType = "#tc-cert-appcard";
-	}
+	// var certType = "";
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// 	$("#cardCompARSIntro").val(comp_cd);
+	// 	certType = "#tc-cert-ars";
+	// } else {
+	// 	$("#cardCompAPPIntro").val(comp_cd);
+	// 	certType = "#tc-cert-appcard";
+	// }
 	
-	// 선택한 카드 이미지 세팅
-    var label = $(object).children("button").attr("data-label");
-    var icon = $(object).children("button").children("i").attr("class");
-    if ($("#tc-cert-ars").hasClass("active")) {
-    	////$(certType + " > div.card_kind_chose > div > div.card_selectbox > .card_toggle > i").removeClass().addClass(icon);
-        ////$(certType + " > div.card_kind_chose > div > div.card_selectbox > .card_toggle").removeClass("active");
-	} else {
-		////$(certType + " > div.card_selectbox >dl>dt> .card_toggle > i").removeClass().addClass(icon);
-        ////$(certType + " > div.card_kind_chose > div > div.card_selectbox > .card_toggle").removeClass("active");
-		////domShow('includeNormalGuideAppSelect');
-	}
+	// // 선택한 카드 이미지 세팅
+    // var label = $(object).children("button").attr("data-label");
+    // var icon = $(object).children("button").children("i").attr("class");
+    // if ($("#tc-cert-ars").hasClass("active")) {
+    // 	////$(certType + " > div.card_kind_chose > div > div.card_selectbox > .card_toggle > i").removeClass().addClass(icon);
+    //     ////$(certType + " > div.card_kind_chose > div > div.card_selectbox > .card_toggle").removeClass("active");
+	// } else {
+	// 	////$(certType + " > div.card_selectbox >dl>dt> .card_toggle > i").removeClass().addClass(icon);
+    //     ////$(certType + " > div.card_kind_chose > div > div.card_selectbox > .card_toggle").removeClass("active");
+	// 	////domShow('includeNormalGuideAppSelect');
+	// }
     
-    // 약관 분기
-	$(certType + " .chk_group input[type=checkbox]").prop("checked",false);//해당화면에 모든 checkbox들의 체크를해제시킨다.
-	if(comp_cd == 'SS') { // 삼성 카드 선택할 경우 본인인증 약관동의를 받지 않음
-		$(certType + " #role_02 > li:nth-child(1)").hide();
-	} else {
-		$(certType + " #role_02 > li:nth-child(1)").show();
-	}
+    // // 약관 분기
+	// $(certType + " .chk_group input[type=checkbox]").prop("checked",false);//해당화면에 모든 checkbox들의 체크를해제시킨다.
+	// if(comp_cd == 'SS') { // 삼성 카드 선택할 경우 본인인증 약관동의를 받지 않음
+	// 	$(certType + " #role_02 > li:nth-child(1)").hide();
+	// } else {
+	// 	$(certType + " #role_02 > li:nth-child(1)").show();
+	// }
 	
-	checkValidCardNoLengthIntro();
+	// checkValidCardNoLengthIntro();
 }
 
 /** 카드 번호 입력 길이 체크 */
 function checkValidCardNoLengthIntro() {
 	
-	var card_no = ""; 
-	var mtel_no = "";
-	var comp_cd = "";
-	if ($("#tc-cert-ars").hasClass("active")) {
-		comp_cd = $("#cardCompARSIntro").val();
-		card_no = $("#includeCardNo1").val()+$("#includeCardNo2").val()+$("#includeCardNo3").val()+$("#includeCardNo4").val();
-		mtel_no = $("#includeCellPhoneNo").val();
-	} else {
-		comp_cd = $("#cardCompAPPIntro").val();
-	}
+	// var card_no = ""; 
+	// var mtel_no = "";
+	// var comp_cd = "";
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// 	comp_cd = $("#cardCompARSIntro").val();
+	// 	card_no = $("#includeCardNo1").val()+$("#includeCardNo2").val()+$("#includeCardNo3").val()+$("#includeCardNo4").val();
+	// 	mtel_no = $("#includeCellPhoneNo").val();
+	// } else {
+	// 	comp_cd = $("#cardCompAPPIntro").val();
+	// }
 
-	if(comp_cd == "HD") {//현대
-		if( card_no.length != 0 && card_no.length != 14 && card_no.length != 16) {
-			$("#errMsg_includeCardNo").show();
-			$("#div_includeCardNos").addClass("error");
-		} else {
-			$("#errMsg_includeCardNo").hide();
-			$("#div_includeCardNos").removeClass("error");
-		}
-	} else {
-		if( card_no.length != 0 && card_no.length != 15 && card_no.length != 16 ) {
-			$("#errMsg_includeCardNo").show();
-			$("#div_includeCardNos").addClass("error");
-		} else {
-			$("#errMsg_includeCardNo").hide();
-			$("#div_includeCardNos").removeClass("error");
-		}
-	}
+	// if(comp_cd == "HD") {//현대
+	// 	if( card_no.length != 0 && card_no.length != 14 && card_no.length != 16) {
+	// 		$("#errMsg_includeCardNo").show();
+	// 		$("#div_includeCardNos").addClass("error");
+	// 	} else {
+	// 		$("#errMsg_includeCardNo").hide();
+	// 		$("#div_includeCardNos").removeClass("error");
+	// 	}
+	// } else {
+	// 	if( card_no.length != 0 && card_no.length != 15 && card_no.length != 16 ) {
+	// 		$("#errMsg_includeCardNo").show();
+	// 		$("#div_includeCardNos").addClass("error");
+	// 	} else {
+	// 		$("#errMsg_includeCardNo").hide();
+	// 		$("#div_includeCardNos").removeClass("error");
+	// 	}
+	// }
 }
 
 /** 휴대전화번호 길이 체크 */
 function checkValidCellPhoneNoLengthIntro() {
-	if($("#includeCellPhoneNo").val() == "" || $("#includeCellPhoneNo").val().length < 10) {
-		$("#errMsg_includeCellPhoneNo").show();
-		$("#includeCellPhoneNo").addClass("error");
-	} else {
-		$("#errMsg_includeCellPhoneNo").hide();
-		$("#includeCellPhoneNo").removeClass("error");
-	}
+	// if($("#includeCellPhoneNo").val() == "" || $("#includeCellPhoneNo").val().length < 10) {
+	// 	$("#errMsg_includeCellPhoneNo").show();
+	// 	$("#includeCellPhoneNo").addClass("error");
+	// } else {
+	// 	$("#errMsg_includeCellPhoneNo").hide();
+	// 	$("#includeCellPhoneNo").removeClass("error");
+	// }
 }
 
 /** 입력 항목 체크(ars, app) */
 function checkValidIntroInputValues(authMod){
-	var card_no = ""; 
-	var mtel_no = "";
-	var comp_cd = "";
-	var certType = "";
-	var birth_gender = "";
+	// var card_no = ""; 
+	// var mtel_no = "";
+	// var comp_cd = "";
+	// var certType = "";
+	// var birth_gender = "";
 	
-	if ($("#tc-cert-ars").hasClass("active")) {
-		comp_cd = $("#cardCompARSIntro").val();
-		card_no = $("#includeCardNo1").val()+$("#includeCardNo2").val()+$("#includeCardNo3").val()+$("#includeCardNo4").val();
-		mtel_no = $("#includeCellPhoneNo").val();
-		certType = "#tc-cert-ars";
-	} else {
-		comp_cd = $("#cardCompAPPIntro").val();
-		certType = "#tc-cert-appcard";
-	}
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// 	comp_cd = $("#cardCompARSIntro").val();
+	// 	card_no = $("#includeCardNo1").val()+$("#includeCardNo2").val()+$("#includeCardNo3").val()+$("#includeCardNo4").val();
+	// 	mtel_no = $("#includeCellPhoneNo").val();
+	// 	certType = "#tc-cert-ars";
+	// } else {
+	// 	comp_cd = $("#cardCompAPPIntro").val();
+	// 	certType = "#tc-cert-appcard";
+	// }
 	
-	if( comp_cd == "" ) {
-		popalarm("카드사를 선택해 주세요.", "info", false,"확인", "");
-		return;
-	}
+	// if( comp_cd == "" ) {
+	// 	popalarm("카드사를 선택해 주세요.", "info", false,"확인", "");
+	// 	return;
+	// }
 	
-	if(authMod == "ARS") { // ARS인증만 체크
-		if(comp_cd == "HD"){
-			if( card_no.length != 16 && card_no.length != 14 ){
-				popalarm("<p>카드번호를 정확하게 입력해주세요</p>", "check", false);
-			    $("#errMsg_includeCardNo").show();
-				$("#includeCardNo").addClass("error");
-				return;
-			}
-		} else {
-			if( card_no.length != 16 && card_no.length != 15 ){
-				popalarm("<p>카드번호를 정확하게 입력해주세요</p>", "check", false);
-				$("#errMsg_includeCardNo").hide();
-				$("#includeCardNo").removeClass("error");
-				return;
-			}
-		}
+	// if(authMod == "ARS") { // ARS인증만 체크
+	// 	if(comp_cd == "HD"){
+	// 		if( card_no.length != 16 && card_no.length != 14 ){
+	// 			popalarm("<p>카드번호를 정확하게 입력해주세요</p>", "check", false);
+	// 		    $("#errMsg_includeCardNo").show();
+	// 			$("#includeCardNo").addClass("error");
+	// 			return;
+	// 		}
+	// 	} else {
+	// 		if( card_no.length != 16 && card_no.length != 15 ){
+	// 			popalarm("<p>카드번호를 정확하게 입력해주세요</p>", "check", false);
+	// 			$("#errMsg_includeCardNo").hide();
+	// 			$("#includeCardNo").removeClass("error");
+	// 			return;
+	// 		}
+	// 	}
 		
-		if( mtel_no == "" ) {
-			popalarm("<p>휴대폰번호를 정확히 입력해주세요.</p>", "info", false,"확인","includeCellPhoneNo");
-			$("#errMsg_includeCellPhoneNo").show();
-			$("#includeCellPhoneNo").addClass("error");
-			return;
-		}		
-	}
+	// 	if( mtel_no == "" ) {
+	// 		popalarm("<p>휴대폰번호를 정확히 입력해주세요.</p>", "info", false,"확인","includeCellPhoneNo");
+	// 		$("#errMsg_includeCellPhoneNo").show();
+	// 		$("#includeCellPhoneNo").addClass("error");
+	// 		return;
+	// 	}		
+	// }
 	
-	//본인인증서비스 약관 동의 체크여부 확인
-	if( (!$( certType +' #role_02 > li:nth-child(1) > label > input[type=checkbox]').is(':checked')) && comp_cd != 'SS' ){ // 삼성제외
-		popalarm("본인인증 서비스 약관 동의는 필수 입니다.", "check", false);
-		return;
-	}
+	// //본인인증서비스 약관 동의 체크여부 확인
+	// if( (!$( certType +' #role_02 > li:nth-child(1) > label > input[type=checkbox]').is(':checked')) && comp_cd != 'SS' ){ // 삼성제외
+	// 	popalarm("본인인증 서비스 약관 동의는 필수 입니다.", "check", false);
+	// 	return;
+	// }
 	
-	//카드사 서비스 약관 동의 체크여부 확인
-	if( !$( certType +' #role_02 > li:nth-child(2) > label > input[type=checkbox]').is(':checked')){
-		popalarm("카드사 서비스 약관 동의는 필수 입니다.", "check", false);
-		return;
-	}
+	// //카드사 서비스 약관 동의 체크여부 확인
+	// if( !$( certType +' #role_02 > li:nth-child(2) > label > input[type=checkbox]').is(':checked')){
+	// 	popalarm("카드사 서비스 약관 동의는 필수 입니다.", "check", false);
+	// 	return;
+	// }
 	
-	// 개인정보 수집 및 이용에 대한 동의 체크여부 확인
-	if( !$( certType +' #role_02 > li:nth-child(3) > label > input[type=checkbox]').is(':checked')){
-		popalarm("개인정보 수집 및 이용에 대한 동의 약관은 필수입니다.", "check", false);
-		return;
-	}
+	// // 개인정보 수집 및 이용에 대한 동의 체크여부 확인
+	// if( !$( certType +' #role_02 > li:nth-child(3) > label > input[type=checkbox]').is(':checked')){
+	// 	popalarm("개인정보 수집 및 이용에 대한 동의 약관은 필수입니다.", "check", false);
+	// 	return;
+	// }
 	
-	//고유식별자 처리 약관 동의 체크여부 확인
-	if( !$( certType +' #role_02 > li:nth-child(4) > label > input[type=checkbox]').is(':checked')){
-		popalarm("고유식별자 처리 약관 동의는 필수 입니다.", "check", false);
-		return;
-	}
+	// //고유식별자 처리 약관 동의 체크여부 확인
+	// if( !$( certType +' #role_02 > li:nth-child(4) > label > input[type=checkbox]').is(':checked')){
+	// 	popalarm("고유식별자 처리 약관 동의는 필수 입니다.", "check", false);
+	// 	return;
+	// }
 	
-	// 본인확인 이름 세팅
-	if ( isEmpty( $("#includeNm").val() )) { 	
-		var CM559CustInfo = JSON.parse($("#CM559CustInfo").val());
-		$("#includeNm").val(fnUnSign(CM559CustInfo.custNm));//$("#includeNm").val(CM559CustInfo.custNm);			
-		$("#includeBirthD").val(CM559CustInfo.custrnmBday);	
-	}
+	// // 본인확인 이름 세팅
+	// if ( isEmpty( $("#includeNm").val() )) { 	
+	// 	var CM559CustInfo = JSON.parse($("#CM559CustInfo").val());
+	// 	$("#includeNm").val(fnUnSign(CM559CustInfo.custNm));//$("#includeNm").val(CM559CustInfo.custNm);			
+	// 	$("#includeBirthD").val(CM559CustInfo.custrnmBday);	
+	// }
 	
 
-	if(authMod == "ARS") { // ARS인증만 체크
-		// checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
-		if(comp_cd == "HD" && card_no.length == 14){
-			popalarm("다이너스 카드이신가요?", "info", true, '' , checkIntroDinersAmex, '');
-		} else if(comp_cd != "HD" && card_no.length == 15) {
-			popalarm("AMEX 카드이신가요?", "info", true, '' , checkIntroDinersAmex, '');
-		} else if(card_no.length == 16) {
-			checkIntroDinersAmex();
-		}
-	}
+	// if(authMod == "ARS") { // ARS인증만 체크
+	// 	// checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
+	// 	if(comp_cd == "HD" && card_no.length == 14){
+	// 		popalarm("다이너스 카드이신가요?", "info", true, '' , checkIntroDinersAmex, '');
+	// 	} else if(comp_cd != "HD" && card_no.length == 15) {
+	// 		popalarm("AMEX 카드이신가요?", "info", true, '' , checkIntroDinersAmex, '');
+	// 	} else if(card_no.length == 16) {
+	// 		checkIntroDinersAmex();
+	// 	}
+	// }
 	
-	if(authMod == "APP") { // 앱카드 인증 요청
-		onIntro_sendKcb004();
-	}
+	// if(authMod == "APP") { // 앱카드 인증 요청
+	// 	onIntro_sendKcb004();
+	// }
 
 }
 
 /** 인증완료 버튼 클릭 안내 후 ARS 요청 */
 function checkIntroDinersAmex() {
 	// checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
-	popalarm("ARS 통화 종료 후 화면의 '인증 완료' 버튼을 눌러주세요.", "info", false, '', onIntro_sendKcb001, '');
-	return;
+	// popalarm("ARS 통화 종료 후 화면의 '인증 완료' 버튼을 눌러주세요.", "info", false, '', onIntro_sendKcb001, '');
+	// return;
 }
 
 /** ARS 요청 */
 function onIntro_sendKcb001() {
-	// checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
-	//$('.dimmed').hide(); // 이중으로 나올경우 다른 액션불가로 인한  조치
+	// // checkValidIntroInputValues() => checkIntroDinersAmex() => on_sendKcb001()
+	// //$('.dimmed').hide(); // 이중으로 나올경우 다른 액션불가로 인한  조치
 
-	var card_no = ""; 
-	var mtel_no = "";
-	var comp_cd = "";
-	var birth_gender = "";
-	var nm = "";
+	// var card_no = ""; 
+	// var mtel_no = "";
+	// var comp_cd = "";
+	// var birth_gender = "";
+	// var nm = "";
 	
-	if ($("#tc-cert-ars").hasClass("active")) {
-		comp_cd = $("#cardCompARSIntro").val();
-		card_no = $("#includeCardNo1").val()+$("#includeCardNo2").val()+$("#includeCardNo3").val()+$("#includeCardNo4").val();
-		mtel_no = $("#includeCellPhoneNo").val();		
-		nm  = $("#includeNm").val();
-		birth_gender = $("#includeBirthD").val();
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// 	comp_cd = $("#cardCompARSIntro").val();
+	// 	card_no = $("#includeCardNo1").val()+$("#includeCardNo2").val()+$("#includeCardNo3").val()+$("#includeCardNo4").val();
+	// 	mtel_no = $("#includeCellPhoneNo").val();		
+	// 	nm  = $("#includeNm").val();
+	// 	birth_gender = $("#includeBirthD").val();
 		
-	} else {
-		comp_cd = $("#cardCompAPPIntro").val();
-	}
+	// } else {
+	// 	comp_cd = $("#cardCompAPPIntro").val();
+	// }
 	
-	var checkParam = new Object();
-	if(card_no.length == 14){       // 다이너스
-		checkParam.crdTpCd = "02";
-		checkParam.crdNo   = card_no.substr(8, 6);
-	}else if(card_no.length == 15){ // 아멕스
-		checkParam.crdTpCd = "01";
-		checkParam.crdNo   = card_no.substr(7, 8);
-	}else if(card_no.length == 16){ // 일반
-		checkParam.crdTpCd = "00";
-		checkParam.crdNo   = card_no.substr(8, 8);
-	}
+	// var checkParam = new Object();
+	// if(card_no.length == 14){       // 다이너스
+	// 	checkParam.crdTpCd = "02";
+	// 	checkParam.crdNo   = card_no.substr(8, 6);
+	// }else if(card_no.length == 15){ // 아멕스
+	// 	checkParam.crdTpCd = "01";
+	// 	checkParam.crdNo   = card_no.substr(7, 8);
+	// }else if(card_no.length == 16){ // 일반
+	// 	checkParam.crdTpCd = "00";
+	// 	checkParam.crdNo   = card_no.substr(8, 8);
+	// }
 
-	checkParam.binNo   = card_no.substr(0, 6);
-	checkParam.crdCd   = comp_cd;
-	checkParam.mbphnNo = mtel_no;
-	checkParam.birthGender = birth_gender;
-	checkParam.nm = nm;
+	// checkParam.binNo   = card_no.substr(0, 6);
+	// checkParam.crdCd   = comp_cd;
+	// checkParam.mbphnNo = mtel_no;
+	// checkParam.birthGender = birth_gender;
+	// checkParam.nm = nm;
 
-	callApiKcb001(checkParam, IntroCallbackSendKcb001);
+	// callApiKcb001(checkParam, IntroCallbackSendKcb001);
 	
 }
 
 /** ARS요청 성공 시 콜백 액션 */
 function IntroCallbackSendKcb001(data) {
-	var txSeqNo  = data.data.Response.txSeqNo;
-	var crdCd = data.data.Response.crdCd;
-	$("#includeTxSeqNo").val(txSeqNo);
-	$("#includeCrdCd").val(crdCd);
+	// var txSeqNo  = data.data.Response.txSeqNo;
+	// var crdCd = data.data.Response.crdCd;
+	// $("#includeTxSeqNo").val(txSeqNo);
+	// $("#includeCrdCd").val(crdCd);
 
-	// 인증요청 비활성화, 인증완료 버튼 활성화
-	domDisabled("btnIntroArsRequest");
-	setTimeout( function(){
-		domEnabled("btnIntroArsAuthComplete");
-	},3000);
+	// // 인증요청 비활성화, 인증완료 버튼 활성화
+	// domDisabled("btnIntroArsRequest");
+	// setTimeout( function(){
+	// 	domEnabled("btnIntroArsAuthComplete");
+	// },3000);
 }
 
 /** 인증완료 버튼 클릭 */
 function onclickbtnIntroArsAuthComplete() {
 	
-	if($("#includeTxSeqNo").val != "" && $("#includeCrdCd").val() != "") {
-		var checkParam = new Object();
-		checkParam.txSeqNo = $('#includeTxSeqNo').val();  
-		checkParam.crdCd   = $('#includeCrdCd').val();
-		checkParam.certPathCd   = $('#certPathCd').val();
-		checkParam.certCustId   = $('#certCustId').val();
-		checkParam.certCtrtId   = $('#certCtrtId').val();
-		callApiKcb002(checkParam, IntorCallbackSendKcb002);
-	}
+	// if($("#includeTxSeqNo").val != "" && $("#includeCrdCd").val() != "") {
+	// 	var checkParam = new Object();
+	// 	checkParam.txSeqNo = $('#includeTxSeqNo').val();  
+	// 	checkParam.crdCd   = $('#includeCrdCd').val();
+	// 	checkParam.certPathCd   = $('#certPathCd').val();
+	// 	checkParam.certCustId   = $('#certCustId').val();
+	// 	checkParam.certCtrtId   = $('#certCtrtId').val();
+	// 	callApiKcb002(checkParam, IntorCallbackSendKcb002);
+	// }
 }
 
 
 /** ARS인증완료 성공 시 콜백 액션 */
 function IntorCallbackSendKcb002(data) {
 	// 인증요청 활성화, 인증완료 버튼 비활성화
-	domEnabled(["btnIntroArsRequest"]);
-	domDisabled(["btnIntroArsAuthComplete", "btnAppAuthComplete"]);
-	var response = data.data.Response;
+	// domEnabled(["btnIntroArsRequest"]);
+	// domDisabled(["btnIntroArsAuthComplete", "btnAppAuthComplete"]);
+	// var response = data.data.Response;
 
-	console.log("rsltName="+response.rsltName+" / includeNm="+$("#includeNm").val());
-	var aRslt = response.rsltName;
-	var bRslt = $("#includeNm").val();
+	// console.log("rsltName="+response.rsltName+" / includeNm="+$("#includeNm").val());
+	// var aRslt = response.rsltName;
+	// var bRslt = $("#includeNm").val();
 	
-	aRslt = removeStrSpace(aRslt);
-	bRslt = removeStrSpace(bRslt);
-	//console.log("aRslt2="+aRslt+" / bRslt2="+bRslt);
-	aRslt = aRslt.toUpperCase();
-	bRslt = bRslt.toUpperCase();
-	console.log("aRslt3="+aRslt+" / bRslt3="+bRslt);
+	// aRslt = removeStrSpace(aRslt);
+	// bRslt = removeStrSpace(bRslt);
+	// //console.log("aRslt2="+aRslt+" / bRslt2="+bRslt);
+	// aRslt = aRslt.toUpperCase();
+	// bRslt = bRslt.toUpperCase();
+	// console.log("aRslt3="+aRslt+" / bRslt3="+bRslt);
 	
 	
-	// 본인확인 이름대조
-	if (aRslt == bRslt) {
-		callbackFromNormalOnBody();
-	} else {
-		popalarm('입력하신 이름과 신용카드사에 등록된 이름이 다릅니다. 신용카드사 확인이 필요합니다. 오류코드 (kcb002)', "info", false);
-		return;
-	}
+	// // 본인확인 이름대조
+	// if (aRslt == bRslt) {
+	// 	callbackFromNormalOnBody();
+	// } else {
+	// 	popalarm('입력하신 이름과 신용카드사에 등록된 이름이 다릅니다. 신용카드사 확인이 필요합니다. 오류코드 (kcb002)', "info", false);
+	// 	return;
+	// }
 }
 
 
 /** 앱카드 인증요청 */
 function onIntro_sendKcb004(){
 
-	var card_no = ""; 
-	var mtel_no = "";
-	var comp_cd = "";
-	if ($("#tc-cert-ars").hasClass("active")) {
-	} else {
-		comp_cd = $("#cardCompAPPIntro").val();
-	}
+	// var card_no = ""; 
+	// var mtel_no = "";
+	// var comp_cd = "";
+	// if ($("#tc-cert-ars").hasClass("active")) {
+	// } else {
+	// 	comp_cd = $("#cardCompAPPIntro").val();
+	// }
 	
-	var checkParam = new Object();
-	checkParam.crdCd   = comp_cd;
-	checkParam.mbphnNo = "";
+	// var checkParam = new Object();
+	// checkParam.crdCd   = comp_cd;
+	// checkParam.mbphnNo = "";
 
-	callApiKcb004(checkParam, introCallbackSendKcb004);
+	// callApiKcb004(checkParam, introCallbackSendKcb004);
 }
 
 
 /** 앱카드 인증요청 성공 시 콜백 액션 */
 function introCallbackSendKcb004(data) {
-	var response = data.data.Response;
-	var txSeqNo  = response.txSeqNo;
-	var txSyncCd = response.txSyncCd;
-	var crdCd = response.crdCd;
+	// var response = data.data.Response;
+	// var txSeqNo  = response.txSeqNo;
+	// var txSyncCd = response.txSyncCd;
+	// var crdCd = response.crdCd;
 
-	$("#includeTxSeqNo").val(txSeqNo);
-	$("#includeCrdCd").val(crdCd);
-	$("#includeNormalSpanTxSyncCd").html(txSyncCd);
+	// $("#includeTxSeqNo").val(txSeqNo);
+	// $("#includeCrdCd").val(crdCd);
+	// $("#includeNormalSpanTxSyncCd").html(txSyncCd);
 
-	if(crdCd == "LT") { // 롯데카드
-		domShows(["includeNormalGuideAppInstall","includeNormalGuideAppLT"]);
-	} else {
-		domShows(["includeNormalGuideAppInstall","includeNormalGuideApp-LT"]);
-	}
+	// if(crdCd == "LT") { // 롯데카드
+	// 	domShows(["includeNormalGuideAppInstall","includeNormalGuideAppLT"]);
+	// } else {
+	// 	domShows(["includeNormalGuideAppInstall","includeNormalGuideApp-LT"]);
+	// }
 	
-	// 앱 경로 세팅
-	var typeOS = getOsInfo().toLowerCase(); //in util.js
-	var andrAppSchm = response.andrAppSchm;
-	var andrdAppSchmIntent = response.andrdAppSchmIntent;
-	var iosAppSchm = response.iosAppSchm;
+	// // 앱 경로 세팅
+	// var typeOS = getOsInfo().toLowerCase(); //in util.js
+	// var andrAppSchm = response.andrAppSchm;
+	// var andrdAppSchmIntent = response.andrdAppSchmIntent;
+	// var iosAppSchm = response.iosAppSchm;
 
-	andrdAppSchmIntent = andrdAppSchmIntent.replace('[[QRCODE]]', txSyncCd);
-	iosAppSchm = iosAppSchm.replace('[[QRCODE]]', txSyncCd);
+	// andrdAppSchmIntent = andrdAppSchmIntent.replace('[[QRCODE]]', txSyncCd);
+	// iosAppSchm = iosAppSchm.replace('[[QRCODE]]', txSyncCd);
 	
-	if(typeOS == "android") {
-		var i = andrdAppSchmIntent.indexOf('#');
-		var originSchm = 'intent://' + andrdAppSchmIntent.replace(andrdAppSchmIntent.substr(0,i),'');
-		$('#includeAppUrlManual').val(originSchm);         // 앱카드인증 수동 URL
-		$('#includeAppUrlDirect').val(andrdAppSchmIntent); // 앱카드인증 URL
-	} else if(typeOS == 'ios') {
-		var i = iosAppSchm.indexOf(':');
-		var originSchm = iosAppSchm.substr(0,i)+ '://';
+	// if(typeOS == "android") {
+	// 	var i = andrdAppSchmIntent.indexOf('#');
+	// 	var originSchm = 'intent://' + andrdAppSchmIntent.replace(andrdAppSchmIntent.substr(0,i),'');
+	// 	$('#includeAppUrlManual').val(originSchm);         // 앱카드인증 수동 URL
+	// 	$('#includeAppUrlDirect').val(andrdAppSchmIntent); // 앱카드인증 URL
+	// } else if(typeOS == 'ios') {
+	// 	var i = iosAppSchm.indexOf(':');
+	// 	var originSchm = iosAppSchm.substr(0,i)+ '://';
 
-		$('#includeAppUrlManual').val(originSchm); // 앱카드인증 수동 URL
-		$('#includeAppUrlDirect').val(iosAppSchm); // 앱카드인증 URL
-	}
+	// 	$('#includeAppUrlManual').val(originSchm); // 앱카드인증 수동 URL
+	// 	$('#includeAppUrlDirect').val(iosAppSchm); // 앱카드인증 URL
+	// }
 	
-	// 앱 실행
-	includeNormalStartApp();
+	// // 앱 실행
+	// includeNormalStartApp();
 	
-	domShow('includeNormalGuideAppInstall');
-	setTimeout( function() {
-		domEnabled('btnAppAuthComplete');
-	},3000);
+	// domShow('includeNormalGuideAppInstall');
+	// setTimeout( function() {
+	// 	domEnabled('btnAppAuthComplete');
+	// },3000);
 }
 
 
 /** 앱카드인증 앱실행 */
 function includeNormalStartApp(str){
-	var typeOS = getOsInfo().toLowerCase();
-	var openAt = new Date;
-	var url = $('#includeAppUrlDirect').val();
-	if(str == 'man') {
-		url = $('#includeAppUrlManual').val();
-	}
+	// var typeOS = getOsInfo().toLowerCase();
+	// var openAt = new Date;
+	// var url = $('#includeAppUrlDirect').val();
+	// if(str == 'man') {
+	// 	url = $('#includeAppUrlManual').val();
+	// }
 	
-	if(typeOS ==  'android'){
-		if(new Date - openAt < 2000){
-			setTimeout( function(){
-				location.href = url;
-			},1000);
-		}
-	} else if(typeOS ==  'ios'){
+	// if(typeOS ==  'android'){
+	// 	if(new Date - openAt < 2000){
+	// 		setTimeout( function(){
+	// 			location.href = url;
+	// 		},1000);
+	// 	}
+	// } else if(typeOS ==  'ios'){
 		
-		if(new Date - openAt < 5000){
-			setTimeout( function(){
-				includeNormalInstallApp();
-			},4000);
-		}
-		location.href = url;
-	}
+	// 	if(new Date - openAt < 5000){
+	// 		setTimeout( function(){
+	// 			includeNormalInstallApp();
+	// 		},4000);
+	// 	}
+	// 	location.href = url;
+	// }
 }
 
 
@@ -3881,63 +3755,63 @@ function includeNormalStartApp(str){
 /** 앱 설치 */
 function includeNormalInstallApp() {
 
-	var url = "";
-	var typeOS = getOsInfo();//in util.js
+	// var url = "";
+	// var typeOS = getOsInfo();//in util.js
 	
-	if($("#btnSelectCardCompApp > i").hasClass("c_none")) {
-		popalarm("카드사를 선택해 주세요.", "info", false);
-		return;
-	} else {
-		if(typeOS == "android") {
-			if($("#btnSelectCardCompApp > i").attr("class").endsWith("bc")) {
-				url = "http://mobile.vpay.co.kr/jsp/MISP/andown.jsp";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hd")) {
-				url = "market://details?id=com.hyundaicard.appcard";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hn")) {
-				url = "market://details?id=com.hanaskcard.paycla";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("kb")) {
-				url = "market://details?id=com.kbcard.cxh.appcard";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("lt")) {
-				url = "market://details?id=com.lcacApp";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("nh")) {
-				url = "market://details?id=nh.smart.nhallonepay";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("sh")) {
-				url = "market://details?id=com.shcard.smartpay";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("ss")) {
-				url = "market://details?id=kr.co.samsungcard.mpocket";
-			}
-		} else if(typeOS == "ios") {
-			if($("#btnSelectCardCompApp > i").attr("class").endsWith("bc")) {
-				url = "https://appsto.re/kr/FBgaw.i";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hd")) {
-				url = "https://appsto.re/kr/GkA4P.i";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hn")) {
-				url = "https://appsto.re/kr/7XeGY.i";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("kb")) {
-				url = "https://appsto.re/kr/Mq4CP.i";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("lt")) {
-				url = "https://appsto.re/kr/GrSaP.i";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("nh")) {
-				url = "https://itunes.apple.com/kr/app/id1177889176?mt=8";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("sh")) {
-				url = "https://appsto.re/kr/TtXhI.i";
-			} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("ss")) {
-				url = "https://appsto.re/kr/S1v5F.i";
-			}
-		} else {
-			var strErr  = "지원 하지 않는 기종 입니다.";
-			popalarm(strErr, "info", false);
-			return;
-		}
-		location.href = url;
-	}
+	// if($("#btnSelectCardCompApp > i").hasClass("c_none")) {
+	// 	popalarm("카드사를 선택해 주세요.", "info", false);
+	// 	return;
+	// } else {
+	// 	if(typeOS == "android") {
+	// 		if($("#btnSelectCardCompApp > i").attr("class").endsWith("bc")) {
+	// 			url = "http://mobile.vpay.co.kr/jsp/MISP/andown.jsp";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hd")) {
+	// 			url = "market://details?id=com.hyundaicard.appcard";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hn")) {
+	// 			url = "market://details?id=com.hanaskcard.paycla";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("kb")) {
+	// 			url = "market://details?id=com.kbcard.cxh.appcard";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("lt")) {
+	// 			url = "market://details?id=com.lcacApp";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("nh")) {
+	// 			url = "market://details?id=nh.smart.nhallonepay";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("sh")) {
+	// 			url = "market://details?id=com.shcard.smartpay";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("ss")) {
+	// 			url = "market://details?id=kr.co.samsungcard.mpocket";
+	// 		}
+	// 	} else if(typeOS == "ios") {
+	// 		if($("#btnSelectCardCompApp > i").attr("class").endsWith("bc")) {
+	// 			url = "https://appsto.re/kr/FBgaw.i";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hd")) {
+	// 			url = "https://appsto.re/kr/GkA4P.i";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("hn")) {
+	// 			url = "https://appsto.re/kr/7XeGY.i";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("kb")) {
+	// 			url = "https://appsto.re/kr/Mq4CP.i";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("lt")) {
+	// 			url = "https://appsto.re/kr/GrSaP.i";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("nh")) {
+	// 			url = "https://itunes.apple.com/kr/app/id1177889176?mt=8";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("sh")) {
+	// 			url = "https://appsto.re/kr/TtXhI.i";
+	// 		} else if($("#btnSelectCardCompApp > i").attr("class").endsWith("ss")) {
+	// 			url = "https://appsto.re/kr/S1v5F.i";
+	// 		}
+	// 	} else {
+	// 		var strErr  = "지원 하지 않는 기종 입니다.";
+	// 		popalarm(strErr, "info", false);
+	// 		return;
+	// 	}
+	// 	location.href = url;
+	// }
 }
 
 
 </script>
 <!-- 팝업 오픈 모드, 레이어 밖에 있어야 함 -->
-<input type="hidden" id="includeOpenMode" value="">
-<input type="hidden" id="includeCustId" value="">
+<!-- <input type="hidden" id="includeOpenMode" value="">
+<input type="hidden" id="includeCustId" value=""> -->
 
 
 
@@ -3989,7 +3863,7 @@ function includeNormalInstallApp() {
                                                     <p>카드 촬영 시 정보가 자동으로 입력됩니다.</p> 
                                                 </div>    
                                                 <label for="c-camera" class="camera_call"> 
-                                                    <p class="btn btn_camera" onclick="uploadOcrImgClick(&#39;CREDIT&#39;);">
+                                                    <p class="btn btn_camera" onclick="uploadOcrImgClick('CREDIT');">
                                                         <i class="icon_camera"></i><span>촬영하기</span>
                                                     </p> 
                                                 </label>                                       
@@ -4027,7 +3901,7 @@ function includeNormalInstallApp() {
                                         <div class="mo_box" mlayerinner="true">
                                             <label>
                                                 <p class="label">본인명의 휴대폰번호</p>
-                                                <input type="number" pattern="\d*" id="includeCellPhoneNo" name="includeCellPhoneNo" value="" class="w100p" maxlength="11" placeholder="&#39;-&#39;없이 입력해주세요">
+                                                <input type="number" pattern="\d*" id="includeCellPhoneNo" name="includeCellPhoneNo" value="" class="w100p" maxlength="11" placeholder="'-'없이 입력해주세요">
                                             </label>
                                             <div id="errMsg_includeCellPhoneNo" class="txt_error" style="display:none;"><i class="sp_common ic_error"></i>휴대폰번호를 정확히 입력해주세요.</div>
                                         </div>
@@ -4134,7 +4008,7 @@ function includeNormalInstallApp() {
                                         <div id="includeNormalGuideApp-LT" class="appcard_install"><!-- 롯데빼고 -->
                                             <div class="appcard_help">
                                                 <p class="txt">앱카드가 실행되지 않았나요?</p>
-                                                <p class="button"><button type="button" class="btn btn_small" onclick="includeNormalStartApp(&#39;man&#39;);">앱 실행</button></p>
+                                                <p class="button"><button type="button" class="btn btn_small" onclick="includeNormalStartApp('man');">앱 실행</button></p>
                                             </div>
                                             <ol>
                                                 <li>앱카드 수동 실행</li>
@@ -5318,7 +5192,7 @@ function callApiKbArsResult(param){
 					                <label for="c-cert-phone">휴대폰번호</label>
 					            </div>
 					            <div class="form_group has_btn">
-					                <input type="number" pattern="\d*" placeholder="&#39;-&#39;없이 입력해주세요" maxlength="11" oninput="onlyNumInput(this); maxLengthCheck(this); kbPushPhonInit()" id="kbPushPhon">
+					                <input type="number" pattern="\d*" placeholder="'-'없이 입력해주세요" maxlength="11" oninput="onlyNumInput(this); maxLengthCheck(this); kbPushPhonInit()" id="kbPushPhon">
 					                <button type="button" class="btn_submit" id="btnCallPush" onclick="btnCallApiKbsign2()">전송</button>
 					            </div>
 					            
@@ -5418,10 +5292,10 @@ function callApiKbArsResult(param){
 
 
 <!-- 유심가입 가입신청 JS -->
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/applyToJoin.js.다운로드"></script>
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/applyToJoin.js.다운로드"></script> -->
 
 <!-- 유심가입 통신사전문 01:LG U 02:KT 03:SKT JS-->
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/applyFor02Usim.js.다운로드"></script>
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/applyFor02Usim.js.다운로드"></script> -->
 
 <script type="text/javascript">
 var gErrCdList = new Array();
@@ -5518,7 +5392,7 @@ var gProdGrpCd = ""; //요금제그룹코드 전역변수
 var applMYn = false;
 
 $(document).ready(function(){	
-	init();//초기세팅
+	// init();//초기세팅
 	
 	if('' == "Y" && isEmpty('')) {
 		popalarm("일시적으로 오류가 발생하였습니다. 다시 시도해주세요.", "info", false, "", goMain);
@@ -6053,15 +5927,15 @@ $(document).ready(function(){
 	});
 	
 	// 미성년자 : 첨부서류 MultiFile 생성 (증빙서류 첨부)
-	$('#file2').MultiFile({
-		max: 5,
-		maxfile: 10240,
-		maxsize: 102400,
-		STRING: {
-			  remove : '',
-	  	},
-   		list : '#fileList1'
-	});
+	// $('#file2').MultiFile({
+	// 	max: 5,
+	// 	maxfile: 10240,
+	// 	maxsize: 102400,
+	// 	STRING: {
+	// 		  remove : '',
+	//   	},
+   	// 	list : '#fileList1'
+	// });
 	
 	//미성년자 : 가입사전조회 버튼클릭액션 
 	$("#btnMinorJoinAuth").click(function() {
@@ -6452,37 +6326,37 @@ $(document).ready(function(){
 </script>
 
 <!-- 신용카드미소지자: 휴대폰본인인증 -->
-<form id="form1" name="form1" action="https://www.liivm.com/join/steps/reserve/phonePopup2" method="post" class="MultiFile-intercepted">
-	<input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624">
-</form>
-<form name="kcbResultForm" method="post" class="MultiFile-intercepted">
-	<input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624">
+<!-- <form id="form1" name="form1" action="https://www.liivm.com/join/steps/reserve/phonePopup2" method="post" class="MultiFile-intercepted"> -->
+	<!-- <input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624"> -->
+<!-- </form> -->
+<!-- <form name="kcbResultForm" method="post" class="MultiFile-intercepted">
+	<input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624"> -->
 	<!-- 테스트 -->
-	<input type="hidden" name="kcbName" id="kcbName">
+	<!-- <input type="hidden" name="kcbName" id="kcbName">
 	<input type="hidden" name="kcbBirthDay" id="kcbBirthDay">
-	<input type="hidden" name="kcbTelNo" id="kcbTelNo">
+	<input type="hidden" name="kcbTelNo" id="kcbTelNo"> -->
 	
-	<input type="hidden" name="result" id="result">
+	<!-- <input type="hidden" name="result" id="result">
 	<input type="hidden" name="errorMsg" id="errorMsg">
-	<input type="hidden" name="kcbValue" id="kcbValue">
+	<input type="hidden" name="kcbValue" id="kcbValue"> -->
 	<!--휴대폰 본인확인 팝업 처리결과 정보 phone_popup3에서 값 입력 -->
-	<input type="hidden" name="CP_CD" id="CP_CD">
+	<!-- <input type="hidden" name="CP_CD" id="CP_CD">
 	<input type="hidden" name="TX_SEQ_NO" id="TX_SEQ_NO">
 	<input type="hidden" name="RSLT_CD" id="RSLT_CD">
-	<input type="hidden" name="RSLT_MSG" id="RSLT_MSG">
+	<input type="hidden" name="RSLT_MSG" id="RSLT_MSG"> -->
 	
-	<input type="hidden" name="RSLT_NAME" id="RSLT_NAME">
+	<!-- <input type="hidden" name="RSLT_NAME" id="RSLT_NAME">
 	<input type="hidden" name="RSLT_BIRTHDAY" id="RSLT_BIRTHDAY">
 	<input type="hidden" name="RSLT_SEX_CD" id="RSLT_SEX_CD">
-	<input type="hidden" name="RSLT_NTV_FRNR_CD" id="RSLT_NTV_FRNR_CD">
+	<input type="hidden" name="RSLT_NTV_FRNR_CD" id="RSLT_NTV_FRNR_CD"> -->
 	
-	<input type="hidden" name="DI" id="DI">
+	<!-- <input type="hidden" name="DI" id="DI">
 	<input type="hidden" name="CI" id="CI">
 	<input type="hidden" name="CI_UPDATE" id="CI_UPDATE">
 	<input type="hidden" name="TEL_COM_CD" id="TEL_COM_CD">
 	
 	<input type="hidden" name="RETURN_MSG">
-</form>
+</form> -->
 <!-- //신용카드미소지자: 휴대폰본인인증 -->
 
 <form id="frm" name="frm" method="post" class="MultiFile-intercepted">
@@ -6543,7 +6417,7 @@ $(document).ready(function(){
                                 <ul class="form_group type_2dv">                                                
                                 	<li>
                                     	<label class="ui_rdo">
-                                        	<input type="radio" id="c-join-type-person" name="c-cust-tp" onclick="modalLayer.show(&#39;joinTypeSelectLayer&#39;, this); if($(&#39;#custTp&#39;).val() == &#39;GEF&#39;){$(&#39;#c-join-type01&#39;).prop(&#39;checked&#39;,true);}">
+                                        	<input type="radio" id="c-join-type-person" name="c-cust-tp">
                                         	<span id="pCustTpNm">개인</span>
 	                                        <!-- 팝업에서 가입자 유형 선택 적용 후 ex) 성인 선택 시 개인 -> 성인으로 변경 
 	                                        Case 01. 성인
@@ -6606,7 +6480,7 @@ $(document).ready(function(){
 	                                        
 	                                        <p class="label">주민등록번호</p>
 	                                        	<div class="form_group">
-		                                        	<input type="number" maxlength="6" id="regNoRf" name="regNoRf" placeholder="생년월일 6자리" oninput="onlyNumberIn(this);maxLengthCheck_join(this)" onblur="juminFormat_f(this)" autocomplete="off" onkeyup="if(this.value.length &gt;=6) $(&#39;#regNoRb&#39;).focus()">
+		                                        	<input type="number" maxlength="6" id="regNoRf" name="regNoRf" placeholder="생년월일 6자리" oninput="onlyNumberIn(this);maxLengthCheck_join(this)" onblur="juminFormat_f(this)" autocomplete="off" onkeyup="if(this.value.length &gt;=6) $('#regNoRb').focus()">
 		                                            <span class="txt_dash">~</span>
 		                                            <input type="number" class="txt_security" maxlength="7" id="regNoRb" name="regNoRb" placeholder="뒷 7자리" oninput="maxLengthCheck_join(this);" pattern="[0-9]*" inputmode="numeric" onblur="juminFormat_b(this);" autocomplete="off">
 	                                           	</div>
@@ -6712,7 +6586,7 @@ $(document).ready(function(){
                                     	</div>    
                                         <span class="label">주민등록번호</span>
                                         <div class="form_group">
-	                                        <label><input type="number" id="legalRprsnRegNoRf" name="legalRprsnRegNoRf" maxlength="6" placeholder="생년월일 6자리" oninput="onlyNumberIn(this);maxLengthCheck_join(this)" onblur="juminLegFormat_f(this)" onkeyup="if(this.value.length &gt;=6) $(&#39;#legalRprsnRegNoRb&#39;).focus()"></label>
+	                                        <label><input type="number" id="legalRprsnRegNoRf" name="legalRprsnRegNoRf" maxlength="6" placeholder="생년월일 6자리" oninput="onlyNumberIn(this);maxLengthCheck_join(this)" onblur="juminLegFormat_f(this)" onkeyup="if(this.value.length &gt;=6) $('#legalRprsnRegNoRb').focus()"></label>
 	                                        <span class="txt_dash">~</span>
 	                                        <label><input type="number" class="txt_security" id="legalRprsnRegNoRb" name="legalRprsnRegNoRb" maxlength="7" placeholder="뒷 7자리" oninput="maxLengthCheck_join(this);" pattern="[0-9]*" inputmode="numeric" onblur="juminLegFormat_b(this)" autocomplete="off"></label>
                                         </div>  
@@ -6785,7 +6659,7 @@ $(document).ready(function(){
                                         </select>
 
                                         <p class="label">법정대리인 휴대폰번호</p> 
-                                        <label><input type="number" pattern="\d*" id="legalRprsnTelNo" name="legalRprsnTelNo" maxlength="11" placeholder="&#39;-&#39;없이 입력해주세요" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)" onblur="checkMsgTelNo();"></label>  
+                                        <label><input type="number" pattern="\d*" id="legalRprsnTelNo" name="legalRprsnTelNo" maxlength="11" placeholder="'-'없이 입력해주세요" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)" onblur="checkMsgTelNo();"></label>  
                                     </div>  
                                     <!-- //상세정보 -->
 
@@ -6870,7 +6744,7 @@ $(document).ready(function(){
 	                                </div> 
 	                                <label>
 	                                    <p class="label">사업자등록번호</p>  
-	                                    <input type="number" id="bzno" name="bzno" maxlength="10" oninput="onlyNumberIn(this);maxLengthCheck_join(this);" onblur="chkBznoLen();" autocomplete="off" placeholder="&#39;-&#39;없이 입력해주세요">
+	                                    <input type="number" id="bzno" name="bzno" maxlength="10" oninput="onlyNumberIn(this);maxLengthCheck_join(this);" onblur="chkBznoLen();" autocomplete="off" placeholder="'-'없이 입력해주세요">
 	                                </label>  
 	
 	                                <label>
@@ -6886,48 +6760,48 @@ $(document).ready(function(){
 
 	                                <label>
 	                                    <p class="label_sub">대표자명</p>  
-	                                    <input type="text" id="txRprsNm" name="txRprsNm" placeholder="대표자 성함을 입력해주세요" onblur="chkLen(&#39;txRprsNm&#39;);" spellcheck="false">
+	                                    <input type="text" id="txRprsNm" name="txRprsNm" placeholder="대표자 성함을 입력해주세요" onblur="chkLen('txRprsNm');" spellcheck="false">
 	                                </label>
 	                                
 	                                <label>
 	                                    <p class="label_sub">업태</p> 
-	                                    <input type="text" id="txBusiCndt" name="txBusiCndt" placeholder="업태를 입력해주세요" onblur="chkLen(&#39;txBusiCndt&#39;);" spellcheck="false">
+	                                    <input type="text" id="txBusiCndt" name="txBusiCndt" placeholder="업태를 입력해주세요" onblur="chkLen('txBusiCndt');" spellcheck="false">
 	                                </label>
 	
 	                                <label>
 	                                    <p class="label">업종</p> 
-	                                    <input type="text" id="txBusiTp" name="txBusiTp" placeholder="업종을 입력해주세요" onblur="chkLen(&#39;txBusiTp&#39;);" spellcheck="false">
+	                                    <input type="text" id="txBusiTp" name="txBusiTp" placeholder="업종을 입력해주세요" onblur="chkLen('txBusiTp');" spellcheck="false">
 	                                </label> 
 
 	                                <p class="label">사업장 주소</p>
 	                                <div class="mo_box address_search">                                                   
 	                                    <div class="form_group type_address">
 	                                        <input type="text" name="busAddr" id="busAddr" placeholder="기본 주소를 검색해주세요" maxlength="200" spellcheck="false"> 
-	                                        <a herf="javascript:" onclick="setAddress(&#39;B&#39;)" class="btn btn_search">
+	                                        <a herf="javascript:" onclick="setAddress('B')" class="btn btn_search">
 	                                            <i class="icon_search"></i><span>불러오기</span>
 	                                        </a>
 	                                    </div>
-	                                   	<input type="text" id="busAddrDtl" name="busAddrDtl" title="상세 주소 입력" placeholder="상세 주소를 입력해주세요" maxlength="200" onblur="chkLen(&#39;busAddrDtl&#39;);" spellcheck="false">
+	                                   	<input type="text" id="busAddrDtl" name="busAddrDtl" title="상세 주소 입력" placeholder="상세 주소를 입력해주세요" maxlength="200" onblur="chkLen('busAddrDtl');" spellcheck="false">
 	                               	</div> 
 
                                     <label>
                                     	<p class="label">담당자</p>
-                                        <input type="text" id="chrgNm" name="chrgNm" placeholder="담당자 성함을 입력해주세요." onblur="chkLen(&#39;chrgNm&#39;);" spellcheck="false">
+                                        <input type="text" id="chrgNm" name="chrgNm" placeholder="담당자 성함을 입력해주세요." onblur="chkLen('chrgNm');" spellcheck="false">
                                    	</label>  
 
                                     <label>
                                     	<p class="label">담당자 직장 연락처</p>
-                                    	<input type="number" id="busTelNo" name="busTelNo" placeholder="직장 연락처를 입력해주세요" maxlength="13" oninput="maxLengthCheck_join(this);" onkeyup="onlyNumberInput(this);" onblur="chkLen(&#39;busTelNo&#39;);">
+                                    	<input type="number" id="busTelNo" name="busTelNo" placeholder="직장 연락처를 입력해주세요" maxlength="13" oninput="maxLengthCheck_join(this);" onkeyup="onlyNumberInput(this);" onblur="chkLen('busTelNo');">
                                     </label>  
 
                                     <label>    
                                     	<p class="label">담당자 휴대폰번호</p>
-                                    	<input type="number" id="busMTelNo" name="busMTelNo" placeholder="&#39;-&#39;없이 입력해주세요" maxlength="13" oninput="maxLengthCheck_join(this);" onkeyup="onlyNumberInput(this);" onblur="chkLen(&#39;busMTelNo&#39;);">
+                                    	<input type="number" id="busMTelNo" name="busMTelNo" placeholder="'-'없이 입력해주세요" maxlength="13" oninput="maxLengthCheck_join(this);" onkeyup="onlyNumberInput(this);" onblur="chkLen('busMTelNo');">
                                     </label>  
 
                                     <label>
                                     	<p class="label">담당자 이메일</p>
-                                    	<input type="email" id="busEml" name="busEml" maxlength="50" onblur="chkLen(&#39;busEml&#39;);" placeholder="이메일을 입력해주세요">
+                                    	<input type="email" id="busEml" name="busEml" maxlength="50" onblur="chkLen('busEml');" placeholder="이메일을 입력해주세요">
                                     </label>                                             
 								</div>
 							</div>
@@ -6979,7 +6853,7 @@ $(document).ready(function(){
 
                                         <label>
                                             <p class="label">발급일자</p>
-                                            <input type="number" id="issfDt" name="issfDt" maxlength="8" oninput="onlyNumberIn(this);maxLengthCheck_join(this)" onblur="chkIssfDt(&#39;N&#39;);" placeholder="입력예:19801230">
+                                            <input type="number" id="issfDt" name="issfDt" maxlength="8" oninput="onlyNumberIn(this);maxLengthCheck_join(this)" onblur="chkIssfDt('N');" placeholder="입력예:19801230">
                                         </label>  
 
                                         <label>
@@ -7259,7 +7133,7 @@ $(document).ready(function(){
 	</ul>                               
 </div></div> 
 	                                	<figure style="display: none;">
-                                			<img id="grpNoticeImg" src="./가입신청 _ Liiv M 가입하기_files/sample_empty.png" alt="이용안내 이미지" style="display:none;">
+                                			<img id="grpNoticeImg" src="./img/sample_empty.png" alt="이용안내 이미지" style="display:none;">
                                     		<figcaption class="blind">이미지 설명</figcaption>
                                  		</figure>
 	                                </div>                                
@@ -7421,7 +7295,7 @@ $(document).ready(function(){
                                     </label>
                                     <dl class="prod">
 	                                    <dt>휴대폰번호</dt>
-	                                    <dd> <input type="number" id="infoOfferTelNo" maxlength="11" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)" value="" placeholder="&#39;-&#39;없이 입력해주세요"></dd>
+	                                    <dd> <input type="number" id="infoOfferTelNo" maxlength="11" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)" value="" placeholder="'-'없이 입력해주세요"></dd>
 	                                </dl>
 	                                <div class="btn_area">
                                         <a href="javascript:" onclick="chkProSoldierInfo();" id="confirmSoldierBtn" class="btn btn_default" style="display: block;">확인</a>
@@ -7461,7 +7335,7 @@ $(document).ready(function(){
 	                                    <dd><input type="text" id="adoptAgencyNm" name="adoptAgencyNm" placeholder="서울유기동물입양센터" maxlength="11" spellcheck="false"></dd>
 	                                </dl>
 	                                <div class="btn_area">
-                                        <a href="javascript:saveAdoptAgencyInfo(&#39;C&#39;)" id="adoptBtn" class="btn btn_default">확인</a>
+                                        <a href="javascript:saveAdoptAgencyInfo('C')" id="adoptBtn" class="btn btn_default">확인</a>
                                     </div>
                                     <div class="txt_help">
 				                        <p><span class="t_color02">소중한 우리 댕냥이를 입양한 기관명을 등록해 주세요. </span></p>
@@ -8613,7 +8487,7 @@ $(document).ready(function(){
 								</div>
                                 <label>
                                     <p class="label">휴대폰번호</p>  
-                                    <input type="number" id="mtelNo" name="mtelNo" pattern="\d*" maxlength="11" placeholder="&#39;-&#39;없이 입력해주세요" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)">
+                                    <input type="number" id="mtelNo" name="mtelNo" pattern="\d*" maxlength="11" placeholder="'-'없이 입력해주세요" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)">
                                 </label>
 
                                 <div class="txt_help type_doc">
@@ -8776,7 +8650,7 @@ $(document).ready(function(){
                                 
                                 <label id="dvrTelNo2Label">
                                      <p class="label">연락 가능번호</p>
-                                    <input type="number" id="dvrlTelNo2" name="dvrlTelNo2" placeholder="&#39;-&#39;없이 입력해주세요" maxlength="11" pattern="\d*" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this);">
+                                    <input type="number" id="dvrlTelNo2" name="dvrlTelNo2" placeholder="'-'없이 입력해주세요" maxlength="11" pattern="\d*" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this);">
                                 </label>  
                                                                   
                                 <div class="mo_box email_ins">
@@ -8803,7 +8677,7 @@ $(document).ready(function(){
                                     <label for="c-reg-address" class="label">주소</label>
                                     <div class="form_group type_address">
                                         <input type="text" id="bassAddr" name="bassAddr" placeholder="기본 주소를 검색해주세요" readonly="" spellcheck="false"> 
-                                        <a herf="javascript:" onclick="setAddress(&#39;C&#39;);" class="btn btn_search">
+                                        <a herf="javascript:" onclick="setAddress('C');" class="btn btn_search">
                                             <i class="icon_search"></i><span>불러오기</span>
                                         </a>
                                     </div>
@@ -8901,7 +8775,7 @@ $(document).ready(function(){
                                                 	        <p class="txt_help_ars">계좌이체(CMS) 자동이체 동의 확인을 위해 ARS를 실행합니다.</p>
                                                             <label>
                                                                 <p class="label_sub">ARS 인증받을 전화번호</p>
-                                                                <input type="number" placeholder="&#39;-&#39; 없이 입력하세요" pattern="\d*" name="arsCertCellPhoneNo" id="arsCertCellPhoneNo" class="w100p" maxlength="11">
+                                                                <input type="number" placeholder="'-' 없이 입력하세요" pattern="\d*" name="arsCertCellPhoneNo" id="arsCertCellPhoneNo" class="w100p" maxlength="11">
                                                             </label>                                                	
                                                             <a href="javascript:" class="btn btn_point" id="btnArsAutoPay">
                                                                 <span>ARS인증</span>
@@ -9010,7 +8884,7 @@ $(document).ready(function(){
                             	<div class="titlebar">
                                 	<p class="label">추천고객 <em>(선택사항)</em></p>
                                    	<p>
-                                    	<a href="javascript:" class="btn btn_small" onclick="modalLayer.show(&#39;recommFriendRegLayer&#39;, this)">친구 추천 검색</a>
+                                    	<a href="javascript:" class="btn btn_small" onclick="modalLayer.show('recommFriendRegLayer', this)">친구 추천 검색</a>
                                     	<input type="hidden" id="friendUsrIdH" name="friendUsrIdH" value="">
                                    	</p>
                                	</div> 
@@ -9068,7 +8942,7 @@ $(document).ready(function(){
                                             
                                             <label>
                                                  <p class="label">연락 가능번호</p>
-                                                <input type="number" id="dvrlTelNo" name="dvrlTelNo" placeholder="&#39;-&#39;없이 입력해주세요" maxlength="11" pattern="\d*" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)">
+                                                <input type="number" id="dvrlTelNo" name="dvrlTelNo" placeholder="'-'없이 입력해주세요" maxlength="11" pattern="\d*" onkeyup="onlyNumberIn(this); maxLengthCheck_join(this)">
                                             </label>
                                         
                                             <div class="txt_help">
@@ -9079,7 +8953,7 @@ $(document).ready(function(){
                                             <div class="address_search">
                                                 <div class="form_group type_address">
                                                     <label><input type="text" id="dvrlAddr" name="dvrlAddr" placeholder="기본 주소를 검색해주세요" readonly="" spellcheck="false"> </label>
-                                                    <a herf="javascript:" class="btn btn_search" onclick="setAddress(&#39;D&#39;)"><i class="icon_search"></i><span class="blind">주소검색</span></a>
+                                                    <a herf="javascript:" class="btn btn_search" onclick="setAddress('D')"><i class="icon_search"></i><span class="blind">주소검색</span></a>
                                                 </div>
                                                 <input type="text" id="dDtlAddr" name="dDtlAddr" placeholder="상세 주소를 입력해주세요" spellcheck="false">
                                             </div>                                                            
@@ -9352,7 +9226,7 @@ function maxLengthCheck01(object){
                     
                     <label>    
                         <p class="label">연락가능번호</p>                        
-                        <input type="number" id="crncyAbilTelno" name="crncyAbilTelno" maxlength="11" pattern="\d*" oninput="maxLengthCheck01(this);" placeholder="&#39;-&#39;없이 입력해주세요" autocomplete="off">
+                        <input type="number" id="crncyAbilTelno" name="crncyAbilTelno" maxlength="11" pattern="\d*" oninput="maxLengthCheck01(this);" placeholder="'-'없이 입력해주세요" autocomplete="off">
                     </label> 
                     
                     <div class="btn_area">
@@ -9576,7 +9450,7 @@ function maxLengthCheck01(object){
 </form>
 <!-- //계좌 정보 입력 레이어(성년/미성년/법정대리인/양수인 UI동일) -->
 <div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:999;-webkit-overflow-scrolling:touch;">
-	<img src="./가입신청 _ Liiv M 가입하기_files/btn_close.gif" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+	<img src="./img/btn_close.gif" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
 </div>
 
 <script type="text/javascript">
@@ -9900,10 +9774,10 @@ function initLayerPosition() {
 			</div>
 		</div>
 		<div class="link">
-			<a href="javascript:" onclick="goMenu(&#39;/info/notice/notice/fixedNoticeTu&#39;, false);">이용약관</a>
-            <a href="javascript:" onclick="goMenu(&#39;/info/notice/notice/fixedNoticePv&#39;, false);" class="bold">개인정보처리방침</a>
+			<a href="javascript:" onclick="goMenu('/info/notice/notice/fixedNoticeTu', false);">이용약관</a>
+            <a href="javascript:" onclick="goMenu('/info/notice/notice/fixedNoticePv', false);" class="bold">개인정보처리방침</a>
             
-            <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#coverageMapLayer" onclick="modalLayer.show(&#39;coverageMapLayer&#39;, this)">서비스 커버리지</a>
+            <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#coverageMapLayer" onclick="modalLayer.show('coverageMapLayer', this)">서비스 커버리지</a>
 			<a href="https://www.msafer.or.kr/" target="_blank">명의도용사이트</a>
 			<a href="https://www.liivm.com/info/rateplan/rateplan/infoPrvnt">이용자피해예방</a>
             <a href="https://spam.kisa.or.kr/spam/main.do" target="_blank">불법스팸대응센터</a>
@@ -9915,7 +9789,7 @@ function initLayerPosition() {
 			<a href="https://www.liivm.com/info/faq/faq/isms" class="icon_sns isms">ISMS</a>
 		</div>
         
-		<a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#cominfo" class="btn_cominfo active" onclick="uiAccordionToggle(&#39;#cominfo&#39;, this)"><span>사업자정보</span></a>
+		<a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#cominfo" class="btn_cominfo active" onclick="uiAccordionToggle('#cominfo', this)"><span>사업자정보</span></a>
 		
 		<div id="cominfo" class="info_copyright">
 			<h5>(주)국민은행</h5>
@@ -10015,8 +9889,8 @@ function initLayerPosition() {
 	
 	
 
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/sideMenu.js.다운로드"></script>
-<script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/membership.js.다운로드"></script>
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/sideMenu.js.다운로드"></script> -->
+<!-- <script type="text/javascript" src="./가입신청 _ Liiv M 가입하기_files/membership.js.다운로드"></script> -->
 <script type="text/javascript">
 var isOpenSide = false;
 
@@ -10296,23 +10170,23 @@ function goMenu(toUrl, needSessionYn, isOpenSvc, age) {
 // 페이지 이동
 function movePage(toUrl) {
 	
-	location.href = decodeURIComponent(toUrl);
+	// location.href = decodeURIComponent(toUrl);
 }
 
 //페이지 이동
 function callbackGoLoginOnSide() {
 
-	$("form[name=frmMenuHandle]").attr("action", "/system/login/login?redirectUrl="+$("#urlToGoAfterConfirm").val());
-	$("form[name=frmMenuHandle]").attr("method", "post");
-	$("form[name=frmMenuHandle]").submit();
+	// $("form[name=frmMenuHandle]").attr("action", "/system/login/login?redirectUrl="+$("#urlToGoAfterConfirm").val());
+	// $("form[name=frmMenuHandle]").attr("method", "post");
+	// $("form[name=frmMenuHandle]").submit();
 }
 
 //페이지 이동
 function callbackGoApplOnSide() {
 
-	$("form[name=frmMenuHandle]").attr("action", "/mypage/applinfo/applinfo/getApplInfos");
-	$("form[name=frmMenuHandle]").attr("method", "post");
-	$("form[name=frmMenuHandle]").submit();
+	// $("form[name=frmMenuHandle]").attr("action", "/mypage/applinfo/applinfo/getApplInfos");
+	// $("form[name=frmMenuHandle]").attr("method", "post");
+	// $("form[name=frmMenuHandle]").submit();
 }
 
 // 새창열기
@@ -10898,88 +10772,6 @@ function fnMoveMenuId(menuId){
 <input type="hidden" id="minorCertCustId" name="minorCertCustId" value="">
 <input type="hidden" id="minorCertCtrtId" name="minorCertCtrtId" value="">
 
-<!-- 사이드 메뉴 -->
-<aside class="layer_menu" id="layer_menu">      
-    <div class="menu_area_wrap">
-    
-        <!-- Case.1 : 로그인 전 -->
-        <a href="javascript:void(0);" class="btn_round login" onclick="goMenu(&#39;/system/login/login&#39;);"><span>로그인</span></a>
-        
-        <!-- 사용자 정보 / 회선 정보 -->
-        <div class="info_box">
-            
-            <!-- 사용자 정보 -->
-            <!-- Case.1 : 로그인 전 -->
-            <div class="user_info">
-                <span class="txt">안녕하세요 고객님</span>
-                <a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#" class="btn_user_login"><strong>로그인</strong> 후 사용해주세요.</a>
-			</div>
-        </div>
-    
-    
-    
-    
-      
-        
-        <!-- 기본/사용자 퀵 메뉴 -->
-        <div class="cmenu_box">
-            <ul><li><a href="javascript:void(0);" onclick="goAgreeTermOnSide();"><i class="sp_sidemenu  ico_joinus  "></i><span>가입하기</span></a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/applinfo/applinfo/getApplInfos&#39;, &#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);"><i class="sp_sidemenu  ico_orderviw  "></i><span>신청현황조회</span></a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/event/event/listEvents&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);"><i class="sp_sidemenu  ico_event  "></i><span>이벤트</span></a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/cscenter/cscenter/csCenter&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);"><i class="sp_sidemenu  ico_ccenter  "></i><span>고객센터</span></a></li></ul>
-        </div>
-        
-        
-        <!-- 메뉴 검색 -->
-        <div class="search_box">
-            <div class="form_group mo_search">
-                <label class="blind" for="keywordSearch">검색할 메뉴명 입력</label>
-                <input type="text" id="keywordSearch" placeholder="검색어를 입력하세요" spellcheck="false"><input type="text" id="keywordBubble" placeholder="" style="position:absolute;width:0;height:0;opacity:0;overflow:hidden;" spellcheck="false">
-                <button type="submit" class="btn_menu_search">검색</button>
-                <button type="button" class="btn_search_del">검색어 삭제</button>
-            </div>  
-        </div>
-        
-        <!-- 스크롤 되는 영역 -->
-        <div class="smenu_box">
-            <!-- 검색 결과 -->
-            <div class="search_result" id="search_result">
-                <div class="keyword_result">
-                    <h4>검색결과 <strong>0</strong>건</h4>
-                    <ul>
-                    
-                    </ul>
-                    <div class="no_result" style="display:none"><strong>검색 내역이 없습니다.</strong></div>
-                </div>
-                <div class="faq_link_box">
-                    <h4 class="blind">자주 찾는 질문 안내</h4>
-                    <p>
-                        원하시는 결과가 없으신가요?<br>
-                        자주 찾는 질문에서 찾아보세요. 
-                    </p>
-                    <a href="javascript:" onclick="fnFowardFAQ();" class="btn btn_default">자주 찾는 질문 바로가기</a>
-                </div>
-            </div>
-
-            <!-- 전체 메뉴 // 여기에 header에서 있는 id="head_nav"이 append로 이동됨 -->
-            <div class="gnb_area" id="gnb_area">
-            <div class="head_nav" id="head_nav">
-			<a href="javascript:" class="liivm" onclick="location.replace(&#39;/&#39;);" title="메인 페이지로 이동">Liiv M</a>
-			<ul class="menu" id="menu"><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200040" class="active "><strong>요금제</strong></a><ul id="MENU200040"><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200042" class="has_sub">리브모바일 요금제</a><ul id="MENU200042"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/rateplan/rateplan/mnoProduct?tab=1&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">LG U+망</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/rateplan/rateplan/mnoProduct?tab=2&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">KT망</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/rateplan/rateplan/mnoProduct?tab=3&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">SKT망</a></li></ul></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/rateplan/rateplan/searchProduct&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">내게 맞는 요금제 찾기</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoCorp&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">법인요금제</a></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200049" class="has_sub">기타 할인</a><ul id="MENU200049"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/etcDiscount?tab=1&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">친구결합 할인</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/etcDiscount?tab=2&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">나눔할인</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200153" class="has_sub">판매중단 요금제</a><ul id="MENU200153"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoYouthHope&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">청년희망 LTE 11GB+</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoOrgLte&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">Liiv M LTE</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoOrg5g&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">Liiv M 5G</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoReliable&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">국민든든 LTE</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoLteGain&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">LTE 든든실속</a></li></ul></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200054" class=""><strong>부가서비스</strong></a><ul id="MENU200054"><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200056" class="has_sub">통신 부가서비스</a><ul id="MENU200056"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/addon/addon/changeAddOn?tab=1&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">LG U+망</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/addon/addon/changeAddOn?tab=2&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">KT망</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/addon/addon/changeAddOn?tab=3&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">SKT망</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200061" class="has_sub">데이터 충전/선물하기</a><ul id="MENU200061"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/payment/charge/datacharge/dataCharge?tab=1&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">LG U+망</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/payment/charge/datacharge/dataCharge?tab=2&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">KT망</a></li></ul></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/payment/micro/micro/microPayment&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;A&#39;,&#39;N&#39;,&#39;%ED%9C%B4%EB%8C%80%ED%8F%B0%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%EC%84%9C%20%EB%B3%B8%EC%9D%B8%EC%9D%B8%EC%A6%9D%20%ED%9B%84%20%EA%B0%84%ED%8E%B8%ED%95%98%EA%B2%8C%20%EA%B2%B0%EC%A0%9C%ED%95%98%EB%8A%94%20%EC%84%9C%EB%B9%84%EC%8A%A4%EC%9E%85%EB%8B%88%EB%8B%A4.%20%ED%9C%B4%EB%8C%80%ED%8F%B0%20%EC%86%8C%EC%95%A1%EA%B2%B0%EC%A0%9C%EB%A5%BC%20%EC%9C%84%ED%95%B4%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%ED%95%98%EC%8B%9C%EA%B2%A0%EC%8A%B5%EB%8B%88%EA%B9%8C%3F&#39;);">휴대폰 소액결제</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoUsimKeep&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;%EB%B2%95%EC%A0%95%EB%8C%80%EB%A6%AC%EC%9D%B8%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%20%EB%8C%80%EC%83%81%EC%9E%90%EA%B0%80%20%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4.&#39;);">유심 보관서비스</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/addon/voicePhishing/voicePhishing&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;%EB%B2%95%EC%A0%95%EB%8C%80%EB%A6%AC%EC%9D%B8%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%20%EB%8C%80%EC%83%81%EC%9E%90%EA%B0%80%20%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4.&#39;);">보이스 피싱예방</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/service/service/phishingInsurance&#39;, &#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;&#39;);">피싱보험</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/service/service/communiInsurance&#39;, &#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;&#39;);">통신비보장보험</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/lossinsu/info/lossInsuInfo&#39;, &#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;&#39;);">휴대폰 분실파손보험</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200069" class=""><strong>이벤트/멤버십</strong></a><ul id="MENU200069"><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200071" class="has_sub">이벤트</a><ul id="MENU200071"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/event/event/listEvents&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">진행중이벤트</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/event/event/listEvents?eventStat=99&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">종료이벤트</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/banner/banner/listBanner&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">제휴서비스</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200076" class="has_sub">멤버십</a><ul id="MENU200076"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/membership/membership/mbrshInfo&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">멤버십 안내</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/membership/membership/myMbrsh&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">나의 멤버십</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/membership/membership/myGrd&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">나의 등급</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/join/membership/membership/couponBox&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">쿠폰함</a></li></ul></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200101" class=""><strong>고객지원</strong></a><ul id="MENU200101"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/cscenter/cscenter/csCenter&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">고객상담</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/notice/notice/notice?noticeCl=002&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">공지사항</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/notice/notice/fixedNoticeTu&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">이용약관</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/notice/notice/fixedNoticePv&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">개인정보처리방침</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/faq/faq/faqMng&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">자주 찾는 질문</a></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200111" class="has_sub">이용안내</a><ul id="MENU200111"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/notice/notice/notice?noticeCl=005&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">Liiv M 이용안내</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/notice/notice/videoGuide&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">Liiv M 동영상 가이드</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoShortCutGuide&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">Liiv M 바로가기 설정</a></li></ul></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/infoPrvnt&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">이용자 피해 예방센터</a></li><li><a href="javascript:void(0);" onclick="openNewWindowOnSide(&#39;01&#39;,&#39;https://obank.kbstar.com/quics?page=C021958&#39;);">지점안내</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200000" class=""><strong>마이페이지</strong></a><ul id="MENU200000"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/infoSearch/infoSearch/myInfoSearch&#39;, &#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);">나의 가입정보</a></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200009" class="has_sub">나의요금</a><ul id="MENU200009"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/rateplan/rateplan/searchRatePlan?tab=1&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">실시간 요금 조회</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/rateplan/rateplan/searchRatePlan?tab=2&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">실시간 사용량 조회</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/bill/bill/searchBill&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">청구서 조회</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/bill/bill/billPayment&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">요금 납부</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200015" class="has_sub">정보변경</a><ul id="MENU200015"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/person/person/person&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">명의변경</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/stoprelease/stoprelease/changeStopRelease&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">일시정지/해제</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/infoSearch/infoSearch/changeBillWay&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">청구서 유형변경</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/infoSearch/infoSearch/changePayWay&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">납부방법 변경</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/number/number/hopeNumber&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">번호변경</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200022" class="has_sub">유심관리</a><ul id="MENU200022"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/device/usim/changeUsimInfo&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">유심정보 변경</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/device/step1/deviceIntro&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">확정기변/기기등록</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/device/ota/retryOta&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">무선개통(OTA)</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/device/esim/esimInfo&#39;, &#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">eSIM 정보등록</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/info/rateplan/rateplan/esimDownLgu&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">eSIM 다운로드</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200027" class="has_sub">증빙서류 관리</a><ul id="MENU200027"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/eviddoc/mgmt/evidDocMgmt&#39;, &#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">증빙서류 첨부 및 확인</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/confirmation/confirmation/certificate&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">가입사실확인서 발급</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200031" class="has_sub">법정대리인 관리</a><ul id="MENU200031"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/legalrprs/legalrprs/legalRprsAuth&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;B&#39;,&#39;N&#39;,&#39;%EB%B2%95%EC%A0%95%EB%8C%80%EB%A6%AC%EC%9D%B8%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%20%EB%8C%80%EC%83%81%EC%9E%90%EA%B0%80%20%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4.&#39;);" class="nw_sp_sidemenu">법정대리인 정보 변경</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/legalrprs/legalrprs/legalRprsInfoAuth&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;B&#39;,&#39;N&#39;,&#39;%EB%B2%95%EC%A0%95%EB%8C%80%EB%A6%AC%EC%9D%B8%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%9D%B4%EC%9A%A9%20%EB%8C%80%EC%83%81%EC%9E%90%EA%B0%80%20%EC%95%84%EB%8B%99%EB%8B%88%EB%8B%A4.&#39;);" class="nw_sp_sidemenu">법정대리인 정보제공 동의변경</a></li></ul></li><li><a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#MENU200035" class="has_sub">정보제공 동의</a><ul id="MENU200035"><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/agree/agree/infoAgree?tab=1&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;N&#39;,&#39;N&#39;,&#39;&#39;);" class="nw_sp_sidemenu">혜택정보 수신동의</a></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/mypage/agree/agree/jobInfoAgree&#39;, &#39;N&#39;,&#39;N&#39;,&#39;N&#39;,&#39;Y&#39;,&#39;&#39;);" class="nw_sp_sidemenu">직업정보 제공동의</a></li></ul></li><li><a href="javascript:void(0);" onclick="fnMoveUrl(&#39;/change/close/close/requestCloseService&#39;, &#39;Y&#39;,&#39;Y&#39;,&#39;Y&#39;,&#39;Y&#39;,&#39;&#39;);">Liiv M 해지</a></li></ul></li><li class="shop"><a href="javascript:modalLayer.show(&#39;liivmShopGoLayer&#39;, this);" class="shop"><strong>휴대폰 구매</strong></a></li></ul>
-		</div></div>
-        </div>
-        
-        <!-- 닫기 버튼 -->
-        <button type="button" class="menu_close" onclick="sideMenu(&#39;close&#39;)"><span>닫기</span></button>
-    <div class="tmenu" id="tmenu">
-			<a href="https://www.liivm.com/info/event/event/listEvents" class="prod">이벤트</a>
-			<a href="https://www.liivm.com/info/banner/banner/listBanner" class="card">제휴서비스</a>	
-						
-			<a href="javascript:" onclick="goMenu(&#39;/system/login/login&#39;);" class="login">로그인</a>
-			
-			
-		</div><div class="kbsite" id="kbsite">
-			<a href="https://www.liivm.com/join/nxtSteps/nxtStep/applyToJoin#" class="txt_hide kb_ci">KB국민은행</a>
-		</div></div>
-</aside>
-<!-- //사이드 메뉴 -->
 
     
     
@@ -11453,7 +11245,7 @@ Liiv M 이용월의 전월말 기준 최근 3개월간 2회 이상 KB국민은�
                            <i class="sp_cs ic_tel"></i>
                            <p><span>전화상담</span><i class="sp_cs ic_phone"></i></p>
                        </button>
-		       <a href="javascript:void(0);" onclick="movePage(&#39;/info/notice/notice/noticeMng?noticeCl=003&#39;, false);">약관의 주요내용 설명서 &gt;</a>
+		       <a href="javascript:void(0);" onclick="movePage('/info/notice/notice/noticeMng?noticeCl=003', false);">약관의 주요내용 설명서 &gt;</a>
                     </div>
                     <div class="box type_cs_info">                   
                         <h3>전화상담 단축번호 안내</h3>
@@ -11584,7 +11376,7 @@ Liiv M 이용월의 전월말 기준 최근 3개월간 2회 이상 KB국민은�
 						<div style="display:none">
 							<a href="https://www.liivm.com/html/subTerms/KB%EC%8A%A4%ED%83%80%ED%81%B4%EB%9F%BD%EC%95%88%EB%82%B4.pdf" id="downloadKbStarClubGuide" download=""></a>
 						</div>                    
-                        <button class="btn btn_default" onclick="document.getElementById(&#39;downloadKbStarClubGuide&#39;).click();">KB스타클럽 안내</button>
+                        <button class="btn btn_default" onclick="document.getElementById('downloadKbStarClubGuide').click();">KB스타클럽 안내</button>
                         <!--TODO : 버튼 클릭시 PDF 다운로드가 되야합니다.-->
                     </div>
                 </div>
@@ -11613,7 +11405,7 @@ Liiv M 이용월의 전월말 기준 최근 3개월간 2회 이상 KB국민은�
 						<div style="display:none">
 							<a href="https://www.liivm.com/html/subTerms/KB%EC%8A%A4%ED%83%80%ED%81%B4%EB%9F%BD%EC%95%88%EB%82%B4.pdf" id="downloadKbStarClubGuide" download=""></a>
 						</div>                     
-                        <button class="btn btn_default" onclick="document.getElementById(&#39;downloadKbStarClubGuide&#39;).click();">KB스타클럽 안내</button>
+                        <button class="btn btn_default" onclick="document.getElementById('downloadKbStarClubGuide').click();">KB스타클럽 안내</button>
                         <!--TODO : 버튼 클릭시 PDF 다운로드가 되야합니다.-->
                     </div>
                 </div>
@@ -11657,57 +11449,59 @@ Liiv M 이용월의 전월말 기준 최근 3개월간 2회 이상 KB국민은�
 
 <script>
     //aside 전체 메뉴 클릭 active이벤트
-    $(document).on('click', '.layer_menu .menu li:not(".shop") a', function(e) {
-        var $li = $(this).closest('li');        
-        $li.siblings('li').find('>a').removeClass('active');
+    // $(document).on('click', '.layer_menu .menu li:not(".shop") a', function(e) {
+    //     var $li = $(this).closest('li');        
+    //     $li.siblings('li').find('>a').removeClass('active');
         
-        if($(this).hasClass('has_sub') == true){
-            e.preventDefault();
-            $(this).toggleClass('active');
-        } else {
-            $(this).addClass('active');
-        }        
-    });
+    //     if($(this).hasClass('has_sub') == true){
+    //         e.preventDefault();
+    //         $(this).toggleClass('active');
+    //     } else {
+    //         $(this).addClass('active');
+    //     }        
+    // });
     
     // aside 전체 메뉴의 active 초기화 
-    function asideMenuActiveReset(){
-        $('.layer_menu .menu a.active').removeClass('active');
-        $('.layer_menu .menu > li:first-child').find('>a').addClass('active');
-        $('.layer_menu .search_box').removeClass('active');
-        $('.layer_menu .search_box #keywordSearch').val('');
-    }
+    // function asideMenuActiveReset(){
+    //     $('.layer_menu .menu a.active').removeClass('active');
+    //     $('.layer_menu .menu > li:first-child').find('>a').addClass('active');
+    //     $('.layer_menu .search_box').removeClass('active');
+    //     $('.layer_menu .search_box #keywordSearch').val('');
+    // }
     
     // aside 검색 input 관련 ui
-    $(document).on('input', '.search_box #keywordSearch', function() {
-        var $closest = $(this).closest('.search_box'); 
-        if ($('#keywordSearch').val() =='') {
-            $closest.removeClass('active');
-        }else{
-            $closest.addClass('active');
-        }
-    });    
+    // $(document).on('input', '.search_box #keywordSearch', function() {
+    //     var $closest = $(this).closest('.search_box'); 
+    //     if ($('#keywordSearch').val() =='') {
+    //         $closest.removeClass('active');
+    //     }else{
+    //         $closest.addClass('active');
+    //     }
+    // });    
     // aside 검색 input 검색어 삭제 관련
-    $(document).on('click', '.search_box .btn_search_del', function() {
-        var $closest = $(this).closest('.search_box');
-        $closest.find('#keywordSearch').val('');
-        $closest.removeClass('active');
-    });
+    // $(document).on('click', '.search_box .btn_search_del', function() {
+    //     var $closest = $(this).closest('.search_box');
+    //     $closest.find('#keywordSearch').val('');
+    //     $closest.removeClass('active');
+    // });
     
     
     // 회선선택
-    $(document).on('click', '#opening_num .mo_select_item .select_list li', function(){	
-        var val = $(this).find('.item').text();
-        var $closest = $(this).closest('.phone_info');
-        if( val =='신청 중 회선 확인'){
-            $closest.find('.num_info').hide();
-            $closest.find('.opening_date').hide();
-        } else {
-            $closest.find('.num_info').show();
-            $closest.find('.opening_date').show();
-        }
-    });
+    // $(document).on('click', '#opening_num .mo_select_item .select_list li', function(){	
+    //     var val = $(this).find('.item').text();
+    //     var $closest = $(this).closest('.phone_info');
+    //     if( val =='신청 중 회선 확인'){
+    //         $closest.find('.num_info').hide();
+    //         $closest.find('.opening_date').hide();
+    //     } else {
+    //         $closest.find('.num_info').show();
+    //         $closest.find('.opening_date').show();
+    //     }
+    // });
     
     
 </script>
     <!-- //왼쪽 사이드 메뉴 -->  
-<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+</body>
+</html>
