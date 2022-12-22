@@ -22,7 +22,7 @@ header .side_menu:before {display:block; content:''; width:20px; height:20px; ma
 .link__area-parent{position:relative;}
 .link__area{cursor:pointer; box-sizing:border-box;}
 
-.bottom__fix{position:fixed; left:50%; bottom:0; width:100%; max-width:420px; padding:12px 16px 30px; transform:translateX(-50%); border-radius:10px; background-color:#fff; box-shadow:0 0 1.5rem rgba(13,72,127,0.15)}
+.bottom__fix{position:fixed; left:50%; bottom:0; width:100%; max-width:420px; padding:12px 16px 30px; transform:translateX(-50%); border-radius:10px; background-color:#fff; box-shadow:0 0 1.5rem rgba(13,72,127,0.15); z-index:10}
 .bottom__fix .container{position:relative;}
 /* .bottom__fix .link__area{position:absolute; left:50%; bottom:10%; transform:translateX(-50%); width:93%; height:20%;} */
 .bottom__fix .result__wrap {padding:17px 0}
