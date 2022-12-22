@@ -11,7 +11,7 @@ window.addEventListener("load", ()=>{
   isMobile ? document.querySelector("body").classList.add("mobile") : null;   // mobile check
   
   // ink__item
-  const linkItem = Array.from(document.querySelectorAll(".link__item"));
+  const linkItem = Array.from(document.querySelectorAll('.link__item'));
   linkItem.forEach((item)=>{
       item.addEventListener("click", (e)=>{
           e.preventDefault();
@@ -419,39 +419,49 @@ $(document).ready(function(){
   // })
 
 
-  // 약관 동의
-  $('.agr__group').on('click', '.chk__all', function(){
-    $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
-    if($('.chk__all').is(':checked')){
-        $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
-        $(this).closest('.check__list__wrap').addClass('active');
-    } else {
-        $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").addClass("disabled");
-        $(this).closest('.check__list__wrap').removeClass('active');
-    }
-  });
-  $('.agr__group').on('click', '.inp__chk', function(){
-      var is_checked = true;
-      $('.agr__group .inp__chk').each(function(){
-          is_checked = is_checked && $(this).is(':checked');
-      });
-      $('.chk__all').prop('checked', is_checked);
-  });
-  $('.check__wrap').each(function(){
-      let inpAll = $(this).find('.inp__all');
-      let inpSub = $(this).find('.inp__sub');
-      inpAll.on('click', function(){
-          $(this).closest('.check__wrap').find('.inp__sub').prop('checked', $(this).is(':checked'));
-      })
-      inpSub.on('click', function(){
-          var is_checked2 = true;
-          inpSub.each(function(){
-              is_checked2 = is_checked2 && $(this).is(':checked');
-          });
-          $(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2)
-          console.log(is_checked2);
-      })
-  });
+	// 약관 동의
+	$('.agr__group').on('click', '.chk__all', function(){
+		$(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
+		if($('.chk__all').is(':checked')){
+			$('.chk__all').closest('.check__list__wrap').addClass('active');
+			$('.chk__all').closest('.content__section').find('.link__item').removeClass('disabled');
+		} else {
+			$('.chk__all').closest('.check__list__wrap').removeClass('active');
+			$('.chk__all').closest('.content__section').find('.link__item').addClass('disabled');
+		}
+	});
+	$('.agr__group').on('click', '.inp__chk', function(){
+		var is_checked = true;
+		$('.agr__group .inp__chk').each(function(){
+			is_checked = is_checked && $(this).is(':checked');
+		});
+		$('.chk__all').prop('checked', is_checked);
+	});
+	$('.check__wrap').each(function(){
+		let inpAll = $(this).find('.inp__all');
+		let inpSub = $(this).find('.inp__sub');
+		inpAll.on('click', function(){
+			$(this).closest('.check__wrap').find('.inp__sub').prop('checked', $(this).is(':checked'));
+		})
+		inpSub.on('click', function(){
+			var is_checked2 = true;
+			inpSub.each(function(){
+				is_checked2 = is_checked2 && $(this).is(':checked');
+			});
+			$(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2)
+			console.log(is_checked2);
+		})
+	});
+	$('.agr__group').on('click', function(){
+		if($('.chk__all').is(':checked')){
+			$('.chk__all').closest('.check__list__wrap').addClass('active');
+			$('.chk__all').closest('.content__section').find('.link__item').removeClass('disabled');
+		} else {
+			$('.chk__all').closest('.check__list__wrap').removeClass('active');
+			$('.chk__all').closest('.content__section').find('.link__item').addClass('disabled');
+		}
+	})
+
 
 
 
