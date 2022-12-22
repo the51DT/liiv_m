@@ -337,8 +337,15 @@ form.jointype4{padding:0 2rem;}
 
 /** section__joincard ****************************/
 .section__joincard{padding-bottom:10rem;}
-.section__joincard-card{padding:1rem 0 0;}
-.section__joincard .form__group{padding:1.7rem 0 0;}
+.section__joincard-ttl{padding:1rem 0 0;}
+.joincard__card__wrap{border:0.1rem solid #E7E8EA; border-radius:1.2rem; margin:3rem 2rem; padding:2rem; box-shadow:0 0 1rem rgba(0,0,0, 0.05)}
+.joincard__card__wrap ul{display:flex; flex-wrap:wrap; align-items:center; justify-content: space-between;}
+.joincard__card__wrap ul li{flex:0 0 25%; border:0.2rem solid #fff; box-sizing:border-box; padding:1rem 0 .8rem; text-align:center;}
+.joincard__card__wrap ul li span{display:block; width:3.6rem; margin:0 auto;}
+.joincard__card__wrap ul li p{font-size:1.4rem; color:#555; padding:1rem 0 0; letter-spacing:-0.045rem;}
+.joincard__card__wrap ul li.active {border:0.2rem solid #FFD338; border-radius:0.8rem; box-shadow:0 0 1rem rgba(0,0,0, .05)}
+.joincard__card__wrap ul li.active p{font-weight:700; color:#222}
+/* .section__joincard .form__group{padding:1.7rem 0 0;} */
 
 
 /** section__joinhelp toast *******************************/
