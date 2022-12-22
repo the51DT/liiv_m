@@ -180,7 +180,7 @@ window.addEventListener("load", ()=>{
         $(this).parents(".form__item").addClass("focus");
     })
     $(document).find(".form__item input").on("blur", function(){
-        // $(this).parents(".form__item").removeClass("focus");
+        $(this).parents(".form__item").removeClass("focus");
 
         // console.log( $(this).parents(".form_item").find("input") )
 
