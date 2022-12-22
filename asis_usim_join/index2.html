@@ -20,9 +20,13 @@
     <div id="wrap">
         <section class="layout">
             <header>
-                <img src="./img/common_status.png" class="mobile-hidden">
-                <img src="./img/common_header.png">
+                <!-- <img src="./img/common_status.png" class="mobile-hidden"> -->
+                <!-- <img src="./img/common_header.png"> -->
+                    <span class="txt_hide kb_ci">국민은행</span>
+                    <a href="#" class="liivm">Liiv M</a>
+                    <button type="button" class="side_menu" onclick="sideMenu('open')">메뉴</button>
             </header>
+                
         </section>
 
         <section class="content__section content__usim">
@@ -86,7 +90,7 @@
                                 <!-- 준비물 확인 툴팁 -->
                                 <div class="ready_chk_tooltip">
                                     <!-- Case 01. 준비물 하나라도 미 체크 시 -->
-                                    <div id="mtrdivN" style="display: none;">
+                                    <div id="mtrdivN" style="display: block;">
                                         <div class="chk_alert">
                                             <i class="sp_ready_chk icon_alert"></i>
                                             <div class="txt_help">
@@ -99,7 +103,7 @@
                                         </div>
                                     </div>
                                     <!-- Case 02. 준비물 모두 체크 시 -->
-                                    <div id="mtrdivY" style="display: block;">
+                                    <div id="mtrdivY" style="display: none;">
                                         <div class="chk_ok">
                                             <i class="sp_ready_chk icon_ok"></i>
                                             <div class="txt_done">
@@ -121,9 +125,9 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <h3><a href="#c1" class="btn accordion_toggle active"><strong>개인사업자</strong>
+                                        <h3><a href="#c1" class="btn accordion_toggle"><strong>개인사업자</strong>
                                                 가입이신가요?</a></h3>
-                                        <div class="accordion_cont" style="display: block;">사업자등록증, 세금계산서 발행용 이메일주소를
+                                        <div class="accordion_cont" style="display: none;">사업자등록증, 세금계산서 발행용 이메일주소를
                                             준비해주세요.</div>
                                     </li>
                                 </ul>
@@ -182,8 +186,8 @@
                         <!-- //가입유형 -->
                         <!-- 가입관련 이벤트 -->
                         <div class="ui_accordion event_info">
-                            <h3><a href="#joinEvent" class="btn accordion_toggle active">가입 관련 무료 진행 중인 이벤트 보기</a></h3>
-                            <div id="joinEvent" class="accordion_cont" style="display: block;">
+                            <h3><a href="#joinEvent" class="btn accordion_toggle">가입 관련 무료 진행 중인 이벤트 보기</a></h3>
+                            <div id="joinEvent" class="accordion_cont" style="display: none;">
                                 <div class="detail">
                                     <ul>
                                         <li><strong>가입비</strong>(3,300원) 무료!</li>
@@ -215,7 +219,7 @@
                                 <!-- 요금제 -->
                                 <div class="join_prod_default">
                                     <ul class="product_lsit"><a href="javascript:"></a>
-                                        <li id="selProd0"
+                                        <li id="selProd0" data-charge="33,000"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000644&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;/info/event/event/eventDetail?eventStat=01&amp;eventId=EVT0000145&quot;,&quot;landPage&quot;:&quot;/info/rateplan/rateplan/infoYouthHope2&quot;,&quot;postStDt&quot;:&quot;20220301000000&quot;,&quot;mnoProdCd&quot;:&quot;LPZ0019040&quot;,&quot;sharingData&quot;:&quot;Y&quot;,&quot;smsUnit&quot;:&quot;기본제공&quot;,&quot;voiceUnit&quot;:&quot;기본제공&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot;&quot;,&quot;voiceAmtNm&quot;:&quot;무제한&quot;,&quot;welfareYn&quot;:&quot;Y&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;청년희망 LTE(Ⅱ)&quot;,&quot;soId&quot;:&quot;01&quot;,&quot;reservYn&quot;:&quot;Y&quot;,&quot;chgNoYn&quot;:&quot;Y&quot;,&quot;dataGiveGn&quot;:&quot;N&quot;,&quot;grpTp1&quot;:&quot;01&quot;,&quot;prodGrpDesc&quot;:&quot;청년들을 위한 데이터무제한 LTE 요금제&quot;,&quot;dataAmtNm&quot;:&quot;11GB&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00001&quot;,&quot;prodDesc2&quot;:&quot;청년희망 LTE 11GB+(Ⅱ)&quot;,&quot;maxDisAmt&quot;:&quot;7454&quot;,&quot;qosDesc&quot;:&quot;11GB + 일 2GB 모두 소진시 <strong>최대3Mbps속도로 계속 사용</strong>&quot;,&quot;dataAmt&quot;:&quot;21&quot;,&quot;eventYn&quot;:&quot;Y&quot;,&quot;prodGrpOrd&quot;:&quot;001&quot;,&quot;dataGiveCnt&quot;:&quot;0&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;11GB+일2GB+3Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;U19&quot;,&quot;pushOrdNo&quot;:&quot;01021&quot;,&quot;adultJrCd&quot;:&quot;NA&quot;,&quot;voiceAmt&quot;:&quot;99&quot;,&quot;smsAmt&quot;:&quot;99&quot;,&quot;eventAmt&quot;:&quot;8200&quot;,&quot;goodProdNo&quot;:&quot;01021&quot;,&quot;monthlyDataAmt&quot;:&quot;71&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;40000원 이하&quot;,&quot;dataUnit&quot;:&quot;11GB+일2GB+3Mbps&quot;,&quot;prodNm&quot;:&quot;청년희망 LTE 11GB+(Ⅱ)&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;00009&quot;,&quot;chrgAmt&quot;:&quot;07&quot;,&quot;prodPrice&quot;:&quot;33000&quot;,&quot;smsAmtNm&quot;:&quot;무제한&quot;,&quot;friendYn&quot;:&quot;N&quot;},this)"
                                             class=""><a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
@@ -234,7 +238,7 @@
                                                     <dd class="sp">33,000원</dd>
                                                 </dl>
                                             </a></li><a href="javascript:"></a>
-                                        <li id="selProd1"
+                                        <li id="selProd1" data-charge="29,900"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000320&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;&quot;,&quot;landPage&quot;:&quot;/info/rateplan/rateplan/infoSoldier&quot;,&quot;postStDt&quot;:&quot;20210401000000&quot;,&quot;mnoProdCd&quot;:&quot;LPZ0017330&quot;,&quot;sharingData&quot;:&quot;Y&quot;,&quot;smsUnit&quot;:&quot;기본제공&quot;,&quot;voiceUnit&quot;:&quot;기본제공&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot;&quot;,&quot;voiceAmtNm&quot;:&quot;무제한&quot;,&quot;welfareYn&quot;:&quot;N&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;나라사랑 LTE&quot;,&quot;soId&quot;:&quot;01&quot;,&quot;reservYn&quot;:&quot;N&quot;,&quot;chgNoYn&quot;:&quot;N&quot;,&quot;dataGiveGn&quot;:&quot;N&quot;,&quot;grpTp1&quot;:&quot;06&quot;,&quot;prodGrpDesc&quot;:&quot;군장병들을 위한 데이터무제한 요금제&quot;,&quot;dataAmtNm&quot;:&quot;11GB&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00002&quot;,&quot;prodDesc2&quot;:&quot;나라사랑 LTE 일반&quot;,&quot;maxDisAmt&quot;:&quot;2000&quot;,&quot;qosDesc&quot;:&quot;11GB + 일 2GB 모두 소진시 <strong>최대3Mbps속도로 계속 사용</strong>&quot;,&quot;dataAmt&quot;:&quot;21&quot;,&quot;eventYn&quot;:&quot;Y&quot;,&quot;prodGrpOrd&quot;:&quot;003&quot;,&quot;dataGiveCnt&quot;:&quot;0&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;11GB+일2GB+3Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;U06&quot;,&quot;pushOrdNo&quot;:&quot;00004&quot;,&quot;adultJrCd&quot;:&quot;성인(ADULT)&quot;,&quot;voiceAmt&quot;:&quot;99&quot;,&quot;smsAmt&quot;:&quot;99&quot;,&quot;eventAmt&quot;:&quot;5700&quot;,&quot;goodProdNo&quot;:&quot;01041&quot;,&quot;monthlyDataAmt&quot;:&quot;71&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;30000원 이하&quot;,&quot;dataUnit&quot;:&quot;월11GB+일2GB+3Mbps&quot;,&quot;prodNm&quot;:&quot;나라사랑 LTE 일반&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;00023&quot;,&quot;chrgAmt&quot;:&quot;05&quot;,&quot;prodPrice&quot;:&quot;29900&quot;,&quot;smsAmtNm&quot;:&quot;무제한&quot;,&quot;friendYn&quot;:&quot;N&quot;},this)"
                                             class=""><a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
@@ -253,7 +257,7 @@
                                                     <dd class="sp">29,900원</dd>
                                                 </dl>
                                             </a></li><a href="javascript:"></a>
-                                        <li id="selProd2"
+                                        <li id="selProd2" data-charge="19,500"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000702&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;&quot;,&quot;landPage&quot;:&quot;&quot;,&quot;postStDt&quot;:&quot;20220512000000&quot;,&quot;mnoProdCd&quot;:&quot;PL226S109&quot;,&quot;sharingData&quot;:&quot;Y&quot;,&quot;smsUnit&quot;:&quot;기본제공&quot;,&quot;voiceUnit&quot;:&quot;기본제공&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot;&quot;,&quot;voiceAmtNm&quot;:&quot;무제한&quot;,&quot;welfareYn&quot;:&quot;Y&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;LTE 무제한&quot;,&quot;soId&quot;:&quot;02&quot;,&quot;reservYn&quot;:&quot;Y&quot;,&quot;chgNoYn&quot;:&quot;N&quot;,&quot;dataGiveGn&quot;:&quot;G&quot;,&quot;grpTp1&quot;:&quot;01&quot;,&quot;prodGrpDesc&quot;:&quot;다양한 구성의 Liiv M KT망 대표 요금제 <br>음성·문자·데이터 무제한에 제휴콘텐츠까지!&quot;,&quot;dataAmtNm&quot;:&quot;7GB&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00003&quot;,&quot;prodDesc2&quot;:&quot;데이터 주기가능 </BR>데이터쉐어링가능&quot;,&quot;maxDisAmt&quot;:&quot;4000&quot;,&quot;qosDesc&quot;:&quot;7GB 소진시 <strong>최대1Mbps속도로 계속사용</strong>&quot;,&quot;dataAmt&quot;:&quot;17&quot;,&quot;eventYn&quot;:&quot;N&quot;,&quot;prodGrpOrd&quot;:&quot;001&quot;,&quot;dataGiveCnt&quot;:&quot;2&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;7GB+1Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;K01&quot;,&quot;pushOrdNo&quot;:&quot;99999&quot;,&quot;adultJrCd&quot;:&quot;NA&quot;,&quot;voiceAmt&quot;:&quot;99&quot;,&quot;smsAmt&quot;:&quot;99&quot;,&quot;eventAmt&quot;:&quot;4400&quot;,&quot;goodProdNo&quot;:&quot;02011&quot;,&quot;monthlyDataAmt&quot;:&quot;7&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;20000원 이하&quot;,&quot;dataUnit&quot;:&quot;7GB+1Mbps&quot;,&quot;prodNm&quot;:&quot;LTE 무제한 7GB+(KT망)&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;00001&quot;,&quot;chrgAmt&quot;:&quot;03&quot;,&quot;prodPrice&quot;:&quot;19500&quot;,&quot;smsAmtNm&quot;:&quot;무제한&quot;,&quot;friendYn&quot;:&quot;Y&quot;},this)"
                                             ><a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
@@ -272,7 +276,7 @@
                                                     <dd class="sp">19,500원</dd>
                                                 </dl>
                                             </a></li><a href="javascript:"></a>
-                                        <li id="selProd3"
+                                        <li id="selProd3" data-charge="29,700"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000734&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;&quot;,&quot;landPage&quot;:&quot;&quot;,&quot;postStDt&quot;:&quot;20220929000000&quot;,&quot;mnoProdCd&quot;:&quot;PC0ZB00010&quot;,&quot;sharingData&quot;:&quot;N&quot;,&quot;smsUnit&quot;:&quot;100건&quot;,&quot;voiceUnit&quot;:&quot;100분&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot; &quot;,&quot;voiceAmtNm&quot;:&quot;100분&quot;,&quot;welfareYn&quot;:&quot;N&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;LTE 실속&quot;,&quot;soId&quot;:&quot;03&quot;,&quot;reservYn&quot;:&quot;Y&quot;,&quot;chgNoYn&quot;:&quot;N&quot;,&quot;dataGiveGn&quot;:&quot;N&quot;,&quot;grpTp1&quot;:&quot;01&quot;,&quot;prodGrpDesc&quot;:&quot;SKT망 LTE 실속 요금제 <br>음성·문자·데이터를 필요한 만큼 선택하는 가성비 요금제!&quot;,&quot;dataAmtNm&quot;:&quot;15GB&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00003&quot;,&quot;prodDesc2&quot;:&quot;3Mbps&quot;,&quot;maxDisAmt&quot;:&quot;4000&quot;,&quot;qosDesc&quot;:&quot;15GB 소진시 <strong>최대3Mbps속도로 계속 사용</strong>&quot;,&quot;dataAmt&quot;:&quot;25&quot;,&quot;eventYn&quot;:&quot;N&quot;,&quot;prodGrpOrd&quot;:&quot;020&quot;,&quot;dataGiveCnt&quot;:&quot;0&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;15GB+3Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;S01&quot;,&quot;pushOrdNo&quot;:&quot;99999&quot;,&quot;adultJrCd&quot;:&quot;NA&quot;,&quot;voiceAmt&quot;:&quot;01&quot;,&quot;smsAmt&quot;:&quot;01&quot;,&quot;eventAmt&quot;:&quot;4400&quot;,&quot;goodProdNo&quot;:&quot;99999&quot;,&quot;monthlyDataAmt&quot;:&quot;15&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;30000원 이하&quot;,&quot;dataUnit&quot;:&quot;15GB+3Mbps&quot;,&quot;prodNm&quot;:&quot;LTE 실속 15GB+(100분)(SKT망)&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;03108&quot;,&quot;chrgAmt&quot;:&quot;05&quot;,&quot;prodPrice&quot;:&quot;29700&quot;,&quot;smsAmtNm&quot;:&quot;100건&quot;,&quot;friendYn&quot;:&quot;Y&quot;},this)">
                                             <a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
@@ -292,7 +296,7 @@
                                                     <dd class="sp">29,700원</dd>
                                                 </dl>
                                             </a></li><a href="javascript:"></a>
-                                        <li id="selProd4"
+                                        <li id="selProd4" data-charge="33,000"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000637&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;/info/event/event/eventDetail?eventStat=01&amp;eventId=EVT0000119&quot;,&quot;landPage&quot;:&quot;/info/rateplan/rateplan/infoLte&quot;,&quot;postStDt&quot;:&quot;20211208000000&quot;,&quot;mnoProdCd&quot;:&quot;LPZ0018519&quot;,&quot;sharingData&quot;:&quot;Y&quot;,&quot;smsUnit&quot;:&quot;기본제공&quot;,&quot;voiceUnit&quot;:&quot;기본제공&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot;&quot;,&quot;voiceAmtNm&quot;:&quot;무제한&quot;,&quot;welfareYn&quot;:&quot;Y&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;LTE 든든&quot;,&quot;soId&quot;:&quot;01&quot;,&quot;reservYn&quot;:&quot;Y&quot;,&quot;chgNoYn&quot;:&quot;N&quot;,&quot;dataGiveGn&quot;:&quot;N&quot;,&quot;grpTp1&quot;:&quot;01&quot;,&quot;prodGrpDesc&quot;:&quot;다양한 구성의 Liiv M 대표 요금제 <br>음성·문자는 기본제공, 데이터는 필요한 만큼 선택!&quot;,&quot;dataAmtNm&quot;:&quot;11GB&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00004&quot;,&quot;prodDesc2&quot;:&quot;든든무제한 11GB+(신)&quot;,&quot;maxDisAmt&quot;:&quot;4000&quot;,&quot;qosDesc&quot;:&quot;11GB + 일 2GB 모두 소진시 <strong>최대3Mbps속도로 계속 사용</strong>&quot;,&quot;dataAmt&quot;:&quot;21&quot;,&quot;eventYn&quot;:&quot;Y&quot;,&quot;prodGrpOrd&quot;:&quot;000&quot;,&quot;dataGiveCnt&quot;:&quot;0&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;11GB+일2GB+3Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;U15&quot;,&quot;pushOrdNo&quot;:&quot;00001&quot;,&quot;adultJrCd&quot;:&quot;NA&quot;,&quot;voiceAmt&quot;:&quot;99&quot;,&quot;smsAmt&quot;:&quot;99&quot;,&quot;eventAmt&quot;:&quot;8200&quot;,&quot;goodProdNo&quot;:&quot;01018&quot;,&quot;monthlyDataAmt&quot;:&quot;71&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;40000원 이하&quot;,&quot;dataUnit&quot;:&quot;월11GB+일2GB+3Mbps&quot;,&quot;prodNm&quot;:&quot;LTE 든든무제한 11GB+(신)&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;00009&quot;,&quot;chrgAmt&quot;:&quot;07&quot;,&quot;prodPrice&quot;:&quot;33000&quot;,&quot;smsAmtNm&quot;:&quot;무제한&quot;,&quot;friendYn&quot;:&quot;Y&quot;},this)">
                                             <a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
@@ -311,7 +315,7 @@
                                                     <dd class="sp">33,000원</dd>
                                                 </dl>
                                             </a></li><a href="javascript:"></a>
-                                        <li id="selProd5"
+                                        <li id="selProd5" data-charge="41,500"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000706&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;&quot;,&quot;landPage&quot;:&quot;&quot;,&quot;postStDt&quot;:&quot;20220512000000&quot;,&quot;mnoProdCd&quot;:&quot;PL21AS380&quot;,&quot;sharingData&quot;:&quot;Y&quot;,&quot;smsUnit&quot;:&quot;기본제공&quot;,&quot;voiceUnit&quot;:&quot;기본제공&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot;&quot;,&quot;voiceAmtNm&quot;:&quot;무제한&quot;,&quot;welfareYn&quot;:&quot;Y&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;LTE 무제한&quot;,&quot;soId&quot;:&quot;02&quot;,&quot;reservYn&quot;:&quot;Y&quot;,&quot;chgNoYn&quot;:&quot;N&quot;,&quot;dataGiveGn&quot;:&quot;G&quot;,&quot;grpTp1&quot;:&quot;01&quot;,&quot;prodGrpDesc&quot;:&quot;다양한 구성의 Liiv M KT망 대표 요금제 <br>음성·문자·데이터 무제한에 제휴콘텐츠까지!&quot;,&quot;dataAmtNm&quot;:&quot;25GB+&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00005&quot;,&quot;prodDesc2&quot;:&quot;데이터 주기가능 </BR>데이터쉐어링가능 &quot;,&quot;maxDisAmt&quot;:&quot;4000&quot;,&quot;qosDesc&quot;:&quot;100GB 소진시 <strong>최대5Mbps속도로 계속 사용</strong>&quot;,&quot;dataAmt&quot;:&quot;35&quot;,&quot;eventYn&quot;:&quot;N&quot;,&quot;prodGrpOrd&quot;:&quot;001&quot;,&quot;dataGiveCnt&quot;:&quot;5&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;100GB+5Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;K01&quot;,&quot;pushOrdNo&quot;:&quot;00005&quot;,&quot;adultJrCd&quot;:&quot;NA&quot;,&quot;voiceAmt&quot;:&quot;99&quot;,&quot;smsAmt&quot;:&quot;99&quot;,&quot;eventAmt&quot;:&quot;4400&quot;,&quot;goodProdNo&quot;:&quot;02016&quot;,&quot;monthlyDataAmt&quot;:&quot;100&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;40000원 이하&quot;,&quot;dataUnit&quot;:&quot;100GB+5Mbs&quot;,&quot;prodNm&quot;:&quot;LTE 무제한 100GB+(게임박스)(KT망)&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;00009&quot;,&quot;chrgAmt&quot;:&quot;07&quot;,&quot;prodPrice&quot;:&quot;41500&quot;,&quot;smsAmtNm&quot;:&quot;무제한&quot;,&quot;friendYn&quot;:&quot;Y&quot;},this)">
                                             <a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
@@ -634,9 +638,20 @@
                 </div>
             </div>
             <div class="bottom__fix">
-                <div class="container">
-                    <img src="./img/usim_bottom_fix.png">
-                    <div class="link__area" data-link="content__usim-agree"></div>
+                <!-- <img src="./img/usim_bottom_fix_new.png"> -->
+                <div class="result__wrap">
+                    <div class="wrap__inner">
+                        <span class="charge__tit">월 예상 납부금액</span>
+                        <span class="charge__data"><em>(부가세 포함)</em><strong><span data-charge="-">-</span>원</strong></span>
+                        <span class="charge__info">* 할인혜택 미포함 금액이며 최종 할인내역은 가입신청 시<br>확인가능합니다.</span>
+                    </div>
+                    <div class="wrap__inner">
+                        <span class="charge__tit sm">월 기본료</span>
+                        <span class="charge__data sm"><strong><span data-charge="-">-</span>원</strong></span>
+                    </div>
+                </div>
+                <div class="link__area" data-link="content__usim-agree">
+                    <button type="button" class="usim__btn">온라인 가입 신청</button>
                 </div>
             </div>
         </section>
@@ -657,7 +672,7 @@
                         <input type="hidden" name="_csrf" value="ec901602-6803-489e-ac27-1d2db41780d0">
                         <div class="chk_group">
                             <div class="chk_all">
-                                <input type="checkbox" id="cate_1" class="cate_1">
+                                <input type="checkbox" id="cate_1" class="cate_1 chk__all">
                                 <label for="cate_1" id="allChk">
                                     <i class="icon_chk_all"></i>
                                     <span>약관 및 개인정보수집 이용에 모두<br> 동의합니다.</span>
@@ -668,263 +683,141 @@
                             </div>
                             <ul class="mo_box_rs type_agree">
                                 <li>
-                                    <label for="cate_1_1" class="ui_chk"><input type="checkbox" name="cate_1_1"
-                                            id="cate_1_1" class="cate_1_1"><span class="txt">상품(서비스)별 필수동의
-                                            사항</span></label>
+                                    <label for="cate_1_1" class="ui_chk"><input type="checkbox" name="cate_1_1" id="cate_1_1" class="cate_1_1 chk__all"><span class="txt">상품(서비스)별 필수동의 사항</span></label>
                                     <ul class="checkbox open">
-
-
-
                                         <!-- sub X -->
-
                                         <li>
                                             <label for="chk0" class="ui_chk">
                                                 <input type="checkbox" id="chk0" name="chk0" data="M" value="A10"
-                                                    class="cate_1_1_1">
+                                                    class="cate_1_1_1 inp__chk">
                                                 <span class="txt">이동통신 이용약관<em class="txt_required">(필수)</em></span>
                                             </label>
                                             <a onclick="agreeConPDF('/html/usimJoinTerms/(필수) 이동통신 이용약관.pdf','chk0')"
                                                 class="btn_pdf">자세히보기</a>
                                             <!-- 고객확인사항이면 -->
-
                                         </li>
-
-                                        <!-- //sub X -->
-                                        <!-- sub O -->
-
-                                        <!-- //sub O -->
-
-
-
-
-                                        <!-- sub X -->
-
                                         <li>
                                             <label for="chk1" class="ui_chk">
                                                 <input type="checkbox" id="chk1" name="chk1" data="M" value="E10"
-                                                    class="cate_1_1_2">
+                                                    class="cate_1_1_2 inp__chk">
                                                 <span class="txt">홈페이지 이용약관<em class="txt_required">(필수)</em></span>
                                             </label>
                                             <a onclick="agreeConPDF('/html/usimJoinTerms/(필수) 홈페이지 이용약관.pdf','chk1')"
                                                 class="btn_pdf">자세히보기</a>
                                             <!-- 고객확인사항이면 -->
-
                                         </li>
-
-                                        <!-- //sub X -->
-                                        <!-- sub O -->
-
-                                        <!-- //sub O -->
-
-
-
-
-                                        <!-- sub X -->
-
-                                        <!-- //sub X -->
-                                        <!-- sub O -->
-
                                         <li class="sub open">
                                             <label for="chk2" class="ui_chk">
                                                 <input type="checkbox" id="chk2" data="M" value="B10"
-                                                    class="cate_1_1_3">
+                                                    class="cate_1_1_3 inp__chk inp__all">
                                                 <span class="txt">개인(신용)정보 수집∙이용∙제공 동의<em
                                                         class="txt_required">(필수)</em></span>
                                             </label>
                                             <a onclick="agreeConPDF('/html/usimJoinTerms/(필수) Liiv M 개인(신용)정보 수집·이용·제공·조회 동의서.pdf','chk2')"
                                                 class="btn_pdf">자세히보기</a>
                                             <ul>
-
-
                                                 <li>
                                                     <label for="B0" class="ui_chk">
                                                         <input type="checkbox" id="B0" name="B0" data="M" value="B11"
-                                                            class="cate_1_1_3_1">
+                                                            class="cate_1_1_3_1 inp__chk">
                                                         <span class="txt">고유식별정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="B1" class="ui_chk">
                                                         <input type="checkbox" id="B1" name="B1" data="M" value="B12"
-                                                            class="cate_1_1_3_2">
+                                                            class="cate_1_1_3_2 inp__chk">
                                                         <span class="txt">개인(신용)정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="B2" class="ui_chk">
                                                         <input type="checkbox" id="B2" name="B2" data="M" value="B13"
-                                                            class="cate_1_1_3_3">
+                                                            class="cate_1_1_3_3 inp__chk">
                                                         <span class="txt">개인위치정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="B3" class="ui_chk">
                                                         <input type="checkbox" id="B3" name="B3" data="M" value="B14"
-                                                            class="cate_1_1_3_4">
+                                                            class="cate_1_1_3_4 inp__chk">
                                                         <span class="txt">고유식별정보 제공 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="B4" class="ui_chk">
                                                         <input type="checkbox" id="B4" name="B4" data="M" value="B15"
-                                                            class="cate_1_1_3_5">
+                                                            class="cate_1_1_3_5 inp__chk">
                                                         <span class="txt">개인(신용)정보 제공 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="B5" class="ui_chk">
                                                         <input type="checkbox" id="B5" name="B5" data="M" value="B16"
-                                                            class="cate_1_1_3_6">
+                                                            class="cate_1_1_3_6 inp__chk">
                                                         <span class="txt">혁신금융서비스 이용 동의</span>
                                                     </label>
                                                 </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                             </ul>
                                         </li>
-
-                                        <!-- //sub O -->
-
-
-
-
-                                        <!-- sub X -->
-
-                                        <!-- //sub X -->
-                                        <!-- sub O -->
-
                                         <li class="sub open">
                                             <label for="chk3" class="ui_chk">
                                                 <input type="checkbox" id="chk3" data="M" value="C10"
-                                                    class="cate_1_1_4">
+                                                    class="cate_1_1_4 inp__chk inp__all">
                                                 <span class="txt">개인(신용)정보 조회 동의<em
                                                         class="txt_required">(필수)</em></span>
                                             </label>
                                             <a onclick="agreeConPDF('/html/usimJoinTerms/(필수) Liiv M 개인(신용)정보 조회 동의서.pdf','chk3')"
                                                 class="btn_pdf">자세히보기</a>
                                             <ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                 <li>
                                                     <label for="C6" class="ui_chk">
                                                         <input type="checkbox" id="C6" name="C6" data="M" value="C11"
-                                                            class="cate_1_1_4_7">
+                                                            class="cate_1_1_4_7 inp__chk">
                                                         <span class="txt">고유식별정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="C7" class="ui_chk">
                                                         <input type="checkbox" id="C7" name="C7" data="M" value="C12"
-                                                            class="cate_1_1_4_8">
+                                                            class="cate_1_1_4_8 inp__chk">
                                                         <span class="txt">개인(신용)정보 수집∙이용 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="C8" class="ui_chk">
                                                         <input type="checkbox" id="C8" name="C8" data="M" value="C13"
-                                                            class="cate_1_1_4_9">
+                                                            class="cate_1_1_4_9 inp__chk">
                                                         <span class="txt">고유식별정보 제공 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="C9" class="ui_chk">
                                                         <input type="checkbox" id="C9" name="C9" data="M" value="C14"
-                                                            class="cate_1_1_4_10">
+                                                            class="cate_1_1_4_10 inp__chk">
                                                         <span class="txt">개인(신용)정보 제공 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="C10" class="ui_chk">
                                                         <input type="checkbox" id="C10" name="C10" data="M" value="C15"
-                                                            class="cate_1_1_4_11">
+                                                            class="cate_1_1_4_11 inp__chk">
                                                         <span class="txt">고유식별정보 조회 동의</span>
                                                     </label>
                                                 </li>
-
-
-
                                                 <li>
                                                     <label for="C11" class="ui_chk">
                                                         <input type="checkbox" id="C11" name="C11" data="M" value="C16"
-                                                            class="cate_1_1_4_12">
+                                                            class="cate_1_1_4_12 inp__chk">
                                                         <span class="txt">개인(신용)정보 조회 동의</span>
                                                     </label>
                                                 </li>
-
-
-
-
-
-
                                             </ul>
                                         </li>
-
-                                        <!-- //sub O -->
-
-
-
-
-                                        <!-- sub X -->
-
                                         <li>
                                             <label for="chk4" class="ui_chk">
                                                 <input type="checkbox" id="chk4" name="chk4" data="M" value="D10"
-                                                    class="cate_1_1_5">
+                                                    class="cate_1_1_5 inp__chk">
                                                 <span class="txt">고객 확인 사항<em class="txt_required">(필수)</em></span>
                                             </label>
                                             <a onclick="agreeConPDF('/html/usimJoinTerms/(필수) 고객확인사항.pdf','chk4')"
@@ -942,19 +835,7 @@
                                                 2. 본인은 본인, 본인 가족, 본인 또는 본인 가족이 관련된 기업 등의 여신거래와 관련하여 Liiv M 가입을 강요받은 사실이
                                                 없으며 통신상품 내용을 충분히 확인한 후, Liiv M 가입 여부를 자발적으로 결정하였음을 확인합니다.
                                             </div>
-
                                         </li>
-
-                                        <!-- //sub X -->
-                                        <!-- sub O -->
-
-                                        <!-- //sub O -->
-
-
-
-
-
-
                                     </ul>
                                 </li>
                             </ul>
@@ -3858,8 +3739,8 @@
             window.addEventListener('resize', setVh);
             setVh();
 
-            const statusBar = document.querySelector(".mobile-hidden");
-            isMobile ? statusBar.style.display = "none" : null;
+            // const statusBar = document.querySelector(".mobile-hidden");
+            // isMobile ? statusBar.style.display = "none" : null;
 
             getHeadPad();
             window.addEventListener("resize", getHeadPad);
@@ -3919,6 +3800,12 @@
         };
 
         // 01 usim
+        $(window).on('load', function(){
+            // 화면 높이값
+            let btmFixedH = $(".content__usim .bottom__fix").outerHeight();
+            $(".content__usim .content__wrap").css("padding-bottom",btmFixedH + "px")
+            
+        });
         $(document).ready(function(){
             // 가입시 준비물 확인 
             $("li[name=stepChkBox]").click(function(){
@@ -3940,7 +3827,55 @@
             $(".product_lsit > li > a").on('click', function(e){
                 e.preventDefault;
                 $(this).closest("li").addClass("active").siblings("li").removeClass("active");
+            });
+            const chargeSelect = Array.from(document.querySelectorAll(".product_lsit li"));
+            // const rdoResult = document.querySelectorAll(".rdo__result");
+            const charge = document.querySelectorAll(".result__wrap .charge__data [data-charge]");
+            chargeSelect.forEach((rdo)=>{
+                const rdoCharge = rdo.getAttribute("data-charge");
+                rdo.addEventListener("click", ()=>{
+                    charge.forEach((result)=>{
+                        result.innerHTML = rdoCharge;
+                    });
+                })
             })
+
+            // 약관 동의
+            $('.chk_group').off('click').on('click', '.chk__all', function(){
+                $(this).closest('.chk_group').find('input').prop('checked', $(this).is(':checked'));
+                $(this).closest('.chk_all').toggleClass('active');
+            });
+            $('.inp__all').off('click').on('click', function(){
+                $(this).closest('.sub').find('input').prop('checked', $(this).is(':checked'));
+            });
+            $('.chk_group').each(function(){
+                var inpChk = $(this).find('.inp__chk');
+                inpChk.on('click', function(){
+                    var is_checked = true;
+                    inpChk.each(function(){
+                    is_checked = is_checked && $(this).is(':checked');
+                    });
+                    $(this).closest('.chk_group').find('.chk__all').prop('checked', is_checked);
+            
+                    if($(this).closest('.chk_group').find('.chk__all').is(':checked')){
+                        $(this).closest('.chk_group').find('.chk__all').closest('.chk_all').addClass('active');
+                    } else {
+                        $(this).closest('.chk_group').find('.chk__all').closest('.chk_all').removeClass('active');
+                    }
+                });
+            });
+            $('.sub').each(function(){
+                var inpChk2 = $(this).find('.inp__chk').not('.inp__all');
+                inpChk2.on('click', function(){
+                    var is_checked2 = true;
+                    inpChk2.each(function(){
+                    is_checked2 = is_checked2 && $(this).is(':checked');
+                });
+                    console.log(is_checked2);
+                    $(this).closest('.sub').find('.inp__all').prop('checked', is_checked2);
+                    $(this).closest('.chk_group').find('.chk__all').prop('checked', is_checked2);
+                });
+            });
         })
     </script>
 </body>

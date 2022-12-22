@@ -446,7 +446,8 @@ window.addEventListener("load", ()=>{
           is_checked2 = is_checked2 && $(this).is(':checked');
         });
         console.log(is_checked2)
-        $(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2)
+        $(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2);
+        $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked2);
       });
     });
   })

@@ -78,10 +78,10 @@
     img.only_pc     {display:block;}    
     
     /* common */
-    body.dvDesktop header{min-width:1025px;}
-    .max_wrap {max-width:920px; margin:0 auto; text-align:left;}
+    /* body.dvDesktop header{min-width:1025px;} */
+    /* .max_wrap {max-width:920px; margin:0 auto; text-align:left;} */
     section.container {padding-left:0; padding-right:0;}
-    section.container .max_wrap {max-width:920px;}
+    /* section.container .max_wrap {max-width:920px;} */
     section.container .main_wrap.max_wrap {margin-left:0rem; margin-right:0rem;}
     h1,h2,h3,h4,h5,h6 {letter-spacing:-0.05em;}
     
@@ -94,7 +94,7 @@
     #header ~ section.container .login_wrap.max_wrap > .btn_area  {margin-left:auto; margin-right:auto;}
 
     /* header */
-    header {text-align:center; background:url(../img/pc_header_bg.png) repeat-x top left; background-size:auto 100%; height:12.5rem; border-bottom:1px solid #e1e1e1;}
+    /* header {text-align:center; background:url(../img/pc_header_bg.png) repeat-x top left; background-size:auto 100%; height:12.5rem; border-bottom:1px solid #e1e1e1;} */
     header .max_wrap {position:relative; padding-top:4.8rem; min-height:12.5rem;}
 
     header .mo_header {display:none;}
