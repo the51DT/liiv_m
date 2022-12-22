@@ -5434,18 +5434,18 @@ $(document).ready(function(){
 	});
 	
 	// 가입자유형 변경시 
-	$('#custTpBtn, #c-join-type-bizperson').click(function(){
-		if($('input[name="c-cust-tp"]:checked').val() == "GEF"){
-			var custTp = $('input[name="c-cust-tp"]:checked').val();
-		} else {
-			var custTp = $('input[name="c-join-type"]:checked').val();
-		} 
+	// $('#custTpBtn, #c-join-type-bizperson').click(function(){
+	// 	// if($('input[name="c-cust-tp"]:checked').val() == "GEF"){
+	// 	// 	var custTp = $('input[name="c-cust-tp"]:checked').val();
+	// 	// } else {
+	// 	// 	var custTp = $('input[name="c-join-type"]:checked').val();
+	// 	// } 
 		
-		changeCustTpView(custTp);//가입자유형에 따른 화면세팅
-		$("#custTp").val(custTp);
-		$("#custId").val('');
+	// 	// changeCustTpView(custTp);//가입자유형에 따른 화면세팅
+	// 	// $("#custTp").val(custTp);
+	// 	// $("#custId").val('');
 		
-	});
+	// });
 	
 	//가입자 유형 변경 취소시 변경전값 세팅
 	$("#custTpCloseBtn").click(function(){
@@ -6127,26 +6127,26 @@ $(document).ready(function(){
 	//특화요금제(나라사랑일반) :: 가입대상확인하기 
 	$("#joinTagetBtn").click(function(){
 		//이전나라사랑일반요금제조회
-		getCtrtProdCnt('PD00000254',function(result){ 
-			if(result > 0){
-				popalarm("나라사랑 LTE요금제는 재가입이 불가능합니다.", "info", false,'');
-				fnLMPM000001('PD00000321');//기본요금제세팅
-				$("#narasarangYn").val('N');
+		// getCtrtProdCnt('PD00000254',function(result){ 
+		// 	if(result > 0){
+		// 		popalarm("나라사랑 LTE요금제는 재가입이 불가능합니다.", "info", false,'');
+		// 		fnLMPM000001('PD00000321');//기본요금제세팅
+		// 		$("#narasarangYn").val('N');
 				
-			}else{
-				//현제나라사랑일반요금제조회
-				getCtrtProdCnt($("#chrgPln").val(),function(result){
-					if(result > 0){
-						popalarm("나라사랑 LTE요금제는 재가입이 불가능합니다.", "info", false, '');
-						fnLMPM000001('PD00000321');//기본요금제세팅
-						$("#narasarangYn").val('N');
-					}else{
-						sendItb006();
+		// 	}else{
+		// 		//현제나라사랑일반요금제조회
+		// 		getCtrtProdCnt($("#chrgPln").val(),function(result){
+		// 			if(result > 0){
+		// 				popalarm("나라사랑 LTE요금제는 재가입이 불가능합니다.", "info", false, '');
+		// 				fnLMPM000001('PD00000321');//기본요금제세팅
+		// 				$("#narasarangYn").val('N');
+		// 			}else{
+		// 				sendItb006();
 						
-					} //end if
-				});//end ajax
-			}//end if
-		});//end ajax
+		// 			} //end if
+		// 		});//end ajax
+		// 	}//end if
+		// });//end ajax
 	});
 	
 	//선택동의팝업 :: 전체 클릭이벤트
@@ -6285,79 +6285,46 @@ $(document).ready(function(){
 		}
 		
 		//계열사동의시
-		if($('#chk6').prop("checked") == true){
-			$("#selTerm3").val($("#chk6").val());
-		}else{
-			$("#selTerm3").val("");
-		}
+		// if($('#chk6').prop("checked") == true){
+		// 	$("#selTerm3").val($("#chk6").val());
+		// }else{
+		// 	$("#selTerm3").val("");
+		// }
 		
 	});
 	
 	//선택동의미체크시  팝업클릭이벤트
 	$("#popBtnNext").click(function(){
-		modalLayer.hide("chkAlertLayer2");
-		fullLayer.hide('selectAgreeLayer');
-		popalarm("최종적으로 Liiv M 가입이 진행됩니다.", "info", true,"확인",saveApplTp);
+		// modalLayer.hide("chkAlertLayer2");
+		// fullLayer.hide('selectAgreeLayer');
+		// popalarm("최종적으로 Liiv M 가입이 진행됩니다.", "info", true,"확인",saveApplTp);
 		
 	});
 	
 	if('' == "Y") { // 데이터쉐어링 가입
-		if('' == "II") {
-			$("#c-join-type-person").prop("checked", true);
-			$("#c-join-type-person").trigger("click");
-			$("#c-join-type-bizperson").closest("li").hide();
-		} else if('' == "GEF") {
-			$("#c-join-type-bizperson").prop("checked", true);
-			$("#c-join-type-bizperson").trigger("click");
-			$("#c-join-type-person").closest("li").hide();
-		}
-		$("#prodSearchBtn").prop("href", "javascript:void(0);"); // 요금제 검색 팝업 막기
+		// if('' == "II") {
+		// 	$("#c-join-type-person").prop("checked", true);
+		// 	$("#c-join-type-person").trigger("click");
+		// 	$("#c-join-type-bizperson").closest("li").hide();
+		// } else if('' == "GEF") {
+		// 	$("#c-join-type-bizperson").prop("checked", true);
+		// 	$("#c-join-type-bizperson").trigger("click");
+		// 	$("#c-join-type-person").closest("li").hide();
+		// }
+		// $("#prodSearchBtn").prop("href", "javascript:void(0);"); // 요금제 검색 팝업 막기
 	}
 	
 	//미성년자 : 신분증진위확인구분_ OCR관련
 	$("input:radio[name='c-select2-id']").change(function(){
-		if($('input:radio[name="c-select2-id"][value="1"]').prop('checked')){  
-			$('input:radio[name="rdoSelfIdf"][value="1"]').prop('checked',true);
-		}else{
-			$('input:radio[name="rdoSelfIdf"][value="2"]').prop('checked',true);
-		}	
+		// if($('input:radio[name="c-select2-id"][value="1"]').prop('checked')){  
+		// 	$('input:radio[name="rdoSelfIdf"][value="1"]').prop('checked',true);
+		// }else{
+		// 	$('input:radio[name="rdoSelfIdf"][value="2"]').prop('checked',true);
+		// }	
 	});
 });
 </script>
 
-<!-- 신용카드미소지자: 휴대폰본인인증 -->
-<!-- <form id="form1" name="form1" action="https://www.liivm.com/join/steps/reserve/phonePopup2" method="post" class="MultiFile-intercepted"> -->
-	<!-- <input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624"> -->
-<!-- </form> -->
-<!-- <form name="kcbResultForm" method="post" class="MultiFile-intercepted">
-	<input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624"> -->
-	<!-- 테스트 -->
-	<!-- <input type="hidden" name="kcbName" id="kcbName">
-	<input type="hidden" name="kcbBirthDay" id="kcbBirthDay">
-	<input type="hidden" name="kcbTelNo" id="kcbTelNo"> -->
-	
-	<!-- <input type="hidden" name="result" id="result">
-	<input type="hidden" name="errorMsg" id="errorMsg">
-	<input type="hidden" name="kcbValue" id="kcbValue"> -->
-	<!--휴대폰 본인확인 팝업 처리결과 정보 phone_popup3에서 값 입력 -->
-	<!-- <input type="hidden" name="CP_CD" id="CP_CD">
-	<input type="hidden" name="TX_SEQ_NO" id="TX_SEQ_NO">
-	<input type="hidden" name="RSLT_CD" id="RSLT_CD">
-	<input type="hidden" name="RSLT_MSG" id="RSLT_MSG"> -->
-	
-	<!-- <input type="hidden" name="RSLT_NAME" id="RSLT_NAME">
-	<input type="hidden" name="RSLT_BIRTHDAY" id="RSLT_BIRTHDAY">
-	<input type="hidden" name="RSLT_SEX_CD" id="RSLT_SEX_CD">
-	<input type="hidden" name="RSLT_NTV_FRNR_CD" id="RSLT_NTV_FRNR_CD"> -->
-	
-	<!-- <input type="hidden" name="DI" id="DI">
-	<input type="hidden" name="CI" id="CI">
-	<input type="hidden" name="CI_UPDATE" id="CI_UPDATE">
-	<input type="hidden" name="TEL_COM_CD" id="TEL_COM_CD">
-	
-	<input type="hidden" name="RETURN_MSG">
-</form> -->
-<!-- //신용카드미소지자: 휴대폰본인인증 -->
 
 <form id="frm" name="frm" method="post" class="MultiFile-intercepted">
 	<input type="hidden" name="_csrf" value="2e93841d-2123-4108-93f0-adc9f561f624">
@@ -6419,12 +6386,6 @@ $(document).ready(function(){
                                     	<label class="ui_rdo">
                                         	<input type="radio" id="c-join-type-person" name="c-cust-tp">
                                         	<span id="pCustTpNm">개인</span>
-	                                        <!-- 팝업에서 가입자 유형 선택 적용 후 ex) 성인 선택 시 개인 -> 성인으로 변경 
-	                                        Case 01. 성인
-	                                        Case 02. 미성년자
-	                                        Case 03. 외국인
-	                                        Case 04. 신용카드 미소지자  
-	                                        -->                                                            
                                         </label> 
 									</li>
                                     <li>
@@ -6459,17 +6420,7 @@ $(document).ready(function(){
 		                                    </li> 
 		                                </ul> 
 									</div>
-	                                <!-- 신분증 촬영 -->
-	                                <div class="id_pic" id="idPicDiv">  
-	                                    <p class="txt_id_pic_help">신분증 촬영 시 정보가 자동으로 입력됩니다.</p>                                                   
-	                                    <label for="c-camera" class="camera_call"> 
-	                                        <p class="btn btn_camera" onclick="callOcrIdCard();">
-	                                            <i class="icon_camera"></i><span>촬영하기</span>
-	                                        </p> 
-	                                       <!--  <input type="file" id="c-camera" accept="image/*" capture="environment"> -->
-	                                    </label>                                       
-	                                </div>    
-	                                <!-- //신분증 촬영 -->
+
 	
 	                                <div class="select_cont">     
 										<div class="mo_box type_select_detail"> 
