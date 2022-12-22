@@ -84,7 +84,7 @@ input:disabled,
 /* 포커스 될 때 label span(name)이 위로 올라감 */
 .basic-form input:focus{padding-top:3.6rem; height:7.4rem;}
 .basic-form input:focus + label{border-bottom:0.2rem solid #222;}
-.basic-form input:focus + label span{font-size:1.4rem; font-weight:700; color:#000;}
+.basic-form input:focus + label span{font-size:1.2rem; color:#999;}
 
 .basic-form input:focus + label::after,
 .basic-form input:valid + label::after { width:100%; transform:translateX(0); } 
