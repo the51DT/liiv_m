@@ -184,7 +184,7 @@ window.addEventListener("load", ()=>{
         const value = $(this).val();
         let star ="";
         if (value){
-            for(let i=1; i<value.length; i++){ star += "*" }
+            for(let i=1; i<value.length; i++){ star += "●" }
             $(this).val($(this).val()[0] + star)
         }
     })
