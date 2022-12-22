@@ -17,7 +17,7 @@ $(document).ready(function(){
     footerPad();//
     emailFreeWhite();//이메일 직접 입력 공통    
     
-    datepickerReadonly()// datepicker input readonly 처리
+    // datepickerReadonly()// datepicker input readonly 처리
     
     //////// PC관련 추가
     layerFormUiCustom(); //2022.09.14 추가
@@ -69,27 +69,27 @@ function deviceType(){
 }
 
 // 우측 메뉴 슬라이드
-function sideMenu(type){
-    var type = type;
-    var $aside = $('aside#layer_menu');
+// function sideMenu(type){
+//     var type = type;
+//     var $aside = $('aside#layer_menu');
     
-    var wH = $(window).scrollTop();
+//     var wH = $(window).scrollTop();
     
-    if(type == 'open'){
-        $aside.attr('data-scroll', wH);
-        $aside.addClass('show');
-        $('body').addClass('scroll_off');
-    } else if (type == 'close'){
-        $aside.removeClass('show'); 
-        $('body').removeClass('scroll_off');
+//     if(type == 'open'){
+//         $aside.attr('data-scroll', wH);
+//         $aside.addClass('show');
+//         $('body').addClass('scroll_off');
+//     } else if (type == 'close'){
+//         $aside.removeClass('show'); 
+//         $('body').removeClass('scroll_off');
         
-        var wH = $aside.attr('data-scroll');
-        $(window).scrollTop(wH);
-        $aside.removeAttr('data-scroll');
+//         var wH = $aside.attr('data-scroll');
+//         $(window).scrollTop(wH);
+//         $aside.removeAttr('data-scroll');
         
-        asideMenuActiveReset(); // aside 메뉴의 active 초기화 // inc_aside.html 에 있음
-    }
-}
+//         asideMenuActiveReset(); // aside 메뉴의 active 초기화 // inc_aside.html 에 있음
+//     }
+// }
 
 
 //모달팝업
@@ -118,11 +118,11 @@ var modalLayer = {
         target.removeClass('modal_up');
         target.next('.dimmed').remove();
         
-        if($('.flayer_pop:visible').length > 0 || $('.modal_up:visible').length > 0){
-            $('body').addClass('scroll_off');  
-        } else {
-           $('body').removeClass('scroll_off');  
-        }
+        // if($('.flayer_pop:visible').length > 0 || $('.modal_up:visible').length > 0){
+        //     $('body').addClass('scroll_off');  
+        // } else {
+        //    $('body').removeClass('scroll_off');  
+        // }
         var wH = target.attr('data-scroll');
         $(window).scrollTop(wH);
         target.removeAttr('data-scroll');
@@ -152,7 +152,7 @@ var modalLayer = {
         
         var wH = $(window).scrollTop();
         showLayer.attr('data-scroll', wH);
-        $('body').addClass('scroll_off');
+        // $('body').addClass('scroll_off');
         
         layerTabKeyAction('#' + target);
         layerFormUiCustom(); //2022.09.14 추가
@@ -189,11 +189,11 @@ var fullLayer = {
 		target.attr('tabindex',-1).hide();
         target.next('.dimmed').remove();
         
-		if($('.flayer_pop:visible').length > 0 || $('.mlayer_pop:visible').length > 0){
-            $('body').addClass('scroll_off');  
-        } else {
-           $('body').removeClass('scroll_off');  
-        } 
+		// if($('.flayer_pop:visible').length > 0 || $('.mlayer_pop:visible').length > 0){
+        //     $('body').addClass('scroll_off');  
+        // } else {
+        //    $('body').removeClass('scroll_off');  
+        // } 
         
         var wH = target.attr('data-scroll');
         $(window).scrollTop(wH);
@@ -221,7 +221,7 @@ var fullLayer = {
         
         var wH = $(window).scrollTop();
         showLayer.attr('data-scroll', wH);
-        $('body').addClass('scroll_off');
+        // $('body').addClass('scroll_off');
         
         layerTabKeyAction('#' + target);
         layerFormUiCustom(); //2022.09.14 추가
@@ -402,31 +402,31 @@ $(document).on('click', '[data-click="tab"]', function(e) {
 
 
 //달력 
-$.datepicker.setDefaults({
-	prevText: "이전달", 
-	nextText: "다음달", 
-	currentText: "오늘", 
-	monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"], 
-	monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"], 
-	dayNames: ['일', '월', '화', '수', '목', '금', '토'], 
-	dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'], 
-	dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], 
-	//weekHeader: "Wk", 
-	dateFormat: "yy.mm.dd", 
-	//firstDay: 0, 
-	//isRTL: false, 
-	showMonthAfterYear: true, 
-	yearSuffix: "년", 
-	changeYear:true,
-	changeMonth:true,
-	showOn: 'button',
-	buttonText: "날짜선택",   
-});
+// $.datepicker.setDefaults({
+// 	prevText: "이전달", 
+// 	nextText: "다음달", 
+// 	currentText: "오늘", 
+// 	monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"], 
+// 	monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"], 
+// 	dayNames: ['일', '월', '화', '수', '목', '금', '토'], 
+// 	dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'], 
+// 	dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'], 
+// 	//weekHeader: "Wk", 
+// 	dateFormat: "yy.mm.dd", 
+// 	//firstDay: 0, 
+// 	//isRTL: false, 
+// 	showMonthAfterYear: true, 
+// 	yearSuffix: "년", 
+// 	changeYear:true,
+// 	changeMonth:true,
+// 	showOn: 'button',
+// 	buttonText: "날짜선택",   
+// });
 
-function datepickerReadonly() {
-   $('.type_datepicker input[type="text"]').addClass('datepicker');
-   $('input.datepicker').attr('readonly', true);    
-}
+// function datepickerReadonly() {
+//    $('.type_datepicker input[type="text"]').addClass('datepicker');
+//    $('input.datepicker').attr('readonly', true);    
+// }
 
 //검색
 function csSearch() {
