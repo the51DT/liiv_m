@@ -75,11 +75,11 @@ window.addEventListener("load", ()=>{
     // });
   
     // step1 아코디언 버튼
-    const accoBtn = document.querySelectorAll(".acco__btn");
-    accoBtn.forEach((item)=>{
-        item.addEventListener("click", function(){
-            item.parentNode.classList.add("active");
-        });
+    $(".acco__btn").each(function(){
+        $(this).on('click', function(){
+            $(this).closest('.acco__wrap').toggleClass('active');
+            $(this).siblings('.acco__cont').slideToggle(200);
+        })
     })
   
   })
@@ -317,7 +317,7 @@ window.addEventListener("load", ()=>{
     // disabled check - 인증방법(KB모바일인증서, 신용카드 인증)
     $(document).on("click", ".section__joinauth .img_radio", function(){
         $(document).find(".section__joinauth .foot__btn .link__item").addClass("disabled");
-        const elem = $(document).find(".section__joinauth .img_radio_wrap .img_radio").eq(0);
+        const elem = $(document).find(".section__joinauth .img_radio_wrap .img_radio").eq(1);
         elem.hasClass("active") ? $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled") : null;
         // $(document).find(".section__joinauth .foot__btn .link__item").removeClass("disabled")
     })
