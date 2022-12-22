@@ -473,4 +473,12 @@ window.addEventListener("load", ()=>{
             }
         });
     });
+
+
+
+    // 신용카드 선택
+    $(document).on("click", ".joincard__card__wrap ul li", function(){
+        $(document).find(".joincard__card__wrap ul li").removeClass("active");
+        $(this).addClass("active");
+    })
 })
