@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/common_v3.css">
+    <script src="./js/jquery-2.1.3.min.js"></script>
     <script src="./js/common_v3.js"></script>
     <script src="./js/common_v3_pc.js"></script>
 </head>
@@ -61,7 +62,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li id="stepChkBox2" name="stepChkBox" class="checked"><!-- 준비 확인 X -->
+                                    <li id="stepChkBox2" name="stepChkBox"><!-- 준비 확인 X -->
                                         <div class="chkbox">
                                             <i class="sp_ready icon_kbacc"></i>
                                             <p>KB국민은행 <br>입출금 계좌</p>
@@ -70,7 +71,7 @@
                                         <a href="javascript:" class="btn_open_acc"
                                             onclick="modalLayer.show('openAccOnlineLayer', this)">계좌 개설하기</a>
                                     </li>
-                                    <li id="stepChkBox3" name="stepChkBox" class="checked"><!-- 준비 확인 X -->
+                                    <li id="stepChkBox3" name="stepChkBox"><!-- 준비 확인 X -->
                                         <div class="chkbox">
                                             <i class="sp_ready icon_kbcert_card"></i>
                                             <p>
@@ -254,7 +255,7 @@
                                             </a></li><a href="javascript:"></a>
                                         <li id="selProd2"
                                             onclick="setProdInfoData({&quot;maxDisAdjAmt&quot;:&quot;&quot;,&quot;prodCd&quot;:&quot;PD00000702&quot;,&quot;priceUnitNm&quot;:&quot;월과금&quot;,&quot;eventLandPage&quot;:&quot;&quot;,&quot;landPage&quot;:&quot;&quot;,&quot;postStDt&quot;:&quot;20220512000000&quot;,&quot;mnoProdCd&quot;:&quot;PL226S109&quot;,&quot;sharingData&quot;:&quot;Y&quot;,&quot;smsUnit&quot;:&quot;기본제공&quot;,&quot;voiceUnit&quot;:&quot;기본제공&quot;,&quot;bestYn&quot;:&quot;N&quot;,&quot;prodDesc&quot;:&quot;&quot;,&quot;voiceAmtNm&quot;:&quot;무제한&quot;,&quot;welfareYn&quot;:&quot;Y&quot;,&quot;priceUnit&quot;:&quot;M&quot;,&quot;prodGrpNm&quot;:&quot;LTE 무제한&quot;,&quot;soId&quot;:&quot;02&quot;,&quot;reservYn&quot;:&quot;Y&quot;,&quot;chgNoYn&quot;:&quot;N&quot;,&quot;dataGiveGn&quot;:&quot;G&quot;,&quot;grpTp1&quot;:&quot;01&quot;,&quot;prodGrpDesc&quot;:&quot;다양한 구성의 Liiv M KT망 대표 요금제 <br>음성·문자·데이터 무제한에 제휴콘텐츠까지!&quot;,&quot;dataAmtNm&quot;:&quot;7GB&quot;,&quot;maxDisDesc&quot;:&quot;&quot;,&quot;popOrdNo&quot;:&quot;00003&quot;,&quot;prodDesc2&quot;:&quot;데이터 주기가능 </BR>데이터쉐어링가능&quot;,&quot;maxDisAmt&quot;:&quot;4000&quot;,&quot;qosDesc&quot;:&quot;7GB 소진시 <strong>최대1Mbps속도로 계속사용</strong>&quot;,&quot;dataAmt&quot;:&quot;17&quot;,&quot;eventYn&quot;:&quot;N&quot;,&quot;prodGrpOrd&quot;:&quot;001&quot;,&quot;dataGiveCnt&quot;:&quot;2&quot;,&quot;bestYn2&quot;:&quot;Y&quot;,&quot;dataDesc&quot;:&quot;7GB+1Mbps&quot;,&quot;oneLineYn&quot;:&quot;N&quot;,&quot;prodGrpCd&quot;:&quot;K01&quot;,&quot;pushOrdNo&quot;:&quot;99999&quot;,&quot;adultJrCd&quot;:&quot;NA&quot;,&quot;voiceAmt&quot;:&quot;99&quot;,&quot;smsAmt&quot;:&quot;99&quot;,&quot;eventAmt&quot;:&quot;4400&quot;,&quot;goodProdNo&quot;:&quot;02011&quot;,&quot;monthlyDataAmt&quot;:&quot;7&quot;,&quot;unlimited&quot;:&quot;Y&quot;,&quot;chrgAmtNm&quot;:&quot;20000원 이하&quot;,&quot;dataUnit&quot;:&quot;7GB+1Mbps&quot;,&quot;prodNm&quot;:&quot;LTE 무제한 7GB+(KT망)&quot;,&quot;svcTp&quot;:&quot;01&quot;,&quot;dispPriNo&quot;:&quot;00001&quot;,&quot;chrgAmt&quot;:&quot;03&quot;,&quot;prodPrice&quot;:&quot;19500&quot;,&quot;smsAmtNm&quot;:&quot;무제한&quot;,&quot;friendYn&quot;:&quot;Y&quot;},this)"
-                                            class="active"><a href="javascript:">
+                                            ><a href="javascript:">
                                                 <h5 class="c_tit"> <span class="d_type i_lte" title="요금제속성">LTE</span>
                                                     <strong class="d_name" title="요금제명">LTE 무제한 7GB+(KT망)</strong> <span
                                                         class="d_comp" title="통신사명">KT</span></h5>
@@ -345,9 +346,9 @@
                                 <!-- //요금제 -->
 
                                 <!-- 이용안내 -->
-                                <div class="ui_accordion user_guide" style="display: block;">
-                                    <h3><a href="javascript:" class="btn accordion_toggle active">이용안내</a></h3>
-                                    <div id="guide" class="accordion_cont" style="display: block;">
+                                <div class="ui_accordion user_guide">
+                                    <h3><a href="javascript:" class="btn accordion_toggle">이용안내</a></h3>
+                                    <div id="guide" class="accordion_cont">
                                         <!-- 유의문구 노출 -->
                                         <p id="grpNoticeDesc">
                                         <div class="user_info_conet">
@@ -2279,225 +2280,12 @@
 
 
                                                                 <option value="LGT">LGU+</option>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                             </select>
                                                         </div>
                                                         <div class="uc_list idx_1">
                                                             <p class="label">SKT 알뜰폰</p>
                                                             <select title="SKT 알뜰폰 선택" id="sktMcoCd">
                                                                 <option value="선택">SKT 알뜰폰</option>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2561,174 +2349,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 <option value="S14">KB국민은행(SKT망)</option>
 
                                                             </select>
@@ -2737,11 +2357,6 @@
                                                             <p class="label">KT 알뜰폰</p>
                                                             <select title="KT 알뜰폰 선택" id="ktMcoCd">
                                                                 <option value="선택">KT 알뜰폰</option>
-
-
-
-
-
 
 
 
@@ -2754,34 +2369,6 @@
 
 
                                                                 <option value="ONS">온세텔레콤</option>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2925,104 +2512,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                                                 <option value="K36">KB국민은행(KT망)</option>
 
                                                             </select>
@@ -3034,114 +2523,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
                                                                 <option value="ONS">온세텔레콤</option>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4535,6 +3917,31 @@
         const setVh = () => {
             document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
         };
+
+        // 01 usim
+        $(document).ready(function(){
+            // 가입시 준비물 확인 
+            $("li[name=stepChkBox]").click(function(){
+                var chkBoxId = this.id;
+                if($(this).attr("class") == "checked") $(this).removeClass("checked");
+                else $(this).addClass("checked");
+                
+                if($(".checked").length == 3){
+                    $("#mtrdivY").css("display","block");
+                    $("#mtrdivN").css("display","none");
+                }else{
+                    $("#mtrdivY").css("display","none");
+                    $("#mtrdivN").css("display","block");
+                }
+                
+            });
+
+            // 요금제 선택
+            $(".product_lsit > li > a").on('click', function(e){
+                e.preventDefault;
+                $(this).closest("li").addClass("active").siblings("li").removeClass("active");
+            })
+        })
     </script>
 </body>
 

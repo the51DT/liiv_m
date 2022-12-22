@@ -1,6 +1,6 @@
 ::-webkit-scrollbar{display:none;}
 
-html,body{height:100%;}
+html,body{height:100%;font-family:'Spoqa Han Sans Neo', 'sans-serif'}
 #wrap{position:relative; width:100%; max-width:420px; min-height:100%; margin:0 auto; overflow-y:scroll; overflow-x:hidden; background:#F2F4F6}
 #wrap img{width:100%; max-width:100%}
 
@@ -28,11 +28,11 @@ header.shadow-hide{box-shadow: 0 0 0 #fff;}
 
 
 /* content__usim */
-.content__usim .content__wrap{margin:1.75rem 0.1875rem 20rem;}
+/* .content__usim .content__wrap{margin:1.75rem 0.1875rem 20rem;} */
 
 
 /* content__usim-agree */
-#wrap .agree__item-ttl{width:15.9375rem; padding:1.75rem 0 0 1rem}
+/* #wrap .agree__item-ttl{width:15.9375rem; padding:1.75rem 0 0 1rem} */
 #wrap .agree__item-off{padding: 1rem 0 0;}
 #wrap .agree__item-notice{width:10.9375rem; padding:0 0 0 1rem; margin:-0.625rem 0 0;}
 #wrap .agree__item-check{padding:1.25rem 0 0;}
