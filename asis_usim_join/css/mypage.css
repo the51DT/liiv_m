@@ -826,11 +826,11 @@ input.i_pc {display: none;}
 .prod_charge .ui_accordion.more dd.txt_discount p span {font-size: 1.4rem; color: #ff4a4a;}
 .prod_charge .ui_accordion.more .btn.accordion_toggle {position: absolute; right: 0; top: 1.3rem; display: inline-block; width: 2rem; height: 2rem; padding: 0; border-radius: 100%; box-shadow: 0.1rem 0.1rem 0.4rem rgba(13,72,127,0.15); background-color: #098aaa; background-image: url(../img/icon_detail_arrow_w.png); background-position: 50% 50%; background-size: 1rem auto;}
 .prod_charge .ui_accordion.more .btn.accordion_toggle.active {transform: rotate(180deg);}
-.prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 5.3rem); margin-right: -4rem; border-top: 0; padding: 0.7rem 0 1.2rem; background-color: #f7f9fa;}
-.dvDesktop .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 6rem);}
+.prod_charge .ui_accordion.more .accordion_cont {/*margin-left: calc(-50vw + 5.3rem);*/ margin-right: -4rem; border-top: 0; padding: 0.7rem 0 1.2rem; background-color: #f7f9fa;}
+/* .dvDesktop .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 6rem);} */
 @media all and (max-width: 767px) {
-    .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 4.3rem);}
-    .dvDesktop .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 5.3rem);}
+    /* .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 4.3rem);} */
+    /* .dvDesktop .prod_charge .ui_accordion.more .accordion_cont {margin-left: calc(-50vw + 5.3rem);} */
 }
 .prod_charge .ui_accordion.more .accordion_cont dl {display: table; width: calc(100%); padding: 0.2rem 1.6rem; border: 0;}
 .prod_charge .ui_accordion.more .accordion_cont dl dt {position: relative; width: 65%; padding-left: 1rem; color: #8aa3b1; text-align: left;}
