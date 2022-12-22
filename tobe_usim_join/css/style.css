@@ -75,16 +75,16 @@ input:disabled,
 /* 스타일 */
 .basic-form {position:relative; margin-top: 1.6rem;} /* 기본세팅 */
 .basic-form input { box-sizing:border-box; padding:1.6rem 0 0;width:100%; height:5.4rem; line-height: 5.4rem; border:0 none; font-size: 1.8rem; color:#222; outline:none; transition:all .2s;}
-.basic-form label { position:absolute; left:0%; bottom:0; width:100%; height:100%; border-bottom:0.1rem solid #D6D6D6; text-align:left; pointer-events:none; }
-.basic-form label:after { content:""; position:absolute; left:0; bottom:-0.1rem; width:0; height:100%; border-bottom:0.1rem solid #000; transition:all .2s; } /* 파란색 가로줄 */
-.basic-form label span { position:absolute; left:0; bottom:0.8rem; font-size:1.8rem; color:#999; transition:all .2s ease; }
+.basic-form label { position:absolute; left:0%; bottom:0; width:100%; height:100%; border-bottom:1px solid #D6D6D6; text-align:left; pointer-events:none; }
+/* .basic-form label:after { content:""; position:absolute; left:0; bottom:-0.1rem; width:0; height:100%; border-bottom:1px solid #000;} */
+.basic-form label span { position:absolute; left:0; bottom:0.8rem; font-size:1.8rem; color:#999; transition:all .1s ease; }
 
 .basic-form input:focus + label span, 
 .basic-form input:valid + label span { transform:translateY(-260%); font-size:1.2rem; color:#999; }  /* input에 글을 입력하고 포커스가 지나간 상태에서 제어하려면 valid 선택자를 써야한다. */
 /* 포커스 될 때 label span(name)이 위로 올라감 */
 .basic-form input:focus{padding-top:3.6rem; height:7.4rem;}
-.basic-form input:focus + label{border-bottom:0.2rem solid #222;}
-.basic-form input:focus + label span{font-size:1.4rem; font-weight:700; color:#000;}
+.basic-form input:focus + label{border-bottom:1px solid #222;}
+.basic-form input:focus + label span{font-size:1.2rem; color:#999;}
 
 .basic-form input:focus + label::after,
 .basic-form input:valid + label::after { width:100%; transform:translateX(0); } 
@@ -337,8 +337,15 @@ form.jointype4{padding:0 2rem;}
 
 /** section__joincard ****************************/
 .section__joincard{padding-bottom:10rem;}
-.section__joincard-card{padding:1rem 0 0;}
-.section__joincard .form__group{padding:1.7rem 0 0;}
+.section__joincard-ttl{padding:1rem 0 0;}
+.joincard__card__wrap{border:0.1rem solid #E7E8EA; border-radius:1.2rem; margin:3rem 2rem; padding:2rem; box-shadow:0 0 1rem rgba(0,0,0, 0.05)}
+.joincard__card__wrap ul{display:flex; flex-wrap:wrap; align-items:center; justify-content: space-between;}
+.joincard__card__wrap ul li{flex:0 0 25%; border:0.2rem solid #fff; box-sizing:border-box; padding:1rem 0 .8rem; text-align:center;}
+.joincard__card__wrap ul li span{display:block; width:3.6rem; margin:0 auto;}
+.joincard__card__wrap ul li p{font-size:1.4rem; color:#555; padding:1rem 0 0; letter-spacing:-0.045rem;}
+.joincard__card__wrap ul li.active {border:0.2rem solid #FFD338; border-radius:0.8rem; box-shadow:0 0 1rem rgba(0,0,0, .05)}
+.joincard__card__wrap ul li.active p{font-weight:700; color:#222}
+/* .section__joincard .form__group{padding:1.7rem 0 0;} */
 
 
 /** section__joinhelp toast *******************************/
