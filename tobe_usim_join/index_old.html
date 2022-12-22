@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.png">
+    <title>To-be usim/join | Liiv M(리브모바일)</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <section class="content__section section__type">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/type-head.png">
+            </header>
+            <div class="container__wrap">
+                contents
+                <a href="#" class="link__item" data-link="section__jointype">section__jointype 으로 링크</a>
+            </div>
+            <footer>
+                <div class="foot__btn"><a href="#" class="link__item" data-link="section__jointype"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <!-- 가입자 유형선택 1 -->
+        <section class="content__section section__jointype">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/jointype-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-1.png"></div>
+                <div class="section__jointype-text"><img src="./img/jointype-text.png"></div>
+
+                <div class="section__jointype-btn img_radio_wrap">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/jointype-icon1.png"></div>
+                        <p>개인</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/jointype-icon2.png"></div>
+                        <p>개인사업자</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__jointype2"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__jointype2">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/jointype-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-1.png"></div>
+                <div><img src="./img/data-1.png"></div>
+
+                <div class="radio__group">
+                    <div class="radio__item radio-type1">
+                        <label>
+                            <input type="radio" name="radio_age">
+                            <span>만 19세 이상 성인입니다.</span>
+                        </label>
+                    </div>
+                    <div class="radio__item radio-type1">
+                        <label>
+                            <input type="radio" name="radio_age">
+                            <span>만 4세 이상 ~ 만 19세 미만 미성년자입니다.</span>
+                        </label>
+                    </div>
+                    <div class="radio__item radio-type1">
+                        <label>
+                            <input type="radio" name="radio_age">
+                            <span>외국인입니다.</span>
+                        </label>
+                    </div>
+                    <div class="radio__item radio-type1">
+                        <label>
+                            <input type="radio" name="radio_age">
+                            <span>만 19세 이상 성인이며<br>신용카드/KB모바일 인증서 미소지자입니다.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__jointype3"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__jointype3">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/jointype-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-1.png"></div>
+                <div><img src="./img/data-1-1.png"></div>
+                <div class="section__jointype3-text"><img src="./img/jointype3-text.png"></div>
+
+                <div class="section__jointype3-btn img_radio_wrap type3">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/jointype3-icon1.png"></div>
+                        <p>주민등록증</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/jointype3-icon2.png"></div>
+                        <p>운전면허증</p>
+                    </div>
+                </div>
+               
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__jointype4"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__jointype4">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/jointype-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-1.png"></div>
+                <div><img src="./img/data-2.png"></div>
+                <div><img src="./img/jointype4-camera.png"></div>
+
+                <form class="">
+                    <div class="form__group">
+                        <div class="form__item">
+                            <label>이름</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="text" class="wfull jointype4_name" placeholder="이름을 입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label>주민등록번호</label>
+                            <div class="form__item-input flex">
+                                <div class="form__item-hasbtn w45">
+                                    <input type="text" class="wfull regNo" maxlength="6" pattern="[0-9]*" inputmode="numeric" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                -
+                                <div class="form__item-hasbtn w45">
+                                    <input type="text" class="wfull regNo2" maxlength="7" pattern="/[0-9*]/g" inputmode="numeric" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="form__item">
+                            <label>발급일자</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="text" class="wfull jointype4_date" pattern="/[0-9*]/g" inputmode="numeric" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+               
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joinauth"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joinauth">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joinauth-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-1.png"></div>
+                <div><img src="./img/data-2.png"></div>
+                <div class="section__joinauth-ttl"><img src="./img/joinauth-ttl.png"></div>
+
+                <div class="section__jointype3-btn img_radio_wrap">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/joinauth-icon1.png"></div>
+                        <p>KB모바일인증서</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/joinauth-icon2.png"></div>
+                        <p>신용카드 인증</p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joininfo"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joininfo">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joininfo-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-2.png"></div>
+                <div class="section__joininfo-ttl"><img src="./img/joininfo-ttl.png"></div>
+                
+
+                <form class="">
+                    <div class="form__group">
+                        <div class="form__item">
+                            <label>아이디</label>
+                            <div class="form__item-input flex">
+                                <div class="form__item-hasbtn" style="flex:0 0 24rem;">
+                                    <input type="text" class="wfull section__joininfo_id" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                <div style="flex:0 0 7rem"><img src="./img/joininfo-idcheck.png"></div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label>비밀번호 생성</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="password" class="wfull section__joininfo_pw" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="form__item">
+                            <label>한번 더 입력해주세요</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="password" class="wfull section__joininfo_pw2" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joininfo2"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joininfo2">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joininfo-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-2.png"></div>
+                <div><img src="./img/data-3.png"></div>
+                <div class="section__joininfo2-ttl"><img src="./img/joininfo2-ttl.png"></div>
+
+                <form class="">
+                    <div class="form__group">
+                        <div class="form__item">
+                            <label>이메일</label>
+                            <div class="form__item-input flex">
+                                <div class="form__item-hasbtn w45">
+                                    <input type="text" class="wfull section__joininfo2_email" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                @
+                                <div class="w45">
+                                    <select class="section__joininfo2_email2">
+                                        <option value="0">직접입력</option>
+                                        <option value="1">naver.com</option>
+                                        <option value="2">hotmail.com</option>
+                                        <option value="3">daum.net</option>
+                                        <option value="4">nate.com</option>
+                                        <option value="5">gmail.com</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div><img src="./img/joininfo2-notice.png"></div>
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joinaddress"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joinaddress">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joininfo-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-2.png"></div>
+                <div><img src="./img/data-4.png"></div>
+                <div class="section__joinaddress-ttl"><img src="./img/joinaddress-ttl.png"></div>
+
+                <form class="">
+                    <div class="form__group">
+                        <div class="form__item">
+                            <label>주소</label>
+                            <div class="form__item-input flex">
+                                <div class="form__item-hasbtn" style="flex:0 0 24rem;">
+                                    <input type="text" class="wfull section__joinaddress_address1" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                <div style="flex:0 0 7rem"><img src="./img/joinaddress-address.png"></div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label>상세주소를 입력해 주세요</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="text" class="wfull section__joinaddress_address2" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joinbill"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joinbill">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joinbill-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-2.png"></div>
+                <div><img src="./img/data-5.png"></div>
+                <div class="section__joinbill-ttl"><img src="./img/joinbill-ttl.png"></div>
+
+                <div class="section__jointype-btn img_radio_wrap">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/joinbill-icon1.png"></div>
+                        <p>문자</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/joinbill-icon2.png"></div>
+                        <p>이메일</p>
+                    </div>
+                </div>
+
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joinpay"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joinpay">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joinpay-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-2.png"></div>
+                <div><img src="./img/data-6.png"></div>
+                <div class="section__joinpay-ttl"><img src="./img/joinpay-ttl.png"></div>
+
+                <div class="section__jointype-btn img_radio_wrap">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/joinpay-icon1.png"></div>
+                        <p>신용카드</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/joinpay-icon2.png"></div>
+                        <p>계좌이체</p>
+                    </div>
+                </div>
+                <div class="section__joinpay-btn"><a href="#" class="link__item disabled" data-link="section__joincard"><img src="./img/btn-card.png"></a></div>
+                <p class="check-type1">
+                    <label>
+                        <input type="checkbox">
+                        <span>[필수] 본인은 본 신청서 계약내용에 따른 납부금을 별도의 통지 없이 위 계좌(카드)에서 지정된 출금일에 자동 인출(결제) 되는 것에 동의합니다.</span>
+                    </label>
+                </p>
+
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joinpay"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        <section class="content__section section__joincard">
+            <header>
+                <!-- <a href="#" class="link__leave">닫기</a> -->
+                <img src="./img/joinpay-head.png">
+            </header>
+            <div class="container__wrap">
+                <div><img src="./img/step-2.png"></div>
+                <div><img src="./img/data-6.png"></div>
+                <div class="section__joincard-card"><img src="./img/joincard-card.png"></div>
+
+                <form class="">
+                    <div class="form__group">
+                        <div class="form__item">
+                            <label>카드번호</label>
+                            <div class="form__item-input flex">
+                                <div class="form__item-hasbtn w20">
+                                    <input type="text" class="wfull section__joincard_1" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                <div class="form__item-hasbtn w20">
+                                    <input type="text" class="wfull section__joincard_2" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                <div class="form__item-hasbtn w20">
+                                    <input type="text" class="wfull section__joincard_3" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                                <div class="form__item-hasbtn w20">
+                                    <input type="text" class="wfull section__joincard_4" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label>유효기간</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="text" class="wfull section__joincard_5" placeholder="입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div><img src="./img/joincard-notice.png"></div>
+
+            </div>
+            <footer>
+                <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joincard"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+
+        
+
+
+        <!-- 가입이 어려우세요? -->
+        <!-- <section class="content__section section__joinhelp">
+            <div class="section__joinhelp-wrap">
+                <div class="section__joinhelp-close"><a href="#" class="link__help-close"><img src="./img/joinhelp-close.png"></a></div>
+                <div><img src="./img/joinhelp-ttl.png"></div>
+
+                <form class="">
+                    <div class="form__group">
+                        <div class="form__item">
+                            <label>이름</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="text" class="wfull section__joinhelp_name" placeholder="이름을 입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <label>이름</label>
+                            <div class="form__item-input">
+                                <div class="form__item-hasbtn">
+                                    <input type="text" class="wfull section__joinhelp_name2" placeholder="이름을 입력해주세요" autocomplete="off">
+                                    <a href="#" class="clear-text inp-del">취소</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div><img src="./img/joinhelp-agree.png"></div>
+                <p class="check-type1">
+                    <label>
+                        <input type="checkbox" class="section__joinhelp-checkbox">
+                        <span>가입 전화 상담을 위한 정보제공에 동의합니다.</span>
+                    </label>
+                </p>
+                <div><img src="./img/joinhelp-text.png"></div>
+                <div class="section__joinhelp-btn"><a href="#" class="link__help-close disabled"><img src="./img/btn-consult.png"></a></div>
+            </div>
+        </section> -->
+
+        <!-- Liiv M과 만남을 그만 두실건가요? -->
+        <!-- <section class="content__section section__leave">
+            <div class="section__leave-wrap">
+                <img src="./img/img_leave_pop.png">
+                <div class="section__leave-btn">
+                    <a href="#" class="link__leave-close"><img src="./img/img_leave_n.png"></a>
+                    <a href="#" class="link__leave-close"><img src="./img/img_leave_y.png"></a>
+                </div>
+            </div>
+        </section> -->
+
+    </div>
+</body>
+</html>

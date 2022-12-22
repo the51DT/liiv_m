@@ -6,28 +6,374 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon.png">
     <title>To-be usim/join | Liiv M(리브모바일)</title>
-
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/jquery-2.1.3.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/common.js"></script>
 </head>
 <body>
     <div id="wrap">
-        <section class="content__section section__type">
+
+        <!-- section1 -->
+        <section class="content__section section__type section__step1_1">
             <header>
-                <!-- <a href="#" class="link__leave">닫기</a> -->
-                <img src="./img/type-head.png">
+                <img src="./img/head_step1_1.png">
             </header>
             <div class="container__wrap">
-                contents
-                <a href="#" class="link__item" data-link="section__jointype">section__jointype 으로 링크</a>
+                <img src="./img/step1_cont1.png" alt="">
+                <div class="cont__inner">
+                    <div class="img_radio_wrap">
+                        <div class="img_radio">
+                            <div class="img_radio_thum">
+                                <img src="./img/step1_cont1_rdo1.svg" alt="">
+                            </div>
+                            <p>번호이동</p>
+                        </div>
+                        <div class="img_radio">
+                            <div class="img_radio_thum">
+                                <img src="./img/step1_cont1_rdo2.svg" alt="">
+                            </div>
+                            <p>신규가입</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/step1_cont1_2.png" alt="">
             </div>
             <footer>
-                <div class="foot__btn"><a href="#" class="link__item" data-link="section__jointype"><img src="./img/btn-next.png"></a></div>
+                <img src="./img/step1_cont1_btm.png" alt="">
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__step1_2"><img src="./img/btn-next.png"></a>
+                </div>
             </footer>
         </section>
 
+        <section class="content__section section__step1_2">
+            <header>
+                <img src="./img/head_step1_2.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/step1_cont2.png" alt="">
+                <div class="cont__inner">
+                    <div class="img_radio_wrap type2">
+                        <div class="img_radio rdo__item" data-flag="청년희망 LTE 11GB+(Ⅱ)" data-charge="24,800">
+                            <img src="./img/step2_cont2_rdo1.png" alt="">
+                        </div>
+                        <div class="img_radio rdo__item" data-flag="나라사랑 LTE 일반" data-charge="24,200">
+                            <img src="./img/step2_cont2_rdo2.png" alt="">
+                        </div>
+                        <div class="img_radio rdo__item" data-flag="LTE 무제한 7GB+(KT망)" data-charge="15,100">
+                            <img src="./img/step2_cont2_rdo3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="acco__wrap">
+                    <button type="button" class="acco__btn">
+                        <img src="./img/step1_cont2_2_acco.png" alt="">
+                    </button>
+                    <div class="acco__cont">
+                        <img src="./img/step1_cont2_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <!-- <img class="shadow__top br__top16" src="./img/step1_cont2_btm.png" alt=""> -->
+                <div class="rdo__result">
+                    <div class="flag">청년희망 LTE 11GB+(Ⅱ)</div>
+                    <div class="charge">매월 <strong><span data-charge="24,800">24,800</span>원</strong> 납부 예상해요!</div>
+                    <div class="info">(부가세 포함, 할인혜택 미포함)</div>
+                </div>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__step1_3"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="content__section section__step1_3">
+            <header>
+                <img src="./img/head_step1_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/step1_cont3.png" alt="">
+                <div class="cont__inner">
+                    <div class="img_radio_wrap">
+                        <div class="img_radio">
+                            <div class="img_radio_thum">
+                                <img src="./img/step1_cont3_rdo1.svg" alt="">
+                            </div>
+                            <p>유심(USIM) 개통</p>
+                        </div>
+                        <div class="img_radio">
+                            <div class="img_radio_thum">
+                                <img src="./img/step1_cont3_rdo2.svg" alt="">
+                            </div>
+                            <p>eSIM 개통</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="acco__wrap">
+                    <button type="button" class="acco__btn">
+                        <img src="./img/step1_cont2_2_acco.png" alt="">
+                    </button>
+                    <div class="acco__cont">
+                        <img src="./img/step1_cont3_2.png" alt="">
+                    </div>
+                </button>
+            </div>
+            <footer>
+                <!-- <img class="shadow__top br__top16" src="./img/step1_cont2_btm.png" alt=""> -->
+                <div class="rdo__result active">
+                    <div class="flag">청년희망 LTE 11GB+(Ⅱ)</div>
+                    <div class="charge">매월 <strong><span data-charge="24,800">24,800</span>원</strong> 납부 예상해요!</div>
+                    <div class="info">(부가세 포함, 할인혜택 미포함)</div>
+                </div>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__step1_4"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="content__section section__step1_4">
+            <header>
+                <img src="./img/head_step1_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/step1_cont4.png" alt="">
+                <div class="cont__inner">
+                    <!-- <div class="img_radio_wrap">
+                        <div class="img_radio rdo__item" data-txt="유심이 없어요">
+                            <label>
+                                <div class="img_radio_thum">
+                                    <img src="./img/step1_cont3_rdo1.svg" alt="">
+                                </div>
+                                <input type="radio" name="rdo__usim" value="no-usim">
+                                <p>유심이 없어요</p>
+                            </label>
+                        </div>
+                        <div class="img_radio rdo__item active" data-txt="유심이 있어요">
+                            <label>
+                                <div class="img_radio_thum">
+                                    <img src="./img/step1_cont3_rdo2.svg" alt="">
+                                </div>
+                                <input type="radio" name="rdo__usim" value="usim" checked>
+                                <p>유심이 있어요</p>
+                            </label>
+                        </div>
+                    </div> -->
+                    <div class="img_radio_wrap">
+                        <div class="img_radio">
+                            <div class="img_radio_thum big">
+                                <img src="./img/step1_cont4_rdo1.svg" alt="">
+                            </div>
+                            <p>유심이 없어요</p>
+                        </div>
+                        <div class="img_radio">
+                            <div class="img_radio_thum big">
+                                <img src="./img/step1_cont4_rdo2.svg" alt="">
+                            </div>
+                            <p>유심이 있어요</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="acco__wrap">
+                    <button type="button" class="acco__btn">
+                        <img src="./img/step1_cont2_2_acco.png" alt="">
+                    </button>
+                    <div class="acco__cont">
+                        <img src="./img/step1_cont4_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <!-- <img class="shadow__top br__top16" src="./img/step1_cont2_btm.png" alt=""> -->
+                <div class="rdo__result active">
+                    <div class="flag">청년희망 LTE 11GB+(Ⅱ)</div>
+                    <div class="charge">매월 <strong><span data-charge="24,800">24,800</span>원</strong> 납부 예상해요!</div>
+                    <div class="info">(부가세 포함, 할인혜택 미포함)</div>
+                </div>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__step1_5"><img src="./img/btn_step1_4.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <!-- <section class="content__section section__step1_5">
+            <header>
+                <img src="./img/head_step1_3_line.png">
+            </header>
+            <div class="container__wrap">
+                <div class="cont__inner">
+                    <div class="result__wrap">
+                        <a href="#" class="result__item link__item" data-link="section__step1_4">
+                            <span class="rdo__result">유심이 있어요</span>
+                        </a>
+                    </div>
+                </div>
+                <img src="./img/step1_cont5_2.png" alt="">
+                <div class="cont__inner">
+                    <div class="img_radio_wrap">
+                        <div class="img_radio">
+                            <div class="img_radio_thum">
+                                <img src="./img/step1_cont3_rdo1.svg" alt="">
+                            </div>
+                            <p>우체국 등기</p>
+                        </div>
+                        <div class="img_radio active">
+                            <div class="img_radio_thum">
+                                <img src="./img/step1_cont3_rdo2.svg" alt="">
+                            </div>
+                            <p>당일 배송 서비스</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <img class="shadow__top br__top16" src="./img/step1_cont2_btm.png" alt="">
+                <div class="foot__btn">
+                    <a href="#" class="link__item" data-link="section__step1_6"><img src="./img/btn_step1_5.png"></a>
+                </div>
+            </footer>
+        </section> -->
+
+        <section class="content__section section__step1_5">
+            <header>
+                <img src="./img/head_step1_4.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/step1_cont6.png" alt="">
+                <div class="cont__inner">
+                    <div class="agr__group">
+                        <div class="check__list__wrap">
+                            <p class="check-type1">
+                                <label for="chk1">
+                                    <input type="checkbox" name="chk1" id="chk1" class="chk__all">
+                                    <span>약관 및 개인(신용)정보 이용에 <br>모두 동의합니다.</span>
+                                </label>
+                            </p>
+                        </div>
+                        <p class="check__alert">모든 필수 약관에 동의해 주세요.</p>
+                        <div class="check__list__wrap">
+                            <p class="check-type1">
+                                <label for="chk2">
+                                    <input type="checkbox" name="chk2" id="chk2" class="inp__chk">
+                                    <span>이동통신 이용약관 주요 내용 설명서 <br><strong>(필수)</strong></span>
+                                </label>
+                                <a href="#" class="btn__terms"></a>
+                            </p>
+                            <p class="check-type1">
+                                <label for="chk3">
+                                    <input type="checkbox" name="chk3" id="chk3" class="inp__chk">
+                                    <span>홈페이지 이용약관 <strong>(필수)</strong></span>
+                                </label>
+                                <a href="#" class="btn__terms"></a>
+                            </p>
+                            <div class="check__wrap">
+                                <p class="check-type1">
+                                    <label for="chk4">
+                                        <input type="checkbox" name="chk4" id="chk4" class="inp__chk inp__all">
+                                        <span>개인(신용)정보 수집&middot;이용&middot;제공 동의 <br><strong>(필수)</strong></span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_1">
+                                        <input type="checkbox" name="chk4_1" id="chk4_1" class="inp__chk">
+                                        <span>고유식별정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_2">
+                                        <input type="checkbox" name="chk4_2" id="chk4_2" class="inp__chk">
+                                        <span>개인(신용)정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_3">
+                                        <input type="checkbox" name="chk4_3" id="chk4_3" class="inp__chk">
+                                        <span>개인위치정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk4_4">
+                                        <input type="checkbox" name="chk4_4" id="chk4_4" class="inp__chk">
+                                        <span>고유식별정보 제공 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                            </div>
+                            <div class="check__wrap">
+                                <p class="check-type1">
+                                    <label for="chk5">
+                                        <input type="checkbox" name="chk5" id="chk5" class="inp__chk inp__all">
+                                        <span>개인(신용)정보 조회 동의 <strong>(필수)</strong></span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_1">
+                                        <input type="checkbox" name="chk5_1" id="chk5_1" class="inp__chk">
+                                        <span>고유식별정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_2">
+                                        <input type="checkbox" name="chk5_2" id="chk5_2" class="inp__chk">
+                                        <span>개인(신용)정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_3">
+                                        <input type="checkbox" name="chk5_3" id="chk5_3" class="inp__chk">
+                                        <span>개인위치정보 수집&middot;이용 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <p class="check-type2">
+                                    <label for="chk5_4">
+                                        <input type="checkbox" name="chk5_4" id="chk5_4" class="inp__chk">
+                                        <span>고유식별정보 제공 동의</span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                            </div>
+                            <div class="check__wrap">
+                                <p class="check-type1">
+                                    <label for="chk6">
+                                        <input type="checkbox" name="chk6" id="chk6" class="inp__chk">
+                                        <span>고객 확인 사항 <strong>(필수)</strong></span>
+                                    </label>
+                                    <a href="#" class="btn__terms"></a>
+                                </p>
+                                <div class="term__box">
+                                    <p class="term__txt">
+                                        1.최근 대출업자, SNS 등을 통해 이동전화 개통시 
+                                        자금을 제공해주겠다고 권유한 후, 개통된 휴대폰 / 
+                                        유심을 대출 사기, 보이스피싱 조직에 유통하는 등의
+                                        악용하는 사례가 다수 적발되고 있습니다.<br>
+                                        이러한 제3자에게 본인명의의 휴대폰, / 유심을 개통
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__jointype"><img src="./img/btn_step1_6.png"></a>
+                </div>
+            </footer>
+        </section>
+        <!-- //section1 -->
+
+        <!-- section2 -->
         <!-- 가입자 유형선택 1 -->
         <section class="content__section section__jointype">
             <header>
@@ -448,65 +794,287 @@
             </div>
             <footer>
                 <!-- <div class="foot__help"><a href="#" class="link__help"><img src="./img/common-help.png"></a></div> -->
-                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__joincard"><img src="./img/btn-next.png"></a></div>
+                <div class="foot__btn"><a href="#" class="link__item disabled" data-link="section__billtype3-2"><img src="./img/btn-next.png"></a></div>
+            </footer>
+        </section>
+        <!-- //section2 -->
+
+        <!-- section3 -->
+        <section class="content__section section__billtype3-2">
+            <header>
+                <img src="./img/head_billtype3_2.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/img_billtype3_2_1.png">
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item" data-link="section__billtype3-3"><img src="./img/btn-next.png"></a>
+                </div>
             </footer>
         </section>
 
-        
+        <section class="content__section section__billtype3-3">
+            <header>
+                <img src="./img/head_billtype3_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/img_billtype3_3_7.png">
+                <div class="img_radio_wrap padding">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_5.png"></div>
+                        <p>우체국 등기</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_6.png"></div>
+                        <p>당일 배송 서비스</p>
+                    </div>
+                </div>
+                <img src="./img/img_billtype3_3_2.png">
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-3-1"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
 
+        <section class="content__section section__billtype3-3-1">
+            <header>
+                <img src="./img/head_billtype3_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/img_billtype3_3_1.png">
+                <div class="img_radio_wrap padding">
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_3.png"></div>
+                        <p>동일합니다.</p>
+                    </div>
+                    <div class="img_radio">
+                        <div class="img_radio_thum"><img src="./img/img_billtype3_3_4.png"></div>
+                        <p>다릅니다</p>
+                    </div>
+                </div>
+                <img src="./img/img_billtype3_3_2.png">
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-4"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
 
-        <!-- 가입이 어려우세요? -->
-        <!-- <section class="content__section section__joinhelp">
-            <div class="section__joinhelp-wrap">
-                <div class="section__joinhelp-close"><a href="#" class="link__help-close"><img src="./img/joinhelp-close.png"></a></div>
-                <div><img src="./img/joinhelp-ttl.png"></div>
-
-                <form class="">
-                    <div class="form__group">
-                        <div class="form__item">
-                            <label>이름</label>
-                            <div class="form__item-input">
-                                <div class="form__item-hasbtn">
-                                    <input type="text" class="wfull section__joinhelp_name" placeholder="이름을 입력해주세요" autocomplete="off">
-                                    <a href="#" class="clear-text inp-del">취소</a>
-                                </div>
+        <section class="content__section section__billtype3-4">
+            <header>
+                <img src="./img/head_billtype3_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/img_billtype3_4_1.png">
+                <form>
+                <div class="usim-address-wrap">
+                    <div class="usim-address">
+                        <div class="usim-address_row first">
+                            <div class="basic-form">
+                                <input type="text" class="form-text" id="usim-address1" autocomplete="off" required placeholder="기본 주소를 검색해주세요">
+                                <label for="usim-address1"><span>주소</span></label>
+                                <a href="#" class="clear-text inp-del">취소</a>
                             </div>
+                            <button type="button" class="btn-address"><img src="./img/btn_address.png" alt="주소검색"></button>
                         </div>
-                        <div class="form__item">
-                            <label>이름</label>
-                            <div class="form__item-input">
-                                <div class="form__item-hasbtn">
-                                    <input type="text" class="wfull section__joinhelp_name2" placeholder="이름을 입력해주세요" autocomplete="off">
-                                    <a href="#" class="clear-text inp-del">취소</a>
-                                </div>
+                        <div class="usim-address_row secend">
+                            <div class="basic-form">
+                                <input type="text" class="form-text" id="usim-address2" autocomplete="off" required placeholder="상세 주소를 입력해주세요">
+                                <label for="usim-address2"><span></span></label>
+                                <a href="#" class="clear-text inp-del">취소</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 </form>
-
-                <div><img src="./img/joinhelp-agree.png"></div>
-                <p class="check-type1">
-                    <label>
-                        <input type="checkbox" class="section__joinhelp-checkbox">
-                        <span>가입 전화 상담을 위한 정보제공에 동의합니다.</span>
-                    </label>
-                </p>
-                <div><img src="./img/joinhelp-text.png"></div>
-                <div class="section__joinhelp-btn"><a href="#" class="link__help-close disabled"><img src="./img/btn-consult.png"></a></div>
+                <img src="./img/img_billtype3_4_2.png">
             </div>
-        </section> -->
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-5"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
 
-        <!-- Liiv M과 만남을 그만 두실건가요? -->
-        <!-- <section class="content__section section__leave">
-            <div class="section__leave-wrap">
-                <img src="./img/img_leave_pop.png">
-                <div class="section__leave-btn">
-                    <a href="#" class="link__leave-close"><img src="./img/img_leave_n.png"></a>
-                    <a href="#" class="link__leave-close"><img src="./img/img_leave_y.png"></a>
+        <section class="content__section section__billtype3-5">
+            <header>
+                <img src="./img/head_billtype3_3.png">
+            </header>
+            <div class="container__wrap">
+                <img src="./img/img_billtype3_5_1.png">
+                <div class="basic-form-wrap">
+                    <div class="basic-form mt0">
+                        <input type="text" class="form-text" id="user_name" autocomplete="off" required placeholder="이름을 입력해주세요">
+                        <label for="user_name"><span>수령인</span></label>
+                        <a href="#" class="clear-text inp-del">취소</a>
+                    </div>
+                    <div class="basic-form">
+                        <input type="text" class="form-text" id="user_phone" autocomplete="off" required placeholder="'-' 없이 입력해주세요">
+                        <label for="user_phone"><span>연락 가능번호</span></label>
+                        <a href="#" class="clear-text inp-del">취소</a>
+                    </div>
+                </div>
+                <img src="./img/img_billtype3_5_2_1.png">
+                <a href="#" class="btn-dropdown"><img src="./img/img_billtype3_5_2_2.png"></a>
+                <div class="dropdown1">
+                    <img src="./img/img_billtype3_5_2_3.png">
+                </div>
+                <div class="dropdown2">
+                    <img src="./img/img_billtype3_5_2.png">
                 </div>
             </div>
-        </section> -->
+            <footer>
+                <div class="foot__btn">
+                    <a href="#" class="link__item disabled" data-link="section__billtype3-6"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="content__section section__billtype3-6">
+            <header>
+                <img src="./img/head_billtype3_4.png">
+            </header>
+            <div class="container__wrap">
+                <div class="float_billtype3_6"><img src="./img/img_billtype3_6_2.png"></div>
+                <img src="./img/img_billtype3_6_1.png">
+            </div>
+            <footer>
+                <div class="foot__btn type2">
+                    <a href="#" class="disabled-type2"><img src="./img/btn_billtype3_6_1.png"></a>
+                    <a href="#" class="link__item" data-link="section__billtype3-7"><img src="./img/btn_billtype3_6_2.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <section class="content__section section__billtype3-7">
+            <header>
+                <img src="./img/head_billtype3_5.png">
+            </header>
+            <div class="container__wrap">
+                <div class="ani-billtype3-7">
+                    <img src="./img/img_billtype3_7_1.png">
+                    <div class="img-ani-billtype3-7"><img src="./img/img_billtype3_7_2.png"></div>
+                </div>
+                <!-- <div class="card__item-toastpopup">
+                    <div class="container">
+                        <a href="#" class="toastpopup-close"><img src="./img/img_billtype3_8_1.png"></a>
+                    </div>
+                </div> -->
+            </div>
+            <footer>
+                <div class="foot__btn">
+                    <a href="#"><img src="./img/btn-next.png"></a>
+                </div>
+            </footer>
+        </section>
+        <!-- //section3 -->
 
     </div>
+
+    <script>
+        const step1Slide = new Swiper(".step1__intro__slide", {
+            pagination: {
+                el: ".pagination",
+            },
+        });
+        step1Slide.on('reachEnd', function(){
+            $('.intro__btn').removeClass('disabled');
+        })
+
+        $(window).scroll(function (event) {
+            let scroll = $(window).scrollTop();
+            
+            if(scroll > 60){
+                $('.float_billtype3_6').stop().fadeIn('fast');
+            }else{
+                $('.float_billtype3_6').stop().fadeOut('fast');
+            }
+        });
+
+        $("a").click(function(e){ 
+            if($(this).hasClass('disabled') || $(this).hasClass('disabled-type2') || $(this).attr('href') == '#'){
+                e.preventDefault(); 
+            }
+        }); 
+        
+        $(document).on("click", ".toastpopup", function (e) {
+            e.preventDefault();
+            $('.card__item-toastpopup').fadeIn('fast');
+            $('.card__item-toastpopup').addClass('active');
+            $('.card__item-toastpopup .container').css('transform','translateY(-100%)');
+            $('html').css('overflow','hidden');
+            
+        });
+
+        $(document).on("click", ".toastpopup-close", function (e) {
+            e.preventDefault();
+            $('.card__item-toastpopup').fadeOut(function(){
+                $('.card__item-toastpopup').css('display','none');
+            })
+            $('.card__item-toastpopup').removeClass('active');
+            $('.card__item-toastpopup .container').css('transform','translateY(0%)');
+            $('html').css('overflow','auto');
+        });
+
+        $(document).on("click", ".billtype3-2", function (e) {
+            if(!$(this).hasClass('disabled')){
+                $('.section__billtype3-1').removeClass('active');
+                $('.section__billtype3-2').addClass('active');
+            }else{
+                e.preventDefault();
+            }
+        });
+
+        $(document).on("click", ".section__billtype3-3 .img_radio", function (e) {
+            if($(this).index() == 0){
+                $('.section__billtype3-3 .foot__btn a').removeClass('disabled');
+            }else{
+                $('.section__billtype3-3 .foot__btn a').addClass('disabled');
+            }
+        });
+
+        $(document).on("click", ".section__billtype3-3-1 .img_radio", function (e) {
+            if($(this).index() == 1){
+                $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
+            }else{
+                $('.section__billtype3-3-1 .foot__btn a').addClass('disabled');
+            }
+        });
+
+        $(document).on("keyup", "#usim-address2", function (e) {            
+            if($(this).val() != ''){
+                $('.section__billtype3-4 .foot__btn a').removeClass('disabled');
+            }else{
+                e.preventDefault();
+            }
+        });
+
+        $(document).on("keyup", "#user_phone", function (e) {            
+            if($(this).val() != ''){
+                $('.section__billtype3-5 .foot__btn a').removeClass('disabled');
+            }else{
+                e.preventDefault();
+            }
+        });
+        
+        $(document).on("change",".section__billtype3-1 .email_row.secend select",function(){
+            $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
+        });
+
+        $(document).on("change",".section__billtype3-1 .email_row.secend select",function(){
+            $('.section__billtype3-1 .billtype3-2.disabled').removeClass('disabled');
+        });
+
+        $(document).on("click", ".btn-dropdown", function (e) {
+            $(this).hide().addClass('active');
+            $('.dropdown1').hide();
+            $('.dropdown2').fadeIn();   
+        });
+    </script>
+
 </body>
 </html>
