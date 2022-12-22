@@ -420,54 +420,45 @@ window.addEventListener("load", ()=>{
   
   
     // 약관 동의
-    $('.agr__group').off('click').on('click', '.chk__all', function(){
+    $('.agr__group').on('click', '.chk__all', function(){
         $(this).closest('.agr__group').find('input').prop('checked', $(this).is(':checked'));
-        $(this).closest('.check__list__wrap').toggleClass('active');
         if($('.chk__all').is(':checked')){
             $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+            $(this).closest('.check__list__wrap').addClass('active');
         } else {
             $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").addClass("disabled");
+            $(this).closest('.check__list__wrap').removeClass('active');
         }
     });
-    $('.inp__all').off('click').on('click', function(){
-        $(this).closest('.check__wrap').find('input').prop('checked', $(this).is(':checked'));
-    });
-    $('.agr__group').each(function(){
-        var inpChk = $(this).find('.inp__chk');
-        inpChk.on('click', function(){
-            var is_checked = true;
-            inpChk.each(function(){
-                is_checked = is_checked && $(this).is(':checked');
-            });
-            $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked);
-            if(is_checked == true){
-                $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
-            } else {
-                $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").addClass("disabled");
-            }
-    
-            if($(this).closest('.agr__group').find('.chk__all').is(':checked')){
-                $(this).closest('.agr__group').find('.chk__all').closest('.check__list__wrap').addClass('active');
-                $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
-            } else {
-                $(this).closest('.agr__group').find('.chk__all').closest('.check__list__wrap').removeClass('active');
-                $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").addClass("disabled");
-            }
+    $('.agr__group').on('click', '.inp__chk', function(){
+        var is_checked = true;
+        $('.agr__group .inp__chk').each(function(){
+            is_checked = is_checked && $(this).is(':checked');
         });
+        $('.chk__all').prop('checked', is_checked);
     });
     $('.check__wrap').each(function(){
-        var inpChk2 = $(this).find('.inp__chk').not('.inp__all');
-        inpChk2.on('click', function(){
+        let inpAll = $(this).find('.inp__all');
+        let inpSub = $(this).find('.inp__sub');
+        inpAll.on('click', function(){
+            $(this).closest('.check__wrap').find('.inp__sub').prop('checked', $(this).is(':checked'));
+        })
+        inpSub.on('click', function(){
             var is_checked2 = true;
-            inpChk2.each(function(){
+            inpSub.each(function(){
                 is_checked2 = is_checked2 && $(this).is(':checked');
             });
-            $(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2);
-            $(this).closest('.agr__group').find('.chk__all').prop('checked', is_checked2);
-            if(is_checked2 == true){
-                $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
-                $('.chk__all').closest('.check__list__wrap').addClass('active');
-            }
-        });
+            $(this).closest('.check__wrap').find('.inp__all').prop('checked', is_checked2)
+            console.log(is_checked2);
+        })
     });
+    $('.agr__group').on('click', function(){
+        if($('.chk__all').is(':checked')){
+            $('.chk__all').closest('.check__list__wrap').addClass('active');
+            $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").removeClass("disabled");
+        } else {
+            $('.chk__all').closest('.check__list__wrap').removeClass('active');
+            $(this).closest("section[class*=section__step1]").find(".foot__btn .link__item").addClass("disabled");
+        }
+    })
 })
