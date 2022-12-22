@@ -24,7 +24,7 @@
 
 .dvDesktop [data-show="select_usim_yes"] .form_group.type_camera .camera_call {display:none !important;}
 .dvDesktop [data-show="select_usim_yes"] .txt_help.txt_usim_help {display:none;}
-.dvDesktop .id_pic {display:none !important;}
+/* .dvDesktop .id_pic {display:none !important;} */
 
 /**/
 .dvDesktop .opening_num_wrap .select_item .btn.list_toggle:focus {}
