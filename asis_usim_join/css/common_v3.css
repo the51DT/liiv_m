@@ -4,8 +4,8 @@
 @import url(layout.css); /* header, footer, error, popup */
 @import url(mypage.css); /* 로그인/유심가입/마이페이지(유심관리,증빙서류관리,법정대리인,정보제공동의, 해지)/부가서비스(통신 부가서비스,데이터충전, 소액결재) */
 @import url(content.css); /* category/ 마이페이지(나의 가입정보, 요금,청구서,요금납부,정보변경) */
-@import url(content2.css?20221128); /* category 요금제/ 특화서비스(부가서비스 > 유심보관서비스, 보이스피싱예방, 피싱보험, 통신장비보험) / 혜택(멤버십 / 이벤트) */
+@import url(content2.css); /* category 요금제/ 특화서비스(부가서비스 > 유심보관서비스, 보이스피싱예방, 피싱보험, 통신장비보험) / 혜택(멤버십 / 이벤트) */
 @import url(content3.css); /* 요금제 상세 화면 */
-
 @import url(media_pc.css); /* 1025px 이상 pc버전용 */
+
 /*@import url(accessibility_custom.css);   */
