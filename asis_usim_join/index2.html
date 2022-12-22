@@ -939,7 +939,7 @@
                                             <ul class="form_group type_2dv">                                                
                                                 <li>
                                                     <label class="ui_rdo">
-                                                        <input type="radio" id="c-join-type-person" name="c-cust-tp">
+                                                        <input type="radio" id="c-join-type-person" name="c-cust-tp" onclick="modalLayer.show('joinTypeSelectLayer', this); if($('#custTp').val() == 'GEF'){$('#c-join-type01').prop('checked',true);}">
                                                         <span id="pCustTpNm">개인</span>
                                                     </label> 
                                                 </li>
@@ -976,7 +976,19 @@
                                                     </ul> 
                                                 </div>
 
-                                                <div class="select_cont">     
+                                                <div class="select_cont">
+
+
+                                                    <div class="id_pic" id="idPicDiv">  
+                                                        <p class="txt_id_pic_help">신분증 촬영 시 정보가 자동으로 입력됩니다.</p>                                                   
+                                                        <label for="c-camera" class="camera_call"> 
+                                                            <p class="btn btn_camera">
+                                                                <i class="icon_camera"></i><span>촬영하기</span>
+                                                            </p> 
+                                                           <!--  <input type="file" id="c-camera" accept="image/*" capture="environment"> -->
+                                                        </label>                                       
+                                                    </div>
+
                                                     <div class="mo_box type_select_detail"> 
                                                         <label>
                                                             <p class="label">이름</p> 
@@ -1315,7 +1327,7 @@
                                                 <div class="mo_box address_search">
                                                 <label for="c-reg-address" class="label">주소</label>
                                                 <div class="form_group type_address">
-                                                    <input type="text" id="bassAddr" name="bassAddr" placeholder="기본 주소를 검색해주세요" readonly="" spellcheck="false"> 
+                                                    <input type="text" id="bassAddr" name="bassAddr" placeholder="기본 주소를 검색해주세요" spellcheck="false"> 
                                                     <a herf="javascript:" class="btn btn_search">
                                                         <i class="icon_search"></i><span>불러오기</span>
                                                     </a>
@@ -1946,7 +1958,299 @@
         </section>
     </div>
 
+
+      
+
+    
+    <!-- 가입자 유형 선택 팝업 -->
+    <div id="joinTypeSelectLayer" class="mlayer_pop fixed_bottom">
+        <div class="layer_content">
+            <div class="layer_header"> 
+                <h3 class="pop_title">가입자 유형을 선택하세요.</h3>
+            </div>
+            <div class="layer_body">
+                <div class="cs_box type_jointype_select">     
+                    
+                    <ul>
+                        <li>                            
+                            <input type="radio" name="c-join-type" id="c-join-type01"  value="II" checked>                            
+                            <label for="c-join-type01"><span>만 19세 이상 성인입니다.</span></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="c-join-type" id="c-join-type02" value="MIN">
+                            <label for="c-join-type02"><span>만 4세 이상 ~ 만 19세 미만 미성년자입니다.</span></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="c-join-type" id="c-join-type03" value="IFX">
+                            <label for="c-join-type03"><span>외국인입니다.</span></label>
+                        </li>
+                        <li >
+                            <input type="radio" name="c-join-type" id="c-join-type04" value="UNC">
+                            <label for="c-join-type04"><span>만 19세 이상 성인이며 신용카드/KB국민인증서 미소지자입니다.</span></label>
+                        </li>
+                    </ul>
+                    
+                </div>                                 
+            </div>
+            <div class="layer_footer">
+                <div class="btn_area">                    
+                    <button type="button" class="btn btn_default layer_close" data-dismiss="modal">적용</button> 
+                </div>                    
+            </div>            
+            <button type="button" class="btn layer_close" id="custTpCloseBtn" data-dismiss="modal"><span>닫기</span></button>
+
+        </div>    
+    </div>
+    <!-- //가입자 유형 선택 팝업 -->
+
+
+    <!-- 카드 등록 선택 팝업 -->
+    <div id="cardRegTypeLayer" class="mlayer_pop"><!-- 수정(2022.04.21) 추가 -->
+        <div class="layer_content">
+                                
+            <div class="layer_body">
+                <div class="cs_box">                                       
+                    카드 등록 방법을 선택하세요.  
+                    <div class="txt_help">
+                        <p>카드 촬영시 정보가 자동으로 입력됩니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="layer_footer">
+                <div class="btn_area">                                        
+                    <a href="#cardRegLayer" onclick="modalLayer.hide('cardRegTypeLayer', this); modalLayer.show('cardRegLayer', this)" class="btn btn_white">직접입력</a> 
+                    <a href="#cardRegCallOCRLayer" onclick="modalLayer.hide('cardRegTypeLayer', this); modalLayer.show('cardRegCallOCRLayer', this)" class="btn btn_default">카드촬영</a> 
+                </div>                    
+            </div>                                 
+        </div>
+    </div>
+    <!-- //카드 등록 선택 팝업 -->
+
+
+    
+    
+    <!-- 카드 등록 > OCR 호출 팝업 --><!-- 수정(2022.04.21) 추가 -->
+    <div id="cardRegCallOCRLayer" class="mlayer_pop">
+        <div class="layer_content type_event">
+            <div class="layer_header"> 
+                <h3 class="pop_title">카드 등록</h3>                
+            </div>
+            <div class="layer_body">
+                <div class="cs_box type_reg">
+                    <!-- 카드 등록 -->
+                    <div class="mo_select_com type_card">                        
+                        <button type="button" class="btn_toggle">
+                            <i class="sp_card c_none" id="ocrCardCd"></i><span class="blind">선택할 은행 목록 열기/닫기</span>
+                        </button>       
+                        <dl class="select_label type_name">
+                            <dt class="blind">은행명 :</dt>
+                            <dd class="label_active"></dd>                            
+                        </dl>
+                        <div class="select_list block">                       
+                            <p class="blind">카드사 목록</p>
+                            <ul>
+                                <li>
+                                    <button type="button" data-label="국민카드" onClick="setCardComp_4('02','국민카드')"> <i class="sp_card c_kb"></i>
+                                        <p>국민카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="신한카드" onClick="setCardComp_4('26','신한카드')"> <i class="sp_card c_sh"></i>
+                                        <p>신한카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="삼성카드" onClick="setCardComp_4('04','삼성카드')"> <i class="sp_card c_ss"></i>
+                                        <p>삼성카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="현대카드" onClick="setCardComp_4('07','현대카드')"> <i class="sp_card c_hd"></i>
+                                        <p>현대카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="롯데카드" onClick="setCardComp_4('08','롯데카드')"> <i class="sp_card c_lt"></i>
+                                        <p>롯데카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="BC카드" onClick="setCardComp_4('01','BC카드')"> <i class="sp_card c_bc"></i>
+                                        <p>BC카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="하나카드" onClick="setCardComp_4('03','하나카드')"> <i class="sp_card c_ha"></i>
+                                        <p>하나카드</p>
+                                    </button>
+                                            
+                                </li>
+                                <li>
+                                    <button type="button" data-label="NH카드" onClick="setCardComp_4('71','NH카드')"> <i class="sp_card c_nh"></i>
+                                        <p>NH카드</p>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" data-label="씨티, 한미카드" onClick="setCardComp_4('72','씨티, 한미카드')"> <i class="sp_card c_ct"></i>
+                                        <p>씨티, 한미카드</p>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>     
+                    <!-- //카드 등록 -->
+                </div>
+            </div>
+            <div class="layer_footer">
+                <div class="btn_area">                                        
+                    <button type="button" class="btn btn_white layer_close">취소</button>
+                    <div class="form_group type_camera">                          
+                        <label for="c-camera" class="camera_call"> 
+                            <p class="btn btn_camera layer_close" >카드 촬영</p> 
+                            <!-- <input type="file" id="c-camera" accept="image/*" capture="environment">카메라 실행 후 OCR촬영 관련 화면은 U9L_pop.html 참고 --> 
+                        </label>                                        
+                    </div>
+                </div>
+            </div>
+            <!-- 우상단 닫기 및 버튼 영역 -->
+            <span class="head_btn_area">                
+                <button type="button" class="btn layer_close" data-dismiss="modal" ><span>닫기</span></button>
+            </span>           
+        </div>    
+    </div>
+    <!-- //카드 등록 > OCR 호출 팝업 -->
+    
+    
+    <!-- 카드 등록 팝업 -->
+    <div id="cardRegLayer" class="mlayer_pop">
+        <div class="layer_content type_event">
+            <div class="layer_header"> 
+                <h3 class="pop_title">카드 등록</h3>                
+            </div>
+            <div class="layer_body">
+                <div class="cs_box type_reg">
+                    <!-- 카드 등록 -->
+                    <div class="mo_select_com type_card">                        
+                        <button type="button" id="btnCardSel" class="btn_toggle">
+                            <i id="selCardImg" class="sp_card c_none"></i><span class="blind">선택할 은행 목록 열기/닫기</span>
+                        </button>       
+                        <dl class="select_label type_name">
+                            <dt class="blind">은행명 :</dt>
+                            <dd class="label_active"></dd>                            
+                        </dl>
+                        
+                        <dl class="select_label type_num">
+                            <dt><label for="c-acc">카드번호</label></dt>
+                            <dd>                 
+                                <div class="form_group">                                                       
+                                    <input type="number" name="cardNo6_1" id="cardNo6_1" title="카드번호 첫째 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_2').focus(); maxLengthCheck_join(this);">   
+                                    <span class="txt_dash">~</span>
+                                    <input type="number" name="cardNo6_2" id="cardNo6_2" title="카드번호 둘째 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_3').focus(); maxLengthCheck_join(this);">
+                                    <span class="txt_dash">~</span>
+                                    <input type="number" class="txt_security" name="cardNo6_3" id="cardNo6_3" title="카드번호 셋째 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_4').focus(); maxLengthCheck_join(this);">
+                                    <span class="txt_dash">~</span>
+                                    <input type="number" class="txt_security" name="cardNo6_4" id="cardNo6_4" title="카드번호 마지막 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onFocus="setCardNo_4(this)" onkeyup="maxLengthCheck_join(this);">
+                                </div>    
+                            </dd>  
+                            <dd><div class="txt_help"><p>본인명의의 신용/체크카드 정보를 입력해주세요.</p></div></dd>
+                        </dl>
+                        
+                        <dl class="select_label type_num">
+                            <dt><label for="c-acc">유효기간</label></dt>
+                            <dd>                 
+                                <div class="form_group">
+                                    <label><input type="tel" name="c-card-exp" id="cardEffcprd" name="cardEffcprd" placeholder="MM/YY"  maxlength="5" pattern="[0-9]*" title="유효기간을 입력해주세요" onKeyUp="onlyNumberInput(this); termFormat(this);" onBlur="checkCardEffprd();"></label>
+                                </div>    
+                            </dd>
+                        </dl>     
+                        
+                        <div class="select_list block">                       
+                            <p class="blind">카드사 목록</p>
+                            <ul>
+		                                <li id="card02">
+											<button type="button" data-label="국민카드" onClick="setCardComp_4('02','국민카드')"> <i class="sp_card c_kb"></i>
+												<p>국민카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card26">
+											<button type="button" data-label="신한카드" onClick="setCardComp_4('26','신한카드')"> <i class="sp_card c_sh"></i>
+												<p>신한카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card04">
+											<button type="button" data-label="삼성카드" onClick="setCardComp_4('04','삼성카드')"> <i class="sp_card c_ss"></i>
+												<p>삼성카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card07">
+											<button type="button" data-label="현대카드" onClick="setCardComp_4('07','현대카드')"> <i class="sp_card c_hd"></i>
+												<p>현대카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card08">
+											<button type="button" data-label="롯데카드" onClick="setCardComp_4('08','롯데카드')"> <i class="sp_card c_lt"></i>
+												<p>롯데카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card01">
+											<button type="button" data-label="BC카드" onClick="setCardComp_4('01','BC카드')"> <i class="sp_card c_bc"></i>
+												<p>BC카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card03">
+											<button type="button" data-label="하나카드" onClick="setCardComp_4('03','하나카드')"> <i class="sp_card c_ha"></i>
+												<p>하나카드</p>
+											</button>
+		                                            
+		                               	</li>
+		                                <li id="card71">
+											<button type="button" data-label="NH카드" onClick="setCardComp_4('71','NH카드')"> <i class="sp_card c_nh"></i>
+												<p>NH카드</p>
+											</button> 
+		                               	</li>
+		                                <li id="card72">
+											<button type="button" data-label="씨티, 한미카드" onClick="setCardComp_4('72','씨티, 한미카드')"> <i class="sp_card c_ct"></i>
+												<p>씨티, 한미카드</p>
+											</button>
+		                               	</li>
+							</ul>
+                        </div>  
+                    </div>     
+                    <!-- //카드 등록 -->
+                </div>
+            </div>
+            <div class="layer_footer">
+                <div class="btn_area">                                        
+                    <button type="button" class="btn btn_white layer_close">취소</button> 
+                    <button type="button" class="btn btn_default layer_close">등록완료</button> 
+                </div>
+            </div>
+            <!-- 우상단 닫기 및 버튼 영역 -->
+            <span class="head_btn_area">                
+                <button type="button" class="btn layer_close" data-dismiss="modal" id="closeOnPaymethod"><span>닫기</span></button>
+            </span>           
+        </div>    
+    </div>
+    <!-- //카드 등록 팝업 -->
+
     <script>
+
+        function setCardComp_4(){
+
+        }
+        
         function detectMobileDevice(agent) {
             const mobileRegex = [/Android/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i]
             return mobileRegex.some(mobile => agent.match(mobile))
@@ -2255,6 +2559,13 @@
                 }
             })
         })
+
+        
+
+        // 카드등록 클릭시 
+        $("#cardRegLayerBtn").click(function(){
+            modalLayer.show('cardRegTypeLayer', this);
+        });
     </script>
 </body>
 
