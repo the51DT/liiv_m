@@ -104,12 +104,12 @@ window.addEventListener("load", ()=>{
   
   // header, footer padding setting
   const containerPad = function(){
-    const head = document.querySelector(".active header");
+    const head = document.querySelector(".active header") ?? 0;
     const foot = document.querySelector(".active footer") ?? 0;
     const contentWrap = document.querySelectorAll(".container__wrap");
     contentWrap.forEach((item)=>{
-        item.style.paddingTop = `${head.offsetHeight}px`;
-        item.style.paddingBottom = `${foot.offsetHeight}px`;
+        head ? item.style.paddingTop = `${head.offsetHeight}px` : item.style.paddingTop = "0";
+        foot ? item.style.paddingBottom = `${foot.offsetHeight}px` : item.style.paddingBottom = "0";
     });
 
   }
