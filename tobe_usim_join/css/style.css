@@ -36,7 +36,7 @@ input[type=checkbox],
 input[type=radio] {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0;}
 select {-o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; margin:0; color:inherit}
 *{box-sizing:border-box;}
-button{border: 0;outline: 0;background: none;padding: 0; margin: 0;}
+button{border: 0;outline: 0;background: none;padding: 0; margin: 0;font-family:'Spoqa Han Sans Neo', 'sans-serif'}
 img{width: 100%;}
 
 input:disabled,
@@ -214,7 +214,7 @@ input:disabled,
 
 
 /** header ************/
-header{position:fixed; left:50%; top:0; width:100%; max-width:420px; transform:translateX(-50%); z-index:11;}
+header{position:fixed; left:50%; top:0; width:100%; max-width:420px; transform:translateX(-50%); z-index:11; background-color:#fff}
 .link__leave{position:absolute; right: 1rem; top: 1rem; display:block; width:4.5rem; height:4rem; text-indent:-9999px;}
 
 /** footer ************/
@@ -369,10 +369,11 @@ form.jointype4{padding:0 2rem;}
 .step1__intro__slide .pagination .swiper-pagination-bullet {width:0.6rem; height:0.6rem; margin:0 0.4rem; border-radius:0.6rem; background-color:#D1D1D1; opacity:1; transition:all 0.2s}
 .step1__intro__slide .pagination .swiper-pagination-bullet-active {width:1.6rem; background-color:#000}
 
-.acco__btn {display:block}
+.acco__wrap .acco__btn {display:block; width:100%; margin-bottom:-2rem; padding:2rem 0}
+.acco__wrap .acco__btn .acco__tit {position:relative; padding-right:1.9rem; color:#555; font-size:1.2rem; line-height:1.5rem; text-align:center; letter-spacing:-0.02rem}
+.acco__wrap .acco__btn .acco__tit::after {content:''; display:block; position:absolute; width:1.4rem; height:1.4rem; top:calc(50% - 0.7rem); right:0; background:url(../img/btn_acco_down.png) no-repeat center / contain; transition:all 0.2s}
+.acco__wrap.active .acco__btn .acco__tit::after {transform:rotate(180deg)}
 .acco__wrap .acco__cont {display:none}
-.acco__wrap.active .acco__cont {display:block}
-.acco__wrap.active .acco__btn {display:none}
 
 /* .result__wrap {padding:0 2rem; border:1px solid #E7E8EA; border-radius:0 0 1.6rem 1.6rem; box-shadow:0 0 2rem rgba(0,0,0,0.07)} */
 /* .result__wrap .result__item {display:block; padding:1.5rem 0} */
