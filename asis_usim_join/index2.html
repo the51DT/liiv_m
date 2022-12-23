@@ -2246,6 +2246,19 @@
     <!-- //카드 등록 팝업 -->
 
     <script>
+        
+        $(()=>{
+            // 카드 선택
+            $(document).on("click", "#cardRegLayer .select_list ul li", function(){
+                $(document).find("#cardRegLayer .select_list ul li").removeClass("active");
+                $(this).addClass("active");
+            })
+            // 카드 선택
+            $(document).on("click", "#cardRegCallOCRLayer .select_list ul li", function(){
+                $(document).find("#cardRegCallOCRLayer .select_list ul li").removeClass("active");
+                $(this).addClass("active");
+            })
+        })
 
         function setCardComp_4(){
 
@@ -2540,6 +2553,7 @@
                 $("#step"+ nextStep +" > h2 > a > .reg_status").text("- 작성필요");
                 //$("#step"+nextStep+" > h2 > a").click();
             }
+
         }
 
         // 03 usim check
