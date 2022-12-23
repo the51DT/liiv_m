@@ -2149,13 +2149,13 @@
                             <dt><label for="c-acc">카드번호</label></dt>
                             <dd>                 
                                 <div class="form_group">                                                       
-                                    <input type="number" name="cardNo6_1" id="cardNo6_1" title="카드번호 첫째 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_2').focus(); maxLengthCheck_join(this);">   
+                                    <input type="number" name="cardNo6_1" id="cardNo6_1" title="카드번호 첫째 자리 입력" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_2').focus();">   
                                     <span class="txt_dash">~</span>
-                                    <input type="number" name="cardNo6_2" id="cardNo6_2" title="카드번호 둘째 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_3').focus(); maxLengthCheck_join(this);">
+                                    <input type="number" name="cardNo6_2" id="cardNo6_2" title="카드번호 둘째 자리 입력" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_3').focus();">
                                     <span class="txt_dash">~</span>
-                                    <input type="number" class="txt_security" name="cardNo6_3" id="cardNo6_3" title="카드번호 셋째 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_4').focus(); maxLengthCheck_join(this);">
+                                    <input type="number" class="txt_security" name="cardNo6_3" id="cardNo6_3" title="카드번호 셋째 자리 입력" maxlength="4" onkeyup="if(this.value.length >=4) $('#cardNo6_4').focus();">
                                     <span class="txt_dash">~</span>
-                                    <input type="number" class="txt_security" name="cardNo6_4" id="cardNo6_4" title="카드번호 마지막 자리 입력" onBlur="cardNoFormat_4(this); checkCardNo();" maxlength="4" onFocus="setCardNo_4(this)" onkeyup="maxLengthCheck_join(this);">
+                                    <input type="number" class="txt_security" name="cardNo6_4" id="cardNo6_4" title="카드번호 마지막 자리 입력" maxlength="4">
                                 </div>    
                             </dd>  
                             <dd><div class="txt_help"><p>본인명의의 신용/체크카드 정보를 입력해주세요.</p></div></dd>
@@ -2165,7 +2165,7 @@
                             <dt><label for="c-acc">유효기간</label></dt>
                             <dd>                 
                                 <div class="form_group">
-                                    <label><input type="tel" name="c-card-exp" id="cardEffcprd" name="cardEffcprd" placeholder="MM/YY"  maxlength="5" pattern="[0-9]*" title="유효기간을 입력해주세요" onKeyUp="onlyNumberInput(this); termFormat(this);" onBlur="checkCardEffprd();"></label>
+                                    <label><input type="tel" name="c-card-exp" id="cardEffcprd" name="cardEffcprd" placeholder="MM/YY"  maxlength="5" pattern="[0-9]*" title="유효기간을 입력해주세요"></label>
                                 </div>    
                             </dd>
                         </dl>     
