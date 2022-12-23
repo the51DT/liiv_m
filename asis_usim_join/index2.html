@@ -1061,19 +1061,19 @@
                                         <ul data-rdo="select">
                                             <li>
                                                 <label class="ui_rdo" id="rdoKbsignAuth">
-                                                    <input type="radio" name="c-cert-type" id="select-cert-kb" checked="">
+                                                    <input type="radio" name="c-cert-type" id="select-cert-kb">
                                                     <span>KB 국민 인증서</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="ui_rdo" id="rdoCardAuth">
-                                                <input type="radio" name="c-cert-type" id="select_cert_card">
+                                                <input type="radio" name="c-cert-type" id="select_cert_card" checked>
                                                     <span>신용카드</span>
                                                 </label>
                                             </li> 
                                         </ul>                        
                                         <div class="select_cont">                      
-                                            <div data-show="select-cert-kb"><!-- Case 01. KB국민 인증서 인증 ---> 
+                                            <div data-show="select-cert-kb" style="display:none;"><!-- Case 01. KB국민 인증서 인증 ---> 
                                                 <a href="javascript:" class="btn_cert_type" disabled="">
                                                     <i class="sp_cert icon_kbmobile2"></i><span>KB국민 인증서</span>
                                                 </a> 
@@ -1081,7 +1081,7 @@
                                                     <i class="sp_cert icon_kbmobile2"></i><span>KB국민인증서 본인인증 완료</span>
                                                 </a>
                                             </div>
-                                            <div data-show="select_cert_card" style="display:none;"><!-- Case 02. 신용카드 인증 --->  
+                                            <div data-show="select_cert_card"><!-- Case 02. 신용카드 인증 --->  
                                                 <a href="javascript:" class="btn_cert_type">
                                                     <i class="sp_cert icon_card"></i><span>신용카드 인증</span>
                                                 </a>
