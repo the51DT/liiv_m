@@ -14,6 +14,14 @@ html{
 
 html,body{height:100%;font-family:'Spoqa Han Sans Neo', 'sans-serif'}
 
+.font-test{}
+.font-test .font100{font-weight:100;}
+.font-test .font300{font-weight:300;}
+.font-test .font400{font-weight:400;}
+.font-test .font500{font-weight:500;}
+.font-test .font700{font-weight:700;}
+.font-test .fontbold{font-weight:bold}
+
 #wrap{position:relative; width:100%; max-width:420px; min-height:100%; margin:0 auto; overflow-y:scroll; overflow-x:hidden;}
 #wrap img{max-width:100%}
 
