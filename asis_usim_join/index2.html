@@ -2294,6 +2294,7 @@
             document.querySelector(`.${link}`).classList.add("active");
             window.scrollTo(0, 0);
             HeadershadowHide();
+            bottomContHeight();
         }
 
         const HeadershadowHide = function () {
@@ -2302,6 +2303,15 @@
             const head = document.querySelector("header");
             activepage === pageJoin ? head.classList.add("shadow-hide") : head.classList.remove("shadow-hide");
             return activepage === pageJoin;
+        }
+
+        const bottomContHeight = function () {
+            const activepage = document.querySelector(".content__section.active");
+            const pageUsim = document.querySelector(".content__usim");
+            const usimCont = document.querySelector(".content__usim .content__wrap");
+            const btmFixed = document.querySelector(".content__usim .bottom__fix");
+            activepage === pageUsim ? usimCont.style.paddingBottom = `${btmFixed.offsetHeight}px` : "";
+            return activepage === pageUsim;
         }
 
         const joinHeadScrollChk = function () {
@@ -2325,12 +2335,6 @@
         };
 
         // 01 usim
-        $(window).on('load', function(){
-            // 화면 높이값
-            let btmFixedH = $(".content__usim .bottom__fix").outerHeight();
-            $(".content__usim .content__wrap").css("padding-bottom",btmFixedH + "px")
-            
-        });
         $(document).ready(function(){
             // 가입시 준비물 확인 
             $("li[name=stepChkBox]").click(function(){
