@@ -271,32 +271,26 @@ form.jointype4{padding:0 2rem;}
 .section__jointype4 .basic-form{margin:0}
 
 .form__group{margin:0 2rem;}
-.form__item{position:relative; transition:padding .3s;}
+.form__item{position:relative; padding:1.6rem 0 0;}
 .form__item + .form__item{margin-top:2rem;}
-.form__item label{position:absolute; left:0; top:0; line-height:3rem; font-size:1.8rem; color:#999; transition:all .3s; z-index:1;}
+.form__item label{position:absolute; left:0; top:1.6rem; line-height:3.8rem; font-size:1.8rem; color:#999; transition:top .2s; z-index:1;}
 .form__item ::placeholder{color:transparent; transition:color .3s;}
 .form__item input[type='text'],
 .form__item input[type='number'],
-.form__item input[type='password']{position:relative; height:3.6rem; color:#222; padding:0 0 0.5rem 0; margin:0; border-width:0 0 1px; border-style:solid; border-color:#D6D6D6; background:transparent; outline: none; z-index:2;}
+.form__item input[type='password']{position:relative; height:3.8rem; line-height:3.8rem; color:#222; margin:0; border-width:0 0 1px; border-style:solid; border-color:#D6D6D6; background:transparent; outline: none; z-index:2;}
 
-.form__item select {box-sizing:border-box; width:100%; height:3.6rem; line-height:3.6rem; border:0 none; border-bottom:1px solid #D6D6D6; background: url(../img/select-down.png) no-repeat 98% 50%; background-size: 1.2rem auto; outline:none;}
+.form__item select {box-sizing:border-box; width:100%; height:3.8rem; border:0 none; border-bottom:1px solid #D6D6D6; background: url(../img/select-down.png) no-repeat 98% 50%; background-size: 1.2rem auto; outline:none;}
 
 .form__item-input.flex{display:flex; align-items:center; justify-content: space-between; font-size:1.8rem;}
 
 .form__item-hasbtn{position:relative;}
 .form__item-hasbtn .inp-del{position:absolute; right:0; bottom:1.1rem; display:none; text-indent:-9999px; width:2rem; height:2rem; background:url(../img/inp_del.png) no-repeat 0 0; background-size:100% auto; z-index:5;}
 .form__item-hasbtn.active .inp-del{display:block;}
-    /* active */
-.form__item.active{padding-top:2em;}
-/* .form__item.active ::placeholder{color:#999;} */
-.form__item.active label{line-height:initial; font-size:1.2rem; color:#999;}
-.form__item.active input{border-bottom:0.2rem solid #222; padding-bottom:0.4rem;}
-/* focus */
-.form__item.focus{padding-top:2em;}
-/* .form__item.focus input{border-bottom:0.2rem solid #222; padding-bottom:0.4rem;} */
-.form__item input:focus{border-bottom:0.2rem solid #222; padding-bottom:0.4rem;}
-/* .form__item.focus ::placeholder{color:#999;} */
-.form__item.focus label{line-height:initial; font-size:1.2rem; color:#999;}
+    /* focus, active */
+.form__item.active label,
+.form__item.focus label{top:0; line-height:1; font-size:1.2rem; color:#999;}
+.form__item.active input,
+.form__item input:focus{border-bottom:2px solid #222;}
 
 
 /** section__joinauth *********************/
