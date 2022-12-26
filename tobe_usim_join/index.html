@@ -20,7 +20,7 @@
         <section class="content__section section__type">
             <header></header>
             <div class="container__wrap">
-                <a href="#" class="link__item" data-link="section__step1_0"><img src="./img/index_b.png"></a>
+                <a href="#" class="link__item" data-link="section__step1_1"><img src="./img/index_b.png"></a>
                 <div class="font-test blind">
                     <span class="font100">100</span>
                     <span class="font300">300</span>
@@ -34,7 +34,7 @@
             <footer></footer>
         </section>
 
-        <section class="content__section section__step1_0">
+        <!-- <section class="content__section section__step1_0">
             <header>
                 <img src="./img/head_step1_intro.png">
             </header>
@@ -56,10 +56,10 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item intro__btn" data-link="section__step1_1"><img src="./img/btn_step1_start.png"></a>
+                    <a href="#" class="link__item intro__btn disabled" data-link="section__step1_1"><img src="./img/btn_step1_start.png"></a>
                 </div>
             </footer>
-        </section>
+        </section> -->
         
         <section class="content__section section__step1_1">
             <header>
@@ -1049,9 +1049,9 @@
                 el: ".pagination",
             },
         });
-        // step1Slide.on('reachEnd', function(){
-        //     $('.intro__btn').removeClass('disabled');
-        // })
+        step1Slide.on('reachEnd', function(){
+            $('.intro__btn').removeClass('disabled');
+        })
 
         $(window).scroll(function (event) {
             let scroll = $(window).scrollTop();
