@@ -656,7 +656,7 @@
                     </div>
                 </div>
                 <div class="link__area" data-link="content__usim-agree">
-                    <button type="button" class="usim__btn">온라인 가입 신청</button>
+                    <button type="button" class="usim__btn" disabled>온라인 가입 신청</button>
                 </div>
             </div>
         </section>
@@ -1605,7 +1605,7 @@
                                                                 <label><input type="text" id="dvrlAddr" name="dvrlAddr" placeholder="기본 주소를 검색해주세요" spellcheck="false"> </label>
                                                                 <a herf="javascript:" class="btn btn_search" ><i class="icon_search"></i><span class="blind">주소검색</span></a>
                                                             </div>
-                                                            <input type="text" id="dDtlAddr" name="dDtlAddr" placeholder="상세 주소를 입력해주세요" spellcheck="false">
+                                                            <input type="text" id="dDtlAddr" name="dDtlAddr" class="step3_btn_chk_input" placeholder="상세 주소를 입력해주세요" spellcheck="false">
                                                         </div>                                                            
                                                         
                                                     </div>        
@@ -1730,7 +1730,7 @@
             
                     <div class="btn_area">
                         <a href="javascript:" id="btnPrev" class="btn btn_white">이전</a>
-                        <a href="javascript:" id="btnNext" class="btn btn_default link__area" data-link="content__usim-check">작성완료</a>
+                        <a href="javascript:" id="btnNext" class="btn btn_default link__area step3_btn_chk disabled" data-link="content__usim-check">작성완료</a>
                     </div>
                     
                     <form>
@@ -2420,6 +2420,28 @@
                     $('.chk__all').closest(".join_wrap").find(".link__area").prop('disabled', true);
                 }
             })
+
+
+
+            
+            // step1 > 유심 없어요 checked 시에만 "온라인 가입 신청" 버튼 활성화
+            $(document).on("change", "#select_usim_no", function(){
+                const btn = $(document).find(".usim__btn");
+                $(this).is(":checked") ? btn.prop("disabled", false) : btn.prop("disabled", true);
+            })
+            $(document).on("change", "#select_usim_yes", function(){
+                const btn = $(document).find(".usim__btn");
+                $(this).is(":checked") ? btn.prop("disabled", true) : null;
+            })
+
+            // step3 > 마지막 상세주소 입력 시에만 "작성완료" 버튼 활성화
+            $(document).on("input", ".step3_btn_chk_input", function(){
+                const length = $(this).val().length;
+                console.log(length);
+                const btn = $(document).find(".step3_btn_chk");
+                length > 1 ? btn.removeClass("disabled") : btn.addClass("disabled");
+            })
+
         })
 
         // 02 usim join
