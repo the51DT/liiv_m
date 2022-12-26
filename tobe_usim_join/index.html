@@ -56,7 +56,7 @@
             </div>
             <footer>
                 <div class="foot__btn">
-                    <a href="#" class="link__item intro__btn disabled" data-link="section__step1_1"><img src="./img/btn_step1_start.png"></a>
+                    <a href="#" class="link__item intro__btn" data-link="section__step1_1"><img src="./img/btn_step1_start.png"></a>
                 </div>
             </footer>
         </section>
@@ -1049,9 +1049,9 @@
                 el: ".pagination",
             },
         });
-        step1Slide.on('reachEnd', function(){
-            $('.intro__btn').removeClass('disabled');
-        })
+        // step1Slide.on('reachEnd', function(){
+        //     $('.intro__btn').removeClass('disabled');
+        // })
 
         $(window).scroll(function (event) {
             let scroll = $(window).scrollTop();
