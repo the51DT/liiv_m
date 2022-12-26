@@ -36,6 +36,7 @@ header .side_menu:before {display:block; content:''; width:20px; height:20px; ma
 .bottom__fix .result__wrap .charge__data em{margin-right:6px; color:#717171; font-size:12px; line-height:24px}
 .bottom__fix .result__wrap .charge__info{display:block; margin-top:10px; color:#8aa3b1; font-size:12px; line-height:18px}
 .bottom__fix .usim__btn {width:100%; border-radius:10px; background-color:#16b9e4; color:#fff; font-size:15px; line-height:50px}
+.bottom__fix .usim__btn[disabled]{background:#F7F9FA; color:#ccc;}
 
 @keyframes loadAnimation {
     0%{opacity: 0;}
