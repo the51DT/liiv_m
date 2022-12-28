@@ -1105,14 +1105,6 @@
             }
         });
 
-        $(document).on("click", ".section__billtype3-3-1 .img_radio", function (e) {
-            if($(this).index() == 1){
-                $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
-            }else{
-                $('.section__billtype3-3-1 .foot__btn a').addClass('disabled');
-            }
-        });
-
         $(document).on("keyup", "#usim-address2", function (e) {            
             if($(this).val() != ''){
                 $('.section__billtype3-4 .foot__btn a').removeClass('disabled');
@@ -1152,10 +1144,20 @@
         });
 
         // 가입자정보와 배송지정보가 동일 체크시
-        $("#sameAsChk").click(function(){
-            $('.section__billtype3-3-1').removeClass('active');
-            $('.section__billtype3-5').addClass('active');
-            $("#user_name").val($(".jointype4_name").val());	//수령인
+        // $("#sameAsChk").click(function(){
+        //     $('.section__billtype3-3-1').removeClass('active');
+        //     $('.section__billtype3-5').addClass('active');
+            
+        // });
+
+        $(document).on("click", ".section__billtype3-3-1 .img_radio", function (e) {
+            if($(this).index() == 1){
+                $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
+            }else{
+                $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
+                $("#user_name").val($(".jointype4_name").val());	//수령인
+                $('.section__billtype3-3-1 .foot__btn a').attr('data-link','section__billtype3-5')
+            }
         });
 
     </script>
