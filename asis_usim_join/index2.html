@@ -1581,7 +1581,7 @@
                                                     <div class="mo_box same_day">
                                                         <p class="txt_receive_help">유심 배송 주소와 정보를 입력해주세요.</p>   
                                                         <label>
-                                                            <input type="checkbox" id="sameAsChk" disabled>
+                                                            <input type="checkbox" id="sameAsChk">
                                                             <span>가입자 고객정보와 동일</span>
                                                         </label> 
                                                     
@@ -2480,19 +2480,21 @@
             // 가입자정보와 배송지정보가 동일 체크시
             $("#sameAsChk").click(function(){
                 if($(this).prop("checked")){
+
                     if($("#custTp").val() == "IFX"){
                         $("#dvrlNm").val($("#fNm").val());	//수령인
                     }else{
                         $("#dvrlNm").val($("#custNm").val());	//수령인
                     }
                     
-                    $("#dvrlTelNo").val($("#telNo").val());	//연락가능번호
+                    // $("#dvrlTelNo").val($("#telNo").val());	//연락가능번호
+                    // $("#dvrlTelNo").val($("#dvrlTelNo2").val());	//연락가능번호
                     $("#dvrlAddr").val($("#bassAddr").val());	//배송지 주소
                     $("#dDtlAddr").val($("#dtlAddr").val());	//배송지 상세주소
                     $("#DPostcode").val($("#postcode").val());
                 }else{
                     $("#dvrlNm").val('');	//수령인
-                    $("#dvrlTelNo").val('');	//연락가능번호
+                    // $("#dvrlTelNo").val('');	//연락가능번호
                     $("#dvrlAddr").val('');	//배송지 주소
                     $("#dDtlAddr").val('');	//배송지 상세주소
                     $("#DPostcode").val('');
