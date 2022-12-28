@@ -903,7 +903,7 @@
             <div class="container__wrap">
                 <img src="./img/img_billtype3_3_1.png">
                 <div class="img_radio_wrap padding">
-                    <div class="img_radio">
+                    <div class="img_radio" id="sameAsChk">
                         <div class="img_radio_thum"><img src="./img/img_billtype3_3_3.png"></div>
                         <p>동일합니다.</p>
                     </div>
@@ -1149,6 +1149,13 @@
                 $(this).parent().next().find('input').focus();
                 return false;
             }
+        });
+
+        // 가입자정보와 배송지정보가 동일 체크시
+        $("#sameAsChk").click(function(){
+            $('.section__billtype3-3-1').removeClass('active');
+            $('.section__billtype3-5').addClass('active');
+            $("#user_name").val($(".jointype4_name").val());	//수령인
         });
 
     </script>
