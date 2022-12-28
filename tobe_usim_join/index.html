@@ -1153,10 +1153,11 @@
         $(document).on("click", ".section__billtype3-3-1 .img_radio", function (e) {
             if($(this).index() == 1){
                 $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
+                $('.section__billtype3-3-1 .foot__btn a').attr('data-link','section__billtype3-4')
             }else{
                 $('.section__billtype3-3-1 .foot__btn a').removeClass('disabled');
-                $("#user_name").val($(".jointype4_name").val());	//수령인
                 $('.section__billtype3-3-1 .foot__btn a').attr('data-link','section__billtype3-5')
+                $("#user_name").val($(".jointype4_name").val());	//수령인
             }
         });
 
